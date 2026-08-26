@@ -149,6 +149,10 @@ export async function POST(req: Request) {
 
       if (adminResult.error) {
         console.error("Resend Admin Email Error:", adminResult.error);
+        return NextResponse.json(
+          { error: `Failed to send email: ${adminResult.error.message}` },
+          { status: 400 }
+        );
       } else {
         console.log("Resend Admin Email Sent Successfully:", adminResult.data?.id);
       }
@@ -169,7 +173,11 @@ export async function POST(req: Request) {
         console.log("Resend User Email Sent Successfully:", userResult.data?.id);
       }
     } else {
-      console.log("DEMO MODE - No API Key provided");
+      console.error("RESEND_API_KEY is missing from environment variables.");
+      return NextResponse.json(
+        { error: "Email service configuration error: RESEND_API_KEY is missing." },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json({
