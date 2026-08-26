@@ -13,12 +13,13 @@ export async function POST(req: Request) {
       );
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const adminEmail = process.env.ADMIN_EMAIL || "Jinaliprajapati1708@gmail.com";
-    
+    const resendApiKey = process.env.RESEND_API_KEY;
+    const adminEmail = process.env.ADMIN_EMAIL;
+    const senderEmail = process.env.SENDER_EMAIL;
+
     // Resend requires a verified domain or its default 'onboarding@resend.dev' for the 'from' address.
     // Public webmail domains like @gmail.com cannot be used as 'from' sender in Resend.
-    let rawSender = process.env.SENDER_EMAIL || "onboarding@resend.dev";
+    let rawSender = senderEmail || "onboarding@resend.dev";
     if (rawSender.includes("@gmail.com") || rawSender.includes("@yahoo.com") || rawSender.includes("@outlook.com") || rawSender.includes("@hotmail.com")) {
       rawSender = "onboarding@resend.dev";
     }
@@ -135,8 +136,16 @@ export async function POST(req: Request) {
       </html>
     `;
 
-    if (apiKey) {
-      const resend = new Resend(apiKey);
+    if (resendApiKey) {
+      if (!adminEmail) {
+        console.error("ADMIN_EMAIL is missing from environment variables.");
+        return NextResponse.json(
+          { error: "Email service configuration error: ADMIN_EMAIL is missing." },
+          { status: 500 }
+        );
+      }
+
+      const resend = new Resend(resendApiKey);
 
       // 1. Send Admin Notification Email
       const adminResult = await resend.emails.send({
