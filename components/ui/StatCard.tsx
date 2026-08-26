@@ -1,4 +1,7 @@
+"use client";
+
 import type { ReactNode } from "react";
+import CountUp from "./CountUp";
 
 type StatCardProps = {
   value: string;
@@ -15,6 +18,9 @@ export default function StatCard({
   suffix,
   className = "",
 }: StatCardProps) {
+  const numericValue = parseInt(value.replace(/[^0-9]/g, ""), 10);
+  const isNumber = !isNaN(numericValue);
+
   return (
     <div
       className={`relative flex flex-col items-center sm:items-start gap-2 p-6 sm:p-8 rounded-2xl overflow-hidden ${className}`}
@@ -32,7 +38,11 @@ export default function StatCard({
           className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight"
           style={{ color: "var(--text-light)" }}
         >
-          {value}
+          {isNumber ? (
+            <CountUp end={numericValue} duration={2000} />
+          ) : (
+            value
+          )}
         </span>
         {suffix && (
           <span

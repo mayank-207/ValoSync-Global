@@ -1,5 +1,6 @@
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
+import CountUp from "../ui/CountUp";
 import {
   ArrowRightIcon,
   CheckIcon,
@@ -73,7 +74,7 @@ export default function AboutSection() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
                   <span className="text-3xl font-extrabold text-cyan-400 block mb-1">
-                    100%
+                    <CountUp end={100} duration={1800} />%
                   </span>
                   <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider block">
                     Confidential NDA
