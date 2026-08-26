@@ -8,6 +8,7 @@ import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import IndustriesSection from "@/components/sections/IndustriesSection";
+import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
 
 export default function Home() {
@@ -23,9 +24,11 @@ export default function Home() {
         <ProcessSection />
         <PortfolioSection />
         <IndustriesSection />
+        <FAQSection />
         <CTASection />
       </main>
       <Footer />
     </>
   );
 }
+

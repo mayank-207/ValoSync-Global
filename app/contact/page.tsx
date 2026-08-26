@@ -17,6 +17,7 @@ import {
   ShieldIcon,
   ChevronDownIcon,
 } from "@/components/ui/Icons";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -338,21 +339,7 @@ export default function ContactPage() {
               subtitle="Quick answers regarding your discovery call, NDA protection, and scope proposals."
               center
             />
-            <div className="space-y-4">
-              {contactFaqs.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800"
-                >
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2">
-                    {faq.question}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <FAQAccordion items={contactFaqs} defaultOpenIndex={0} />
           </div>
         </section>
       </main>

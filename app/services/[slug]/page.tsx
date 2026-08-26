@@ -17,6 +17,7 @@ import {
   MarketingIcon,
   ChevronDownIcon,
 } from "@/components/ui/Icons";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 type ServiceSlug =
   | "custom-software"
@@ -680,26 +681,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         {/* Dynamic FAQ Accordion */}
         <section className="section-padding bg-slate-50 dark:bg-[#060e24]/80">
           <div className="container max-w-3xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
                 {data.title} FAQs
               </h2>
             </div>
-            <div className="space-y-4">
-              {data.faqs.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className="p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800"
-                >
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2">
-                    {faq.question}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <FAQAccordion items={data.faqs} defaultOpenIndex={0} />
           </div>
         </section>
 

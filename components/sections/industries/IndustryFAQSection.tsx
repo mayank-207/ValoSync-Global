@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { ChevronDownIcon } from "@/components/ui/Icons";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 const faqs = [
   {
@@ -33,15 +33,9 @@ const faqs = [
 ];
 
 export default function IndustryFAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section className="section-padding bg-white dark:bg-[#060e24] relative">
-      <div className="container">
+      <div className="container max-w-3xl mx-auto">
         <SectionHeading
           badge="Frequently Asked Questions"
           title="Everything You Need to Know About Our Industry Engineering"
@@ -49,42 +43,9 @@ export default function IndustryFAQSection() {
           center
         />
 
-        <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div
-                key={idx}
-                className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0F172A]/60 overflow-hidden transition-all duration-200"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFAQ(idx)}
-                  className="flex items-center justify-between w-full p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
-                  aria-expanded={isOpen}
-                >
-                  <span className="text-base sm:text-lg font-bold text-slate-900 dark:text-white pr-4">
-                    {faq.question}
-                  </span>
-                  <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-300 transition-transform duration-300 flex-shrink-0 ${
-                      isOpen ? "rotate-180 bg-cyan-500 text-white dark:bg-cyan-500" : ""
-                    }`}
-                  >
-                    <ChevronDownIcon size={18} />
-                  </div>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-200/60 dark:border-slate-800/80">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+        <FAQAccordion items={faqs} defaultOpenIndex={0} />
       </div>
     </section>
   );
 }
+
