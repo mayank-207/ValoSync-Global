@@ -49,7 +49,7 @@ const processSteps = [
 
 export default function IndustryProcessSection() {
   return (
-    <section className="section-padding bg-slate-50 dark:bg-[#060e24]/80 relative">
+    <section className="section-padding bg-[#F7F9FC] relative">
       <div className="container">
         <SectionHeading
           badge="Our Engagement Workflow"
@@ -62,25 +62,25 @@ export default function IndustryProcessSection() {
           {processSteps.map((step, idx) => (
             <div
               key={idx}
-              className="relative flex flex-col p-6 rounded-2xl bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+              className="relative flex flex-col p-6 rounded-2xl bg-white border border-[#D9E1EC] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
             >
               {/* Step Number Badge */}
               <div className="flex items-center justify-between mb-6">
-                <span className="text-3xl font-black text-cyan-500/30 group-hover:text-cyan-500 transition-colors duration-300">
+                <span className="text-3xl font-black text-[#0D47A1]/40 group-hover:text-[#0D47A1] transition-colors duration-300">
                   {step.step}
                 </span>
-                <div className="w-10 h-10 rounded-xl bg-cyan-50 dark:bg-cyan-950/40 text-cyan-500 flex items-center justify-center border border-cyan-100 dark:border-cyan-900/30">
+                <div className="w-10 h-10 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] flex items-center justify-center border border-[#0D47A1]/20">
                   {step.icon}
                 </div>
               </div>
 
               {/* Title */}
-              <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-cyan-500 transition-colors duration-200">
+              <h3 className="text-base font-bold text-[#1A1A1A] mb-2 group-hover:text-[#0D47A1] transition-colors duration-200">
                 {step.title}
               </h3>
 
               {/* Description */}
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-xs text-[#4A5568] leading-relaxed">
                 {step.description}
               </p>
             </div>

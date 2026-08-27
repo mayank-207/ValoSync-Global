@@ -186,10 +186,10 @@ export default function IndustriesGridSection() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 ${
+              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1]/40 ${
                 activeCategory === cat
-                  ? "bg-cyan-500 text-white shadow-md shadow-cyan-500/20 scale-105"
-                  : "bg-white dark:bg-[#0F172A] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-cyan-500/40 hover:text-cyan-500"
+                  ? "bg-[#0D47A1] text-white shadow-md shadow-[#0D47A1]/20 scale-105"
+                  : "bg-white text-[#4A5568] border border-[#D9E1EC] hover:border-[#0D47A1] hover:text-[#0D47A1]"
               }`}
             >
               {cat}

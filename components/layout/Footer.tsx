@@ -54,65 +54,32 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-auto pt-16" style={{ background: "var(--primary-color)" }}>
-      <div
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage:
-            "var(--gradient-decorative)",
-        }}
-      />
-
+    <footer className="relative mt-auto pt-16 bg-[#071A3D] text-white">
       <div className="relative container">
         {/* Pre-footer Call to Action Card */}
-        <section
-          className="relative mb-16 p-8 md:p-12 rounded-3xl overflow-hidden shadow-2xl border"
-          style={{
-            background:
-              "var(--gradient-cta)",
-            borderColor: "var(--color-accent-border-alpha)",
-          }}
-        >
+        <section className="relative mb-16 p-8 md:p-12 rounded-3xl overflow-hidden shadow-2xl border border-[#0D47A1]/40 bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1]">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <span
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-full mb-4 border"
-                style={{
-                  background: "var(--color-accent-soft-alpha)",
-                  borderColor: "var(--color-accent-border-alpha)",
-                  color: "var(--accent-color)",
-                }}
-              >
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-full mb-4 border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37]">
                 Let&apos;s Build Success Together
               </span>
-              <h2
-                className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-3"
-                style={{ color: "var(--text-light)" }}
-              >
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-3 text-white">
                 Ready to Accelerate Your{" "}
-                <span style={{ color: "var(--accent-color)" }}>Digital Growth?</span>
+                <span className="text-[#D4AF37]">Digital Growth?</span>
               </h2>
-              <p
-                className="text-sm md:text-base leading-relaxed"
-                style={{ color: "var(--color-inverse-muted)" }}
-              >
+              <p className="text-sm md:text-base leading-relaxed text-slate-300">
                 Talk with VeloSync Global about custom software, CRM, web development, automation, cloud delivery or digital growth requirements.
               </p>
             </div>
             <div className="flex lg:justify-end">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 px-7 py-4 text-base font-bold rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/40"
-                style={{
-                  background: "var(--gradient-accent)",
-                  color: "var(--text-light)",
-                  boxShadow: "var(--shadow-lg)",
-                }}
+                className="group inline-flex items-center gap-3 px-7 py-4 text-base font-bold rounded-xl transition-all duration-200 hover:-translate-y-0.5 shadow-lg bg-[#0D47A1] hover:bg-[#0a3882] text-white"
               >
                 Book Free Consultation
                 <ArrowRightIcon
                   size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
+                  className="transition-transform duration-200 group-hover:translate-x-1"
                 />
               </Link>
             </div>

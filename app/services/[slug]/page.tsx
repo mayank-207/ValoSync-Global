@@ -576,12 +576,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         {/* Dynamic Hero Section */}
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyan-500/15 blur-[120px] rounded-full pointer-events-none" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#D4AF37]/15 blur-[120px] rounded-full pointer-events-none" />
 
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide mb-6">
-                <SparkleIcon size={16} className="text-cyan-400" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
+                <SparkleIcon size={16} className="text-[#D4AF37]" />
                 <span>{data.badge}</span>
               </div>
 
@@ -608,7 +608,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   href="#capabilities"
                   variant="outline"
                   size="lg"
-                  leftIcon={<ZapIcon size={18} className="text-cyan-400" />}
+                  leftIcon={<ZapIcon size={18} className="text-[#D4AF37]" />}
                 >
                   Explore Capabilities
                 </Button>
@@ -618,8 +618,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-left pt-8 border-t border-slate-800/80">
                 {data.highlights.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2">
-                    <CheckCircleIcon size={18} className="text-cyan-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm font-medium text-slate-300">{item}</span>
+                    <CheckCircleIcon size={18} className="text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm font-medium text-slate-200">{item}</span>
                   </div>
                 ))}
               </div>
@@ -631,7 +631,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <section className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-cyan-500 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider block mb-2">
+              <span className="text-[#0D47A1] dark:text-[#D4AF37] font-bold text-xs uppercase tracking-wider block mb-2">
                 Problem & Solution
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
@@ -641,17 +641,17 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Pain Points */}
-              <div className="bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-red-500/20 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center text-base">
+              <div className="bg-white p-8 rounded-3xl border border-[#D9E1EC] shadow-lg">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-lg bg-[#071A3D]/10 text-[#071A3D] flex items-center justify-center text-base font-bold">
                     ✕
                   </span>
                   Common Challenges
                 </h3>
                 <ul className="space-y-4">
                   {data.painPoints.map((p, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                      <span className="text-red-500 font-bold mt-0.5">•</span>
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568]">
+                      <span className="text-[#071A3D] font-bold mt-0.5">•</span>
                       <span>{p}</span>
                     </li>
                   ))}
@@ -659,15 +659,15 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               </div>
 
               {/* Engineered Solution */}
-              <div className="bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/30 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
-                  <CheckCircleIcon size={24} className="text-cyan-400" />
-                  Velosync Global Approach
+              <div className="bg-white p-8 rounded-3xl border border-[#0D47A1]/30 shadow-lg">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
+                  <CheckCircleIcon size={24} className="text-[#D4AF37]" />
+                  VeloSync Global Approach
                 </h3>
                 <ul className="space-y-4">
                   {data.solutions.map((s, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300 font-medium">
-                      <CheckCircleIcon size={18} className="text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568] font-medium">
+                      <CheckCircleIcon size={18} className="text-[#0D47A1] flex-shrink-0 mt-0.5" />
                       <span>{s}</span>
                     </li>
                   ))}
@@ -681,7 +681,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <section id="capabilities" className="section-padding bg-white dark:bg-[#060e24] relative">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-cyan-500 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider block mb-2">
+              <span className="text-[#0D47A1] dark:text-[#D4AF37] font-bold text-xs uppercase tracking-wider block mb-2">
                 Core Modules & Features
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
@@ -693,9 +693,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               {data.capabilities.map((cap, idx) => (
                 <div
                   key={idx}
-                  className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 hover:border-cyan-500/40 transition-all duration-300"
+                  className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 hover:border-[#0D47A1]/40 transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 font-bold flex items-center justify-center text-sm mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] font-bold flex items-center justify-center text-sm mb-4">
                     0{idx + 1}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
@@ -720,7 +720,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               {data.techStack.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="px-5 py-2.5 rounded-xl bg-slate-800 text-cyan-300 text-sm font-semibold border border-slate-700/60"
+                  className="px-5 py-2.5 rounded-xl bg-slate-800 text-[#D4AF37] text-sm font-semibold border border-slate-700/60"
                 >
                   {tech}
                 </span>

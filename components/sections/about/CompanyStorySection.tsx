@@ -37,7 +37,7 @@ const milestones = [
 
 export default function CompanyStorySection() {
   return (
-    <section className="section-padding bg-slate-50 dark:bg-[#060e24]/80 relative overflow-hidden">
+    <section className="section-padding bg-[#F7F9FC] relative overflow-hidden">
       <div className="container">
         <SectionHeading
           badge="Company Evolution"
@@ -48,7 +48,7 @@ export default function CompanyStorySection() {
 
         <div className="max-w-4xl mx-auto relative">
           {/* Vertical Connecting Line */}
-          <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-0.5 bg-gradient-to-b from-cyan-500 via-blue-500 to-indigo-500 -translate-x-1/2" />
+          <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-0.5 bg-[#0D47A1]/30 -translate-x-1/2" />
 
           <div className="space-y-8 sm:space-y-12">
             {milestones.map((m, idx) => {
@@ -61,19 +61,19 @@ export default function CompanyStorySection() {
                   }`}
                 >
                   {/* Timeline Badge/Dot */}
-                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-cyan-500 text-white items-center justify-center font-bold text-sm shadow-lg shadow-cyan-500/30 z-10">
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#0D47A1] text-white items-center justify-center font-bold text-sm shadow-lg z-10">
                     {idx + 1}
                   </div>
 
                   {/* Content Card */}
-                  <div className="w-full md:w-[calc(50%-2rem)] p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-wider mb-3">
+                  <div className="w-full md:w-[calc(50%-2rem)] p-6 sm:p-8 rounded-3xl bg-white border border-[#D9E1EC] shadow-lg hover:shadow-xl transition-all duration-300">
+                    <span className="inline-block px-3 py-1 rounded-full bg-[#0D47A1]/10 text-[#0D47A1] text-xs font-bold uppercase tracking-wider mb-3">
                       {m.phase}
                     </span>
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                    <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">
                       {m.title}
                     </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p className="text-sm text-[#4A5568] leading-relaxed">
                       {m.description}
                     </p>
                   </div>

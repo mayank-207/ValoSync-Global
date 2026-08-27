@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
       <main id="main" className="pt-32 pb-24 bg-white dark:bg-[#060e24] text-slate-900 dark:text-white">
         <div className="container max-w-4xl mx-auto px-4">
           <div className="mb-12 text-center">
-            <span className="px-3.5 py-1.5 rounded-full bg-cyan-500/10 text-cyan-500 font-semibold text-xs uppercase tracking-wider">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#0D47A1]/10 text-[#0D47A1] font-semibold text-xs uppercase tracking-wider">
               Legal Compliance
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold mt-4 mb-3">
@@ -81,7 +81,7 @@ export default function PrivacyPolicyPage() {
               </h2>
               <p>
                 If you have questions regarding this Privacy Policy or wish to request access to or correction of your personal information, please email our Privacy Officer at{" "}
-                <a href="mailto:privacy@velosyncglobal.com" className="text-cyan-500 font-semibold hover:underline">
+                <a href="mailto:privacy@velosyncglobal.com" className="text-[#0D47A1] font-semibold hover:underline">
                   privacy@velosyncglobal.com
                 </a>.
               </p>

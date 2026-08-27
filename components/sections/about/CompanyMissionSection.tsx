@@ -9,31 +9,28 @@ export default function CompanyMissionSection() {
       description:
         "To liberate businesses from manual administrative bottlenecks by building high-performing custom software, intelligent CRMs, and automated workflow ecosystems.",
       icon: <RocketIcon size={28} />,
-      accentColor: "from-cyan-500/20 to-blue-500/10 border-cyan-500/30 text-cyan-500",
     },
     {
       title: "Our Vision",
       description:
         "To become a globally recognized IT solutions leader and trusted digital transformation partner for Australian SMEs and international organizations.",
       icon: <EyeIcon size={28} />,
-      accentColor: "from-indigo-500/20 to-purple-500/10 border-indigo-500/30 text-indigo-500",
     },
     {
       title: "Our Core Focus",
       description:
         "Solving high-value operational challenges through domain-specific software engineering, strict data privacy compliance, and continuous ROI delivery.",
       icon: <TargetIcon size={28} />,
-      accentColor: "from-emerald-500/20 to-teal-500/10 border-emerald-500/30 text-emerald-500",
     },
   ];
 
   return (
-    <section className="section-padding bg-slate-50 dark:bg-[#060e24]/70 relative">
+    <section className="section-padding bg-[#F7F9FC] relative">
       <div className="container">
         <SectionHeading
           badge="Mission & Vision"
           title="Empowering Australian Businesses Through Intelligent Technology"
-          subtitle="At Velosync Global, we don't just write code—we re-engineer business operations to achieve unprecedented speed, accuracy, and profitability."
+          subtitle="At VeloSync Global, we don't just write code—we re-engineer business operations to achieve unprecedented speed, accuracy, and profitability."
           center
         />
 
@@ -41,23 +38,23 @@ export default function CompanyMissionSection() {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 flex flex-col justify-between"
+              className="p-8 rounded-3xl bg-white border border-[#D9E1EC] shadow-md flex flex-col justify-between"
             >
               <div>
-                <span className="p-3 rounded-2xl bg-cyan-500/10 text-cyan-400 inline-block mb-6">
+                <span className="p-3 rounded-2xl bg-[#0D47A1]/10 text-[#0D47A1] inline-block mb-6 border border-[#0D47A1]/20">
                   {pillar.icon}
                 </span>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">
                   {pillar.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                <p className="text-[#4A5568] text-sm leading-relaxed mb-6">
                   {pillar.description}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center gap-2 text-xs font-semibold text-cyan-500">
-                <CheckCircleIcon size={16} />
-                <span>Velosync Global Pillar</span>
+              <div className="pt-4 border-t border-[#F0F4FA] flex items-center gap-2 text-xs font-semibold text-[#0D47A1]">
+                <CheckCircleIcon size={16} className="text-[#D4AF37]" />
+                <span>VeloSync Global Pillar</span>
               </div>
             </div>
           ))}

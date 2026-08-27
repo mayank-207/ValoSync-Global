@@ -33,37 +33,37 @@ export default function WhyPartnerSection() {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1] text-white relative overflow-hidden">
       <div className="container relative z-10">
         <SectionHeading
           badge="The Velosync Advantage"
-          title="Why Leading Businesses Choose Velosync Global"
+          title="Why Leading Businesses Choose VeloSync Global"
           subtitle="A comparative look at how our engineering excellence and client dedication set us apart."
           center
         />
 
         {/* Comparison Table */}
-        <div className="max-w-4xl mx-auto overflow-hidden rounded-3xl border border-slate-800 bg-[#0F172A]/90 shadow-2xl mb-12">
-          <div className="grid grid-cols-12 bg-slate-900/90 p-4 sm:p-6 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-400 border-b border-slate-800">
-            <div className="col-span-4">Feature / Capability</div>
-            <div className="col-span-4 text-cyan-400">Velosync Global</div>
+        <div className="max-w-4xl mx-auto overflow-hidden rounded-3xl border border-white/10 bg-[#071A3D]/90 shadow-2xl mb-12">
+          <div className="grid grid-cols-12 bg-[#041026] p-4 sm:p-6 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-400 border-b border-white/10">
+            <div className="col-span-4 text-white">Feature / Capability</div>
+            <div className="col-span-4 text-[#D4AF37]">VeloSync Global</div>
             <div className="col-span-4 text-slate-400">Traditional Agencies</div>
           </div>
 
-          <div className="divide-y divide-slate-800">
+          <div className="divide-y divide-white/10">
             {comparison.map((row, idx) => (
               <div
                 key={idx}
-                className="grid grid-cols-12 p-4 sm:p-6 items-center text-xs sm:text-sm hover:bg-slate-800/40 transition-colors duration-200"
+                className="grid grid-cols-12 p-4 sm:p-6 items-center text-xs sm:text-sm hover:bg-white/5 transition-colors duration-200"
               >
                 <div className="col-span-4 font-bold text-white pr-2">
                   {row.feature}
                 </div>
-                <div className="col-span-4 text-cyan-300 font-medium flex items-center gap-2 pr-2">
-                  <CheckCircleIcon size={16} className="text-cyan-400 flex-shrink-0 hidden sm:inline" />
+                <div className="col-span-4 text-[#D4AF37] font-medium flex items-center gap-2 pr-2">
+                  <CheckCircleIcon size={16} className="text-[#D4AF37] flex-shrink-0 hidden sm:inline" />
                   <span>{row.velosync}</span>
                 </div>
-                <div className="col-span-4 text-slate-400 font-normal">
+                <div className="col-span-4 text-slate-300 font-normal">
                   {row.others}
                 </div>
               </div>

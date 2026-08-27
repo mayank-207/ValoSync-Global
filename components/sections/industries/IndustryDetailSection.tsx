@@ -168,15 +168,15 @@ export default function IndustryDetailSection() {
             <button
               key={sector.id}
               onClick={() => setSelectedSectorId(sector.id)}
-              className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl text-sm font-bold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 ${
+              className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl text-sm font-bold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1]/40 ${
                 selectedSectorId === sector.id
-                  ? "bg-slate-900 dark:bg-slate-800 text-white shadow-xl shadow-slate-900/10 ring-2 ring-cyan-500/50"
-                  : "bg-slate-100 dark:bg-slate-900/60 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800"
+                  ? "bg-[#071A3D] text-white shadow-xl shadow-[#071A3D]/20 ring-2 ring-[#0D47A1]/50"
+                  : "bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC] hover:bg-white hover:text-[#0D47A1]"
               }`}
             >
               <span
                 className={
-                  selectedSectorId === sector.id ? "text-cyan-400" : "text-slate-400"
+                  selectedSectorId === sector.id ? "text-[#D4AF37]" : "text-[#718096]"
                 }
               >
                 {sector.icon}
@@ -187,14 +187,14 @@ export default function IndustryDetailSection() {
         </div>
 
         {/* Selected Sector Deep-Dive Card */}
-        <div className="bg-slate-50 dark:bg-[#0F172A] rounded-3xl p-6 sm:p-10 border border-slate-200/80 dark:border-slate-800 shadow-2xl transition-all duration-300">
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mb-10 pb-8 border-b border-slate-200 dark:border-slate-800">
+        <div className="bg-[#F7F9FC] rounded-3xl p-6 sm:p-10 border border-[#D9E1EC] shadow-2xl transition-all duration-300">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mb-10 pb-8 border-b border-[#D9E1EC]">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                <ZapIcon size={14} />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D47A1]/10 text-[#0D47A1] text-xs font-bold uppercase tracking-wider mb-3">
+                <ZapIcon size={14} className="text-[#D4AF37]" />
                 <span>Sector Spotlight</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">
                 {currentSector.name}
               </h3>
               <p className="text-slate-600 dark:text-slate-400 font-medium text-base mt-2">
@@ -215,16 +215,16 @@ export default function IndustryDetailSection() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10">
             {/* Challenges Column */}
-            <div className="bg-white dark:bg-[#060e24] p-6 sm:p-8 rounded-2xl border border-red-500/20 shadow-sm">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#D9E1EC] shadow-sm">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center font-bold text-lg">
+                <div className="w-10 h-10 rounded-xl bg-[#071A3D]/10 text-[#071A3D] flex items-center justify-center font-bold text-lg">
                   !
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900 dark:text-white">
+                  <h4 className="text-lg font-bold text-[#1A1A1A]">
                     Common Industry Pain Points
                   </h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                  <p className="text-xs text-[#718096]">
                     Obstacles slowing down growth & efficiency
                   </p>
                 </div>
@@ -232,8 +232,8 @@ export default function IndustryDetailSection() {
 
               <ul className="space-y-4">
                 {currentSector.challenges.map((c, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                    <span className="w-5 h-5 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
+                  <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568]">
+                    <span className="w-5 h-5 rounded-full bg-[#071A3D]/10 text-[#071A3D] flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
                       ✕
                     </span>
                     <span>{c}</span>
@@ -243,16 +243,16 @@ export default function IndustryDetailSection() {
             </div>
 
             {/* Solutions Column */}
-            <div className="bg-white dark:bg-[#060e24] p-6 sm:p-8 rounded-2xl border border-cyan-500/30 shadow-sm">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#0D47A1]/30 shadow-sm">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center font-bold">
-                  <CheckCircleIcon size={22} />
+                <div className="w-10 h-10 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] flex items-center justify-center font-bold">
+                  <CheckCircleIcon size={22} className="text-[#D4AF37]" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900 dark:text-white">
-                    Velosync Global Engineered Solution
+                  <h4 className="text-lg font-bold text-[#1A1A1A]">
+                    VeloSync Global Engineered Solution
                   </h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                  <p className="text-xs text-[#718096]">
                     Tailored software, CRM & AI automation
                   </p>
                 </div>
@@ -260,8 +260,8 @@ export default function IndustryDetailSection() {
 
               <ul className="space-y-4">
                 {currentSector.solutions.map((s, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                    <CheckCircleIcon size={18} className="text-cyan-500 flex-shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568]">
+                    <CheckCircleIcon size={18} className="text-[#0D47A1] flex-shrink-0 mt-0.5" />
                     <span className="font-medium">{s}</span>
                   </li>
                 ))}
@@ -270,20 +270,20 @@ export default function IndustryDetailSection() {
           </div>
 
           {/* Business Impact Metrics */}
-          <div className="pt-6 border-t border-slate-200 dark:border-slate-800">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4 text-center">
+          <div className="pt-6 border-t border-[#D9E1EC]">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#718096] mb-4 text-center">
               Proven Business ROI & Performance Impact
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {currentSector.outcomes.map((o, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-[#060e24] p-5 rounded-2xl text-center border border-slate-200 dark:border-slate-800/80"
+                  className="bg-[#F7F9FC] p-5 rounded-2xl text-center border border-[#D9E1EC]"
                 >
-                  <div className="text-2xl sm:text-3xl font-extrabold text-cyan-500 mb-1">
+                  <div className="text-2xl sm:text-3xl font-extrabold text-[#0D47A1] mb-1">
                     {o.value}
                   </div>
-                  <div className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+                  <div className="text-xs font-semibold text-[#4A5568]">
                     {o.label}
                   </div>
                 </div>

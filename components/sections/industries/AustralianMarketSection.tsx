@@ -40,34 +40,33 @@ export default function AustralianMarketSection() {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1] text-white relative overflow-hidden">
       {/* Glow Effects */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#D4AF37]/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Heading & Context */}
           <div className="lg:col-span-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wide mb-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold tracking-wide mb-6">
               <GlobeIcon size={16} />
               <span>Australian Market Ready</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight mb-6">
               Empower Your{" "}
-              <span className="bg-gradient-to-r from-cyan-400 to-indigo-300 bg-clip-text text-transparent">
+              <span className="text-[#D4AF37]">
                 Australian SME
               </span>{" "}
               With Scalable Digital Systems
             </h2>
 
-            <p className="text-slate-300 text-base leading-relaxed mb-8">
-              Australian businesses face unique operational, staffing, and compliance challenges. Velosync Global builds purpose-driven software and automation solutions that eliminate repetitive work, increase lead generation, and drive sustainable profit growth.
+            <p className="text-slate-200 text-base leading-relaxed mb-8">
+              Australian businesses face unique operational, staffing, and compliance challenges. VeloSync Global builds purpose-driven software and automation solutions that eliminate repetitive work, increase lead generation, and drive sustainable profit growth.
             </p>
 
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm mb-8">
-              <div className="text-sm font-semibold text-cyan-300 mb-2">
+              <div className="text-sm font-semibold text-[#D4AF37] mb-2">
                 Ideal Customer Profile (ICP) Commitment
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -91,15 +90,15 @@ export default function AustralianMarketSection() {
             {australianFeatures.map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#0F172A]/90 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 group"
+                className="p-6 rounded-2xl bg-[#071A3D]/90 border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-cyan-500/20">
+                <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 text-[#D4AF37] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-[#D4AF37]/30">
                   {item.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   {item.description}
                 </p>
               </div>

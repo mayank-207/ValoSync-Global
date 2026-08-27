@@ -18,7 +18,7 @@ export default function TermsOfServicePage() {
       <main id="main" className="pt-32 pb-24 bg-white dark:bg-[#060e24] text-slate-900 dark:text-white">
         <div className="container max-w-4xl mx-auto px-4">
           <div className="mb-12 text-center">
-            <span className="px-3.5 py-1.5 rounded-full bg-cyan-500/10 text-cyan-500 font-semibold text-xs uppercase tracking-wider">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#0D47A1]/10 text-[#0D47A1] font-semibold text-xs uppercase tracking-wider">
               Service Agreement
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold mt-4 mb-3">

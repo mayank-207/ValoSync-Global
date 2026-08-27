@@ -56,7 +56,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 dark:bg-primary-dark/95 backdrop-blur-md shadow-md border-b border-slate-200/50 dark:border-slate-800/50 py-3"
+          ? "bg-white shadow-md border-b border-[#D9E1EC] py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -79,12 +79,11 @@ export default function Header() {
                 {item.dropdown ? (
                   <>
                     <button
-                      className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-200 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
-                      style={{
-                        color: isScrolled
-                          ? "var(--text-primary)"
-                          : "var(--text-light)",
-                      }}
+                      className={`flex items-center gap-1.5 px-4 py-2 text-sm font-bold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
+                        isScrolled
+                          ? "text-[#1A1A1A] hover:text-[#0B3D91]"
+                          : "text-white hover:text-[#D4AF37]"
+                      }`}
                       aria-expanded={openDropdown === item.label}
                       aria-haspopup="true"
                     >
@@ -103,16 +102,12 @@ export default function Header() {
                           : "opacity-0 -translate-y-2 pointer-events-none"
                       }`}
                     >
-                      <ul
-                        className="w-72 p-2 rounded-2xl shadow-2xl border bg-white dark:bg-surface-dark"
-                        style={{ borderColor: "var(--border-color)" }}
-                      >
+                      <ul className="w-72 p-2 rounded-2xl shadow-2xl border bg-white border-[#D9E1EC]">
                         {item.dropdown.map((subItem) => (
                           <li key={subItem.label}>
                             <Link
                               href={subItem.href}
-                              className="block px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 hover:bg-accent/10 hover:text-accent"
-                              style={{ color: "var(--text-primary)" }}
+                              className="block px-4 py-3 text-sm font-semibold text-[#1A1A1A] rounded-xl transition-all duration-200 hover:bg-[#0B3D91]/10 hover:text-[#0B3D91]"
                             >
                               {subItem.label}
                             </Link>
@@ -124,12 +119,11 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="inline-block px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-200 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
-                    style={{
-                      color: isScrolled
-                        ? "var(--text-primary)"
-                        : "var(--text-light)",
-                    }}
+                    className={`inline-block px-4 py-2 text-sm font-bold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
+                      isScrolled
+                        ? "text-[#1A1A1A] hover:text-[#0B3D91]"
+                        : "text-white hover:text-[#D4AF37]"
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -154,8 +148,8 @@ export default function Header() {
           {/* Mobile Hamburger Toggle */}
           <button
             type="button"
-            className={`lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-200 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 ${
-              isScrolled ? "text-slate-900 dark:text-white" : "text-white"
+            className={`lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-200 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
+              isScrolled ? "text-[#1A1A1A]" : "text-white"
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
@@ -186,8 +180,7 @@ export default function Header() {
           aria-hidden="true"
         />
         <nav
-          className="relative h-full overflow-y-auto bg-white dark:bg-primary-dark shadow-2xl border-t"
-          style={{ borderColor: "var(--border-color)" }}
+          className="relative h-full overflow-y-auto bg-white shadow-2xl border-t border-[#D9E1EC]"
           aria-label="Mobile navigation"
         >
           <ul className="container py-6 flex flex-col gap-1">
@@ -197,8 +190,7 @@ export default function Header() {
                   <div className="flex flex-col">
                     <button
                       type="button"
-                      className="flex items-center justify-between w-full px-4 py-3.5 text-base font-semibold rounded-xl transition-colors duration-200 hover:bg-surface focus:outline-none"
-                      style={{ color: "var(--text-primary)" }}
+                      className="flex items-center justify-between w-full px-4 py-3.5 text-base font-bold text-[#1A1A1A] rounded-xl transition-colors duration-200 hover:bg-[#F7F9FC] focus:outline-none"
                       onClick={() =>
                         setOpenDropdown(
                           openDropdown === item.label ? null : item.label
@@ -215,13 +207,12 @@ export default function Header() {
                       />
                     </button>
                     {openDropdown === item.label && (
-                      <ul className="pl-4 mt-1 flex flex-col gap-1 border-l-2 border-accent/30 ml-4">
+                      <ul className="pl-4 mt-1 flex flex-col gap-1 border-l-2 border-[#0D47A1]/30 ml-4">
                         {item.dropdown.map((subItem) => (
                           <li key={subItem.label}>
                             <Link
                               href={subItem.href}
-                              className="block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors duration-200 hover:text-accent"
-                              style={{ color: "var(--text-secondary)" }}
+                              className="block px-4 py-2.5 text-sm font-semibold text-[#4A5568] rounded-lg transition-colors duration-200 hover:text-[#0D47A1]"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               {subItem.label}
@@ -234,8 +225,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-4 py-3.5 text-base font-semibold rounded-xl transition-colors duration-200 hover:bg-surface"
-                    style={{ color: "var(--text-primary)" }}
+                    className="block px-4 py-3.5 text-base font-bold text-[#1A1A1A] rounded-xl transition-colors duration-200 hover:bg-[#F7F9FC]"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -243,7 +233,7 @@ export default function Header() {
                 )}
               </li>
             ))}
-            <li className="pt-6 mt-4 border-t" style={{ borderColor: "var(--border-color)" }}>
+            <li className="pt-6 mt-4 border-t border-[#D9E1EC]">
               <Button
                 as="link"
                 href="/contact"

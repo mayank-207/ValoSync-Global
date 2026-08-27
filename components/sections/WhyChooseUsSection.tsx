@@ -51,8 +51,7 @@ const features = [
 export default function WhyChooseUsSection() {
   return (
     <section
-      className="section-padding relative"
-      style={{ background: "var(--background-color)" }}
+      className="section-padding relative bg-[#F7F9FC]"
       aria-labelledby="why-choose-heading"
     >
       <div className="container">
@@ -62,48 +61,37 @@ export default function WhyChooseUsSection() {
               eyebrow="Why Choose Us"
               title="Why Businesses Partner With VeloSync Global"
               description="We combine business understanding, suitable technologies and transparent delivery to build reliable digital solutions."
-              align="center"
+              align="left"
+              className="mb-8"
             />
 
-            <div
-              className="p-8 rounded-3xl border mb-16 relative overflow-hidden"
-              style={{
-                borderColor: "var(--border-color)",
-                background: "var(--surface-color)",
-              }}
-            >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="flex items-center gap-4">
-                  <span className="p-3 rounded-2xl bg-cyan-500/10 text-cyan-500 border border-cyan-500/20">
+            <div className="p-8 rounded-3xl border border-[#D9E1EC] bg-white shadow-md mb-8 relative overflow-hidden">
+              <div className="flex flex-col gap-6">
+                <div className="flex items-start gap-4">
+                  <span className="p-3 rounded-2xl bg-[#0D47A1]/10 text-[#0D47A1] border border-[#0D47A1]/20 flex-shrink-0">
                     <ShieldIcon size={24} />
                   </span>
                   <div>
-                    <h3
-                      className="text-lg font-bold"
-                      style={{ color: "var(--text-primary)" }}
-                    >
+                    <h3 className="text-lg font-bold text-[#1A1A1A]">
                       Quality-Focused and Transparent Delivery
                     </h3>
-                    <p
-                      className="text-sm mt-0.5"
-                      style={{ color: "var(--text-secondary)" }}
-                    >
+                    <p className="text-sm mt-1 text-[#4A5568] leading-relaxed">
                       Every engagement follows a structured approach to scoping, delivery, quality assurance and handover.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-6 pt-4 border-t border-slate-700/60 text-xs">
+                <div className="flex items-center gap-6 pt-4 border-t border-[#F0F4FA] text-xs">
                   <div>
-                    <span className="block text-2xl font-extrabold text-cyan-400">
+                    <span className="block text-2xl font-extrabold text-[#0D47A1]">
                       Clear
                     </span>
-                    <span className="text-slate-400">Milestones & Updates</span>
+                    <span className="text-[#718096] font-medium">Milestones & Updates</span>
                   </div>
                   <div>
-                    <span className="block text-2xl font-extrabold text-cyan-400">
+                    <span className="block text-2xl font-extrabold text-[#0D47A1]">
                       Ongoing
                     </span>
-                    <span className="text-slate-400">Support Options</span>
+                    <span className="text-[#718096] font-medium">Support Options</span>
                   </div>
                 </div>
               </div>

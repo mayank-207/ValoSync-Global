@@ -576,12 +576,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
         {/* Dynamic Hero */}
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyan-500/15 blur-[120px] rounded-full pointer-events-none" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#D4AF37]/15 blur-[120px] rounded-full pointer-events-none" />
 
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <span className="px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wide">
+              <div className="mb-6">
+                <span className="px-4 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold uppercase tracking-wide">
                   {data.category}
                 </span>
                 <span className="px-3 py-1.5 rounded-full bg-white/10 text-slate-300 text-xs font-semibold">
@@ -612,7 +612,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   href="#case-details"
                   variant="outline"
                   size="lg"
-                  leftIcon={<ZapIcon size={18} className="text-cyan-400" />}
+                  leftIcon={<ZapIcon size={18} className="text-[#D4AF37]" />}
                 >
                   Explore System Features
                 </Button>
@@ -624,12 +624,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
         {/* Metrics Banner */}
         <section className="py-10 bg-slate-900 border-y border-slate-800 text-white">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {data.results.map((r, idx) => (
-                <div key={idx} className="text-center p-4">
-                  <div className="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-1">
-                    {r.value}
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10 border-t border-slate-800/80">
+                {data.results.map((r, idx) => (
+                  <div key={idx} className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <div className="text-3xl sm:text-4xl font-extrabold text-[#D4AF37] mb-1">
+                      {r.value}
+                    </div>
                   <div className="text-xs sm:text-sm text-slate-400 font-medium uppercase tracking-wider">
                     {r.label}
                   </div>
@@ -643,14 +643,14 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <section id="case-details" className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative">
           <div className="container">
             {/* Overview */}
-            <div className="max-w-3xl mx-auto mb-16 bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-md">
-              <span className="text-cyan-500 font-bold text-xs uppercase tracking-wider block mb-2">
+            <div className="max-w-3xl mx-auto mb-16 bg-white p-8 rounded-3xl border border-[#D9E1EC] shadow-md">
+              <span className="text-[#0D47A1] font-bold text-xs uppercase tracking-wider block mb-2">
                 Client Context & Overview
               </span>
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">
                 About the Client
               </h2>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base">
+              <p className="text-[#4A5568] leading-relaxed text-base">
                 {data.clientOverview}
               </p>
             </div>
@@ -658,17 +658,17 @@ export default async function CaseStudyPage({ params }: PageProps) {
             {/* Problem vs Solution Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
               {/* Challenges */}
-              <div className="bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-red-500/20 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center text-base">
+              <div className="bg-white p-8 rounded-3xl border border-[#D9E1EC] shadow-lg">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-lg bg-[#071A3D]/10 text-[#071A3D] flex items-center justify-center text-base font-bold">
                     ✕
                   </span>
                   Technical & Operational Bottlenecks
                 </h3>
                 <ul className="space-y-4">
                   {data.challenges.map((c, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                      <span className="text-red-500 font-bold mt-0.5">•</span>
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568]">
+                      <span className="text-[#071A3D] font-bold mt-0.5">•</span>
                       <span>{c}</span>
                     </li>
                   ))}
@@ -676,15 +676,15 @@ export default async function CaseStudyPage({ params }: PageProps) {
               </div>
 
               {/* Solutions */}
-              <div className="bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/30 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
-                  <CheckCircleIcon size={24} className="text-cyan-400" />
-                  Velosync Global Engineered Solution
+              <div className="bg-white p-8 rounded-3xl border border-[#0D47A1]/30 shadow-lg">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
+                  <CheckCircleIcon size={24} className="text-[#D4AF37]" />
+                  VeloSync Global Engineered Solution
                 </h3>
                 <ul className="space-y-4">
                   {data.solutions.map((s, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300 font-medium">
-                      <CheckCircleIcon size={18} className="text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568] font-medium">
+                      <CheckCircleIcon size={18} className="text-[#0D47A1] flex-shrink-0 mt-0.5" />
                       <span>{s}</span>
                     </li>
                   ))}
@@ -695,10 +695,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
             {/* Features Grid */}
             <div className="mb-16">
               <div className="text-center max-w-3xl mx-auto mb-12">
-                <span className="text-cyan-500 font-bold text-xs uppercase tracking-wider block mb-2">
+                <span className="text-[#0D47A1] font-bold text-xs uppercase tracking-wider block mb-2">
                   System Architecture & Capabilities
                 </span>
-                <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">
+                <h2 className="text-3xl font-extrabold text-[#1A1A1A]">
                   Key Features Engineered
                 </h2>
               </div>
@@ -707,15 +707,15 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 {data.features.map((feat, idx) => (
                   <div
                     key={idx}
-                    className="p-7 rounded-3xl bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 shadow-sm"
+                    className="p-7 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] shadow-sm"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 font-bold flex items-center justify-center text-sm mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] font-bold flex items-center justify-center text-sm mb-4">
                       0{idx + 1}
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                    <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">
                       {feat.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    <p className="text-[#4A5568] text-sm leading-relaxed">
                       {feat.description}
                     </p>
                   </div>
@@ -724,7 +724,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </div>
 
             {/* Tech Stack & Deliverables Bar */}
-            <div className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800">
+            <div className="bg-[#071A3D] text-white p-8 rounded-3xl border border-white/10 shadow-2xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
@@ -733,7 +733,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <ul className="space-y-2">
                     {data.deliverables.map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm font-medium text-slate-200">
-                        <div className="w-2 h-2 rounded-full bg-cyan-400" />
+                        <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -748,7 +748,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                     {data.techStack.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1.5 rounded-lg bg-slate-800 text-cyan-300 text-xs font-semibold border border-slate-700"
+                        className="px-3 py-1.5 rounded-lg bg-[#041026] text-[#D4AF37] text-xs font-semibold border border-white/15"
                       >
                         {tech}
                       </span>

@@ -28,10 +28,9 @@ const statsData = [
 
 export default function PortfolioStatsSection() {
   return (
-    <section className="section-padding bg-slate-900 text-white relative overflow-hidden">
+    <section className="section-padding bg-[#071A3D] text-white relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#D4AF37]/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container relative z-10">
         <SectionHeading
@@ -45,15 +44,15 @@ export default function PortfolioStatsSection() {
           {statsData.map((stat, idx) => (
             <div
               key={idx}
-              className="bg-slate-800/60 backdrop-blur-md p-8 rounded-3xl border border-slate-700/80 hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1 shadow-xl text-center"
+              className="bg-[#041026]/80 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:border-[#D4AF37]/40 transition-all duration-300 hover:-translate-y-1 shadow-xl text-center"
             >
-              <div className="text-4xl sm:text-5xl font-extrabold text-cyan-400 mb-2">
+              <div className="text-4xl sm:text-5xl font-extrabold text-[#D4AF37] mb-2">
                 {stat.number}
               </div>
               <h3 className="text-base font-bold text-white mb-2">
                 {stat.label}
               </h3>
-              <p className="text-slate-400 text-xs leading-relaxed">
+              <p className="text-slate-300 text-xs leading-relaxed">
                 {stat.description}
               </p>
             </div>

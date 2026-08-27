@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "outline" | "ghost" | "gold";
 type ButtonSize = "sm" | "md" | "lg";
 
 type ButtonBaseProps = {
@@ -48,6 +48,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   secondary: "button-secondary",
   outline: "button-outline",
   ghost: "button-ghost",
+  gold: "button-gold",
 };
 
 export default function Button(props: ButtonProps) {
