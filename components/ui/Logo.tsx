@@ -28,8 +28,8 @@ export default function Logo({ variant = "dark", className = "" }: LogoProps) {
       aria-label="Velosync Global - Home"
     >
       {/* Temporary Logo Icon Emblem */}
-      <span className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#0B1B3D] via-[#1E3A8A] to-[#06B6D4] p-0.5 shadow-md transition-transform duration-300 group-hover:scale-105">
-        <span className="w-full h-full bg-[#0B1B3D] rounded-[10px] flex items-center justify-center">
+      <span className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent p-0.5 shadow-md transition-transform duration-300 group-hover:scale-105">
+        <span className="w-full h-full bg-primary rounded-[10px] flex items-center justify-center">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -39,13 +39,13 @@ export default function Logo({ variant = "dark", className = "" }: LogoProps) {
           >
             <path
               d="M12 2L3 7V12C3 17.52 6.84 22.74 12 24C17.16 22.74 21 17.52 21 12V7L12 2Z"
-              stroke="#06B6D4"
+              stroke="currentColor"
               strokeWidth="2"
               strokeLinejoin="round"
             />
             <path
               d="M8.5 12.5L11 15L15.5 9.5"
-              stroke="#06B6D4"
+              stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
