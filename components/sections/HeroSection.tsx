@@ -35,7 +35,7 @@ export default function HeroSection() {
           className="absolute -top-24 right-0 w-[600px] h-[600px] rounded-full blur-[120px] animate-float"
           style={{
             background:
-              "radial-gradient(circle, rgba(6, 182, 212, 0.35) 0%, transparent 70%)",
+              "var(--gradient-decorative)",
           }}
         />
         <div
@@ -67,8 +67,8 @@ export default function HeroSection() {
               <span
                 className="inline-flex items-center gap-2 px-4 py-2 text-xs md:text-sm font-semibold rounded-full mb-6 border backdrop-blur-md"
                 style={{
-                  background: "rgba(255, 255, 255, 0.06)",
-                  borderColor: "rgba(6, 182, 212, 0.35)",
+                  background: "var(--color-inverse-subtle)",
+                  borderColor: "var(--color-accent-border-alpha)",
                   color: "var(--accent-color)",
                 }}
               >
@@ -93,7 +93,7 @@ export default function HeroSection() {
             {/* Hero Subtitle */}
             <p
               className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 max-w-2xl animate-fade-in-up animate-delay-200"
-              style={{ color: "rgba(203, 213, 225, 0.9)" }}
+              style={{ color: "var(--color-inverse-muted)" }}
             >
               VeloSync Global designs and develops custom software, CRM platforms, web applications and practical automation solutions that help Australian businesses simplify operations and grow with confidence.
             </p>
@@ -113,8 +113,8 @@ export default function HeroSection() {
                 className="group inline-flex items-center gap-2.5 px-6 py-4 text-base font-semibold rounded-2xl transition-all duration-300 hover:-translate-y-0.5 border backdrop-blur-md"
                 style={{
                   color: "var(--text-light)",
-                  borderColor: "rgba(255, 255, 255, 0.2)",
-                  background: "rgba(255, 255, 255, 0.05)",
+                  borderColor: "var(--color-inverse-border)",
+                  background: "var(--color-inverse-subtle)",
                 }}
               >
                 Explore Our Services
@@ -128,12 +128,12 @@ export default function HeroSection() {
                 <li
                   key={item}
                   className="flex items-center gap-2 text-xs sm:text-sm font-medium"
-                  style={{ color: "rgba(203, 213, 225, 0.9)" }}
+                  style={{ color: "var(--color-inverse-muted)" }}
                 >
                   <span
                     className="inline-flex items-center justify-center w-5 h-5 rounded-full flex-shrink-0"
                     style={{
-                      background: "rgba(6, 182, 212, 0.2)",
+                      background: "var(--color-accent-soft-alpha)",
                       color: "var(--accent-color)",
                     }}
                   >
@@ -151,8 +151,8 @@ export default function HeroSection() {
               className="relative rounded-3xl p-6 sm:p-8 overflow-hidden shadow-2xl border backdrop-blur-xl"
               style={{
                 background:
-                  "linear-gradient(145deg, rgba(15, 23, 42, 0.9) 0%, rgba(11, 27, 61, 0.95) 100%)",
-                borderColor: "rgba(6, 182, 212, 0.25)",
+                  "var(--gradient-dark)",
+                borderColor: "var(--color-accent-border-alpha)",
                 boxShadow: "0 25px 60px -15px rgba(0, 0, 0, 0.6)",
               }}
             >
@@ -166,7 +166,7 @@ export default function HeroSection() {
                     velosync-engine.v1.0.ts
                   </span>
                 </div>
-                <span className="px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider rounded-md bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+                <span className="px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider rounded-md bg-accent/20 text-accent border border-accent/30">
                   SYSTEM ACTIVE
                 </span>
               </div>
@@ -175,7 +175,7 @@ export default function HeroSection() {
               <div className="space-y-4 font-mono text-xs text-slate-300">
                 <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <span className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                    <span className="p-2 rounded-lg bg-accent/10 text-accent">
                       <BrainIcon size={18} />
                     </span>
                     <div>
@@ -206,14 +206,14 @@ export default function HeroSection() {
                       </p>
                     </div>
                   </div>
-                  <span className="text-xs text-cyan-400 font-semibold font-sans">
+                  <span className="text-xs text-accent font-semibold font-sans">
                     Built to Scale
                   </span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <span className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                    <span className="p-2 rounded-lg bg-accent/10 text-accent">
                       <ZapIcon size={18} />
                     </span>
                     <div>
@@ -234,7 +234,7 @@ export default function HeroSection() {
               {/* Progress metric footer inside mockup */}
               <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
                 <span>Security & NDA Protection</span>
-                <span className="text-cyan-400 font-medium">Built In</span>
+                <span className="text-accent font-medium">Built In</span>
               </div>
             </div>
 
@@ -251,7 +251,7 @@ export default function HeroSection() {
                 <div
                   className="inline-flex items-center justify-center w-12 h-12 rounded-xl"
                   style={{
-                    background: "rgba(6, 182, 212, 0.12)",
+                    background: "var(--color-accent-soft-alpha)",
                     color: "var(--accent-color)",
                   }}
                 >
@@ -287,7 +287,7 @@ export default function HeroSection() {
                 <div
                   className="inline-flex items-center justify-center w-12 h-12 rounded-xl"
                   style={{
-                    background: "rgba(11, 27, 61, 0.1)",
+                    background: "var(--color-primary-soft-alpha)",
                     color: "var(--primary-color)",
                   }}
                 >
