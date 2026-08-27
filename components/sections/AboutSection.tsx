@@ -50,7 +50,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Visual Card Cluster */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-3xl p-8 border bg-gradient-to-br from-slate-900 via-[#0B1B3D] to-slate-900 text-white shadow-2xl overflow-hidden">
+            <div className="relative rounded-3xl p-8 border bg-gradient-to-br from-primary-dark via-primary to-primary-dark text-white shadow-2xl overflow-hidden">
               <div
                 className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl pointer-events-none"
                 aria-hidden="true"
@@ -124,7 +124,7 @@ export default function AboutSection() {
             </div>
 
             {/* Accent Floating Badge */}
-            <div className="hidden sm:flex absolute -bottom-6 -right-6 p-4 rounded-2xl bg-white dark:bg-[#0F172A] border shadow-xl items-center gap-3">
+            <div className="hidden sm:flex absolute -bottom-6 -right-6 p-4 rounded-2xl bg-white dark:bg-surface-dark border shadow-xl items-center gap-3">
               <span className="p-2.5 rounded-xl bg-amber-500/10 text-amber-500">
                 <StarIcon size={22} />
               </span>
@@ -184,7 +184,7 @@ export default function AboutSection() {
                   <div
                     className="inline-flex items-center justify-center w-9 h-9 rounded-lg mb-2"
                     style={{
-                      background: "rgba(6, 182, 212, 0.1)",
+                      background: "var(--color-accent-soft-alpha)",
                       color: "var(--accent-color)",
                     }}
                   >
