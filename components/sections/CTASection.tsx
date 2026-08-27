@@ -53,7 +53,7 @@ export default function CTASection() {
           className="relative rounded-3xl p-8 md:p-12 lg:p-16 overflow-hidden border shadow-2xl"
           style={{
             background: "var(--gradient-hero)",
-            borderColor: "rgba(6, 182, 212, 0.25)",
+            borderColor: "var(--color-accent-border-alpha)",
           }}
         >
           {/* Background Lighting Elements */}
@@ -61,7 +61,7 @@ export default function CTASection() {
             className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[100px] pointer-events-none"
             style={{
               background:
-                "radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, transparent 70%)",
+                "var(--gradient-decorative)",
             }}
             aria-hidden="true"
           />
@@ -80,8 +80,8 @@ export default function CTASection() {
               <span
                 className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-full mb-6 border"
                 style={{
-                  background: "rgba(255, 255, 255, 0.08)",
-                  borderColor: "rgba(6, 182, 212, 0.4)",
+                  background: "var(--color-inverse-subtle)",
+                  borderColor: "var(--color-accent-border-alpha)",
                   color: "var(--accent-color)",
                 }}
               >
@@ -102,7 +102,7 @@ export default function CTASection() {
 
               <p
                 className="text-base sm:text-lg leading-relaxed mb-8 max-w-xl"
-                style={{ color: "rgba(203, 213, 225, 0.9)" }}
+                style={{ color: "var(--color-inverse-muted)" }}
               >
                 Discuss your custom software, CRM, web development, automation, cloud delivery or digital growth requirements with VeloSync Global.
               </p>
@@ -114,7 +114,7 @@ export default function CTASection() {
                   "Clear Scope, Milestones and Commercial Proposal",
                 ].map((point) => (
                   <div key={point} className="flex items-center gap-3 text-sm font-medium">
-                    <span className="p-1 rounded-full bg-cyan-500/20 text-cyan-400">
+                    <span className="p-1 rounded-full bg-accent/20 text-accent">
                       <CheckCircleIcon size={16} />
                     </span>
                     <span className="text-slate-200">{point}</span>
@@ -126,24 +126,24 @@ export default function CTASection() {
             {/* Right Column: Quick Interactive Enquiry Form */}
             <div className="lg:col-span-6">
               <div
-                className="p-6 sm:p-8 rounded-3xl backdrop-blur-xl border bg-white/95 dark:bg-[#0F172A]/95 text-slate-900 dark:text-white shadow-2xl"
-                style={{ borderColor: "rgba(255, 255, 255, 0.15)" }}
+                className="p-6 sm:p-8 rounded-3xl backdrop-blur-xl border bg-white/95 dark:bg-surface-dark/95 text-slate-900 dark:text-white shadow-2xl"
+                style={{ borderColor: "var(--color-inverse-border)" }}
               >
                 {submitted ? (
                   <div className="text-center py-10 space-y-4">
-                    <div className="w-16 h-16 rounded-full bg-cyan-500/20 text-cyan-500 flex items-center justify-center mx-auto">
+                    <div className="w-16 h-16 rounded-full bg-accent/20 text-accent flex items-center justify-center mx-auto">
                       <CheckCircleIcon size={36} />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
                       Consultation Request Sent!
                     </h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
-                      Thank you, <strong className="text-cyan-500">{formData.name}</strong>. Our team will review your requirements and contact you at <span className="font-semibold">{formData.email}</span> as soon as possible.
+                      Thank you, <strong className="text-accent">{formData.name}</strong>. Our team will review your requirements and contact you at <span className="font-semibold">{formData.email}</span> as soon as possible.
                     </p>
                     <button
                       type="button"
                       onClick={() => setSubmitted(false)}
-                      className="inline-block mt-4 text-xs font-bold text-cyan-500 uppercase tracking-wider hover:underline"
+                      className="inline-block mt-4 text-xs font-bold text-accent uppercase tracking-wider hover:underline"
                     >
                       Submit Another Inquiry
                     </button>
@@ -174,7 +174,7 @@ export default function CTASection() {
                           placeholder="e.g. Alex Smith"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                          className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-accent"
                         />
                       </div>
                       <div>
@@ -191,7 +191,7 @@ export default function CTASection() {
                           placeholder="alex@company.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                          className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-accent"
                         />
                       </div>
                     </div>
@@ -210,7 +210,7 @@ export default function CTASection() {
                           placeholder="+61 400 000 000"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                          className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-accent"
                         />
                       </div>
                       <div>
@@ -224,7 +224,7 @@ export default function CTASection() {
                           id="service"
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                          className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-accent"
                         >
                           <option value="Custom Software Development">Custom Software Development</option>
                           <option value="CRM Development">CRM Development</option>
@@ -249,7 +249,7 @@ export default function CTASection() {
                         placeholder="Briefly describe your goals, budget, or timeline..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                        className="w-full px-4 py-3 text-sm rounded-xl border bg-slate-50 dark:bg-slate-900 border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-accent"
                       />
                     </div>
 
