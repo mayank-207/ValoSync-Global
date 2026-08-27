@@ -25,6 +25,7 @@ type ServiceSlug =
   | "ai-automation"
   | "business-automation"
   | "web-development"
+  | "cloud-devops"
   | "digital-marketing";
 
 interface ServiceData {
@@ -118,7 +119,7 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
     metaTitle: "Custom CRM Development Services | Velosync Global",
     metaDescription:
       "Build custom CRM platforms engineered to manage sales pipelines, customer interactions, lead scoring, and automated client onboarding.",
-    heroHeadline: "Custom CRM Platforms Built for High-Converting Sales Teams",
+    heroHeadline: "Custom CRM Platforms Built for Business-Focused Sales Teams",
     heroSubtitle:
       "Eliminate clunky generic CRMs. Velosync Global engineers tailored sales pipelines, automated lead scoring, and omnichannel client management systems.",
     iconName: "crm",
@@ -175,7 +176,7 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       {
         question: "Is training provided for our sales team?",
         answer:
-          "Absoutely. We provide complete video tutorials, user documentation, and live onboarding sessions for your staff.",
+          "Yes. We provide complete video tutorials, user documentation, and live onboarding sessions for your staff.",
       },
     ],
   },
@@ -192,8 +193,8 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
     highlights: [
       "Private Enterprise RAG Bots",
       "Automated OCR Data Extraction",
-      "24/7 Conversational AI Agents",
-      "Zero Data Leakage Security",
+      "Conversational AI Assistants",
+      "Security-Conscious Integration",
     ],
     painPoints: [
       "Human staff spending hours copying data from invoices, medical files, or contracts.",
@@ -203,7 +204,7 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
     solutions: [
       "Custom RAG-powered knowledge assistants with instant semantic retrieval across all documents.",
       "Automated OCR extraction pipelines sending structured data straight into your ERP/CRM.",
-      "24/7 autonomous support bots resolving 65%+ of routine queries with human-like accuracy.",
+      "AI-assisted support workflows designed with escalation and human review where appropriate.",
     ],
     capabilities: [
       {
@@ -270,7 +271,7 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
     solutions: [
       "Custom integration middleware connecting inventory, accounting, CRM, and logistics.",
       "Automated approval workflows with instant Slack, Teams, and SMS escalation alerts.",
-      "Real-time data synchronization ensuring 100% consistency across all software tools.",
+      "Real-time data synchronization ensuring better consistency across all software tools.",
     ],
     capabilities: [
       {
@@ -324,8 +325,8 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       "Deliver sub-second page loads, flawless mobile responsiveness, and high conversion rates with modern Next.js and React architecture.",
     iconName: "layers",
     highlights: [
-      "Sub-Second Next.js Speed",
-      "100/100 Core Web Vitals",
+      "Modern Web Architecture",
+      "Performance-Focused Delivery",
       "Headless CMS Freedom",
       "Mobile-First UX Design",
     ],
@@ -380,13 +381,80 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       },
     ],
   },
+  "cloud-devops": {
+    title: "Cloud & DevOps Support",
+    badge: "Reliable Cloud Delivery",
+    metaTitle: "Cloud & DevOps Support Services Australia | VeloSync Global",
+    metaDescription:
+      "Cloud setup, application deployment, CI/CD pipelines, containerisation, monitoring and infrastructure optimisation for Australian businesses.",
+    heroHeadline: "Build a More Reliable Path From Code to Production",
+    heroSubtitle:
+      "We help businesses establish practical cloud and DevOps foundations that improve deployment consistency, system visibility and ongoing maintainability.",
+    iconName: "cloud",
+    highlights: [
+      "Cloud Setup & Deployment",
+      "CI/CD Pipeline Automation",
+      "Docker & Containerisation",
+      "Monitoring & Backup Planning",
+    ],
+    painPoints: [
+      "Manual deployments creating delays, inconsistencies and avoidable release risk.",
+      "Limited visibility into application health, errors and infrastructure performance.",
+      "Cloud environments that are difficult to maintain, scale or recover.",
+    ],
+    solutions: [
+      "A deployment approach aligned with your application, team and operating requirements.",
+      "Automated build, test and release workflows using suitable CI/CD tooling.",
+      "Monitoring, backup and infrastructure practices designed to improve operational confidence.",
+    ],
+    capabilities: [
+      {
+        title: "Cloud Setup & Application Deployment",
+        description:
+          "Configure and deploy applications across suitable AWS, Azure, Vercel or managed hosting environments.",
+      },
+      {
+        title: "CI/CD Pipeline Implementation",
+        description:
+          "Automate build, test and deployment steps to create a more consistent release process.",
+      },
+      {
+        title: "Containers & Environment Management",
+        description:
+          "Use Docker and environment configuration practices to improve portability and deployment consistency.",
+      },
+      {
+        title: "Monitoring, Backups & Optimisation",
+        description:
+          "Improve visibility, recovery readiness, resource usage and ongoing infrastructure maintenance.",
+      },
+    ],
+    techStack: ["AWS", "Azure", "Docker", "Linux", "GitHub Actions", "Vercel"],
+    metrics: [
+      { value: "Plan", label: "Assess Requirements" },
+      { value: "Build", label: "Automate Delivery" },
+      { value: "Improve", label: "Monitor & Optimise" },
+    ],
+    faqs: [
+      {
+        question: "Can you support an application that is already live?",
+        answer:
+          "Yes. We can review the current hosting and deployment setup, identify priority improvements and define a practical migration or optimisation plan.",
+      },
+      {
+        question: "Do you provide ongoing cloud management?",
+        answer:
+          "Ongoing monitoring, maintenance and support can be scoped based on the application, infrastructure and response requirements.",
+      },
+    ],
+  },
   "digital-marketing": {
     title: "Digital Marketing & SEO",
     badge: "ROI-Focused Lead Generation",
     metaTitle: "Digital Marketing & Technical SEO Services | Velosync Global",
     metaDescription:
       "Data-driven digital marketing campaigns, technical SEO optimization, lead generation funnels, and targeted audience acquisition.",
-    heroHeadline: "Data-Driven Digital Marketing That Conquers Markets & Drives Revenue",
+    heroHeadline: "Data-Driven Digital Marketing That Supports Visibility and Sustainable Growth",
     heroSubtitle:
       "Scale your qualified lead pipeline with technical SEO, high-intent Google Ads, social media campaigns, and conversion rate optimization.",
     iconName: "marketing",
@@ -438,12 +506,12 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       {
         question: "How quickly can we expect results from SEO vs PPC?",
         answer:
-          "PPC ad campaigns generate qualified leads within 24-48 hours of launch. SEO builds sustainable organic dominance over 3 to 6 months.",
+          "PPC can begin generating visibility soon after launch, while SEO usually requires sustained technical and content work. Timelines depend on competition, budget and the current website.",
       },
       {
         question: "How do you report campaign performance?",
         answer:
-          "We provide a live 24/7 custom analytics dashboard and conduct bi-weekly strategy calls reviewing cost per lead, traffic, and sales closed.",
+          "Reporting can cover traffic, enquiries, campaign cost and agreed conversion metrics, with a review cadence defined for the engagement.",
       },
     ],
   },
@@ -456,6 +524,7 @@ export async function generateStaticParams() {
     { slug: "ai-automation" },
     { slug: "business-automation" },
     { slug: "web-development" },
+    { slug: "cloud-devops" },
     { slug: "digital-marketing" },
   ];
 }
@@ -554,24 +623,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Metrics Banner */}
-        <section className="py-10 bg-slate-900 border-y border-slate-800 text-white">
-          <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {data.metrics.map((m, idx) => (
-                <div key={idx} className="text-center p-4">
-                  <div className="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-1">
-                    {m.value}
-                  </div>
-                  <div className="text-xs sm:text-sm text-slate-400 font-medium uppercase tracking-wider">
-                    {m.label}
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
