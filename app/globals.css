@@ -234,6 +234,81 @@ img {
   opacity: 0.55;
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  font-weight: 650;
+  transition:
+    color var(--transition-base),
+    background var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.button:hover {
+  transform: translateY(-0.125rem);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--color-accent-soft-alpha);
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+  transform: none;
+}
+
+.button-primary {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  box-shadow: var(--shadow-md);
+}
+
+.button-primary:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.button-secondary {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+}
+
+.button-secondary:hover {
+  background: var(--button-secondary-hover);
+}
+
+.button-outline {
+  background: transparent;
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.button-outline:hover {
+  background: var(--brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--brand-primary);
+}
+
+.button-ghost:hover {
+  background: var(--color-primary-soft-alpha);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
