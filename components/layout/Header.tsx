@@ -18,6 +18,7 @@ const navItems = [
       { label: "AI Automation", href: "/services/ai-automation" },
       { label: "Business Automation", href: "/services/business-automation" },
       { label: "Web Development", href: "/services/web-development" },
+      { label: "Cloud & DevOps Support", href: "/services/cloud-devops" },
       { label: "Digital Marketing", href: "/services/digital-marketing" },
     ],
   },
