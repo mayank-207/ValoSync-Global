@@ -104,7 +104,7 @@ export default function Header() {
                       }`}
                     >
                       <ul
-                        className="w-72 p-2 rounded-2xl shadow-2xl border bg-white dark:bg-[#0F172A]"
+                        className="w-72 p-2 rounded-2xl shadow-2xl border bg-white dark:bg-surface-dark"
                         style={{ borderColor: "var(--border-color)" }}
                       >
                         {item.dropdown.map((subItem) => (
