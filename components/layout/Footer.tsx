@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Logo from "../ui/Logo";
 import {
-  PhoneIcon,
   MailIcon,
   MapPinIcon,
   LinkedinIcon,
