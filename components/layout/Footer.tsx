@@ -24,6 +24,7 @@ const footerLinks = {
     { label: "AI Automation", href: "/services/ai-automation" },
     { label: "Business Automation", href: "/services/business-automation" },
     { label: "Web Development", href: "/services/web-development" },
+    { label: "Cloud & DevOps Support", href: "/services/cloud-devops" },
     { label: "Digital Marketing", href: "/services/digital-marketing" },
   ],
   industries: [
@@ -37,12 +38,6 @@ const footerLinks = {
 
 const contactInfo = [
   {
-    icon: <PhoneIcon size={18} />,
-    label: "Sales & Inquiries",
-    value: "+61 (02) 8000 0000 / +91 98765 43210",
-    href: "tel:+61280000000",
-  },
-  {
     icon: <MailIcon size={18} />,
     label: "Official Email",
     value: "contact@velosyncglobal.com",
@@ -51,7 +46,7 @@ const contactInfo = [
   {
     icon: <MapPinIcon size={18} />,
     label: "Global Reach",
-    value: "Australia & Global Delivery Hub",
+    value: "Supporting Australian Businesses",
     href: "/contact",
   },
 ];
@@ -102,7 +97,7 @@ export default function Footer() {
                 className="text-sm md:text-base leading-relaxed"
                 style={{ color: "rgba(203, 213, 225, 0.9)" }}
               >
-                Connect with Velosync Global today to discuss custom software development, AI automation, or lead generation strategies tailored for your business.
+                Talk with VeloSync Global about custom software, CRM, web development, automation, cloud delivery or digital growth requirements.
               </p>
             </div>
             <div className="flex lg:justify-end">
@@ -133,7 +128,7 @@ export default function Footer() {
               className="text-sm leading-relaxed mb-6 max-w-md"
               style={{ color: "rgba(203, 213, 225, 0.85)" }}
             >
-              Velosync Global delivers enterprise-grade software development, customized CRM systems, AI & business automation, modern web applications, and ROI-driven digital marketing.
+              VeloSync Global builds custom software, CRM platforms, websites and connected digital solutions, supported by cloud delivery and digital growth services.
             </p>
             <div className="flex flex-col gap-3.5">
               {contactInfo.map((item) => (
@@ -246,7 +241,7 @@ export default function Footer() {
             className="text-xs text-center md:text-left"
             style={{ color: "rgba(148, 163, 184, 0.85)" }}
           >
-            © {currentYear} Velosync Global. All rights reserved. Built for global technology leadership.
+            © {currentYear} Velosync Global. All rights reserved. Technology solutions built around your business.
           </p>
 
           <div className="flex items-center gap-3">
