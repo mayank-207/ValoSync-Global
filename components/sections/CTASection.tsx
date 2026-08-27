@@ -69,7 +69,7 @@ export default function CTASection() {
             className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none"
             style={{
               background:
-                "radial-gradient(circle, rgba(30, 58, 138, 0.4) 0%, transparent 70%)",
+                "var(--gradient-decorative)",
             }}
             aria-hidden="true"
           />
