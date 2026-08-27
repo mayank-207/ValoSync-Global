@@ -12,39 +12,39 @@ import {
 const features = [
   {
     icon: <TargetIcon size={24} />,
-    title: "Australian Lead Focus",
+    title: "Australian Market Understanding",
     description:
-      "Engineered to capture and convert high-value leads across Australian markets with localized strategies.",
+      "We consider local audiences, business expectations and commercial priorities when shaping each solution.",
   },
   {
     icon: <UsersIcon size={24} />,
-    title: "Dedicated Cross-Functional Team",
+    title: "Collaborative Delivery Team",
     description:
-      "Direct access to senior developers, UI designers, QA specialists, and dedicated project managers.",
+      "Development, design, QA and project coordination work together around agreed outcomes.",
   },
   {
     icon: <ZapIcon size={24} />,
-    title: "Agile Rapid Delivery",
+    title: "Transparent Project Delivery",
     description:
-      "Iterative 2-week sprint delivery cycles with total transparency and continuous deployment updates.",
+      "Clear milestones, regular progress updates and practical decision points keep stakeholders informed.",
   },
   {
     icon: <SparkleIcon size={24} />,
     title: "AI & Business Automation",
     description:
-      "Cutting-edge AI automation models to streamline manual business processes and cut operational costs.",
+      "Practical automation designed to reduce repetitive work and connect everyday business processes.",
   },
   {
     icon: <ShieldIcon size={24} />,
-    title: "Strict Security & NDA",
+    title: "Security-Conscious Approach",
     description:
-      "100% data protection, enterprise confidentiality agreements, and secure cloud infrastructure.",
+      "Confidentiality, access controls and security requirements are considered from project discovery.",
   },
   {
     icon: <LayersIcon size={24} />,
-    title: "End-to-End SLA Support",
+    title: "Support Beyond Launch",
     description:
-      "From technical consultation to post-launch maintenance, bug fixes, and continuous feature scaling.",
+      "Maintenance and improvement options help your solution evolve after its initial release.",
   },
 ];
 
@@ -60,8 +60,8 @@ export default function WhyChooseUsSection() {
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <SectionHeading
               eyebrow="Why Choose Us"
-              title="The Velosync Global Engineering Advantage"
-              description="We combine deep technical expertise, robust cloud architecture, and modern AI automation to build high-ROI digital solutions for businesses."
+              title="Why Businesses Partner With VeloSync Global"
+              description="We combine business understanding, suitable technologies and transparent delivery to build reliable digital solutions."
               align="center"
             />
 
@@ -82,28 +82,28 @@ export default function WhyChooseUsSection() {
                       className="text-lg font-bold"
                       style={{ color: "var(--text-primary)" }}
                     >
-                      Enterprise Reliability & Transparent Delivery
+                      Quality-Focused and Transparent Delivery
                     </h3>
                     <p
                       className="text-sm mt-0.5"
                       style={{ color: "var(--text-secondary)" }}
                     >
-                      Every project at Velosync Global is backed by strict quality assurance, transparent communication, and dedicated ongoing support.
+                      Every engagement follows a structured approach to scoping, delivery, quality assurance and handover.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 pt-4 border-t border-slate-700/60 text-xs">
                   <div>
                     <span className="block text-2xl font-extrabold text-cyan-400">
-                      100%
+                      Clear
                     </span>
-                    <span className="text-slate-400">On-Time Sprint Record</span>
+                    <span className="text-slate-400">Milestones & Updates</span>
                   </div>
                   <div>
                     <span className="block text-2xl font-extrabold text-cyan-400">
-                      24/7
+                      Ongoing
                     </span>
-                    <span className="text-slate-400">Expert Technical Support</span>
+                    <span className="text-slate-400">Support Options</span>
                   </div>
                 </div>
               </div>
