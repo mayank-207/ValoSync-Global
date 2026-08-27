@@ -6,10 +6,10 @@ import { ArrowRightIcon, SparkleIcon, CheckCircleIcon, ZapIcon } from "@/compone
 
 export default function ServicesHero() {
   const highlights = [
-    "Tailored Enterprise Engineering",
-    "Custom High-Converting CRMs",
-    "AI & Intelligent Automation",
-    "ROI-Driven Growth & SEO",
+    "Custom Software & CRM",
+    "Web & WordPress Development",
+    "Automation & Integration",
+    "Cloud, DevOps & Digital Growth",
   ];
 
   return (
@@ -24,20 +24,20 @@ export default function ServicesHero() {
           {/* Eyebrow Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide mb-6 animate-fade-in">
             <SparkleIcon size={16} className="text-cyan-400" />
-            <span>Full-Spectrum IT & Software Engineering</span>
+            <span>Software, Cloud and Digital Services</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6 animate-fade-in-up">
-            Targeted Services to Accelerate Your{" "}
+            Technology Services Built to Support Your{" "}
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-300 bg-clip-text text-transparent">
-              Digital Transformation & Growth
+              Business Goals
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto mb-10 animate-fade-in-up animate-delay-100">
-            Velosync Global delivers end-to-end technology solutions — from bespoke software engineering and intelligent CRM systems to AI workflow automation and high-converting digital marketing strategies tailored for Australian SMEs and global enterprises.
+            VeloSync Global helps Australian businesses plan, build and improve custom software, CRM platforms, websites, cloud delivery and digital growth initiatives.
           </p>
 
           {/* Action CTAs */}
@@ -49,7 +49,7 @@ export default function ServicesHero() {
               size="lg"
               rightIcon={<ArrowRightIcon size={18} />}
             >
-              Book Free Service Consultation
+              Book a Free Consultation
             </Button>
             <Button
               as="link"
@@ -58,7 +58,7 @@ export default function ServicesHero() {
               size="lg"
               leftIcon={<ZapIcon size={18} className="text-cyan-400" />}
             >
-              Explore Our Core Services
+              Explore Our Services
             </Button>
           </div>
 
