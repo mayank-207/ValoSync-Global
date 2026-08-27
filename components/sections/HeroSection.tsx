@@ -13,9 +13,9 @@ import {
 
 export default function HeroSection() {
   const trustHighlights = [
-    "Australian Lead Generation Focus",
-    "100% Confidential NDA Guarantee",
-    "Agile & Dedicated Development",
+    "Business-First Technology Strategy",
+    "Secure and Transparent Delivery",
+    "Dedicated Project Collaboration",
   ];
 
   return (
@@ -73,7 +73,7 @@ export default function HeroSection() {
                 }}
               >
                 <SparkleIcon size={16} />
-                Empowering Businesses Across Australia & Globally
+                Technology Solutions for Australian Businesses
               </span>
             </div>
 
@@ -83,11 +83,11 @@ export default function HeroSection() {
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] mb-6 animate-fade-in-up animate-delay-100"
               style={{ color: "var(--text-light)" }}
             >
-              Custom Software,{" "}
+              Custom Software & CRM{" "} 
               <span className="block">
-                <span className="gradient-text">AI & Business Automation</span>
+                <span className="gradient-text">Built Around Your Business</span>
               </span>
-              Engineered for Growth.
+              Designed for Sustainable Growth.
             </h1>
 
             {/* Hero Subtitle */}
@@ -95,7 +95,7 @@ export default function HeroSection() {
               className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 max-w-2xl animate-fade-in-up animate-delay-200"
               style={{ color: "rgba(203, 213, 225, 0.9)" }}
             >
-              Velosync Global transforms business visions into scalable digital reality. We build bespoke software, intelligent CRM systems, and AI automation engines designed to scale high-growth enterprises.
+              VeloSync Global designs and develops custom software, CRM platforms, web applications and practical automation solutions that help Australian businesses simplify operations and grow with confidence.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-10 animate-fade-in-up animate-delay-300">
@@ -188,7 +188,7 @@ export default function HeroSection() {
                     </div>
                   </div>
                   <span className="text-xs text-emerald-400 font-semibold font-sans">
-                    99.8% Efficiency
+                    Connected Workflow
                   </span>
                 </div>
 
@@ -207,7 +207,7 @@ export default function HeroSection() {
                     </div>
                   </div>
                   <span className="text-xs text-cyan-400 font-semibold font-sans">
-                    Enterprise Ready
+                    Built to Scale
                   </span>
                 </div>
 
@@ -226,7 +226,7 @@ export default function HeroSection() {
                     </div>
                   </div>
                   <span className="text-xs text-amber-400 font-semibold font-sans">
-                    3.5x Conversion Rate
+                    Market Focused
                   </span>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function HeroSection() {
               {/* Progress metric footer inside mockup */}
               <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
                 <span>Security & NDA Protection</span>
-                <span className="text-cyan-400 font-medium">100% Guaranteed</span>
+                <span className="text-cyan-400 font-medium">Built In</span>
               </div>
             </div>
 
@@ -262,7 +262,7 @@ export default function HeroSection() {
                     className="text-xl font-extrabold"
                     style={{ color: "var(--text-primary)" }}
                   >
-                    100% NDA
+                    Secure Delivery
                   </p>
                   <p
                     className="text-xs font-semibold"
@@ -304,7 +304,7 @@ export default function HeroSection() {
                     className="text-xs font-semibold"
                     style={{ color: "var(--text-secondary)" }}
                   >
-                    Targeted Lead Tech
+                    Australian Market Insight
                   </p>
                 </div>
               </div>
