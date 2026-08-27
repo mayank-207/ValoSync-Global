@@ -6,27 +6,27 @@ import SectionHeading from "@/components/ui/SectionHeading";
 const techLayers = [
   {
     category: "Frontend & UI Engineering",
-    description: "Lightning-fast client interfaces built with React, Next.js, and modern CSS design systems.",
-    tools: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "Redux / Zustand", "HTML5 / WebSockets"],
+    description: "Responsive interfaces built with proven frontend frameworks and maintainable design systems.",
+    tools: ["Next.js", "React", "Angular", "TypeScript", "Tailwind CSS", "HTML5 / CSS3"],
   },
   {
     category: "Backend, Databases & APIs",
-    description: "High-concurrency cloud architecture, microservices, and secure relational & vector data storage.",
-    tools: ["Node.js / Express", "Python / FastAPI", "PostgreSQL", "MongoDB", "Redis Cache", "GraphQL & REST APIs"],
+    description: "Backend applications, integrations and data layers selected around performance, security and maintainability.",
+    tools: ["Laravel / PHP", "Node.js / Express", ".NET", "MySQL / PostgreSQL", "MongoDB", "GraphQL & REST APIs"],
   },
   {
     category: "AI, Machine Learning & Automation",
-    description: "Custom RAG knowledge retrieval systems, LLM fine-tuning, and intelligent OCR extraction pipelines.",
-    tools: ["OpenAI GPT-4o", "LangChain / LlamaIndex", "Pinecone Vector DB", "Python PyTorch", "Zapier / Make APIs", "Custom OCR Engines"],
+    description: "AI integrations, workflow automation and document-processing capabilities matched to practical use cases.",
+    tools: ["OpenAI APIs", "Python", "LangChain", "Vector Databases", "Zapier / Make", "n8n"],
   },
   {
     category: "Cloud, Infrastructure & Security",
-    description: "ISO/HIPAA compliant hosting, containerized Docker microservices, and CI/CD pipelines.",
-    tools: ["AWS Cloud", "Docker Containers", "Kubernetes", "Vercel", "GitHub Actions", "OAuth2 & JWT Security"],
+    description: "Cloud deployment, containerisation, release automation, monitoring and security-conscious infrastructure practices.",
+    tools: ["AWS / Azure", "Docker", "Linux", "Vercel", "GitHub Actions", "CI/CD Pipelines"],
   },
   {
     category: "Digital Growth & Analytics",
-    description: "Enterprise analytics, conversion funnels, ad platforms, and keyword tracking tools.",
+    description: "Analytics, search, advertising and social platforms used to measure and improve digital performance.",
     tools: ["Google Analytics 4", "Google Search Console", "Google Ads / Meta Ads", "Semrush / Ahrefs", "HubSpot CRM", "Hotjar Heatmaps"],
   },
 ];
@@ -41,8 +41,8 @@ export default function ServiceTechStackSection() {
       <div className="container relative z-10">
         <SectionHeading
           badge="Technology Stack & Ecosystem"
-          title="Built With Premier Battle-Tested Technologies"
-          subtitle="We leverage cutting-edge frameworks, secure cloud infrastructure, and AI platforms to deliver future-proof solutions."
+          title="Technology Selected for the Solution, Not the Trend"
+          subtitle="Our stack spans modern web frameworks, established enterprise technologies, WordPress, cloud platforms and digital growth tools."
           center
         />
 
