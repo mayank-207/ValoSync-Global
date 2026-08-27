@@ -14,29 +14,29 @@ import {
 
 export default function AboutSection() {
   const coreValues = [
-    "Australian Market Focused Strategy",
-    "Agile & Transparent Development",
-    "Dedicated Cross-Functional Team",
-    "100% Data Security & Confidentiality",
-    "Post-Launch Maintenance & SLA",
-    "Tailored ROI-Driven Solutions",
+    "Australian Market Understanding",
+    "Clear and Collaborative Delivery",
+    "Cross-Functional Project Support",
+    "Security-Conscious Development",
+    "Post-Launch Support Options",
+    "Solutions Tailored to Your Operations",
   ];
 
   const highlights = [
     {
       icon: <AwardIcon size={24} />,
       title: "Quality First",
-      description: "Rigorous QA testing, code review, and CI/CD standards.",
+      description: "Structured QA, code reviews and release checks.",
     },
     {
       icon: <UsersIcon size={24} />,
       title: "Dedicated Teams",
-      description: "Full-stack engineers, UI designers, and project managers.",
+      description: "Development, design, QA and project coordination.",
     },
     {
       icon: <BriefcaseIcon size={24} />,
       title: "Scalable Architecture",
-      description: "Cloud-native infrastructure built to grow with your business.",
+      description: "Architecture selected to support your current and future needs.",
     },
   ];
 
@@ -66,7 +66,7 @@ export default function AboutSection() {
                     Velosync Global Standard
                   </h3>
                   <p className="text-xs text-slate-300">
-                    Built for Enterprise Performance & Lead Growth
+                    Practical Technology. Clear Business Outcomes.
                   </p>
                 </div>
               </div>
@@ -74,13 +74,13 @@ export default function AboutSection() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
                   <span className="text-3xl font-extrabold text-cyan-400 block mb-1">
-                    <CountUp end={100} duration={1800} />%
+                    Secure
                   </span>
                   <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider block">
-                    Confidential NDA
+                    Project Protection
                   </span>
                   <p className="text-[11px] text-slate-400 mt-1">
-                    Your IP & data remains completely protected.
+                    Confidentiality measures agreed for each engagement.
                   </p>
                 </div>
 
@@ -89,10 +89,10 @@ export default function AboutSection() {
                     AU
                   </span>
                   <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider block">
-                    Targeted Lead Tech
+                    Market Alignment
                   </span>
                   <p className="text-[11px] text-slate-400 mt-1">
-                    Engineered to capture high-value market leads.
+                    Solutions shaped around Australian business needs.
                   </p>
                 </div>
               </div>
@@ -111,10 +111,10 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white">
-                      5-Star Technology Delivery
+                      Collaborative Technology Delivery
                     </p>
                     <p className="text-xs text-slate-300">
-                      Top-Tier Engineering & Support
+                      Clear communication from scope to launch
                     </p>
                   </div>
                 </div>
@@ -131,10 +131,10 @@ export default function AboutSection() {
               </span>
               <div>
                 <p className="text-sm font-bold text-slate-900 dark:text-white">
-                  99.9% Uptime SLA
+                  Post-Launch Support
                 </p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
-                  Reliable Infrastructure
+                  Maintenance options available
                 </p>
               </div>
             </div>
@@ -144,8 +144,8 @@ export default function AboutSection() {
           <div className="lg:col-span-6">
             <SectionHeading
               eyebrow="About Velosync Global"
-              title="Architecting Digital Solutions That Drive Australian Business Success"
-              description="Velosync Global is a forward-looking technology company specializing in custom software development, custom CRM systems, AI automation, and ROI-centric digital marketing. We empower businesses to operate smarter and scale faster."
+              title="A Technology Partner Focused on Practical Business Progress"
+              description="VeloSync Global partners with Australian businesses to build custom software, CRM platforms, web applications and connected digital solutions. We combine business understanding with practical technology to improve operations and support long-term growth."
               align="left"
               className="mb-8"
               maxWidth="none"
@@ -214,7 +214,7 @@ export default function AboutSection() {
               size="lg"
               rightIcon={<ArrowRightIcon size={18} />}
             >
-              Learn More About Our Capabilities
+              Learn More About VeloSync Global
             </Button>
           </div>
         </div>
