@@ -86,7 +86,7 @@ export default function CTASection() {
                 }}
               >
                 <SparkleIcon size={14} />
-                Book Your Consultation & Project Scope
+                Start a Project Conversation
               </span>
 
               <h2
@@ -94,9 +94,9 @@ export default function CTASection() {
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6"
                 style={{ color: "var(--text-light)" }}
               >
-                Ready to Build Your{" "}
+                Ready to Turn Your{" "}
                 <span className="block gradient-text mt-1">
-                  Next Tech Breakthrough?
+                  Business Challenge Into a Working Solution?
                 </span>
               </h2>
 
@@ -104,14 +104,14 @@ export default function CTASection() {
                 className="text-base sm:text-lg leading-relaxed mb-8 max-w-xl"
                 style={{ color: "rgba(203, 213, 225, 0.9)" }}
               >
-                Partner with Velosync Global for custom software development, CRM engineering, AI workflow automation, or targeted lead generation campaigns.
+                Discuss your custom software, CRM, web development, automation, cloud delivery or digital growth requirements with VeloSync Global.
               </p>
 
               <div className="space-y-4">
                 {[
-                  "Free 30-Minute Technical Scope Consultation",
-                  "100% Confidential Non-Disclosure Agreement (NDA)",
-                  "Custom Proposal & Transparent Milestone Estimates",
+                  "Initial Project Discovery Conversation",
+                  "Confidentiality Options for Sensitive Projects",
+                  "Clear Scope, Milestones and Commercial Proposal",
                 ].map((point) => (
                   <div key={point} className="flex items-center gap-3 text-sm font-medium">
                     <span className="p-1 rounded-full bg-cyan-500/20 text-cyan-400">
@@ -138,7 +138,7 @@ export default function CTASection() {
                       Consultation Request Sent!
                     </h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
-                      Thank you, <strong className="text-cyan-500">{formData.name}</strong>. Our senior solutions architect will contact you at <span className="font-semibold">{formData.email}</span> within 24 hours.
+                      Thank you, <strong className="text-cyan-500">{formData.name}</strong>. Our team will review your requirements and contact you at <span className="font-semibold">{formData.email}</span> as soon as possible.
                     </p>
                     <button
                       type="button"
@@ -155,7 +155,7 @@ export default function CTASection() {
                         Book a Free Consultation
                       </h3>
                       <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">
-                        Fill in your project requirements for an instant callback.
+                        Share a few details so we can prepare for a useful project conversation.
                       </p>
                     </div>
 
