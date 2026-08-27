@@ -9,6 +9,7 @@ import {
   BrainIcon,
   AutomationIcon,
   LayersIcon,
+  GlobeIcon,
   MarketingIcon,
   FilterIcon,
 } from "@/components/ui/Icons";
@@ -19,7 +20,7 @@ export const servicesData = [
     category: "Development",
     title: "Custom Software Development",
     description:
-      "Engineered bespoke software applications tailored to your specific business workflows, high-concurrency architecture, and proprietary business logic.",
+      "Custom software designed around your workflows, users, integrations and long-term operating requirements.",
     icon: <CodeIcon size={28} />,
     href: "/services/custom-software",
     features: [
@@ -27,7 +28,7 @@ export const servicesData = [
       "Scalable Cloud & Microservices",
       "Legacy Code & API Modernization",
     ],
-    metrics: "100% Tailored Workflows",
+    metrics: "Built Around Your Workflow",
     techStack: ["Next.js", "Node.js", "Python", "AWS / Docker"],
   },
   {
@@ -35,7 +36,7 @@ export const servicesData = [
     category: "Development",
     title: "CRM Development",
     description:
-      "Customized CRM platforms engineered to manage sales pipelines, customer interactions, lead scoring, and automated client onboarding effortlessly.",
+      "CRM platforms tailored to your customer journey, sales process, follow-ups, reporting and internal operations.",
     icon: <CrmIcon size={28} />,
     href: "/services/crm-development",
     features: [
@@ -43,7 +44,7 @@ export const servicesData = [
       "Automated WhatsApp & Email Sync",
       "Real-Time Sales Performance Analytics",
     ],
-    metrics: "3.2x Faster Lead Response",
+    metrics: "Connected Customer Operations",
     techStack: ["React", "TypeScript", "PostgreSQL", "REST/GraphQL"],
   },
   {
@@ -51,7 +52,7 @@ export const servicesData = [
     category: "Automation",
     title: "AI Automation Solutions",
     description:
-      "Harness artificial intelligence and machine learning to automate complex data processing, intelligent document parsing, and 24/7 AI chat agents.",
+      "Apply AI where it delivers practical value, including document processing, knowledge support and workflow assistance.",
     icon: <BrainIcon size={28} />,
     href: "/services/ai-automation",
     features: [
@@ -59,7 +60,7 @@ export const servicesData = [
       "Automated Medical/Invoice Extraction",
       "Predictive Analytics & Decision Engines",
     ],
-    metrics: "75% Reduction in Data Entry Labor",
+    metrics: "Practical AI Integration",
     techStack: ["Python", "OpenAI / LangChain", "FastAPI", "Vector DBs"],
   },
   {
@@ -67,7 +68,7 @@ export const servicesData = [
     category: "Automation",
     title: "Business Process Automation",
     description:
-      "Eliminate repetitive manual overhead by automating cross-departmental operations, multi-app data synchronization, and automated task dispatching.",
+      "Reduce repetitive work by connecting tools, synchronising data and automating approvals, notifications and task flows.",
     icon: <AutomationIcon size={28} />,
     href: "/services/business-automation",
     features: [
@@ -75,7 +76,7 @@ export const servicesData = [
       "Third-Party ERP & Software Integration",
       "Automated SLA & Approval Alerts",
     ],
-    metrics: "20+ Hours Saved / Week per Team",
+    metrics: "Streamlined Workflows",
     techStack: ["Node.js", "Zapier / Make APIs", "WebSockets", "Redis"],
   },
   {
@@ -83,36 +84,52 @@ export const servicesData = [
     category: "Development",
     title: "Web Development",
     description:
-      "Modern, ultra-fast web applications, enterprise corporate portals, and headless e-commerce platforms engineered with Next.js and high-performing UI design.",
+      "Responsive websites, WordPress solutions, web applications, customer portals and digital platforms built for usability and performance.",
     icon: <LayersIcon size={28} />,
     href: "/services/web-development",
     features: [
-      "Sub-Second Next.js Performance",
+      "Performance-Focused Development",
       "Responsive & Accessible Design",
       "Headless CMS & E-Commerce Integration",
     ],
-    metrics: "99+ Google Lighthouse Score",
+    metrics: "Responsive, Accessible Delivery",
     techStack: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+  },
+  {
+    slug: "cloud-devops",
+    category: "Cloud & Infrastructure",
+    title: "Cloud & DevOps Support",
+    description:
+      "Plan reliable deployments, automate release workflows and improve the visibility, resilience and maintainability of your infrastructure.",
+    icon: <GlobeIcon size={28} />,
+    href: "/services/cloud-devops",
+    features: [
+      "Cloud Setup & Application Deployment",
+      "CI/CD Pipelines & Containerisation",
+      "Monitoring, Backups & Optimisation",
+    ],
+    metrics: "Reliable Delivery Foundations",
+    techStack: ["AWS / Azure", "Docker", "GitHub Actions", "Linux"],
   },
   {
     slug: "digital-marketing",
     category: "Digital Growth",
     title: "Digital Marketing & SEO",
     description:
-      "Data-driven digital marketing campaigns, technical SEO optimization, lead generation funnels, and targeted audience acquisition for Australian SMEs and global brands.",
+      "SEO, paid media, content and social media services designed to improve visibility and generate relevant opportunities in the Australian market.",
     icon: <MarketingIcon size={28} />,
     href: "/services/digital-marketing",
     features: [
-      "Technical SEO & Local Search Domination",
-      "High-Intent Lead Gen Funnels",
-      "Social Media & Content Campaigning",
+      "Technical SEO & Local Search",
+      "Lead Generation Campaigns",
+      "Social Media & Content Planning",
     ],
-    metrics: "4.5x ROI on Ad Spend",
+    metrics: "Measurable Digital Growth",
     techStack: ["Google Analytics 4", "Semrush", "Meta Ads", "Google Ads"],
   },
 ];
 
-const categories = ["All", "Development", "Automation", "Digital Growth"];
+const categories = ["All", "Development", "Automation", "Cloud & Infrastructure", "Digital Growth"];
 
 export default function ServicesGridSection() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -129,9 +146,9 @@ export default function ServicesGridSection() {
     >
       <div className="container">
         <SectionHeading
-          badge="Complete Service Portfolio"
-          title="Engineered Solutions Built for Speed, Scale & ROI"
-          subtitle="Select a category or click on any service to explore detailed capabilities, technical stack, and real-world outcomes."
+          badge="Service Portfolio"
+          title="Choose the Right Capability for Your Next Initiative"
+          subtitle="Explore our development, automation, cloud and digital growth services, then speak with us about the right delivery approach."
           center
         />
 
