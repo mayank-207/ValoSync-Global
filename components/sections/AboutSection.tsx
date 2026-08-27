@@ -52,12 +52,12 @@ export default function AboutSection() {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl p-8 border bg-gradient-to-br from-slate-900 via-[#0B1B3D] to-slate-900 text-white shadow-2xl overflow-hidden">
               <div
-                className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
+                className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl pointer-events-none"
                 aria-hidden="true"
               />
 
               <div className="flex items-center gap-3 mb-8">
-                <span className="p-3 rounded-2xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+                <span className="p-3 rounded-2xl bg-accent/20 text-accent border border-accent/30">
                   <ShieldIcon size={28} />
                 </span>
                 <div>
@@ -72,7 +72,7 @@ export default function AboutSection() {
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
-                  <span className="text-3xl font-extrabold text-cyan-400 block mb-1">
+                  <span className="text-3xl font-extrabold text-accent block mb-1">
                     Secure
                   </span>
                   <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider block">
@@ -84,7 +84,7 @@ export default function AboutSection() {
                 </div>
 
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
-                  <span className="text-3xl font-extrabold text-cyan-400 block mb-1">
+                  <span className="text-3xl font-extrabold text-accent block mb-1">
                     AU
                   </span>
                   <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider block">
@@ -96,13 +96,13 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-between">
+              <div className="p-5 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-2">
                     {[1, 2, 3, 4].map((idx) => (
                       <span
                         key={idx}
-                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 border-2 border-slate-900 text-cyan-400 text-xs font-bold"
+                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 border-2 border-slate-900 text-accent text-xs font-bold"
                       >
                         <StarIcon size={14} />
                       </span>
@@ -117,7 +117,7 @@ export default function AboutSection() {
                     </p>
                   </div>
                 </div>
-                <span className="p-2 rounded-xl bg-cyan-500/20 text-cyan-400">
+                <span className="p-2 rounded-xl bg-accent/20 text-accent">
                   <TargetIcon size={20} />
                 </span>
               </div>
@@ -160,7 +160,7 @@ export default function AboutSection() {
                   <span
                     className="flex-shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-md mt-0.5"
                     style={{
-                      background: "rgba(6, 182, 212, 0.15)",
+                      background: "var(--color-accent-soft-alpha)",
                       color: "var(--accent-color)",
                     }}
                   >
