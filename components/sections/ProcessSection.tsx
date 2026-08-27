@@ -42,12 +42,12 @@ const processSteps = [
     step: "04",
     title: "Launch & Support",
     description:
-      "After rigorous testing, we deploy your solution and provide ongoing support, maintenance, and optimization to ensure lasting success.",
+      "After rigorous testing, we deploy your solution and offer ongoing support, maintenance and improvement options based on your operating needs.",
     highlights: [
       "Performance testing",
       "Secure deployment",
       "Training & documentation",
-      "24/7 post-launch support",
+      "Post-launch support options",
     ],
   },
 ];
@@ -63,7 +63,7 @@ export default function ProcessSection() {
         <SectionHeading
           eyebrow="Our Process"
           title="How We Deliver Successful Projects"
-          description="Our proven 4-step methodology ensures your project is delivered on time, within budget, and to the highest quality standards—every single time."
+          description="Our four-stage delivery approach creates shared clarity from initial discovery through launch and ongoing improvement."
           className="mb-16"
         />
 
