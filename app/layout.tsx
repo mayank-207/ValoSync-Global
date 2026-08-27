@@ -17,21 +17,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://velosyncglobal.com"),
   title: {
-    default: "Velosync Global | Digital Transformation & IT Solutions Company",
+    default: "VeloSync Global | Custom Software & CRM Development Australia",
     template: "%s | Velosync Global",
   },
   description:
-    "Velosync Global delivers cutting-edge digital transformation, software development, AI solutions, cloud services, and IT consulting to help businesses scale and innovate.",
+    "VeloSync Global builds custom software, CRM platforms, web applications and practical automation solutions for Australian businesses.",
   keywords: [
     "Velosync Global",
-    "digital transformation",
+    "custom software development Australia",
     "software development",
-    "AI solutions",
-    "cloud services",
-    "IT consulting",
+    "CRM development",
+    "business process automation",
+    "Cloud and DevOps support",
     "web development",
-    "mobile app development",
-    "technology company",
+    "WordPress development",
+    "Australian software company",
     "IT solutions",
   ],
   authors: [{ name: "Velosync Global" }],
@@ -47,23 +47,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://velosyncglobal.com",
     siteName: "Velosync Global",
-    title: "Velosync Global | Digital Transformation & IT Solutions Company",
+    title: "VeloSync Global | Custom Software & CRM Development Australia",
     description:
-      "Velosync Global delivers cutting-edge digital transformation, software development, AI solutions, cloud services, and IT consulting to help businesses scale and innovate.",
+      "VeloSync Global builds custom software, CRM platforms, web applications and practical automation solutions for Australian businesses.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Velosync Global - Digital Transformation & IT Solutions",
+        alt: "VeloSync Global - Custom Software and CRM Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Velosync Global | Digital Transformation & IT Solutions Company",
+    title: "VeloSync Global | Custom Software & CRM Development Australia",
     description:
-      "Velosync Global delivers cutting-edge digital transformation, software development, AI solutions, cloud services, and IT consulting to help businesses scale and innovate.",
+      "VeloSync Global builds custom software, CRM platforms, web applications and practical automation solutions for Australian businesses.",
     images: ["/images/og-image.jpg"],
     creator: "@velosyncglobal",
   },
