@@ -59,7 +59,7 @@ export default function Footer() {
         className="absolute inset-0 opacity-10 pointer-events-none"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 20% 20%, rgb(6 182 212) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgb(30 58 138) 0%, transparent 50%)",
+            "var(--gradient-decorative)",
         }}
       />
 
@@ -69,7 +69,7 @@ export default function Footer() {
           className="relative mb-16 p-8 md:p-12 rounded-3xl overflow-hidden shadow-2xl border"
           style={{
             background:
-              "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.85) 50%, rgba(6, 182, 212, 0.2) 100%)",
+              "var(--gradient-cta)",
             borderColor: "var(--color-accent-border-alpha)",
           }}
         >
@@ -106,7 +106,7 @@ export default function Footer() {
                 style={{
                   background: "var(--gradient-accent)",
                   color: "var(--text-light)",
-                  boxShadow: "0 10px 30px -10px rgba(6, 182, 212, 0.5)",
+                  boxShadow: "var(--shadow-lg)",
                 }}
               >
                 Book Free Consultation
@@ -148,7 +148,7 @@ export default function Footer() {
                   <div>
                     <p
                       className="text-[11px] font-semibold uppercase tracking-wider mb-0.5"
-                      style={{ color: "rgba(148, 163, 184, 0.8)" }}
+                      style={{ color: "var(--color-inverse-muted)" }}
                     >
                       {item.label}
                     </p>
@@ -238,7 +238,7 @@ export default function Footer() {
         >
           <p
             className="text-xs text-center md:text-left"
-            style={{ color: "rgba(148, 163, 184, 0.85)" }}
+            style={{ color: "var(--color-inverse-muted)" }}
           >
             © {currentYear} Velosync Global. All rights reserved. Technology solutions built around your business.
           </p>
@@ -287,14 +287,14 @@ export default function Footer() {
             <Link
               href="/privacy-policy"
               className="transition-colors duration-200 hover:text-accent"
-              style={{ color: "rgba(148, 163, 184, 0.85)" }}
+              style={{ color: "var(--color-inverse-muted)" }}
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
               className="transition-colors duration-200 hover:text-accent"
-              style={{ color: "rgba(148, 163, 184, 0.85)" }}
+              style={{ color: "var(--color-inverse-muted)" }}
             >
               Terms & Conditions
             </Link>
