@@ -70,7 +70,7 @@ export default function Footer() {
           style={{
             background:
               "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.85) 50%, rgba(6, 182, 212, 0.2) 100%)",
-            borderColor: "rgba(6, 182, 212, 0.3)",
+            borderColor: "var(--color-accent-border-alpha)",
           }}
         >
           <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -78,8 +78,8 @@ export default function Footer() {
               <span
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-full mb-4 border"
                 style={{
-                  background: "rgba(6, 182, 212, 0.15)",
-                  borderColor: "rgba(6, 182, 212, 0.4)",
+                  background: "var(--color-accent-soft-alpha)",
+                  borderColor: "var(--color-accent-border-alpha)",
                   color: "var(--accent-color)",
                 }}
               >
@@ -94,7 +94,7 @@ export default function Footer() {
               </h2>
               <p
                 className="text-sm md:text-base leading-relaxed"
-                style={{ color: "rgba(203, 213, 225, 0.9)" }}
+                style={{ color: "var(--color-inverse-muted)" }}
               >
                 Talk with VeloSync Global about custom software, CRM, web development, automation, cloud delivery or digital growth requirements.
               </p>
@@ -125,7 +125,7 @@ export default function Footer() {
             <Logo variant="light" className="mb-6" />
             <p
               className="text-sm leading-relaxed mb-6 max-w-md"
-              style={{ color: "rgba(203, 213, 225, 0.85)" }}
+              style={{ color: "var(--color-inverse-muted)" }}
             >
               VeloSync Global builds custom software, CRM platforms, websites and connected digital solutions, supported by cloud delivery and digital growth services.
             </p>
@@ -137,9 +137,9 @@ export default function Footer() {
                   className="flex items-start gap-3 group transition-colors duration-200"
                 >
                   <span
-                    className="flex-shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-xl transition-colors duration-200 group-hover:bg-cyan-500/20"
+                    className="flex-shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-xl transition-colors duration-200 group-hover:bg-accent/20"
                     style={{
-                      background: "rgba(255, 255, 255, 0.06)",
+                      background: "var(--color-inverse-subtle)",
                       color: "var(--accent-color)",
                     }}
                   >
@@ -153,7 +153,7 @@ export default function Footer() {
                       {item.label}
                     </p>
                     <p
-                      className="text-sm font-semibold transition-colors duration-200 group-hover:text-cyan-400"
+                      className="text-sm font-semibold transition-colors duration-200 group-hover:text-accent"
                       style={{ color: "var(--text-light)" }}
                     >
                       {item.value}
@@ -176,8 +176,8 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm font-medium transition-colors duration-200 hover:text-cyan-400"
-                    style={{ color: "rgba(203, 213, 225, 0.85)" }}
+                    className="text-sm font-medium transition-colors duration-200 hover:text-accent"
+                    style={{ color: "var(--color-inverse-muted)" }}
                   >
                     {link.label}
                   </Link>
@@ -198,8 +198,8 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm font-medium transition-colors duration-200 hover:text-cyan-400"
-                    style={{ color: "rgba(203, 213, 225, 0.85)" }}
+                    className="text-sm font-medium transition-colors duration-200 hover:text-accent"
+                    style={{ color: "var(--color-inverse-muted)" }}
                   >
                     {link.label}
                   </Link>
@@ -220,8 +220,8 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm font-medium transition-colors duration-200 hover:text-cyan-400"
-                    style={{ color: "rgba(203, 213, 225, 0.85)" }}
+                    className="text-sm font-medium transition-colors duration-200 hover:text-accent"
+                    style={{ color: "var(--color-inverse-muted)" }}
                   >
                     {link.label}
                   </Link>
@@ -234,7 +234,7 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div
           className="flex flex-col md:flex-row items-center justify-between gap-6 py-8 border-t"
-          style={{ borderColor: "rgba(255, 255, 255, 0.08)" }}
+          style={{ borderColor: "var(--color-inverse-subtle)" }}
         >
           <p
             className="text-xs text-center md:text-left"
@@ -272,10 +272,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="inline-flex items-center justify-center w-9 h-9 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:bg-cyan-500/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40"
+                className="inline-flex items-center justify-center w-9 h-9 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
                 style={{
-                  background: "rgba(255, 255, 255, 0.05)",
-                  color: "rgba(203, 213, 225, 0.85)",
+                  background: "var(--color-inverse-subtle)",
+                  color: "var(--color-inverse-muted)",
                 }}
               >
                 {social.icon}
@@ -286,14 +286,14 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium">
             <Link
               href="/privacy-policy"
-              className="transition-colors duration-200 hover:text-cyan-400"
+              className="transition-colors duration-200 hover:text-accent"
               style={{ color: "rgba(148, 163, 184, 0.85)" }}
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
-              className="transition-colors duration-200 hover:text-cyan-400"
+              className="transition-colors duration-200 hover:text-accent"
               style={{ color: "rgba(148, 163, 184, 0.85)" }}
             >
               Terms & Conditions
