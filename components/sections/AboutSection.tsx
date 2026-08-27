@@ -1,6 +1,5 @@
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
-import CountUp from "../ui/CountUp";
 import {
   ArrowRightIcon,
   CheckIcon,
