@@ -42,7 +42,7 @@ export default function HeroSection() {
           className="absolute bottom-0 left-[-100px] w-[500px] h-[500px] rounded-full blur-[120px] animate-float"
           style={{
             background:
-              "radial-gradient(circle, rgba(30, 58, 138, 0.5) 0%, transparent 70%)",
+              "var(--gradient-decorative)",
             animationDelay: "3s",
           }}
         />
@@ -52,7 +52,7 @@ export default function HeroSection() {
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
+            "var(--gradient-grid)",
           backgroundSize: "48px 48px",
         }}
         aria-hidden="true"
@@ -153,7 +153,7 @@ export default function HeroSection() {
                 background:
                   "var(--gradient-dark)",
                 borderColor: "var(--color-accent-border-alpha)",
-                boxShadow: "0 25px 60px -15px rgba(0, 0, 0, 0.6)",
+                boxShadow: "var(--shadow-premium)",
               }}
             >
               {/* Decorative Tech Graphic Box Header */}
@@ -242,7 +242,7 @@ export default function HeroSection() {
             <div
               className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-6 p-4 rounded-2xl shadow-2xl backdrop-blur-md border animate-float"
               style={{
-                background: "rgba(255, 255, 255, 0.96)",
+                background: "var(--color-surface-elevated)",
                 borderColor: "var(--border-color)",
                 animationDelay: "1s",
               }}
@@ -278,7 +278,7 @@ export default function HeroSection() {
             <div
               className="absolute -top-6 -right-4 md:-top-6 md:-right-6 p-4 rounded-2xl shadow-2xl backdrop-blur-md border animate-float"
               style={{
-                background: "rgba(255, 255, 255, 0.96)",
+                background: "var(--color-surface-elevated)",
                 borderColor: "var(--border-color)",
                 animationDelay: "3s",
               }}
