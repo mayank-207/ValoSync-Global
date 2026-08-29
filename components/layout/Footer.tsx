@@ -19,6 +19,7 @@ const footerLinks = {
   ],
   services: [
     { label: "Custom Software Development", href: "/services/custom-software" },
+    { label: "Mobile App Development", href: "/services/mobile-app-development" },
     { label: "CRM Development", href: "/services/crm-development" },
     { label: "AI Automation", href: "/services/ai-automation" },
     { label: "Web Development", href: "/services/web-development" },

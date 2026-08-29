@@ -55,15 +55,6 @@ export default function IndustryCard({
           </span>
         </div>
 
-        {metrics && (
-          <span className={`text-xs font-bold px-3 py-1 rounded-full ${
-            highlight
-              ? "bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30"
-              : "bg-[#0D47A1]/10 text-[#0D47A1] border border-[#0D47A1]/20"
-          }`}>
-            {metrics}
-          </span>
-        )}
       </div>
 
       {/* Title */}

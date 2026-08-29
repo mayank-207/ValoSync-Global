@@ -7,6 +7,7 @@ import { SparkleIcon, CheckCircleIcon } from "@/components/ui/Icons";
 export type TechCategory =
   | "all"
   | "frontend"
+  | "mobile"
   | "backend"
   | "database-cloud"
   | "ai-automation"
@@ -20,6 +21,14 @@ export interface TechItem {
 }
 
 export const allTechnologies: TechItem[] = [
+  // Mobile & Cross-Platform Apps
+  { name: "Flutter", role: "Cross-Platform iOS & Android", category: "mobile" },
+  { name: "React Native", role: "Native Performance JavaScript Engine", category: "mobile" },
+  { name: "Swift", role: "Native Apple iOS Architecture", category: "mobile" },
+  { name: "Kotlin", role: "Modern Native Android Development", category: "mobile" },
+  { name: "Expo", role: "Rapid Mobile Development & OTA Updates", category: "mobile" },
+  { name: "Firebase", role: "Realtime Database & Push Notifications", category: "mobile" },
+
   // Frontend & Web
   { name: "Next.js", role: "SSR & Web App Router", category: "frontend" },
   { name: "React", role: "Interactive Component UI", category: "frontend" },
@@ -63,6 +72,7 @@ export const allTechnologies: TechItem[] = [
 
 const filterCategories = [
   { id: "all", label: "All Technologies" },
+  { id: "mobile", label: "Mobile Apps (iOS & Android)" },
   { id: "frontend", label: "Frontend & Web" },
   { id: "backend", label: "Backend & PHP" },
   { id: "database-cloud", label: "Databases & Cloud" },

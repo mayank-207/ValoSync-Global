@@ -30,7 +30,7 @@ export const industriesData = [
     ],
     metrics: "45% Faster Patient Intake",
     techStack: ["React", "Next.js", "Python AI", "AWS Health"],
-    highlight: true,
+    highlight: false,
   },
   {
     id: "logistics",

@@ -12,6 +12,7 @@ import {
   GlobeIcon,
   MarketingIcon,
   FilterIcon,
+  SmartphoneIcon,
 } from "@/components/ui/Icons";
 
 export const servicesData = [
@@ -30,6 +31,22 @@ export const servicesData = [
     ],
     metrics: "Built Around Your Workflow",
     techStack: ["Next.js", "Node.js", "Python", "AWS / Docker"],
+  },
+  {
+    slug: "mobile-app-development",
+    category: "Development",
+    title: "Mobile App Development",
+    description:
+      "Design, build and scale native iOS, Android and cross-platform Flutter/React Native mobile applications with offline sync.",
+    icon: <SmartphoneIcon size={28} />,
+    href: "/services/mobile-app-development",
+    features: [
+      "Native iOS (Swift) & Android (Kotlin)",
+      "Cross-Platform Flutter & React Native",
+      "Guaranteed App Store & Play Store Approval",
+    ],
+    metrics: "High-Performance Mobile Delivery",
+    techStack: ["Flutter", "React Native", "Swift", "Kotlin"],
   },
   {
     slug: "crm-development",

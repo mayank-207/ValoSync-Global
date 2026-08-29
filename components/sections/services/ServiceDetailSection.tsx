@@ -13,6 +13,7 @@ import {
   CheckCircleIcon,
   ArrowRightIcon,
   ZapIcon,
+  SmartphoneIcon,
 } from "@/components/ui/Icons";
 
 const serviceDetails = [
@@ -118,6 +119,32 @@ const serviceDetails = [
       { label: "Page Load Speed", value: "< 0.6s" },
       { label: "Core Web Vitals", value: "100/100" },
       { label: "Organic Bounce Rate", value: "-40%" },
+    ],
+  },
+  {
+    id: "mobile-app-development",
+    name: "Mobile App Development",
+    icon: <SmartphoneIcon size={22} />,
+    tagline: "Native iOS, Android and cross-platform Flutter/React Native mobile applications built for scale.",
+    challenges: [
+      "Sluggish hybrid apps that lag, drain device battery, and receive 1-star reviews.",
+      "High cost and friction of maintaining two separate engineering teams for iOS and Android.",
+      "App Store and Google Play rejections due to complex privacy regulations and latency.",
+    ],
+    solutions: [
+      "Modern cross-platform architecture (Flutter / React Native) cutting development cost by up to 40% with native 60fps performance.",
+      "Single codebase architecture with automated testing and native device sensor integrations (Camera, GPS, Biometrics, Bluetooth).",
+      "End-to-end publishing, testflight distribution, and guaranteed App Store & Play Store compliance.",
+    ],
+    deliverables: [
+      "Native iOS (Swift) & Android (Kotlin) Builds",
+      "Cross-Platform Flutter / React Native App",
+      "App Store & Google Play Publishing Package",
+    ],
+    outcomes: [
+      { label: "Average App Rating", value: "4.9 ★" },
+      { label: "Crash-Free Sessions", value: "99.9%" },
+      { label: "Time-to-Market", value: "-40%" },
     ],
   },
   {

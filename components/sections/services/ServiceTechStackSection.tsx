@@ -6,6 +6,11 @@ import { TechLogo } from "@/components/ui/TechLogos";
 
 const techLayers = [
   {
+    category: "Mobile & Multi-Platform",
+    description: "Native iOS, Android and cross-platform applications built for 60fps performance and offline resilience.",
+    tools: ["Flutter", "React Native", "Swift", "Kotlin", "Expo", "Firebase"],
+  },
+  {
     category: "Frontend & UI Engineering",
     description: "Responsive interfaces built with proven frontend frameworks, type safety, and maintainable design systems.",
     tools: ["Next.js", "React", "TypeScript", "WordPress", "Tailwind CSS", "Vercel"],

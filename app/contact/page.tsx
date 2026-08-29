@@ -261,6 +261,7 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
                       >
                         <option value="Custom Software Development">Custom Software Development</option>
+                        <option value="Mobile App Development">Mobile App Development (iOS & Android)</option>
                         <option value="CRM Development">CRM Development</option>
                         <option value="AI Automation">AI Automation</option>
                         <option value="Business Process Automation">Business Process Automation</option>

@@ -59,6 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic Service routes
   const serviceSlugs = [
     "custom-software",
+    "mobile-app-development",
     "crm-development",
     "ai-automation",
     "web-development",

@@ -9,6 +9,76 @@ export interface TechLogoProps {
 export function TechLogo({ name, className = "", size = 36 }: TechLogoProps) {
   const normalized = name.toLowerCase().trim();
 
+  // Flutter
+  if (normalized.includes("flutter")) {
+    return (
+      <svg width={size} height={size} viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <rect width="128" height="128" rx="24" fill="#02569B" />
+        <path d="M78 24L34 68L48 82L106 24H78Z" fill="#54C5F8" />
+        <path d="M78 68L50 96L64 110L106 68H78Z" fill="#01579B" />
+        <path d="M64 82L50 96L64 110L78 96L64 82Z" fill="#29B6F6" />
+      </svg>
+    );
+  }
+
+  // React Native
+  if (normalized.includes("react native")) {
+    return (
+      <svg width={size} height={size} viewBox="-11.5 -10.23174 23 20.46348" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+        <g stroke="#61DAFB" strokeWidth="1" fill="none">
+          <ellipse rx="11" ry="4.2" />
+          <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+          <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+        </g>
+      </svg>
+    );
+  }
+
+  // Swift / iOS / Apple
+  if (normalized.includes("swift") || normalized.includes("ios") || normalized.includes("apple")) {
+    return (
+      <svg width={size} height={size} viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <rect width="128" height="128" rx="24" fill="#F05138" />
+        <path d="M96 90C96 90 78 100 52 82C40 73 34 60 32 46C40 56 50 62 62 64C50 56 44 44 44 32C58 48 76 56 94 58C96 46 92 36 86 28C100 38 104 54 100 68C104 74 106 82 96 90Z" fill="white" />
+      </svg>
+    );
+  }
+
+  // Kotlin / Android
+  if (normalized.includes("kotlin") || normalized.includes("android")) {
+    return (
+      <svg width={size} height={size} viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <rect width="128" height="128" rx="24" fill="#7F52FF" />
+        <path d="M30 30L98 98H30V30Z" fill="#C711E1" />
+        <path d="M98 30L30 98H98V30Z" fill="#E4485D" opacity="0.8" />
+        <path d="M30 30L98 30L64 64L30 30Z" fill="#0095D5" />
+      </svg>
+    );
+  }
+
+  // Firebase
+  if (normalized.includes("firebase")) {
+    return (
+      <svg width={size} height={size} viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <rect width="128" height="128" rx="24" fill="#1A202C" />
+        <path d="M36 88L48 30L58 50L36 88Z" fill="#FFA000" />
+        <path d="M36 88L76 22L84 38L36 88Z" fill="#F57C00" />
+        <path d="M72 64L92 88H36L72 64Z" fill="#FFCA28" />
+      </svg>
+    );
+  }
+
+  // Expo
+  if (normalized.includes("expo")) {
+    return (
+      <svg width={size} height={size} viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <rect width="128" height="128" rx="24" fill="#000020" />
+        <path d="M42 40L64 88L86 40H72L64 58L56 40H42Z" fill="white" />
+      </svg>
+    );
+  }
+
   // Laravel
   if (normalized.includes("laravel")) {
     return (

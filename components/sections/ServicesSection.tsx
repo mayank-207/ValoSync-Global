@@ -9,6 +9,7 @@ import {
   GlobeIcon,
   MarketingIcon,
   ArrowRightIcon,
+  SmartphoneIcon,
 } from "../ui/Icons";
 import Button from "../ui/Button";
 
@@ -19,6 +20,13 @@ const services = [
     description:
       "Develop tailored, scalable software solutions built around your unique business workflows, operational requirements, and growth strategy.",
     href: "/services/custom-software",
+  },
+  {
+    icon: <SmartphoneIcon size={28} />,
+    title: "Mobile App Development",
+    description:
+      "Design and engineer native iOS (Swift), Android (Kotlin), and cross-platform (Flutter & React Native) mobile applications with seamless offline sync.",
+    href: "/services/mobile-app-development",
   },
   {
     icon: <CrmIcon size={28} />,

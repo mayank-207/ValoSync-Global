@@ -62,9 +62,9 @@ export const metadata: Metadata = {
       "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
     images: [
       {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/images/logo.png",
+        width: 800,
+        height: 800,
         alt: "ValoSync Global - Custom Software & CRM Development Australia",
       },
     ],
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
     description:
       "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/logo.png"],
     creator: "@valosyncglobal",
   },
   robots: {
@@ -91,11 +91,14 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/images/logo.png", type: "image/png" },
+      { url: "/favicon.png", type: "image/png" },
       { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
     ],
     shortcut: "/images/logo.png",
     apple: [
       { url: "/images/logo.png", type: "image/png" },
+      { url: "/apple-icon.png", type: "image/png" },
     ],
   },
   alternates: {
@@ -136,6 +139,11 @@ export default function RootLayout({ children }: LayoutProps) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" href="/images/logo.png" type="image/png" sizes="any" />
+        <link rel="shortcut icon" href="/images/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/logo.png" />
+      </head>
       <body className="min-h-full flex flex-col">
         <JsonLd />
         {children}

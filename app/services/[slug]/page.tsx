@@ -25,6 +25,7 @@ type ServiceSlug =
   | "crm-development"
   | "ai-automation"
   | "web-development"
+  | "mobile-app-development"
   | "cloud-devops"
   | "digital-marketing";
 
@@ -358,6 +359,84 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       },
     ],
   },
+  "mobile-app-development": {
+    title: "Mobile App Development",
+    badge: "iOS, Android & Cross-Platform Apps",
+    metaTitle: "Mobile App Development Services Australia | iOS, Android & Flutter | Valosync Global",
+    metaDescription:
+      "Custom iOS and Android mobile app development, React Native, Flutter, and enterprise mobile applications built for Australian businesses and global enterprises.",
+    heroHeadline: "Native & Cross-Platform Mobile Apps Engineered for Performance",
+    heroSubtitle:
+      "Transform your product vision into high-performing, intuitive iOS & Android applications with offline sync, biometric security, and App Store approval guarantees.",
+    iconName: "smartphone",
+    highlights: [
+      "Native iOS (Swift) & Android (Kotlin)",
+      "Cross-Platform Flutter & React Native",
+      "100% App & Play Store Approval",
+      "Offline Sync & Biometric Security",
+    ],
+    painPoints: [
+      "Sluggish hybrid apps that lag, drain battery, and receive 1-star reviews.",
+      "High cost and friction of maintaining two separate engineering teams for iOS and Android.",
+      "App Store and Google Play rejections due to complex privacy regulations and latency.",
+    ],
+    solutions: [
+      "Modern cross-platform architecture (Flutter / React Native) cutting development cost by up to 40% with native 60fps performance.",
+      "Single codebase architecture with automated testing and native device sensor integrations (Camera, GPS, Biometrics, Bluetooth).",
+      "End-to-end publishing, testflight distribution, and guaranteed App Store & Play Store compliance.",
+    ],
+    capabilities: [
+      {
+        title: "iOS Native App Development",
+        description:
+          "High-performance native Apple iOS applications engineered with Swift, SwiftUI, and CoreData for iPhone and iPad devices.",
+      },
+      {
+        title: "Android Native App Development",
+        description:
+          "Modern native Android applications built with Kotlin and Jetpack Compose optimized for global Android device compatibility.",
+      },
+      {
+        title: "Cross-Platform Flutter & React Native",
+        description:
+          "Single codebase delivering near-native speed, fluid animations, and simultaneous release across both iOS and Android stores.",
+      },
+      {
+        title: "Enterprise Mobile & API Integration",
+        description:
+          "Secure mobile portals with offline-first synchronization, push notifications, role-based access, and enterprise API sync.",
+      },
+    ],
+    techStack: [
+      { name: "Flutter", role: "Cross-Platform Framework" },
+      { name: "React Native", role: "Native Performance Engine" },
+      { name: "Swift", role: "Native Apple iOS" },
+      { name: "Kotlin", role: "Modern Android" },
+      { name: "Expo", role: "Mobile Tooling & OTA" },
+      { name: "Firebase", role: "Realtime DB & Notifications" },
+      { name: "Node.js", role: "Backend Mobile APIs" },
+      { name: "PostgreSQL", role: "Relational Database" },
+      { name: "AWS Cloud", role: "Cloud Sync Infrastructure" },
+      { name: "Docker", role: "Container Security" },
+    ],
+    metrics: [
+      { value: "4.9 ★", label: "Average App Rating" },
+      { value: "99.9%", label: "Crash-Free Sessions" },
+      { value: "-40%", label: "Time-to-Market" },
+    ],
+    faqs: [
+      {
+        question: "Should we choose Flutter, React Native, or Native iOS/Android?",
+        answer:
+          "For most consumer and enterprise applications, Flutter and React Native provide native 60fps performance while reducing development and maintenance costs by up to 40%. For specialized hardware-intensive apps (e.g. low-level Bluetooth or high-end 3D graphics), pure Swift and Kotlin are recommended. We provide a complete architecture recommendation during discovery.",
+      },
+      {
+        question: "Do you handle App Store and Google Play publishing?",
+        answer:
+          "Yes. We handle developer portal configuration, TestFlight distribution, Apple & Google privacy manifest compliance, store screenshots, metadata optimization, and final publishing approval.",
+      },
+    ],
+  },
   "cloud-devops": {
     title: "Cloud & DevOps Support",
     badge: "Reliable Cloud Delivery",
@@ -522,6 +601,7 @@ export async function generateStaticParams() {
     { slug: "crm-development" },
     { slug: "ai-automation" },
     { slug: "web-development" },
+    { slug: "mobile-app-development" },
     { slug: "cloud-devops" },
     { slug: "digital-marketing" },
   ];
@@ -720,6 +800,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               ? "backend"
               : slug === "ai-automation"
               ? "ai-automation"
+              : slug === "mobile-app-development"
+              ? "mobile"
               : slug === "web-development"
               ? "frontend"
               : slug === "cloud-devops"
