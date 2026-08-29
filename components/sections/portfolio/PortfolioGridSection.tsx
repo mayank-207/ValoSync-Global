@@ -35,14 +35,14 @@ export const portfolioProjects = [
     featured: true,
   },
   {
-    slug: "australian-lead-portal",
-    title: "Australian Lead Generation & Quote Engine",
+    slug: "lead-portal",
+    title: "Lead Generation & Quote Engine",
     category: "Digital Marketing",
     industry: "Professional Services",
-    country: "Australia",
+    country: "Global",
     metric: "3.5x Qualified Inquiries",
     description:
-      "High-converting landing architecture and automated quote engines specifically tailored to attract and engage Australian commercial clients.",
+      "High-converting landing architecture and automated quote engines specifically tailored to attract and engage commercial clients.",
     icon: <MarketingIcon size={24} />,
     tags: ["React 19", "Automated Workflows", "SEO Suite", "Google Ads"],
     featured: true,
@@ -147,7 +147,7 @@ export default function PortfolioGridSection() {
   return (
     <section
       id="case-studies-grid"
-      className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative"
+      className="section-padding bg-white relative"
     >
       <div className="container">
         <SectionHeading
@@ -159,7 +159,7 @@ export default function PortfolioGridSection() {
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          <div className="flex items-center gap-2 pr-3 text-slate-400 text-xs font-semibold uppercase tracking-wider hidden sm:flex">
+          <div className="flex items-center gap-2 pr-3 text-[#718096] text-xs font-semibold uppercase tracking-wider hidden sm:flex">
             <FilterIcon size={14} />
             <span>Filter:</span>
           </div>
@@ -167,10 +167,10 @@ export default function PortfolioGridSection() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 ${
+              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1] ${
                 activeCategory === cat
-                  ? "bg-cyan-500 text-white shadow-md shadow-cyan-500/20 scale-105"
-                  : "bg-white dark:bg-[#0F172A] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-cyan-500/40 hover:text-cyan-500"
+                  ? "bg-[#0D47A1] text-white shadow-md shadow-[#0D47A1]/20 scale-105"
+                  : "bg-white text-[#4A5568] border border-[#D9E1EC] hover:border-[#0D47A1]/40 hover:text-[#0D47A1]"
               }`}
             >
               {cat}
@@ -184,20 +184,20 @@ export default function PortfolioGridSection() {
             <Link
               key={project.slug}
               href={`/portfolio/${project.slug}`}
-              className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/50 rounded-3xl"
+              className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1]/50 rounded-3xl"
             >
-              <article className="relative flex flex-col h-full rounded-3xl border overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-white dark:bg-[#0F172A] border-slate-200 dark:border-slate-800">
+              <article className="relative flex flex-col h-full rounded-3xl border border-[#D9E1EC] bg-white shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#0D47A1]/40">
                 {/* Visual Header Box */}
-                <div className="relative p-6 bg-gradient-to-br from-[#0B1B3D] via-[#1E3A8A] to-[#0F172A] text-white flex flex-col justify-between h-48 overflow-hidden">
+                <div className="relative p-6 bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1] text-white flex flex-col justify-between h-48 overflow-hidden">
                   <div className="flex items-center justify-between z-10">
-                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 backdrop-blur-md">
+                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/40 backdrop-blur-md">
                       {project.category}
                     </span>
                     <div className="flex items-center gap-2">
                       <span className="px-2.5 py-0.5 text-[10px] font-semibold rounded-full bg-white/10 text-slate-300">
                         {project.country}
                       </span>
-                      <span className="p-2 rounded-xl bg-white/10 text-cyan-400">
+                      <span className="p-2 rounded-xl bg-white/10 text-[#D4AF37]">
                         {project.icon}
                       </span>
                     </div>
@@ -207,42 +207,42 @@ export default function PortfolioGridSection() {
                     <span className="text-[11px] font-semibold text-slate-300 block uppercase tracking-wider mb-0.5">
                       KEY IMPACT METRIC
                     </span>
-                    <span className="text-xl font-extrabold text-cyan-400">
+                    <span className="text-xl font-extrabold text-[#D4AF37]">
                       {project.metric}
                     </span>
                   </div>
 
                   {/* Glow effect */}
                   <div
-                    className="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500/20 rounded-full blur-2xl pointer-events-none transition-transform duration-500 group-hover:scale-150"
+                    className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#0D47A1]/30 rounded-full blur-2xl pointer-events-none transition-transform duration-500 group-hover:scale-150"
                     aria-hidden="true"
                   />
                 </div>
 
                 {/* Body Content */}
                 <div className="flex flex-col flex-1 p-6 sm:p-7">
-                  <div className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mb-1">
+                  <div className="text-xs font-semibold text-[#0D47A1] mb-1">
                     {project.industry}
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-cyan-500">
+                  <h3 className="text-lg font-bold mb-3 text-[#1A1A1A] transition-colors duration-300 group-hover:text-[#0D47A1]">
                     {project.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400 flex-1 mb-6">
+                  <p className="text-sm leading-relaxed text-[#4A5568] flex-1 mb-6">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100 dark:border-slate-800">
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-[#F0F4FA]">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60"
+                        className="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC]"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="mt-5 pt-2 flex items-center gap-2 text-sm font-semibold text-cyan-500 group-hover:gap-3 transition-all duration-300">
+                  <div className="mt-5 pt-2 flex items-center gap-2 text-sm font-bold text-[#0D47A1] group-hover:gap-3 transition-all duration-300">
                     <span>Read Full Case Study</span>
                     <ArrowRightIcon size={16} />
                   </div>

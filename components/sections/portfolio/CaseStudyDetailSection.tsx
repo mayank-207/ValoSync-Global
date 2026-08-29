@@ -21,7 +21,7 @@ const spotlightCaseStudies = [
     category: "CRM Development",
     icon: <CrmIcon size={24} />,
     summary:
-      "Engineered for an Australian B2B consulting firm dealing with complex multi-touch sales cycles and high-value contracts.",
+      "Engineered for an B2B consulting firm dealing with complex multi-touch sales cycles and high-value contracts.",
     challenge:
       "Legacy CRM caused 20+ hours of lost administrative labor per week per sales manager, while manual follow-up delays caused a 40% lead drop-off rate.",
     solution:
@@ -40,8 +40,8 @@ const spotlightCaseStudies = [
   },
   {
     id: "spotlight-marketing",
-    slug: "australian-lead-portal",
-    title: "Australian Lead Generation Engine",
+    slug: "lead-portal",
+    title: "Lead Generation Engine",
     category: "Digital Marketing & SEO",
     icon: <MarketingIcon size={24} />,
     summary:
@@ -95,7 +95,7 @@ export default function CaseStudyDetailSection() {
     spotlightCaseStudies.find((s) => s.id === selectedId) || spotlightCaseStudies[0];
 
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative overflow-hidden">
+    <section className="section-padding bg-white relative overflow-hidden">
       <div className="container">
         <SectionHeading
           badge="Deep-Dive Case Studies"
@@ -110,15 +110,15 @@ export default function CaseStudyDetailSection() {
             <button
               key={study.id}
               onClick={() => setSelectedId(study.id)}
-              className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 ${
+              className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1]/40 ${
                 selectedId === study.id
-                  ? "bg-slate-900 dark:bg-slate-800 text-white shadow-xl shadow-slate-900/10 ring-2 ring-cyan-500/50 scale-105"
-                  : "bg-slate-100 dark:bg-slate-900/60 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800"
+                  ? "bg-[#071A3D] text-white shadow-xl shadow-[#071A3D]/20 ring-2 ring-[#0D47A1]/50 scale-105"
+                  : "bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC] hover:bg-white hover:text-[#0D47A1]"
               }`}
             >
               <span
                 className={
-                  selectedId === study.id ? "text-cyan-400" : "text-slate-400"
+                  selectedId === study.id ? "text-[#D4AF37]" : "text-[#718096]"
                 }
               >
                 {study.icon}
@@ -129,14 +129,14 @@ export default function CaseStudyDetailSection() {
         </div>
 
         {/* Selected Case Study Detail Card */}
-        <div className="bg-slate-50 dark:bg-[#0F172A] rounded-3xl p-6 sm:p-10 border border-slate-200/80 dark:border-slate-800 shadow-2xl transition-all duration-300">
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mb-10 pb-8 border-b border-slate-200 dark:border-slate-800">
+        <div className="bg-[#F7F9FC] rounded-3xl p-6 sm:p-10 border border-[#D9E1EC] shadow-2xl transition-all duration-300">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mb-10 pb-8 border-b border-[#D9E1EC]">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                <ZapIcon size={14} />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D47A1]/10 text-[#0D47A1] text-xs font-bold uppercase tracking-wider mb-3">
+                <ZapIcon size={14} className="text-[#D4AF37]" />
                 <span>Featured Case Study</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">
                 {currentStudy.title}
               </h3>
               <p className="text-slate-600 dark:text-slate-400 font-medium text-base mt-2">
@@ -157,56 +157,56 @@ export default function CaseStudyDetailSection() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10">
             {/* Challenge Column */}
-            <div className="bg-white dark:bg-[#060e24] p-6 sm:p-8 rounded-2xl border border-red-500/20 shadow-sm">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#D9E1EC] shadow-sm">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center font-bold text-lg">
+                <div className="w-10 h-10 rounded-xl bg-[#071A3D]/10 text-[#071A3D] flex items-center justify-center font-bold text-lg">
                   !
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900 dark:text-white">
+                  <h4 className="text-lg font-bold text-[#1A1A1A]">
                     The Client Challenge
                   </h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                  <p className="text-xs text-[#718096]">
                     Operational friction & revenue loss
                   </p>
                 </div>
               </div>
-              <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+              <p className="text-[#4A5568] text-sm leading-relaxed">
                 {currentStudy.challenge}
               </p>
             </div>
 
             {/* Solution Column */}
-            <div className="bg-white dark:bg-[#060e24] p-6 sm:p-8 rounded-2xl border border-cyan-500/30 shadow-sm">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#0D47A1]/30 shadow-sm">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center font-bold">
-                  <CheckCircleIcon size={22} />
+                <div className="w-10 h-10 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] flex items-center justify-center font-bold">
+                  <CheckCircleIcon size={22} className="text-[#D4AF37]" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-cyan-400 uppercase tracking-wider">
-                    Velosync Global Solution
+                  <h4 className="text-sm font-bold text-[#0D47A1] uppercase tracking-wider">
+                    ValoSync Global Solution
                   </h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                  <p className="text-xs text-[#718096]">
                     Engineered architecture & automation
                   </p>
                 </div>
               </div>
-              <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+              <p className="text-[#4A5568] text-sm leading-relaxed">
                 {currentStudy.solution}
               </p>
             </div>
           </div>
 
           {/* Key Deliverables & Results */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-slate-200 dark:border-slate-800">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-[#D9E1EC]">
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#718096] mb-4">
                 Key Deliverables Built
               </h4>
               <ul className="space-y-2.5">
                 {currentStudy.deliverables.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2.5 text-sm font-semibold text-slate-800 dark:text-slate-200">
-                    <div className="w-2 h-2 rounded-full bg-cyan-500" />
+                  <li key={idx} className="flex items-center gap-2.5 text-sm font-semibold text-[#1A1A1A]">
+                    <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -214,19 +214,19 @@ export default function CaseStudyDetailSection() {
             </div>
 
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4 text-center md:text-left">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#718096] mb-4 text-center md:text-left">
                 Verified Business ROI
               </h4>
               <div className="grid grid-cols-3 gap-3">
                 {currentStudy.results.map((r, idx) => (
                   <div
                     key={idx}
-                    className="bg-white dark:bg-[#060e24] p-4 rounded-2xl text-center border border-slate-200 dark:border-slate-800/80"
+                    className="bg-[#F7F9FC] p-4 rounded-2xl text-center border border-[#D9E1EC]"
                   >
-                    <div className="text-xl sm:text-2xl font-extrabold text-cyan-500 mb-0.5">
+                    <div className="text-xl sm:text-2xl font-extrabold text-[#0D47A1] mb-0.5">
                       {r.value}
                     </div>
-                    <div className="text-[11px] font-semibold text-slate-600 dark:text-slate-400">
+                    <div className="text-[11px] font-semibold text-[#4A5568]">
                       {r.label}
                     </div>
                   </div>

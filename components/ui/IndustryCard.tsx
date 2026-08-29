@@ -28,8 +28,8 @@ export default function IndustryCard({
     <article
       className={`group relative flex flex-col h-full rounded-2xl p-6 sm:p-8 transition-all duration-300 border ${
         highlight
-          ? "bg-gradient-to-b from-[#0B1B3D]/90 to-[#0F172A] border-cyan-500/40 text-white shadow-xl shadow-cyan-500/10"
-          : "bg-white dark:bg-[#0F172A] border-slate-200 dark:border-slate-800 hover:border-cyan-500/50 hover:shadow-xl hover:-translate-y-1"
+          ? "bg-gradient-to-b from-[#071A3D] to-[#041026] border-[#0D47A1]/50 text-white shadow-xl"
+          : "bg-white border-[#D9E1EC] hover:border-[#0D47A1]/50 hover:shadow-xl hover:-translate-y-1"
       }`}
     >
       {/* Category Tag & Icon */}
@@ -38,8 +38,8 @@ export default function IndustryCard({
           <div
             className={`w-14 h-14 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${
               highlight
-                ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30"
-                : "bg-cyan-50 dark:bg-cyan-950/50 text-cyan-600 dark:text-cyan-400 border border-cyan-100 dark:border-cyan-900/40"
+                ? "bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30"
+                : "bg-[#0D47A1]/10 text-[#0D47A1] border border-[#0D47A1]/20"
             }`}
           >
             {icon}
@@ -47,25 +47,20 @@ export default function IndustryCard({
           <span
             className={`text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full ${
               highlight
-                ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30"
-                : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
+                ? "bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30"
+                : "bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC]"
             }`}
           >
             {category}
           </span>
         </div>
 
-        {metrics && (
-          <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-            {metrics}
-          </span>
-        )}
       </div>
 
       {/* Title */}
       <h3
-        className={`text-xl font-bold mb-3 transition-colors duration-200 group-hover:text-cyan-500 ${
-          highlight ? "text-white" : "text-slate-900 dark:text-white"
+        className={`text-xl font-bold mb-3 transition-colors duration-200 group-hover:text-[#0D47A1] ${
+          highlight ? "text-white group-hover:text-[#D4AF37]" : "text-[#1A1A1A]"
         }`}
       >
         {title}
@@ -74,17 +69,17 @@ export default function IndustryCard({
       {/* Description */}
       <p
         className={`text-sm leading-relaxed mb-6 flex-grow ${
-          highlight ? "text-slate-300" : "text-slate-600 dark:text-slate-400"
+          highlight ? "text-slate-300" : "text-[#4A5568]"
         }`}
       >
         {description}
       </p>
 
       {/* Key Features List */}
-      <div className="mb-6 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+      <div className="mb-6 pt-4 border-t border-[#F0F4FA]">
         <h4
           className={`text-xs font-semibold uppercase tracking-wider mb-3 ${
-            highlight ? "text-cyan-400" : "text-slate-400 dark:text-slate-500"
+            highlight ? "text-[#D4AF37]" : "text-[#718096]"
           }`}
         >
           Core Industry Solutions
@@ -95,16 +90,10 @@ export default function IndustryCard({
               <CheckCircleIcon
                 size={16}
                 className={`mt-0.5 flex-shrink-0 ${
-                  highlight ? "text-cyan-400" : "text-cyan-500"
+                  highlight ? "text-[#D4AF37]" : "text-[#0D47A1]"
                 }`}
               />
-              <span
-                className={
-                  highlight
-                    ? "text-slate-200"
-                    : "text-slate-700 dark:text-slate-300"
-                }
-              >
+              <span className={highlight ? "text-slate-200" : "text-[#1A1A1A]"}>
                 {feature}
               </span>
             </li>
@@ -119,8 +108,8 @@ export default function IndustryCard({
             key={idx}
             className={`text-[11px] font-medium px-2.5 py-0.5 rounded-md ${
               highlight
-                ? "bg-slate-800 text-slate-300 border border-slate-700"
-                : "bg-slate-100 dark:bg-slate-800/60 text-slate-600 dark:text-slate-400 border border-slate-200/60 dark:border-slate-800"
+                ? "bg-[#041026] text-slate-300 border border-slate-700"
+                : "bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC]"
             }`}
           >
             {tech}
@@ -133,7 +122,7 @@ export default function IndustryCard({
         <Button
           as="link"
           href="/contact"
-          variant={highlight ? "primary" : "secondary"}
+          variant={highlight ? "gold" : "primary"}
           size="sm"
           fullWidth
           rightIcon={<ArrowRightIcon size={14} />}

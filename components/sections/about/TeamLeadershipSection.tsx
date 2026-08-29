@@ -35,7 +35,7 @@ const teamRoles = [
 
 export default function TeamLeadershipSection() {
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative">
+    <section className="section-padding bg-white relative">
       <div className="container">
         <SectionHeading
           badge="Multidisciplinary Talent"
@@ -48,26 +48,26 @@ export default function TeamLeadershipSection() {
           {teamRoles.map((role, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200/80 dark:border-slate-800 hover:border-cyan-500/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="p-8 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] hover:border-[#0B3D91]/40 hover:shadow-xl hover:bg-white transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center mb-6 border border-cyan-500/20">
+                <div className="w-14 h-14 rounded-2xl bg-[#0D47A1]/10 text-[#0D47A1] flex items-center justify-center mb-6 border border-[#0D47A1]/20">
                   {role.icon}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">
                   {role.title}
                 </h3>
-                <p className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mb-4">
+                <p className="text-xs font-semibold text-[#0D47A1] mb-4">
                   {role.focus}
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-sm text-[#4A5568] leading-relaxed">
                   {role.description}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-800/80 text-xs font-medium text-slate-400">
-                Dedicated Velosync Global Engineering Division
-              </div>
+              {/* <div className="mt-6 pt-4 border-t border-[#F0F4FA] text-xs font-medium text-[#718096]">
+                Dedicated ValoSync Global Engineering Division
+              </div> */}
             </div>
           ))}
         </div>

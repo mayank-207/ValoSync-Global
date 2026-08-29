@@ -1,6 +1,6 @@
-# VeloSync Global
+# ValoSync Global
 
-**VeloSync Global** is a modern, high-performance web application built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS. Designed to deliver sleek digital experiences, showcase custom software solutions, enterprise CRMs, AI automation services, and detailed portfolio case studies.
+**ValoSync Global** is a modern, high-performance web application built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS. Designed to deliver sleek digital experiences, showcase custom software solutions, enterprise CRMs, AI automation services, and detailed portfolio case studies.
 
 ---
 
@@ -28,7 +28,7 @@
 ## 📂 Project Structure
 
 ```text
-velosync_global/
+valosync_global/
 ├── app/                      # Next.js App Router pages and API routes
 │   ├── about/                # About page
 │   ├── api/contact/          # Contact API route (Resend email integration)
@@ -62,8 +62,8 @@ velosync_global/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/mayank-207/VeloSync-Global.git
-   cd VeloSync-Global
+   git clone https://github.com/mayank-207/ValoSync-Global.git
+   cd ValoSync-Global
    ```
 
 2. **Install dependencies**:
@@ -104,7 +104,7 @@ velosync_global/
 
 This repository includes a `netlify.toml` configuration file tuned for Next.js App Router applications.
 
-1. Connect your repository (`mayank-207/VeloSync-Global`) to **Netlify**.
+1. Connect your repository (`mayank-207/ValoSync-Global`) to **Netlify**.
 2. Netlify will auto-detect the build command and publish directory:
    - **Build Command**: `npm run build`
    - **Publish Directory**: `.next`
@@ -117,4 +117,4 @@ This repository includes a `netlify.toml` configuration file tuned for Next.js A
 
 ## 📜 License
 
-Private & Proprietary - **VeloSync Global**.
+Private & Proprietary - **ValoSync Global**.

@@ -6,12 +6,12 @@ import FAQAccordion from "@/components/ui/FAQAccordion";
 
 const faqs = [
   {
-    question: "Do you customize software for specific Australian industry compliance?",
+    question: "Do you customize software for specific industry compliance regulations?",
     answer:
-      "Yes. All our solutions for Australian clients are built in compliance with local regulations, including the Australian Privacy Principles (APPs), AHPRA guidelines for healthcare, financial audit requirements, and local data residency standards.",
+      "Yes. All our solutions are engineered in compliance with relevant data privacy standards (including Privacy Principles, AHPRA guidelines for healthcare, and international security protocols), financial audit requirements, and secure cloud residency options.",
   },
   {
-    question: "Can Velosync Global integrate custom software with our existing legacy ERP/CRM?",
+    question: "Can Valosync Global integrate custom software with our existing legacy ERP/CRM?",
     answer:
       "Absoutely. We specialize in API engineering and middleware integration. Whether you use SAP, Salesforce, Xero, MYOB, custom legacy databases, or proprietary hardware, we connect your existing systems without disrupting day-to-day operations.",
   },
@@ -34,7 +34,7 @@ const faqs = [
 
 export default function IndustryFAQSection() {
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative">
+    <section className="section-padding bg-[#F7F9FC] relative">
       <div className="container max-w-3xl mx-auto">
         <SectionHeading
           badge="Frequently Asked Questions"

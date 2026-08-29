@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Logo from "../ui/Logo";
 import {
-  PhoneIcon,
   MailIcon,
   MapPinIcon,
   LinkedinIcon,
@@ -20,10 +19,11 @@ const footerLinks = {
   ],
   services: [
     { label: "Custom Software Development", href: "/services/custom-software" },
+    { label: "Mobile App Development", href: "/services/mobile-app-development" },
     { label: "CRM Development", href: "/services/crm-development" },
     { label: "AI Automation", href: "/services/ai-automation" },
-    { label: "Business Automation", href: "/services/business-automation" },
     { label: "Web Development", href: "/services/web-development" },
+    { label: "Cloud & DevOps Support", href: "/services/cloud-devops" },
     { label: "Digital Marketing", href: "/services/digital-marketing" },
   ],
   industries: [
@@ -37,21 +37,15 @@ const footerLinks = {
 
 const contactInfo = [
   {
-    icon: <PhoneIcon size={18} />,
-    label: "Sales & Inquiries",
-    value: "+61 (02) 8000 0000 / +91 98765 43210",
-    href: "tel:+61280000000",
-  },
-  {
     icon: <MailIcon size={18} />,
     label: "Official Email",
-    value: "contact@velosyncglobal.com",
-    href: "mailto:contact@velosyncglobal.com",
+    value: "contact@valosyncglobal.com",
+    href: "mailto:contact@valosyncglobal.com",
   },
   {
     icon: <MapPinIcon size={18} />,
     label: "Global Reach",
-    value: "Australia & Global Delivery Hub",
+    value: "Supporting Businesses",
     href: "/contact",
   },
 ];
@@ -60,70 +54,37 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-auto pt-16" style={{ background: "var(--primary-color)" }}>
-      <div
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 20%, rgb(6 182 212) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgb(30 58 138) 0%, transparent 50%)",
-        }}
-      />
-
+    <footer className="relative mt-auto pt-16 bg-[#071A3D] text-white">
       <div className="relative container">
         {/* Pre-footer Call to Action Card */}
-        <section
-          className="relative mb-16 p-8 md:p-12 rounded-3xl overflow-hidden shadow-2xl border"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.85) 50%, rgba(6, 182, 212, 0.2) 100%)",
-            borderColor: "rgba(6, 182, 212, 0.3)",
-          }}
-        >
+        {/* <section className="relative mb-16 p-8 md:p-12 rounded-3xl overflow-hidden shadow-2xl border border-[#0D47A1]/40 bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1]">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <span
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-full mb-4 border"
-                style={{
-                  background: "rgba(6, 182, 212, 0.15)",
-                  borderColor: "rgba(6, 182, 212, 0.4)",
-                  color: "var(--accent-color)",
-                }}
-              >
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-full mb-4 border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37]">
                 Let&apos;s Build Success Together
               </span>
-              <h2
-                className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-3"
-                style={{ color: "var(--text-light)" }}
-              >
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-3 text-white">
                 Ready to Accelerate Your{" "}
-                <span style={{ color: "var(--accent-color)" }}>Digital Growth?</span>
+                <span className="text-[#D4AF37]">Digital Growth?</span>
               </h2>
-              <p
-                className="text-sm md:text-base leading-relaxed"
-                style={{ color: "rgba(203, 213, 225, 0.9)" }}
-              >
-                Connect with Velosync Global today to discuss custom software development, AI automation, or lead generation strategies tailored for your business.
+              <p className="text-sm md:text-base leading-relaxed text-slate-300">
+                Talk with ValoSync Global about custom software, CRM, web development, automation, cloud delivery or digital growth requirements.
               </p>
             </div>
             <div className="flex lg:justify-end">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 px-7 py-4 text-base font-bold rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/40"
-                style={{
-                  background: "var(--gradient-accent)",
-                  color: "var(--text-light)",
-                  boxShadow: "0 10px 30px -10px rgba(6, 182, 212, 0.5)",
-                }}
+                className="group inline-flex items-center gap-3 px-7 py-4 text-base font-bold rounded-xl transition-all duration-200 hover:-translate-y-0.5 shadow-lg bg-[#0D47A1] hover:bg-[#0a3882] text-white"
               >
                 Book Free Consultation
                 <ArrowRightIcon
                   size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
+                  className="transition-transform duration-200 group-hover:translate-x-1"
                 />
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Footer Navigation Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16">
@@ -131,9 +92,9 @@ export default function Footer() {
             <Logo variant="light" className="mb-6" />
             <p
               className="text-sm leading-relaxed mb-6 max-w-md"
-              style={{ color: "rgba(203, 213, 225, 0.85)" }}
+              style={{ color: "var(--color-inverse-muted)" }}
             >
-              Velosync Global delivers enterprise-grade software development, customized CRM systems, AI & business automation, modern web applications, and ROI-driven digital marketing.
+              ValoSync Global builds custom software, CRM platforms, websites and connected digital solutions, supported by cloud delivery and digital growth services.
             </p>
             <div className="flex flex-col gap-3.5">
               {contactInfo.map((item) => (
@@ -143,9 +104,9 @@ export default function Footer() {
                   className="flex items-start gap-3 group transition-colors duration-200"
                 >
                   <span
-                    className="flex-shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-xl transition-colors duration-200 group-hover:bg-cyan-500/20"
+                    className="flex-shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-xl transition-colors duration-200 group-hover:bg-accent/20"
                     style={{
-                      background: "rgba(255, 255, 255, 0.06)",
+                      background: "var(--color-inverse-subtle)",
                       color: "var(--accent-color)",
                     }}
                   >
@@ -154,12 +115,12 @@ export default function Footer() {
                   <div>
                     <p
                       className="text-[11px] font-semibold uppercase tracking-wider mb-0.5"
-                      style={{ color: "rgba(148, 163, 184, 0.8)" }}
+                      style={{ color: "var(--color-inverse-muted)" }}
                     >
                       {item.label}
                     </p>
                     <p
-                      className="text-sm font-semibold transition-colors duration-200 group-hover:text-cyan-400"
+                      className="text-sm font-semibold transition-colors duration-200 group-hover:text-accent"
                       style={{ color: "var(--text-light)" }}
                     >
                       {item.value}
@@ -182,8 +143,8 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm font-medium transition-colors duration-200 hover:text-cyan-400"
-                    style={{ color: "rgba(203, 213, 225, 0.85)" }}
+                    className="text-sm font-medium transition-colors duration-200 hover:text-accent"
+                    style={{ color: "var(--color-inverse-muted)" }}
                   >
                     {link.label}
                   </Link>
@@ -204,8 +165,8 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm font-medium transition-colors duration-200 hover:text-cyan-400"
-                    style={{ color: "rgba(203, 213, 225, 0.85)" }}
+                    className="text-sm font-medium transition-colors duration-200 hover:text-accent"
+                    style={{ color: "var(--color-inverse-muted)" }}
                   >
                     {link.label}
                   </Link>
@@ -226,8 +187,8 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm font-medium transition-colors duration-200 hover:text-cyan-400"
-                    style={{ color: "rgba(203, 213, 225, 0.85)" }}
+                    className="text-sm font-medium transition-colors duration-200 hover:text-accent"
+                    style={{ color: "var(--color-inverse-muted)" }}
                   >
                     {link.label}
                   </Link>
@@ -240,35 +201,35 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div
           className="flex flex-col md:flex-row items-center justify-between gap-6 py-8 border-t"
-          style={{ borderColor: "rgba(255, 255, 255, 0.08)" }}
+          style={{ borderColor: "var(--color-inverse-subtle)" }}
         >
           <p
             className="text-xs text-center md:text-left"
-            style={{ color: "rgba(148, 163, 184, 0.85)" }}
+            style={{ color: "var(--color-inverse-muted)" }}
           >
-            © {currentYear} Velosync Global. All rights reserved. Built for global technology leadership.
+            © {currentYear} Valosync Global. All rights reserved. Technology solutions built around your business.
           </p>
 
           <div className="flex items-center gap-3">
             {[
               {
                 icon: <LinkedinIcon size={18} />,
-                href: "https://linkedin.com/company/velosyncglobal",
+                href: "https://linkedin.com/company/valosyncglobal",
                 label: "LinkedIn Company Account",
               },
               {
                 icon: <InstagramIcon size={18} />,
-                href: "https://instagram.com/velosyncglobal",
+                href: "https://instagram.com/valosyncglobal",
                 label: "Instagram Company Account",
               },
               {
                 icon: <TwitterIcon size={18} />,
-                href: "https://twitter.com/velosyncglobal",
+                href: "https://twitter.com/valosyncglobal",
                 label: "Twitter Account",
               },
               {
                 icon: <GithubIcon size={18} />,
-                href: "https://github.com/velosyncglobal",
+                href: "https://github.com/valosyncglobal",
                 label: "GitHub Repositories",
               },
             ].map((social) => (
@@ -278,10 +239,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="inline-flex items-center justify-center w-9 h-9 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:bg-cyan-500/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40"
+                className="inline-flex items-center justify-center w-9 h-9 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
                 style={{
-                  background: "rgba(255, 255, 255, 0.05)",
-                  color: "rgba(203, 213, 225, 0.85)",
+                  background: "var(--color-inverse-subtle)",
+                  color: "var(--color-inverse-muted)",
                 }}
               >
                 {social.icon}
@@ -292,15 +253,15 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium">
             <Link
               href="/privacy-policy"
-              className="transition-colors duration-200 hover:text-cyan-400"
-              style={{ color: "rgba(148, 163, 184, 0.85)" }}
+              className="transition-colors duration-200 hover:text-accent"
+              style={{ color: "var(--color-inverse-muted)" }}
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
-              className="transition-colors duration-200 hover:text-cyan-400"
-              style={{ color: "rgba(148, 163, 184, 0.85)" }}
+              className="transition-colors duration-200 hover:text-accent"
+              style={{ color: "var(--color-inverse-muted)" }}
             >
               Terms & Conditions
             </Link>

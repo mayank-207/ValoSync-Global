@@ -18,13 +18,15 @@ import {
   ChevronDownIcon,
 } from "@/components/ui/Icons";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import TechStackFilterShowcase, { TechCategory } from "@/components/sections/services/TechStackFilterShowcase";
 
 type ServiceSlug =
   | "custom-software"
   | "crm-development"
   | "ai-automation"
-  | "business-automation"
   | "web-development"
+  | "mobile-app-development"
+  | "cloud-devops"
   | "digital-marketing";
 
 interface ServiceData {
@@ -39,7 +41,7 @@ interface ServiceData {
   painPoints: string[];
   solutions: string[];
   capabilities: { title: string; description: string }[];
-  techStack: string[];
+  techStack: { name: string; role: string }[];
   metrics: { value: string; label: string }[];
   faqs: { question: string; answer: string }[];
 }
@@ -48,9 +50,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "custom-software": {
     title: "Custom Software Development",
     badge: "Bespoke Enterprise Software",
-    metaTitle: "Custom Software Development Services | Velosync Global",
+    metaTitle: "Custom Software Development Services Australia | Valosync Global",
     metaDescription:
-      "Engineered bespoke software applications, scalable microservices, SaaS platforms, and API integrations tailored for your exact business requirements.",
+      "Engineered bespoke software applications, scalable microservices, SaaS platforms, and API integrations for Australian businesses and global enterprises.",
     heroHeadline: "Bespoke Software Platforms Built to Scale Your Business",
     heroSubtitle:
       "Transform your operational vision into high-performing, cloud-native software built specifically around your proprietary workflows and growth goals.",
@@ -93,7 +95,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Designing high-throughput REST and GraphQL APIs to connect internal software with external partner ecosystems.",
       },
     ],
-    techStack: ["Next.js", "React", "Node.js", "Python", "PostgreSQL", "AWS / Docker"],
+    techStack: [
+      { name: "Next.js", role: "Full-Stack Framework" },
+      { name: "React", role: "Frontend UI Components" },
+      { name: "TypeScript", role: "Type-Safe Architecture" },
+      { name: "Node.js", role: "Backend Microservices" },
+      { name: "Python", role: "Data Logic & APIs" },
+      { name: "PostgreSQL", role: "Relational Database" },
+      { name: "Docker", role: "Container Security" },
+      { name: "AWS Cloud", role: "Elastic Infrastructure" },
+      { name: "GitHub Actions", role: "CI/CD Deployment" },
+      { name: "Tailwind CSS", role: "Modular Styling" },
+    ],
     metrics: [
       { value: "100%", label: "Source Code Ownership" },
       { value: "99.9%", label: "Uptime Guarantee" },
@@ -115,12 +128,12 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "crm-development": {
     title: "CRM Development",
     badge: "Intelligent Sales & Customer Management",
-    metaTitle: "Custom CRM Development Services | Velosync Global",
+    metaTitle: "Custom CRM Development Services Australia | Valosync Global",
     metaDescription:
-      "Build custom CRM platforms engineered to manage sales pipelines, customer interactions, lead scoring, and automated client onboarding.",
-    heroHeadline: "Custom CRM Platforms Built for High-Converting Sales Teams",
+      "Build custom CRM platforms engineered for sales pipelines, automated lead scoring, client onboarding, and CRM solutions for Australian and international businesses.",
+    heroHeadline: "Custom CRM Platforms Built for Business-Focused Sales Teams",
     heroSubtitle:
-      "Eliminate clunky generic CRMs. Velosync Global engineers tailored sales pipelines, automated lead scoring, and omnichannel client management systems.",
+      "Eliminate clunky generic CRMs. Valosync Global engineers tailored sales pipelines, automated lead scoring, and omnichannel client management systems.",
     iconName: "crm",
     highlights: [
       "Tailored Pipeline Stages",
@@ -160,7 +173,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Track sales rep activity, deal conversion rates, revenue projections, and customer lifetime value in real time.",
       },
     ],
-    techStack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Twilio / WhatsApp API", "Stripe API"],
+    techStack: [
+      { name: "React", role: "Pipeline Dashboard" },
+      { name: "TypeScript", role: "Enterprise Logic" },
+      { name: "Node.js", role: "High-Speed APIs" },
+      { name: "PostgreSQL", role: "Customer Records" },
+      { name: "Twilio", role: "SMS & Telephony" },
+      { name: "WhatsApp API", role: "Direct Messaging" },
+      { name: "Stripe", role: "Recurring Billing" },
+      { name: "Google Analytics", role: "Attribution Funnels" },
+      { name: "Docker", role: "Secure Containers" },
+      { name: "AWS", role: "High Availability" },
+    ],
     metrics: [
       { value: "< 2 Mins", label: "Lead Response Time" },
       { value: "+35%", label: "Sales Conversion Rate" },
@@ -175,16 +199,16 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       {
         question: "Is training provided for our sales team?",
         answer:
-          "Absoutely. We provide complete video tutorials, user documentation, and live onboarding sessions for your staff.",
+          "Yes. We provide complete video tutorials, user documentation, and live onboarding sessions for your staff.",
       },
     ],
   },
   "ai-automation": {
     title: "AI Automation Solutions",
     badge: "Intelligent Artificial Intelligence & ML",
-    metaTitle: "AI Automation & Custom LLM Services | Velosync Global",
+    metaTitle: "AI Automation & Custom LLM Services Australia | Valosync Global",
     metaDescription:
-      "Deploy custom AI solutions, RAG knowledge bots, intelligent document extraction pipelines, and 24/7 conversational agents.",
+      "Deploy custom AI solutions, RAG knowledge bots, intelligent document extraction pipelines, and 24/7 conversational agents for Australian and global organizations.",
     heroHeadline: "Harness AI to Automate Complex Workflows & Data Processing",
     heroSubtitle:
       "Empower your workforce with enterprise AI assistants, automated medical & invoice extraction engines, and intelligent customer support bots.",
@@ -192,8 +216,8 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
     highlights: [
       "Private Enterprise RAG Bots",
       "Automated OCR Data Extraction",
-      "24/7 Conversational AI Agents",
-      "Zero Data Leakage Security",
+      "Conversational AI Assistants",
+      "Security-Conscious Integration",
     ],
     painPoints: [
       "Human staff spending hours copying data from invoices, medical files, or contracts.",
@@ -203,7 +227,7 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
     solutions: [
       "Custom RAG-powered knowledge assistants with instant semantic retrieval across all documents.",
       "Automated OCR extraction pipelines sending structured data straight into your ERP/CRM.",
-      "24/7 autonomous support bots resolving 65%+ of routine queries with human-like accuracy.",
+      "AI-assisted support workflows designed with escalation and human review where appropriate.",
     ],
     capabilities: [
       {
@@ -227,7 +251,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Automate report generation, email drafts, compliance checks, and summary generation across toolchains.",
       },
     ],
-    techStack: ["OpenAI / Anthropic APIs", "LangChain", "LlamaIndex", "Pinecone Vector DB", "Python / FastAPI", "Next.js"],
+    techStack: [
+      { name: "OpenAI GPT-4o", role: "LLM & Reasoning Engine" },
+      { name: "Anthropic Claude", role: "Complex Document Parsing" },
+      { name: "LangChain", role: "Agent Framework" },
+      { name: "Pinecone DB", role: "Vector Semantic Storage" },
+      { name: "Python", role: "FastAPI Backend" },
+      { name: "Next.js", role: "AI Web Interface" },
+      { name: "Docker", role: "Container Sandbox" },
+      { name: "AWS", role: "Cloud AI Infrastructure" },
+      { name: "GitHub Actions", role: "Automated Testing" },
+      { name: "PostgreSQL", role: "Vector Metadata DB" },
+    ],
     metrics: [
       { value: "99.2%", label: "Data Extraction Accuracy" },
       { value: "65%", label: "Support Automated" },
@@ -246,86 +281,19 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       },
     ],
   },
-  "business-automation": {
-    title: "Business Process Automation",
-    badge: "Operational Workflow Orchestration",
-    metaTitle: "Business Process Automation Services | Velosync Global",
-    metaDescription:
-      "Automate manual business processes, inter-departmental data sync, approval chains, and automated task dispatching.",
-    heroHeadline: "Streamline Operations & Eliminate Repetitive Manual Labor",
-    heroSubtitle:
-      "Interconnect your software applications, automate cross-departmental tasks, and eliminate costly human errors across your organization.",
-    iconName: "automation",
-    highlights: [
-      "Cross-App API Middleware",
-      "Automated Multi-Tier Approvals",
-      "Elimination of Human Error",
-      "Real-Time Operational Audit",
-    ],
-    painPoints: [
-      "Staff performing repetitive copy-paste work between disparate software systems.",
-      "Critical purchase orders and approval requests stalled in manager inboxes.",
-      "Billing discrepancies and inventory mismatches due to delayed manual updates.",
-    ],
-    solutions: [
-      "Custom integration middleware connecting inventory, accounting, CRM, and logistics.",
-      "Automated approval workflows with instant Slack, Teams, and SMS escalation alerts.",
-      "Real-time data synchronization ensuring 100% consistency across all software tools.",
-    ],
-    capabilities: [
-      {
-        title: "Multi-App Workflow Integration",
-        description:
-          "Sync data between Xero, Salesforce, Shopify, Google Sheets, and custom databases automatically.",
-      },
-      {
-        title: "Automated Document & Invoice Generation",
-        description:
-          "Instantly generate PDFs, contracts, shipping labels, and invoices upon transaction triggers.",
-      },
-      {
-        title: "Approval & Task Dispatch Engines",
-        description:
-          "Route requests automatically based on manager availability, price thresholds, or department rules.",
-      },
-      {
-        title: "System Audit & Error Monitoring",
-        description:
-          "Centralized monitoring console catching data anomalies and alerting admins before issues compound.",
-      },
-    ],
-    techStack: ["Node.js", "Python", "Zapier / Make APIs", "WebSockets", "Redis", "PostgreSQL"],
-    metrics: [
-      { value: "10x", label: "Execution Speed" },
-      { value: "20+ Hrs", label: "Saved / Team / Week" },
-      { value: "0%", label: "Manual Data Copying" },
-    ],
-    faqs: [
-      {
-        question: "Can you automate workflows across legacy systems without APIs?",
-        answer:
-          "Yes. We use robotic process automation (RPA) and custom headless scripts to interact with legacy systems safely.",
-      },
-      {
-        question: "What happens if a third-party app changes its API?",
-        answer:
-          "Our automated error monitoring triggers alerts instantly, and our support team updates integration schemas under SLA agreements.",
-      },
-    ],
-  },
   "web-development": {
     title: "Web Development",
     badge: "Ultra-Fast Web Platforms",
-    metaTitle: "Web Development Services | Next.js & Headless Apps | Velosync Global",
+    metaTitle: "Web Development Services Australia | Next.js & Headless Apps | Valosync Global",
     metaDescription:
-      "Engineered business websites, web applications, client portals, and headless e-commerce built with modern Next.js and high-performance tech stack.",
+      "Engineered business websites, web applications, client portals, and headless e-commerce built with modern Next.js for Australian businesses and global enterprises.",
     heroHeadline: "High-Performance Web Applications Built for Maximum Growth",
     heroSubtitle:
       "Deliver sub-second page loads, flawless mobile responsiveness, and high conversion rates with modern Next.js and React architecture.",
     iconName: "layers",
     highlights: [
-      "Sub-Second Next.js Speed",
-      "100/100 Core Web Vitals",
+      "Modern Web Architecture",
+      "Performance-Focused Delivery",
       "Headless CMS Freedom",
       "Mobile-First UX Design",
     ],
@@ -361,7 +329,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Custom component libraries tailored to your brand guidelines for consistent long-term scaling.",
       },
     ],
-    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "Stripe API"],
+    techStack: [
+      { name: "Next.js", role: "SSR & Static Web" },
+      { name: "React", role: "Interactive Frontend" },
+      { name: "TypeScript", role: "Strict Type Safety" },
+      { name: "Tailwind CSS", role: "Utility Design Tokens" },
+      { name: "Vercel", role: "Global Edge CDN" },
+      { name: "Stripe", role: "Payments & Invoicing" },
+      { name: "Google Analytics 4", role: "User Analytics" },
+      { name: "PostgreSQL", role: "Data Storage" },
+      { name: "GitHub Actions", role: "Automated Builds" },
+      { name: "Docker", role: "Dev Environment" },
+    ],
     metrics: [
       { value: "< 0.6s", label: "Average Load Speed" },
       { value: "100/100", label: "Core Web Vitals" },
@@ -380,13 +359,169 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       },
     ],
   },
+  "mobile-app-development": {
+    title: "Mobile App Development",
+    badge: "iOS, Android & Cross-Platform Apps",
+    metaTitle: "Mobile App Development Services Australia | iOS, Android & Flutter | Valosync Global",
+    metaDescription:
+      "Custom iOS and Android mobile app development, React Native, Flutter, and enterprise mobile applications built for Australian businesses and global enterprises.",
+    heroHeadline: "Native & Cross-Platform Mobile Apps Engineered for Performance",
+    heroSubtitle:
+      "Transform your product vision into high-performing, intuitive iOS & Android applications with offline sync, biometric security, and App Store approval guarantees.",
+    iconName: "smartphone",
+    highlights: [
+      "Native iOS (Swift) & Android (Kotlin)",
+      "Cross-Platform Flutter & React Native",
+      "100% App & Play Store Approval",
+      "Offline Sync & Biometric Security",
+    ],
+    painPoints: [
+      "Sluggish hybrid apps that lag, drain battery, and receive 1-star reviews.",
+      "High cost and friction of maintaining two separate engineering teams for iOS and Android.",
+      "App Store and Google Play rejections due to complex privacy regulations and latency.",
+    ],
+    solutions: [
+      "Modern cross-platform architecture (Flutter / React Native) cutting development cost by up to 40% with native 60fps performance.",
+      "Single codebase architecture with automated testing and native device sensor integrations (Camera, GPS, Biometrics, Bluetooth).",
+      "End-to-end publishing, testflight distribution, and guaranteed App Store & Play Store compliance.",
+    ],
+    capabilities: [
+      {
+        title: "iOS Native App Development",
+        description:
+          "High-performance native Apple iOS applications engineered with Swift, SwiftUI, and CoreData for iPhone and iPad devices.",
+      },
+      {
+        title: "Android Native App Development",
+        description:
+          "Modern native Android applications built with Kotlin and Jetpack Compose optimized for global Android device compatibility.",
+      },
+      {
+        title: "Cross-Platform Flutter & React Native",
+        description:
+          "Single codebase delivering near-native speed, fluid animations, and simultaneous release across both iOS and Android stores.",
+      },
+      {
+        title: "Enterprise Mobile & API Integration",
+        description:
+          "Secure mobile portals with offline-first synchronization, push notifications, role-based access, and enterprise API sync.",
+      },
+    ],
+    techStack: [
+      { name: "Flutter", role: "Cross-Platform Framework" },
+      { name: "React Native", role: "Native Performance Engine" },
+      { name: "Swift", role: "Native Apple iOS" },
+      { name: "Kotlin", role: "Modern Android" },
+      { name: "Expo", role: "Mobile Tooling & OTA" },
+      { name: "Firebase", role: "Realtime DB & Notifications" },
+      { name: "Node.js", role: "Backend Mobile APIs" },
+      { name: "PostgreSQL", role: "Relational Database" },
+      { name: "AWS Cloud", role: "Cloud Sync Infrastructure" },
+      { name: "Docker", role: "Container Security" },
+    ],
+    metrics: [
+      { value: "4.9 ★", label: "Average App Rating" },
+      { value: "99.9%", label: "Crash-Free Sessions" },
+      { value: "-40%", label: "Time-to-Market" },
+    ],
+    faqs: [
+      {
+        question: "Should we choose Flutter, React Native, or Native iOS/Android?",
+        answer:
+          "For most consumer and enterprise applications, Flutter and React Native provide native 60fps performance while reducing development and maintenance costs by up to 40%. For specialized hardware-intensive apps (e.g. low-level Bluetooth or high-end 3D graphics), pure Swift and Kotlin are recommended. We provide a complete architecture recommendation during discovery.",
+      },
+      {
+        question: "Do you handle App Store and Google Play publishing?",
+        answer:
+          "Yes. We handle developer portal configuration, TestFlight distribution, Apple & Google privacy manifest compliance, store screenshots, metadata optimization, and final publishing approval.",
+      },
+    ],
+  },
+  "cloud-devops": {
+    title: "Cloud & DevOps Support",
+    badge: "Reliable Cloud Delivery",
+    metaTitle: "Cloud & DevOps Support Services Australia | Valosync Global",
+    metaDescription:
+      "Cloud setup, application deployment, CI/CD pipelines, containerisation, monitoring and infrastructure optimisation for Australian enterprises and growing global businesses.",
+    heroHeadline: "Build a More Reliable Path From Code to Production",
+    heroSubtitle:
+      "We help businesses establish practical cloud and DevOps foundations that improve deployment consistency, system visibility and ongoing maintainability.",
+    iconName: "cloud",
+    highlights: [
+      "Cloud Setup & Deployment",
+      "CI/CD Pipeline Automation",
+      "Docker & Containerisation",
+      "Monitoring & Backup Planning",
+    ],
+    painPoints: [
+      "Manual deployments creating delays, inconsistencies and avoidable release risk.",
+      "Limited visibility into application health, errors and infrastructure performance.",
+      "Cloud environments that are difficult to maintain, scale or recover.",
+    ],
+    solutions: [
+      "A deployment approach aligned with your application, team and operating requirements.",
+      "Automated build, test and release workflows using suitable CI/CD tooling.",
+      "Monitoring, backup and infrastructure practices designed to improve operational confidence.",
+    ],
+    capabilities: [
+      {
+        title: "Cloud Setup & Application Deployment",
+        description:
+          "Configure and deploy applications across suitable AWS, Azure, Vercel or managed hosting environments.",
+      },
+      {
+        title: "CI/CD Pipeline Implementation",
+        description:
+          "Automate build, test and deployment steps to create a more consistent release process.",
+      },
+      {
+        title: "Containers & Environment Management",
+        description:
+          "Use Docker and environment configuration practices to improve portability and deployment consistency.",
+      },
+      {
+        title: "Monitoring, Backups & Optimisation",
+        description:
+          "Improve visibility, recovery readiness, resource usage and ongoing infrastructure maintenance.",
+      },
+    ],
+    techStack: [
+      { name: "AWS", role: "Cloud Compute & VPC" },
+      { name: "Microsoft Azure", role: "Enterprise Cloud" },
+      { name: "Google Cloud", role: "Data Storage & Compute" },
+      { name: "Docker", role: "Containerization" },
+      { name: "GitHub Actions", role: "CI/CD Automation" },
+      { name: "Vercel", role: "Serverless Deployment" },
+      { name: "Linux", role: "Production OS" },
+      { name: "PostgreSQL", role: "Database Clustering" },
+      { name: "Node.js", role: "API Microservices" },
+      { name: "Python", role: "Automation Scripts" },
+    ],
+    metrics: [
+      { value: "Plan", label: "Assess Requirements" },
+      { value: "Build", label: "Automate Delivery" },
+      { value: "Improve", label: "Monitor & Optimise" },
+    ],
+    faqs: [
+      {
+        question: "Can you support an application that is already live?",
+        answer:
+          "Yes. We can review the current hosting and deployment setup, identify priority improvements and define a practical migration or optimisation plan.",
+      },
+      {
+        question: "Do you provide ongoing cloud management?",
+        answer:
+          "Ongoing monitoring, maintenance and support can be scoped based on the application, infrastructure and response requirements.",
+      },
+    ],
+  },
   "digital-marketing": {
     title: "Digital Marketing & SEO",
     badge: "ROI-Focused Lead Generation",
-    metaTitle: "Digital Marketing & Technical SEO Services | Velosync Global",
+    metaTitle: "Digital Marketing & Technical SEO Services Australia | Valosync Global",
     metaDescription:
-      "Data-driven digital marketing campaigns, technical SEO optimization, lead generation funnels, and targeted audience acquisition.",
-    heroHeadline: "Data-Driven Digital Marketing That Conquers Markets & Drives Revenue",
+      "Data-driven digital marketing campaigns, technical SEO optimization, lead generation funnels, and targeted customer acquisition for Australian and global markets.",
+    heroHeadline: "Data-Driven Digital Marketing That Supports Visibility and Sustainable Growth",
     heroSubtitle:
       "Scale your qualified lead pipeline with technical SEO, high-intent Google Ads, social media campaigns, and conversion rate optimization.",
     iconName: "marketing",
@@ -428,7 +563,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Creating high-value whitepapers, case studies, and blog content that positions you as the market leader.",
       },
     ],
-    techStack: ["Google Analytics 4", "Google Search Console", "Google Ads", "Meta Ads", "Semrush", "Hotjar"],
+    techStack: [
+      { name: "Google Analytics", role: "GA4 Traffic & Attribution" },
+      { name: "Google Search Console", role: "Search Indexing" },
+      { name: "Google Ads", role: "High-Intent PPC" },
+      { name: "Meta Ads", role: "Social Retargeting" },
+      { name: "Semrush", role: "Keyword & Backlink Intel" },
+      { name: "HubSpot", role: "CRM & Inbound Automation" },
+      { name: "Stripe", role: "Revenue Tracking" },
+      { name: "Next.js", role: "Fast Landing Pages" },
+      { name: "Tailwind CSS", role: "Conversion UI Layout" },
+      { name: "GitHub Actions", role: "Continuous Optimization" },
+    ],
     metrics: [
       { value: "4.5x", label: "Average Campaign ROAS" },
       { value: "+220%", label: "Qualified Lead Volume" },
@@ -438,12 +584,12 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       {
         question: "How quickly can we expect results from SEO vs PPC?",
         answer:
-          "PPC ad campaigns generate qualified leads within 24-48 hours of launch. SEO builds sustainable organic dominance over 3 to 6 months.",
+          "PPC can begin generating visibility soon after launch, while SEO usually requires sustained technical and content work. Timelines depend on competition, budget and the current website.",
       },
       {
         question: "How do you report campaign performance?",
         answer:
-          "We provide a live 24/7 custom analytics dashboard and conduct bi-weekly strategy calls reviewing cost per lead, traffic, and sales closed.",
+          "Reporting can cover traffic, enquiries, campaign cost and agreed conversion metrics, with a review cadence defined for the engagement.",
       },
     ],
   },
@@ -454,8 +600,9 @@ export async function generateStaticParams() {
     { slug: "custom-software" },
     { slug: "crm-development" },
     { slug: "ai-automation" },
-    { slug: "business-automation" },
     { slug: "web-development" },
+    { slug: "mobile-app-development" },
+    { slug: "cloud-devops" },
     { slug: "digital-marketing" },
   ];
 }
@@ -471,7 +618,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!data) {
     return {
-      title: "Service Not Found | Velosync Global",
+      title: "Service Not Found | Valosync Global",
     };
   }
 
@@ -482,10 +629,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `/services/${slug}`,
     },
     openGraph: {
-      title: `${data.title} | Velosync Global`,
+      title: `${data.title} | Valosync Global`,
       description: data.metaDescription,
-      url: `https://velosyncglobal.com/services/${slug}`,
-      siteName: "Velosync Global",
+      url: `https://valosyncglobal.com/services/${slug}`,
+      siteName: "Valosync Global",
       type: "website",
     },
   };
@@ -507,12 +654,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         {/* Dynamic Hero Section */}
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyan-500/15 blur-[120px] rounded-full pointer-events-none" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#D4AF37]/15 blur-[120px] rounded-full pointer-events-none" />
 
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide mb-6">
-                <SparkleIcon size={16} className="text-cyan-400" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
+                <SparkleIcon size={16} className="text-[#D4AF37]" />
                 <span>{data.badge}</span>
               </div>
 
@@ -539,7 +686,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   href="#capabilities"
                   variant="outline"
                   size="lg"
-                  leftIcon={<ZapIcon size={18} className="text-cyan-400" />}
+                  leftIcon={<ZapIcon size={18} className="text-[#D4AF37]" />}
                 >
                   Explore Capabilities
                 </Button>
@@ -549,8 +696,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-left pt-8 border-t border-slate-800/80">
                 {data.highlights.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2">
-                    <CheckCircleIcon size={18} className="text-cyan-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm font-medium text-slate-300">{item}</span>
+                    <CheckCircleIcon size={18} className="text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm font-medium text-slate-200">{item}</span>
                   </div>
                 ))}
               </div>
@@ -558,49 +705,31 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* Metrics Banner */}
-        <section className="py-10 bg-slate-900 border-y border-slate-800 text-white">
-          <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {data.metrics.map((m, idx) => (
-                <div key={idx} className="text-center p-4">
-                  <div className="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-1">
-                    {m.value}
-                  </div>
-                  <div className="text-xs sm:text-sm text-slate-400 font-medium uppercase tracking-wider">
-                    {m.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Problem vs Solution Section */}
-        <section className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative">
+        <section className="section-padding bg-[#F7F9FC] relative">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-cyan-500 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider block mb-2">
+              <span className="text-[#0B3D91] font-bold text-xs uppercase tracking-wider block mb-2">
                 Problem & Solution
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A]">
                 Overcoming Common Industry Bottlenecks
               </h2>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Pain Points */}
-              <div className="bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-red-500/20 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center text-base">
+              <div className="bg-white p-8 rounded-3xl border border-[#D9E1EC] shadow-lg">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-lg bg-[#071A3D]/10 text-[#071A3D] flex items-center justify-center text-base font-bold">
                     ✕
                   </span>
                   Common Challenges
                 </h3>
                 <ul className="space-y-4">
                   {data.painPoints.map((p, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                      <span className="text-red-500 font-bold mt-0.5">•</span>
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568]">
+                      <span className="text-[#071A3D] font-bold mt-0.5">•</span>
                       <span>{p}</span>
                     </li>
                   ))}
@@ -608,15 +737,15 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               </div>
 
               {/* Engineered Solution */}
-              <div className="bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/30 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
-                  <CheckCircleIcon size={24} className="text-cyan-400" />
-                  Velosync Global Approach
+              <div className="bg-white p-8 rounded-3xl border border-[#0D47A1]/30 shadow-lg">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
+                  <CheckCircleIcon size={24} className="text-[#D4AF37]" />
+                  ValoSync Global Approach
                 </h3>
                 <ul className="space-y-4">
                   {data.solutions.map((s, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300 font-medium">
-                      <CheckCircleIcon size={18} className="text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568] font-medium">
+                      <CheckCircleIcon size={18} className="text-[#0D47A1] flex-shrink-0 mt-0.5" />
                       <span>{s}</span>
                     </li>
                   ))}
@@ -627,30 +756,32 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         </section>
 
         {/* Capabilities Grid */}
-        <section id="capabilities" className="section-padding bg-white dark:bg-[#060e24] relative">
+        <section id="capabilities" className="section-padding bg-white relative">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-cyan-500 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider block mb-2">
+              <span className="text-[#0B3D91] font-bold text-xs uppercase tracking-wider block mb-2">
                 Core Modules & Features
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A]">
                 What We Build in {data.title}
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 cursor-pointer">
               {data.capabilities.map((cap, idx) => (
                 <div
                   key={idx}
-                  className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 hover:border-cyan-500/40 transition-all duration-300"
+                  className="p-8 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] hover:border-[#0B3D91]/40 hover:shadow-xl hover:bg-white transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 font-bold flex items-center justify-center text-sm mb-4">
+                  <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-xl bg-[#0B3D91]/10 text-[#0B3D91] font-bold flex items-center justify-center text-sm mb-4 border border-[#0B3D91]/20">
                     0{idx + 1}
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">
                     {cap.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                  </div>
+                  <p className="text-[#4A5568] text-sm leading-relaxed">
                     {cap.description}
                   </p>
                 </div>
@@ -659,30 +790,31 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* Tech Stack Bar */}
-        <section className="py-16 bg-slate-900 text-white border-t border-slate-800">
-          <div className="container text-center">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-8">
-              Core Tech Stack & Frameworks
-            </h3>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {data.techStack.map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="px-5 py-2.5 rounded-xl bg-slate-800 text-cyan-300 text-sm font-semibold border border-slate-700/60"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Interactive Core Tech Stack, Frameworks & Tools with Filter Capsules */}
+        <TechStackFilterShowcase
+          initialServiceTitle={data.title}
+          defaultCategory={
+            slug === "custom-software"
+              ? "all"
+              : slug === "crm-development"
+              ? "backend"
+              : slug === "ai-automation"
+              ? "ai-automation"
+              : slug === "mobile-app-development"
+              ? "mobile"
+              : slug === "web-development"
+              ? "frontend"
+              : slug === "cloud-devops"
+              ? "database-cloud"
+              : "seo-marketing"
+          }
+        />
 
         {/* Dynamic FAQ Accordion */}
-        <section className="section-padding bg-slate-50 dark:bg-[#060e24]/80">
+        <section className="section-padding bg-[#F7F9FC]">
           <div className="container max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1A1A1A] mb-3">
                 {data.title} FAQs
               </h2>
             </div>

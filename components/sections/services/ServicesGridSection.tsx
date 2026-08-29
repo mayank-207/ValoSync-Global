@@ -9,8 +9,10 @@ import {
   BrainIcon,
   AutomationIcon,
   LayersIcon,
+  GlobeIcon,
   MarketingIcon,
   FilterIcon,
+  SmartphoneIcon,
 } from "@/components/ui/Icons";
 
 export const servicesData = [
@@ -19,7 +21,7 @@ export const servicesData = [
     category: "Development",
     title: "Custom Software Development",
     description:
-      "Engineered bespoke software applications tailored to your specific business workflows, high-concurrency architecture, and proprietary business logic.",
+      "Custom software designed around your workflows, users, integrations and long-term operating requirements.",
     icon: <CodeIcon size={28} />,
     href: "/services/custom-software",
     features: [
@@ -27,15 +29,31 @@ export const servicesData = [
       "Scalable Cloud & Microservices",
       "Legacy Code & API Modernization",
     ],
-    metrics: "100% Tailored Workflows",
+    metrics: "Built Around Your Workflow",
     techStack: ["Next.js", "Node.js", "Python", "AWS / Docker"],
+  },
+  {
+    slug: "mobile-app-development",
+    category: "Development",
+    title: "Mobile App Development",
+    description:
+      "Design, build and scale native iOS, Android and cross-platform Flutter/React Native mobile applications with offline sync.",
+    icon: <SmartphoneIcon size={28} />,
+    href: "/services/mobile-app-development",
+    features: [
+      "Native iOS (Swift) & Android (Kotlin)",
+      "Cross-Platform Flutter & React Native",
+      "Guaranteed App Store & Play Store Approval",
+    ],
+    metrics: "High-Performance Mobile Delivery",
+    techStack: ["Flutter", "React Native", "Swift", "Kotlin"],
   },
   {
     slug: "crm-development",
     category: "Development",
     title: "CRM Development",
     description:
-      "Customized CRM platforms engineered to manage sales pipelines, customer interactions, lead scoring, and automated client onboarding effortlessly.",
+      "CRM platforms tailored to your customer journey, sales process, follow-ups, reporting and internal operations.",
     icon: <CrmIcon size={28} />,
     href: "/services/crm-development",
     features: [
@@ -43,15 +61,15 @@ export const servicesData = [
       "Automated WhatsApp & Email Sync",
       "Real-Time Sales Performance Analytics",
     ],
-    metrics: "3.2x Faster Lead Response",
+    metrics: "Connected Customer Operations",
     techStack: ["React", "TypeScript", "PostgreSQL", "REST/GraphQL"],
   },
   {
     slug: "ai-automation",
-    category: "Automation",
+    category: "AI & Automation",
     title: "AI Automation Solutions",
     description:
-      "Harness artificial intelligence and machine learning to automate complex data processing, intelligent document parsing, and 24/7 AI chat agents.",
+      "Apply AI where it delivers practical value, including document processing, knowledge support, workflow assistance and intelligent chatbots.",
     icon: <BrainIcon size={28} />,
     href: "/services/ai-automation",
     features: [
@@ -59,60 +77,60 @@ export const servicesData = [
       "Automated Medical/Invoice Extraction",
       "Predictive Analytics & Decision Engines",
     ],
-    metrics: "75% Reduction in Data Entry Labor",
+    metrics: "Practical AI Integration",
     techStack: ["Python", "OpenAI / LangChain", "FastAPI", "Vector DBs"],
-  },
-  {
-    slug: "business-automation",
-    category: "Automation",
-    title: "Business Process Automation",
-    description:
-      "Eliminate repetitive manual overhead by automating cross-departmental operations, multi-app data synchronization, and automated task dispatching.",
-    icon: <AutomationIcon size={28} />,
-    href: "/services/business-automation",
-    features: [
-      "End-to-End Workflow Orchestration",
-      "Third-Party ERP & Software Integration",
-      "Automated SLA & Approval Alerts",
-    ],
-    metrics: "20+ Hours Saved / Week per Team",
-    techStack: ["Node.js", "Zapier / Make APIs", "WebSockets", "Redis"],
   },
   {
     slug: "web-development",
     category: "Development",
     title: "Web Development",
     description:
-      "Modern, ultra-fast web applications, enterprise corporate portals, and headless e-commerce platforms engineered with Next.js and high-performing UI design.",
+      "Responsive websites, WordPress solutions, web applications, customer portals and digital platforms built for usability and performance.",
     icon: <LayersIcon size={28} />,
     href: "/services/web-development",
     features: [
-      "Sub-Second Next.js Performance",
+      "Performance-Focused Development",
       "Responsive & Accessible Design",
       "Headless CMS & E-Commerce Integration",
     ],
-    metrics: "99+ Google Lighthouse Score",
+    metrics: "Responsive, Accessible Delivery",
     techStack: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+  },
+  {
+    slug: "cloud-devops",
+    category: "Cloud & Infrastructure",
+    title: "Cloud & DevOps Support",
+    description:
+      "Plan reliable deployments, automate release workflows and improve the visibility, resilience and maintainability of your infrastructure.",
+    icon: <GlobeIcon size={28} />,
+    href: "/services/cloud-devops",
+    features: [
+      "Cloud Setup & Application Deployment",
+      "CI/CD Pipelines & Containerisation",
+      "Monitoring, Backups & Optimisation",
+    ],
+    metrics: "Reliable Delivery Foundations",
+    techStack: ["AWS / Azure", "Docker", "GitHub Actions", "Linux"],
   },
   {
     slug: "digital-marketing",
     category: "Digital Growth",
     title: "Digital Marketing & SEO",
     description:
-      "Data-driven digital marketing campaigns, technical SEO optimization, lead generation funnels, and targeted audience acquisition for Australian SMEs and global brands.",
+      "SEO, paid media, content and social media services designed to improve visibility and generate relevant commercial opportunities.",
     icon: <MarketingIcon size={28} />,
     href: "/services/digital-marketing",
     features: [
-      "Technical SEO & Local Search Domination",
-      "High-Intent Lead Gen Funnels",
-      "Social Media & Content Campaigning",
+      "Technical SEO & Local Search",
+      "Lead Generation Campaigns",
+      "Social Media & Content Planning",
     ],
-    metrics: "4.5x ROI on Ad Spend",
+    metrics: "Measurable Digital Growth",
     techStack: ["Google Analytics 4", "Semrush", "Meta Ads", "Google Ads"],
   },
 ];
 
-const categories = ["All", "Development", "Automation", "Digital Growth"];
+const categories = ["All", "Development", "AI & Automation", "Cloud & Infrastructure", "Digital Growth"];
 
 export default function ServicesGridSection() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -125,13 +143,13 @@ export default function ServicesGridSection() {
   return (
     <section
       id="services-catalog"
-      className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative"
+      className="section-padding bg-[#F7F9FC] relative"
     >
       <div className="container">
         <SectionHeading
-          badge="Complete Service Portfolio"
-          title="Engineered Solutions Built for Speed, Scale & ROI"
-          subtitle="Select a category or click on any service to explore detailed capabilities, technical stack, and real-world outcomes."
+          badge="Service Portfolio"
+          title="Choose the Right Capability for Your Next Initiative"
+          subtitle="Explore our development, automation, cloud and digital growth services, then speak with us about the right delivery approach."
           center
         />
 
@@ -145,10 +163,10 @@ export default function ServicesGridSection() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 ${
+              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1] ${
                 activeCategory === cat
-                  ? "bg-cyan-500 text-white shadow-md shadow-cyan-500/20 scale-105"
-                  : "bg-white dark:bg-[#0F172A] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-cyan-500/40 hover:text-cyan-500"
+                  ? "bg-[#0B3D91] text-white shadow-md"
+                  : "bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC] hover:bg-[#EEF3FA] hover:text-[#0B3D91]"
               }`}
             >
               {cat}
@@ -157,7 +175,7 @@ export default function ServicesGridSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, index) => (
             <ServiceCard
               key={service.slug}

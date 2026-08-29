@@ -10,42 +10,44 @@ import ServiceFAQSection from "@/components/sections/services/ServiceFAQSection"
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Services | Custom Software, CRM, AI Automation & Digital Marketing",
+  title: "Technology & Software Engineering Services Australia | Valosync Global",
   description:
-    "Explore Velosync Global's end-to-end technology services: Custom Software Development, CRM Engineering, AI Workflow Automation, Business Process Automation, Web Applications, and Digital Marketing for Australian SMEs and global enterprises.",
+    "Explore Valosync Global's end-to-end technology services: Custom Software Development Australia, CRM Engineering, AI Automation, Web Applications, and Cloud DevOps for Australian and global businesses.",
   keywords: [
-    "Velosync Global Services",
+    "Valosync Global Services",
     "Custom Software Development Australia",
-    "CRM Development Services",
-    "AI Automation Agency",
-    "Business Process Automation",
-    "Web Application Development",
+    "CRM Development Services Australia",
+    "AI Automation Agency Australia",
+    "Business Process Automation Australia",
+    "Web Application Development Sydney Melbourne",
+    "Cloud DevOps Support Australia",
     "Digital Marketing & SEO Australia",
+    "Enterprise Software Solutions Australia",
   ],
   alternates: {
     canonical: "/services",
   },
   openGraph: {
-    title: "Technology & Software Engineering Services | Velosync Global",
+    title: "Technology & Software Engineering Services Australia | Valosync Global",
     description:
-      "Engineered custom software platforms, high-conversion CRMs, AI workflow automation, and digital marketing funnels tailored to enterprise growth.",
-    url: "https://velosyncglobal.com/services",
-    siteName: "Velosync Global",
+      "Engineered custom software platforms, high-conversion CRMs, AI workflow automation, and digital growth funnels tailored for Australian businesses and global enterprises.",
+    url: "https://valosyncglobal.com/services",
+    siteName: "Valosync Global",
     type: "website",
     images: [
       {
         url: "/images/og-services.jpg",
         width: 1200,
         height: 630,
-        alt: "Velosync Global Core Technology Services",
+        alt: "Valosync Global Core Technology Services Australia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Technology & Software Engineering Services | Velosync Global",
+    title: "Technology & Software Engineering Services Australia | Valosync Global",
     description:
-      "Engineered custom software, intelligent CRM systems, AI workflow automation, and digital growth.",
+      "Engineered custom software, intelligent CRM systems, AI workflow automation, and digital growth for Australian and global enterprises.",
     images: ["/images/og-services.jpg"],
   },
 };

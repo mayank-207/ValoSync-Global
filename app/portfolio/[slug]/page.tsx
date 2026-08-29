@@ -14,7 +14,7 @@ import {
 
 type CaseStudySlug =
   | "ai-enterprise-crm"
-  | "australian-lead-portal"
+  | "lead-portal"
   | "multi-tenant-erp"
   | "healthcare-telehealth-portal"
   | "logistics-dispatch-tracker"
@@ -47,15 +47,15 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "CRM Development",
     industry: "Financial Services",
     country: "Australia",
-    metaTitle: "AI Enterprise CRM Case Study | Velosync Global",
+    metaTitle: "AI Enterprise CRM Case Study | Valosync Global",
     metaDescription:
-      "Explore how Velosync Global engineered an AI-powered CRM with automated lead scoring and WhatsApp sync, driving 70% faster deal closure.",
+      "Explore how Valosync Global engineered an AI-powered CRM with automated lead scoring and WhatsApp sync, driving 70% faster deal closure.",
     heroHeadline: "AI-Powered Enterprise CRM Accelerating B2B Deal Closure",
     heroSubtitle:
-      "Engineered for an Australian enterprise consulting firm to eliminate sales friction, automate lead scoring, and unify omnichannel communication.",
+      "Engineered for an enterprise consulting firm to eliminate sales friction, automate lead scoring, and unify omnichannel communication.",
     metric: "70% Faster Deal Closure",
     clientOverview:
-      "Our client is a high-touch Australian enterprise advisory firm managing complex B2B sales cycles involving multiple stakeholders, custom contract terms, and high-value deals.",
+      "Our client is a high-touch enterprise advisory firm managing complex B2B sales cycles involving multiple stakeholders, custom contract terms, and high-value deals.",
     challenges: [
       "Sales reps losing 20+ hours weekly to manual CRM data entry and spreadsheet tracking.",
       "Inbound lead inquiries cooling down due to 24-hour delayed initial outreach.",
@@ -101,20 +101,20 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     ],
     techStack: ["Next.js", "TypeScript", "PostgreSQL", "OpenAI API", "Twilio WhatsApp", "AWS"],
   },
-  "australian-lead-portal": {
-    title: "Australian Lead Generation & Quote Engine",
+  "lead-portal": {
+    title: "Lead Generation & Quote Engine",
     category: "Digital Marketing",
     industry: "Professional Services",
     country: "Australia",
-    metaTitle: "Australian Lead Gen Portal Case Study | Velosync Global",
+    metaTitle: "Lead Gen Portal Case Study | Valosync Global",
     metaDescription:
-      "Discover how Velosync Global designed a high-converting web portal and Google Ads campaign delivering 3.5x qualified commercial leads.",
+      "Discover how Valosync Global designed a high-converting web portal and Google Ads campaign delivering 3.5x qualified commercial leads.",
     heroHeadline: "Conquering Commercial Search & Tripling Qualified Inquiries",
     heroSubtitle:
-      "A complete digital overhaul combining sub-second Next.js web design, technical SEO, and high-intent Google Search campaigns for Australian B2B buyers.",
+      "A complete digital overhaul combining sub-second Next.js web design, technical SEO, and high-intent Google Search campaigns for B2B buyers.",
     metric: "3.5x Qualified Inquiries",
     clientOverview:
-      "An established Australian commercial equipment and facility supplier targeting corporate facility managers across Sydney, Melbourne, and Brisbane.",
+      "An established commercial equipment and facility supplier targeting corporate facility managers across Sydney, Melbourne, and Brisbane.",
     challenges: [
       "Sluggish legacy website causing high bounce rates on mobile ad traffic.",
       "High cost-per-click on generic search terms yielding unqualified consumer inquiries.",
@@ -139,7 +139,7 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
       {
         title: "Technical SEO Domination",
         description:
-          "Comprehensive schema markup and local landing page targeting across major Australian metros.",
+          "Comprehensive schema markup and local landing page targeting across major metros.",
       },
       {
         title: "End-to-End GA4 Attribution",
@@ -165,9 +165,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Custom Software",
     industry: "Enterprise Operations",
     country: "Global",
-    metaTitle: "Multi-Tenant Business ERP Case Study | Velosync Global",
+    metaTitle: "Multi-Tenant Business ERP Case Study | Valosync Global",
     metaDescription:
-      "See how Velosync Global engineered a multi-tenant cloud ERP with automated Xero and Stripe integration, achieving 99.9% billing accuracy.",
+      "See how Valosync Global engineered a multi-tenant cloud ERP with automated Xero and Stripe integration, achieving 99.9% billing accuracy.",
     heroHeadline: "Cloud ERP & Automated Billing Streamlining Global Operations",
     heroSubtitle:
       "Architected for a multi-national logistics and technology company to unify project scheduling, multi-currency invoicing, and client milestone approvals.",
@@ -224,19 +224,19 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Custom Software",
     industry: "Healthcare",
     country: "Australia",
-    metaTitle: "Healthcare Telehealth Portal Case Study | Velosync Global",
+    metaTitle: "Healthcare Telehealth Portal Case Study | Valosync Global",
     metaDescription:
-      "Discover how Velosync Global delivered an AHPRA/HIPAA compliant telehealth portal with automated intake and EHR sync, dropping no-shows by 60%.",
+      "Discover how Valosync Global delivered an AHPRA/HIPAA compliant telehealth portal with automated intake and EHR sync, dropping no-shows by 60%.",
     heroHeadline: "AHPRA-Compliant Digital Health & Patient Intake Portal",
     heroSubtitle:
-      "Engineered for an Australian healthcare network to streamline patient onboarding, secure video consultation, and EHR record management.",
+      "Engineered for an healthcare network to streamline patient onboarding, secure video consultation, and EHR record management.",
     metric: "60% Lower Patient No-Shows",
     clientOverview:
       "A multi-clinic medical group in Australia providing specialized consultations both in-clinic and via secure digital health channels.",
     challenges: [
       "Paper patient intake forms causing long waiting room queues and data entry errors.",
       "High patient no-show rates due to lack of automated SMS and email reminders.",
-      "Strict AHPRA and Australian Privacy Principles compliance requirements.",
+      "Strict AHPRA and Privacy Principles compliance requirements.",
     ],
     solutions: [
       "Self-service digital patient intake portal accessible on any smartphone before visits.",
@@ -283,15 +283,15 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "AI & Automation",
     industry: "Logistics",
     country: "Australia",
-    metaTitle: "Logistics Fleet Tracking Case Study | Velosync Global",
+    metaTitle: "Logistics Fleet Tracking Case Study | Valosync Global",
     metaDescription:
-      "Learn how Velosync Global built a real-time GPS fleet tracking and automated dispatch portal for Australian logistics operators, saving 25+ hours/week.",
+      "Learn how Valosync Global built a real-time GPS fleet tracking and automated dispatch portal for logistics operators, saving 25+ hours/week.",
     heroHeadline: "Real-Time Fleet Telematics & Automated Dispatch Engine",
     heroSubtitle:
-      "Developed for an Australian transport & logistics company to optimize driver routes, automate customer tracking notifications, and sync inventory.",
+      "Developed for an transport & logistics company to optimize driver routes, automate customer tracking notifications, and sync inventory.",
     metric: "25+ Hours Saved / Week",
     clientOverview:
-      "An Australian freight and logistics provider operating a fleet of 40+ transport vehicles across interstate routes.",
+      "An freight and logistics provider operating a fleet of 40+ transport vehicles across interstate routes.",
     challenges: [
       "Manual phone dispatch communication consuming 20+ hours of operational labor weekly.",
       "Inability to provide customers with accurate real-time shipment arrival windows.",
@@ -342,15 +342,15 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Custom Software",
     industry: "Fintech",
     country: "Global",
-    metaTitle: "Fintech KYC Onboarding Case Study | Velosync Global",
+    metaTitle: "Fintech KYC Onboarding Case Study | Valosync Global",
     metaDescription:
-      "Read how Velosync Global engineered an encrypted KYC onboarding and automated loan evaluation engine, achieving instant customer verification.",
+      "Read how Valosync Global engineered an encrypted KYC onboarding and automated loan evaluation engine, achieving instant customer verification.",
     heroHeadline: "Automated KYC Onboarding & Instant Credit Evaluation",
     heroSubtitle:
       "Built for an emerging digital lending platform to eliminate paper verification, prevent fraud, and accelerate borrower onboarding.",
     metric: "Instant Onboarding Turnaround",
     clientOverview:
-      "A fast-growing fintech company offering digital working capital loans to Australian SMEs and micro-enterprises.",
+      "A fast-growing fintech company offering digital working capital loans to SMEs and micro-enterprises.",
     challenges: [
       "Slow, paper-heavy onboarding taking up to 5 business days for borrower approval.",
       "High application drop-off rate during manual bank statement submission steps.",
@@ -401,15 +401,15 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Web & E-Commerce",
     industry: "Retail",
     country: "Australia",
-    metaTitle: "Headless E-Commerce Case Study | Velosync Global",
+    metaTitle: "Headless E-Commerce Case Study | Valosync Global",
     metaDescription:
-      "Explore how Velosync Global built a Next.js headless storefront delivering sub-second speed and a 38% increase in repeat customer purchases.",
+      "Explore how Valosync Global built a Next.js headless storefront delivering sub-second speed and a 38% increase in repeat customer purchases.",
     heroHeadline: "Sub-Second Headless Commerce Driving Repeat Customer Sales",
     heroSubtitle:
-      "Re-platforming an Australian retail brand from legacy monolithic architecture to a modern Next.js headless e-commerce ecosystem.",
+      "Re-platforming an retail brand from legacy monolithic architecture to a modern Next.js headless e-commerce ecosystem.",
     metric: "38% Increase in Repeat Purchases",
     clientOverview:
-      "A boutique Australian lifestyle brand selling high-value apparel and homewares online and through pop-up retail stores.",
+      "A boutique lifestyle brand selling high-value apparel and homewares online and through pop-up retail stores.",
     challenges: [
       "Legacy e-commerce store suffering 4+ second load times destroys mobile ad conversion.",
       "Disconnected inventory across physical stores and web channel causing stockouts.",
@@ -460,9 +460,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "AI & Automation",
     industry: "Manufacturing",
     country: "Global",
-    metaTitle: "Industrial IoT Dashboard Case Study | Velosync Global",
+    metaTitle: "Industrial IoT Dashboard Case Study | Valosync Global",
     metaDescription:
-      "Discover how Velosync Global built a real-time IoT manufacturing dashboard, reducing unplanned machine downtime by 40%.",
+      "Discover how Valosync Global built a real-time IoT manufacturing dashboard, reducing unplanned machine downtime by 40%.",
     heroHeadline: "Industry 4.0 IoT Telematics & Predictive Maintenance",
     heroSubtitle:
       "Developed for an industrial manufacturing facility to connect machine IoT sensors, track Overall Equipment Effectiveness (OEE), and predict maintenance.",
@@ -519,7 +519,7 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
 export async function generateStaticParams() {
   return [
     { slug: "ai-enterprise-crm" },
-    { slug: "australian-lead-portal" },
+    { slug: "lead-portal" },
     { slug: "multi-tenant-erp" },
     { slug: "healthcare-telehealth-portal" },
     { slug: "logistics-dispatch-tracker" },
@@ -540,7 +540,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!data) {
     return {
-      title: "Case Study Not Found | Velosync Global",
+      title: "Case Study Not Found | Valosync Global",
     };
   }
 
@@ -551,10 +551,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `/portfolio/${slug}`,
     },
     openGraph: {
-      title: `${data.title} | Velosync Global Case Study`,
+      title: `${data.title} | Valosync Global Case Study`,
       description: data.metaDescription,
-      url: `https://velosyncglobal.com/portfolio/${slug}`,
-      siteName: "Velosync Global",
+      url: `https://valosyncglobal.com/portfolio/${slug}`,
+      siteName: "Valosync Global",
       type: "website",
     },
   };
@@ -576,12 +576,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
         {/* Dynamic Hero */}
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyan-500/15 blur-[120px] rounded-full pointer-events-none" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#D4AF37]/15 blur-[120px] rounded-full pointer-events-none" />
 
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <span className="px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wide">
+              <div className="mb-6">
+                <span className="px-4 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold uppercase tracking-wide">
                   {data.category}
                 </span>
                 <span className="px-3 py-1.5 rounded-full bg-white/10 text-slate-300 text-xs font-semibold">
@@ -612,7 +612,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   href="#case-details"
                   variant="outline"
                   size="lg"
-                  leftIcon={<ZapIcon size={18} className="text-cyan-400" />}
+                  leftIcon={<ZapIcon size={18} className="text-[#D4AF37]" />}
                 >
                   Explore System Features
                 </Button>
@@ -624,12 +624,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
         {/* Metrics Banner */}
         <section className="py-10 bg-slate-900 border-y border-slate-800 text-white">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {data.results.map((r, idx) => (
-                <div key={idx} className="text-center p-4">
-                  <div className="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-1">
-                    {r.value}
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10 border-t border-slate-800/80">
+                {data.results.map((r, idx) => (
+                  <div key={idx} className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <div className="text-3xl sm:text-4xl font-extrabold text-[#D4AF37] mb-1">
+                      {r.value}
+                    </div>
                   <div className="text-xs sm:text-sm text-slate-400 font-medium uppercase tracking-wider">
                     {r.label}
                   </div>
@@ -640,17 +640,17 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </section>
 
         {/* Client Story & Challenge vs Solution */}
-        <section id="case-details" className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative">
+        <section id="case-details" className="section-padding bg-[#F7F9FC] relative">
           <div className="container">
             {/* Overview */}
-            <div className="max-w-3xl mx-auto mb-16 bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-md">
-              <span className="text-cyan-500 font-bold text-xs uppercase tracking-wider block mb-2">
+            <div className="max-w-3xl mx-auto mb-16 bg-white p-8 rounded-3xl border border-[#D9E1EC] shadow-md">
+              <span className="text-[#0D47A1] font-bold text-xs uppercase tracking-wider block mb-2">
                 Client Context & Overview
               </span>
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">
                 About the Client
               </h2>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base">
+              <p className="text-[#4A5568] leading-relaxed text-base">
                 {data.clientOverview}
               </p>
             </div>
@@ -658,17 +658,17 @@ export default async function CaseStudyPage({ params }: PageProps) {
             {/* Problem vs Solution Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
               {/* Challenges */}
-              <div className="bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-red-500/20 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center text-base">
+              <div className="bg-white p-8 rounded-3xl border border-[#D9E1EC] shadow-lg">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-lg bg-[#071A3D]/10 text-[#071A3D] flex items-center justify-center text-base font-bold">
                     ✕
                   </span>
                   Technical & Operational Bottlenecks
                 </h3>
                 <ul className="space-y-4">
                   {data.challenges.map((c, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                      <span className="text-red-500 font-bold mt-0.5">•</span>
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568]">
+                      <span className="text-[#071A3D] font-bold mt-0.5">•</span>
                       <span>{c}</span>
                     </li>
                   ))}
@@ -676,15 +676,15 @@ export default async function CaseStudyPage({ params }: PageProps) {
               </div>
 
               {/* Solutions */}
-              <div className="bg-white dark:bg-[#0F172A] p-8 rounded-3xl border border-cyan-500/30 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
-                  <CheckCircleIcon size={24} className="text-cyan-400" />
-                  Velosync Global Engineered Solution
+              <div className="bg-white p-8 rounded-3xl border border-[#0D47A1]/30 shadow-lg">
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
+                  <CheckCircleIcon size={24} className="text-[#D4AF37]" />
+                  ValoSync Global Engineered Solution
                 </h3>
                 <ul className="space-y-4">
                   {data.solutions.map((s, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300 font-medium">
-                      <CheckCircleIcon size={18} className="text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568] font-medium">
+                      <CheckCircleIcon size={18} className="text-[#0D47A1] flex-shrink-0 mt-0.5" />
                       <span>{s}</span>
                     </li>
                   ))}
@@ -695,10 +695,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
             {/* Features Grid */}
             <div className="mb-16">
               <div className="text-center max-w-3xl mx-auto mb-12">
-                <span className="text-cyan-500 font-bold text-xs uppercase tracking-wider block mb-2">
+                <span className="text-[#0D47A1] font-bold text-xs uppercase tracking-wider block mb-2">
                   System Architecture & Capabilities
                 </span>
-                <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">
+                <h2 className="text-3xl font-extrabold text-[#1A1A1A]">
                   Key Features Engineered
                 </h2>
               </div>
@@ -707,15 +707,15 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 {data.features.map((feat, idx) => (
                   <div
                     key={idx}
-                    className="p-7 rounded-3xl bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 shadow-sm"
+                    className="p-7 rounded-3xl bg-white border border-[#D9E1EC] shadow-sm hover:shadow-xl hover:border-[#0B3D91]/40 transition-all duration-300"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 font-bold flex items-center justify-center text-sm mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#0B3D91]/10 text-[#0B3D91] font-bold flex items-center justify-center text-sm mb-4 border border-[#0B3D91]/20">
                       0{idx + 1}
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                    <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">
                       {feat.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    <p className="text-[#4A5568] text-sm leading-relaxed">
                       {feat.description}
                     </p>
                   </div>
@@ -724,7 +724,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </div>
 
             {/* Tech Stack & Deliverables Bar */}
-            <div className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800">
+            <div className="bg-[#071A3D] text-white p-8 rounded-3xl border border-white/10 shadow-2xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
@@ -733,7 +733,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <ul className="space-y-2">
                     {data.deliverables.map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm font-medium text-slate-200">
-                        <div className="w-2 h-2 rounded-full bg-cyan-400" />
+                        <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -748,7 +748,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                     {data.techStack.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1.5 rounded-lg bg-slate-800 text-cyan-300 text-xs font-semibold border border-slate-700"
+                        className="px-3 py-1.5 rounded-lg bg-[#041026] text-[#D4AF37] text-xs font-semibold border border-white/15"
                       >
                         {tech}
                       </span>

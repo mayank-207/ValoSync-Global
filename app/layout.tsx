@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import JsonLd from "@/components/seo/JsonLd";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,28 +16,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://velosyncglobal.com"),
+  metadataBase: new URL("https://valosyncglobal.com"),
   title: {
-    default: "Velosync Global | Digital Transformation & IT Solutions Company",
-    template: "%s | Velosync Global",
+    default: "ValoSync Global | Custom Software, CRM & AI Development Australia",
+    template: "%s | Valosync Global",
   },
   description:
-    "Velosync Global delivers cutting-edge digital transformation, software development, AI solutions, cloud services, and IT consulting to help businesses scale and innovate.",
+    "ValoSync Global provides enterprise custom software development, bespoke CRM platforms, AI workflow automation, and cloud DevOps solutions for Australian businesses and global enterprises.",
   keywords: [
-    "Velosync Global",
-    "digital transformation",
-    "software development",
-    "AI solutions",
-    "cloud services",
-    "IT consulting",
-    "web development",
-    "mobile app development",
-    "technology company",
-    "IT solutions",
+    "custom software development Australia",
+    "software development company Australia",
+    "CRM development Australia",
+    "custom CRM solutions Australia",
+    "AI automation agency Australia",
+    "web application development Sydney",
+    "software engineers Melbourne",
+    "IT solutions Brisbane Australia",
+    "business process automation Australia",
+    "cloud DevOps support Australia",
+    "enterprise software developers Australia",
+    "Australian software engineering firm",
+    "B2B CRM software Australia",
+    "Valosync Global",
+    "custom software Sydney",
+    "software company Australia",
+    "IT consulting Australia",
+    "Next.js web development",
   ],
-  authors: [{ name: "Velosync Global" }],
-  creator: "Velosync Global",
-  publisher: "Velosync Global",
+  authors: [{ name: "Valosync Global" }],
+  creator: "Valosync Global",
+  publisher: "Valosync Global",
   formatDetection: {
     email: false,
     address: false,
@@ -44,28 +53,29 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://velosyncglobal.com",
-    siteName: "Velosync Global",
-    title: "Velosync Global | Digital Transformation & IT Solutions Company",
+    locale: "en_AU",
+    alternateLocale: ["en_US", "en_GB"],
+    url: "https://valosyncglobal.com",
+    siteName: "Valosync Global",
+    title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
     description:
-      "Velosync Global delivers cutting-edge digital transformation, software development, AI solutions, cloud services, and IT consulting to help businesses scale and innovate.",
+      "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
     images: [
       {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Velosync Global - Digital Transformation & IT Solutions",
+        url: "/images/logo.png",
+        width: 800,
+        height: 800,
+        alt: "ValoSync Global - Custom Software & CRM Development Australia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Velosync Global | Digital Transformation & IT Solutions Company",
+    title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
     description:
-      "Velosync Global delivers cutting-edge digital transformation, software development, AI solutions, cloud services, and IT consulting to help businesses scale and innovate.",
-    images: ["/images/og-image.jpg"],
-    creator: "@velosyncglobal",
+      "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
+    images: ["/images/logo.png"],
+    creator: "@valosyncglobal",
   },
   robots: {
     index: true,
@@ -78,16 +88,41 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/images/logo.png", type: "image/png" },
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    shortcut: "/images/logo.png",
+    apple: [
+      { url: "/images/logo.png", type: "image/png" },
+      { url: "/apple-icon.png", type: "image/png" },
+    ],
+  },
   alternates: {
     canonical: "/",
+    languages: {
+      "en-AU": "https://valosyncglobal.com",
+      "en": "https://valosyncglobal.com",
+      "x-default": "https://valosyncglobal.com",
+    },
+  },
+  other: {
+    "geo.region": "AU",
+    "geo.placename": "Australia",
+    "geo.position": "-25.274398;133.775136",
+    "ICBM": "-25.274398, 133.775136",
+    "target-country": "AU",
   },
   category: "technology",
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0B1B3D" },
-    { media: "(prefers-color-scheme: dark)", color: "#060e24" },
+    { media: "(prefers-color-scheme: light)", color: "#0B3D91" },
+    { media: "(prefers-color-scheme: dark)", color: "#071A33" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -104,7 +139,15 @@ export default function RootLayout({ children }: LayoutProps) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+        <link rel="icon" href="/images/logo.png" type="image/png" sizes="any" />
+        <link rel="shortcut icon" href="/images/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/logo.png" />
+      </head>
+      <body className="min-h-full flex flex-col">
+        <JsonLd />
+        {children}
+      </body>
     </html>
   );
 }

@@ -6,8 +6,10 @@ import {
   BrainIcon,
   AutomationIcon,
   LayersIcon,
+  GlobeIcon,
   MarketingIcon,
   ArrowRightIcon,
+  SmartphoneIcon,
 } from "../ui/Icons";
 import Button from "../ui/Button";
 
@@ -18,6 +20,13 @@ const services = [
     description:
       "Develop tailored, scalable software solutions built around your unique business workflows, operational requirements, and growth strategy.",
     href: "/services/custom-software",
+  },
+  {
+    icon: <SmartphoneIcon size={28} />,
+    title: "Mobile App Development",
+    description:
+      "Design and engineer native iOS (Swift), Android (Kotlin), and cross-platform (Flutter & React Native) mobile applications with seamless offline sync.",
+    href: "/services/mobile-app-development",
   },
   {
     icon: <CrmIcon size={28} />,
@@ -34,24 +43,24 @@ const services = [
     href: "/services/ai-automation",
   },
   {
-    icon: <AutomationIcon size={28} />,
-    title: "Business Process Automation",
-    description:
-      "Automate complex manual business workflows to improve operational efficiency, eliminate human errors, and drastically reduce repetitive work.",
-    href: "/services/business-automation",
-  },
-  {
     icon: <LayersIcon size={28} />,
     title: "Web Development",
     description:
-      "Engineered business websites, web applications, client portals, and industry platforms built with modern Next.js and high-performance tech stack.",
+      "Build responsive websites, WordPress solutions, web applications and client portals using technologies suited to your business requirements.",
     href: "/services/web-development",
+  },
+  {
+    icon: <GlobeIcon size={28} />,
+    title: "Cloud & DevOps Support",
+    description:
+      "Improve deployment reliability with cloud setup, CI/CD pipelines, containerisation, monitoring, backup planning and infrastructure optimisation.",
+    href: "/services/cloud-devops",
   },
   {
     icon: <MarketingIcon size={28} />,
     title: "Digital Marketing & SEO",
     description:
-      "ROI-focused SEO, social media marketing, content strategies, and lead generation campaigns tailored to conquer markets in Australia and beyond.",
+      "Strengthen your digital presence through SEO, content, paid campaigns and social media management aligned with target commercial audiences.",
     href: "/services/digital-marketing",
   },
 ];
@@ -66,9 +75,9 @@ export default function ServicesSection() {
     >
       <div className="container">
         <SectionHeading
-          badge="Enterprise IT Capabilities"
-          title="End-to-End Technology & Digital Solutions"
-          description="Velosync Global delivers specialized IT solutions engineered to accelerate digital transformation, optimize operations, and generate high-value qualified leads."
+          badge="Our Services"
+          title="Digital Solutions Built Around Real Business Needs"
+          // description="From custom software and CRM platforms to cloud delivery and digital growth, we help businesses choose and implement technology that creates practical value."
           center
         />
 
@@ -90,7 +99,7 @@ export default function ServicesSection() {
             size="lg"
             rightIcon={<ArrowRightIcon size={18} />}
           >
-            Discuss Your Service Requirements
+            Discuss Your Project
           </Button>
         </div>
       </div>

@@ -41,21 +41,21 @@ const values = [
     icon: <ZapIcon size={24} />,
   },
   {
-    title: "Australian & Global Compliance",
+    title: "Global Compliance",
     description:
-      "Tailored for Australian regulatory guidelines (APPs, ACCC) and global enterprise standards to ensure frictionless market launch.",
+      "Tailored for regulatory guidelines and global enterprise standards to ensure frictionless market launch.",
     icon: <GlobeIcon size={24} />,
   },
 ];
 
 export default function CoreValuesSection() {
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative">
+    <section className="section-padding bg-[#F7F9FC] relative">
       <div className="container">
         <SectionHeading
           badge="Guiding Principles"
           title="The Core Values That Define Our Work"
-          subtitle="How Velosync Global delivers excellence, trust, and long-term value to every business partnership."
+          subtitle="How ValoSync Global delivers excellence, trust, and long-term value to every business partnership."
           center
         />
 
@@ -63,15 +63,15 @@ export default function CoreValuesSection() {
           {values.map((v, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200/80 dark:border-slate-800 hover:border-cyan-500/40 hover:shadow-xl transition-all duration-300 group"
+              className="p-6 sm:p-8 rounded-2xl bg-white border border-[#D9E1EC] hover:border-[#0D47A1]/40 hover:shadow-xl transition-all duration-300 group"
             >
-              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-cyan-500/20">
+              <div className="w-12 h-12 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-[#0D47A1]/20">
                 {v.icon}
               </div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 group-hover:text-cyan-500 transition-colors duration-200">
+              <h3 className="text-lg font-bold text-[#1A1A1A] mb-3 group-hover:text-[#0D47A1] transition-colors duration-200">
                 {v.title}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#4A5568] leading-relaxed">
                 {v.description}
               </p>
             </div>

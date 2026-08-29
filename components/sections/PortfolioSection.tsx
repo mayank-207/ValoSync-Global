@@ -14,12 +14,12 @@ const portfolio = [
     tags: ["Next.js", "AI Lead Scoring", "CRM Engine"],
   },
   {
-    title: "Australian Lead Generation Portal",
+    title: "Lead Generation Portal",
     category: "Web & Automation",
     metric: "3.5x Qualified Inquiries",
     description:
-      "High-converting landing architecture and automated quote engines specifically tailored to attract and engage Australian commercial clients.",
-    href: "/portfolio/australian-lead-portal",
+      "High-converting landing architecture and automated quote engines specifically tailored to attract and engage commercial clients.",
+    href: "/portfolio/lead-portal",
     icon: <ZapIcon size={28} />,
     tags: ["React 19", "Automated Workflows", "SEO Suite"],
   },
@@ -39,8 +39,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="section-padding relative"
-      style={{ background: "var(--background-color)" }}
+      className="section-padding relative bg-white"
       aria-labelledby="portfolio-heading"
     >
       <div className="container">
@@ -48,15 +47,14 @@ export default function PortfolioSection() {
           <SectionHeading
             eyebrow="Proven Impact"
             title="Featured Case Studies & Workflows"
-            description="Explore how Velosync Global delivers tailored software engineering, custom CRM systems, and AI business automation for enterprise growth."
+            description="Explore how Valosync Global delivers tailored software engineering, custom CRM systems, and AI business automation for enterprise growth."
             align="left"
             maxWidth="3xl"
             className="mb-0"
           />
           <Link
             href="/portfolio"
-            className="group inline-flex items-center gap-2 text-sm font-bold transition-colors duration-200 hover:gap-3"
-            style={{ color: "var(--accent-color)" }}
+            className="group inline-flex items-center gap-2 text-sm font-bold text-[#0D47A1] transition-colors duration-200 hover:gap-3"
           >
             Explore Case Studies
             <ArrowRightIcon size={18} />
@@ -64,25 +62,20 @@ export default function PortfolioSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {portfolio.map((project, index) => (
+          {portfolio.map((project) => (
             <Link
               key={project.title}
               href={project.href}
-              className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/50 rounded-3xl"
+              className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1]/50 rounded-3xl"
             >
-              <article
-                className="relative flex flex-col h-full rounded-3xl border overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-white dark:bg-[#0F172A]"
-                style={{
-                  borderColor: "var(--border-color)",
-                }}
-              >
-                {/* Visual Header Box */}
-                <div className="relative p-6 bg-gradient-to-br from-[#0B1B3D] via-[#1E3A8A] to-[#0F172A] text-white flex flex-col justify-between h-48 overflow-hidden">
+              <article className="relative flex flex-col h-full rounded-3xl border border-[#D9E1EC] bg-white shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#0D47A1]/40">
+                {/* Visual Header Box: Deep Blue to Royal Blue */}
+                <div className="relative p-6 bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1] text-white flex flex-col justify-between h-48 overflow-hidden">
                   <div className="flex items-center justify-between z-10">
-                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 backdrop-blur-md">
+                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/40 backdrop-blur-md">
                       {project.category}
                     </span>
-                    <span className="p-2 rounded-xl bg-white/10 text-cyan-400">
+                    <span className="p-2 rounded-xl bg-white/10 text-[#D4AF37]">
                       {project.icon}
                     </span>
                   </div>
@@ -91,38 +84,31 @@ export default function PortfolioSection() {
                     <span className="text-xs font-semibold text-slate-300 block uppercase tracking-wider mb-0.5">
                       KEY IMPACT METRIC
                     </span>
-                    <span className="text-xl font-extrabold text-cyan-400">
+                    <span className="text-xl font-extrabold text-[#D4AF37]">
                       {project.metric}
                     </span>
                   </div>
 
                   {/* Ambient Glow Element */}
                   <div
-                    className="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500/20 rounded-full blur-2xl pointer-events-none transition-transform duration-500 group-hover:scale-150"
+                    className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#0D47A1]/30 rounded-full blur-2xl pointer-events-none transition-transform duration-500 group-hover:scale-150"
                     aria-hidden="true"
                   />
                 </div>
 
                 <div className="flex flex-col flex-1 p-6 lg:p-7">
-                  <h3
-                    className="text-lg font-bold mb-3 transition-colors duration-300 group-hover:text-cyan-500"
-                    style={{ color: "var(--text-primary)" }}
-                  >
+                  <h3 className="text-lg font-bold mb-3 text-[#1A1A1A] transition-colors duration-300 group-hover:text-[#0D47A1]">
                     {project.title}
                   </h3>
-                  <p
-                    className="text-sm leading-relaxed flex-1 mb-6"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
+                  <p className="text-sm leading-relaxed flex-1 mb-6 text-[#4A5568]">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 pt-4 border-t" style={{ borderColor: "var(--border-color)" }}>
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-[#F0F4FA]">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-surface text-text-secondary border"
-                        style={{ borderColor: "var(--border-color)" }}
+                        className="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC]"
                       >
                         {tag}
                       </span>

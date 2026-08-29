@@ -1,6 +1,5 @@
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
-import CountUp from "../ui/CountUp";
 import {
   ArrowRightIcon,
   CheckIcon,
@@ -14,29 +13,29 @@ import {
 
 export default function AboutSection() {
   const coreValues = [
-    "Australian Market Focused Strategy",
-    "Agile & Transparent Development",
-    "Dedicated Cross-Functional Team",
-    "100% Data Security & Confidentiality",
-    "Post-Launch Maintenance & SLA",
-    "Tailored ROI-Driven Solutions",
+    "Market Understanding",
+    "Clear and Collaborative Delivery",
+    "Cross-Functional Project Support",
+    "Security-Conscious Development",
+    "Post-Launch Support Options",
+    "Solutions Tailored to Your Operations",
   ];
 
   const highlights = [
     {
       icon: <AwardIcon size={24} />,
       title: "Quality First",
-      description: "Rigorous QA testing, code review, and CI/CD standards.",
+      description: "Structured QA, code reviews and release checks.",
     },
     {
       icon: <UsersIcon size={24} />,
       title: "Dedicated Teams",
-      description: "Full-stack engineers, UI designers, and project managers.",
+      description: "Development, design, QA and project coordination.",
     },
     {
       icon: <BriefcaseIcon size={24} />,
       title: "Scalable Architecture",
-      description: "Cloud-native infrastructure built to grow with your business.",
+      description: "Architecture selected to support your current and future needs.",
     },
   ];
 
@@ -51,59 +50,59 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Visual Card Cluster */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-3xl p-8 border bg-gradient-to-br from-slate-900 via-[#0B1B3D] to-slate-900 text-white shadow-2xl overflow-hidden">
+            <div className="relative rounded-3xl p-8 border border-[#0D47A1]/30 bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1] text-white shadow-2xl overflow-hidden">
               <div
-                className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
+                className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"
                 aria-hidden="true"
               />
 
               <div className="flex items-center gap-3 mb-8">
-                <span className="p-3 rounded-2xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+                <span className="p-3 rounded-2xl bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30">
                   <ShieldIcon size={28} />
                 </span>
                 <div>
                   <h3 className="text-xl font-bold text-white">
-                    Velosync Global Standard
+                    ValoSync Global Standard
                   </h3>
                   <p className="text-xs text-slate-300">
-                    Built for Enterprise Performance & Lead Growth
+                    Practical Technology. Clear Business Outcomes.
                   </p>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
-                  <span className="text-3xl font-extrabold text-cyan-400 block mb-1">
-                    <CountUp end={100} duration={1800} />%
+                  <span className="text-3xl font-extrabold text-[#D4AF37] block mb-1">
+                    Secure
                   </span>
                   <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider block">
-                    Confidential NDA
+                    Project Protection
                   </span>
                   <p className="text-[11px] text-slate-400 mt-1">
-                    Your IP & data remains completely protected.
+                    Confidentiality measures agreed for each engagement.
                   </p>
                 </div>
 
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
-                  <span className="text-3xl font-extrabold text-cyan-400 block mb-1">
+                  <span className="text-3xl font-extrabold text-[#D4AF37] block mb-1">
                     AU
                   </span>
                   <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider block">
-                    Targeted Lead Tech
+                    Market Alignment
                   </span>
                   <p className="text-[11px] text-slate-400 mt-1">
-                    Engineered to capture high-value market leads.
+                    Solutions shaped around business needs.
                   </p>
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-between">
+              <div className="p-5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-2">
                     {[1, 2, 3, 4].map((idx) => (
                       <span
                         key={idx}
-                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 border-2 border-slate-900 text-cyan-400 text-xs font-bold"
+                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#071A3D] border-2 border-[#041026] text-[#D4AF37] text-xs font-bold"
                       >
                         <StarIcon size={14} />
                       </span>
@@ -111,30 +110,30 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white">
-                      5-Star Technology Delivery
+                      Collaborative Technology Delivery
                     </p>
                     <p className="text-xs text-slate-300">
-                      Top-Tier Engineering & Support
+                      Clear communication from scope to launch
                     </p>
                   </div>
                 </div>
-                <span className="p-2 rounded-xl bg-cyan-500/20 text-cyan-400">
+                <span className="p-2 rounded-xl bg-[#0D47A1]/40 text-[#D4AF37]">
                   <TargetIcon size={20} />
                 </span>
               </div>
             </div>
 
             {/* Accent Floating Badge */}
-            <div className="hidden sm:flex absolute -bottom-6 -right-6 p-4 rounded-2xl bg-white dark:bg-[#0F172A] border shadow-xl items-center gap-3">
-              <span className="p-2.5 rounded-xl bg-amber-500/10 text-amber-500">
+            <div className="hidden sm:flex absolute -bottom-6 -right-6 p-4 rounded-2xl bg-white border border-[#D9E1EC] shadow-xl items-center gap-3">
+              <span className="p-2.5 rounded-xl bg-[#D4AF37]/15 text-[#B89224]">
                 <StarIcon size={22} />
               </span>
               <div>
-                <p className="text-sm font-bold text-slate-900 dark:text-white">
-                  99.9% Uptime SLA
+                <p className="text-sm font-bold text-[#1A1A1A]">
+                  Post-Launch Support
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  Reliable Infrastructure
+                <p className="text-xs text-[#4A5568]">
+                  Maintenance options available
                 </p>
               </div>
             </div>
@@ -143,9 +142,9 @@ export default function AboutSection() {
           {/* Right Column: Detailed Text */}
           <div className="lg:col-span-6">
             <SectionHeading
-              eyebrow="About Velosync Global"
-              title="Architecting Digital Solutions That Drive Australian Business Success"
-              description="Velosync Global is a forward-looking technology company specializing in custom software development, custom CRM systems, AI automation, and ROI-centric digital marketing. We empower businesses to operate smarter and scale faster."
+              // eyebrow="About Valosync Global"
+              title="Built around your business, powered by practical technology."
+              // description="ValoSync Global partners with businesses to build custom software, CRM platforms, web applications and connected digital solutions. We combine business understanding with practical technology to improve operations and support long-term growth."
               align="left"
               className="mb-8"
               maxWidth="none"
@@ -155,16 +154,9 @@ export default function AboutSection() {
               {coreValues.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-2.5 text-sm font-medium"
-                  style={{ color: "var(--text-primary)" }}
+                  className="flex items-start gap-2.5 text-sm font-medium text-[#1A1A1A]"
                 >
-                  <span
-                    className="flex-shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-md mt-0.5"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.15)",
-                      color: "var(--accent-color)",
-                    }}
-                  >
+                  <span className="flex-shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-md mt-0.5 bg-[#0D47A1]/10 text-[#0D47A1]">
                     <CheckIcon size={12} />
                   </span>
                   {item}
@@ -176,31 +168,15 @@ export default function AboutSection() {
               {highlights.map((item) => (
                 <div
                   key={item.title}
-                  className="p-4 rounded-xl border transition-all duration-300 hover:shadow-md"
-                  style={{
-                    borderColor: "var(--border-color)",
-                    background: "var(--surface-color)",
-                  }}
+                  className="p-4 rounded-xl border border-[#D9E1EC] bg-white shadow-sm transition-all duration-300 hover:shadow-md hover:border-[#0D47A1]/30"
                 >
-                  <div
-                    className="inline-flex items-center justify-center w-9 h-9 rounded-lg mb-2"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.1)",
-                      color: "var(--accent-color)",
-                    }}
-                  >
+                  <div className="inline-flex items-center justify-center w-9 h-9 rounded-lg mb-2 bg-[#0D47A1]/10 text-[#0D47A1]">
                     {item.icon}
                   </div>
-                  <h4
-                    className="text-sm font-bold mb-1"
-                    style={{ color: "var(--text-primary)" }}
-                  >
+                  <h4 className="text-sm font-bold mb-1 text-[#1A1A1A]">
                     {item.title}
                   </h4>
-                  <p
-                    className="text-xs leading-relaxed"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
+                  <p className="text-xs leading-relaxed text-[#4A5568]">
                     {item.description}
                   </p>
                 </div>
@@ -214,7 +190,7 @@ export default function AboutSection() {
               size="lg"
               rightIcon={<ArrowRightIcon size={18} />}
             >
-              Learn More About Our Capabilities
+              Learn More About ValoSync Global
             </Button>
           </div>
         </div>

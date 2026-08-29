@@ -16,12 +16,12 @@ const faqs = [
       "We offer flexible engagement models: Fixed-Price Milestone Projects (best for clearly defined custom software or CRM builds) and Dedicated Engineering Squads (monthly sprint-based model ideal for evolving platforms and AI automation).",
   },
   {
-    question: "Are your software and CRM solutions compliant with Australian privacy laws?",
+    question: "Are your software and CRM solutions compliant with privacy laws?",
     answer:
-      "Yes. All digital platforms engineered for Australian clients strictly follow Australian Privacy Principles (APPs), AHPRA guidelines for health software, and Australian data residency requirements on local AWS/Azure data centers.",
+      "Yes. All digital platforms engineered for clients strictly follow Privacy Principles, AHPRA guidelines for health software, and Australian data residency requirements on local AWS/Azure data centers.",
   },
   {
-    question: "Can Velosync Global integrate custom software with our existing tools?",
+    question: "Can Valosync Global integrate custom software with our existing tools?",
     answer:
       "Yes. We specialize in API middleware engineering. We seamlessly connect custom software and CRMs with Xero, MYOB, Salesforce, SAP, Stripe, Google Workspace, and legacy SQL databases without disrupting your daily operations.",
   },
@@ -39,12 +39,12 @@ const faqs = [
 
 export default function ServiceFAQSection() {
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative">
+    <section className="section-padding bg-[#F7F9FC] relative">
       <div className="container max-w-3xl mx-auto">
         <SectionHeading
           badge="Frequently Asked Questions"
           title="Everything You Need to Know About Our Services"
-          subtitle="Transparent details regarding source code IP ownership, pricing models, delivery timelines, and Australian compliance."
+          subtitle="Transparent details regarding source code IP ownership, pricing models, delivery timelines, and compliance."
           center
         />
 

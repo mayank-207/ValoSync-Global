@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "outline" | "ghost" | "gold";
 type ButtonSize = "sm" | "md" | "lg";
 
 type ButtonBaseProps = {
@@ -44,14 +44,11 @@ const sizeClasses: Record<ButtonSize, string> = {
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary:
-    "bg-gradient-to-r from-accent to-accent-hover text-text-light shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus:ring-accent/40",
-  secondary:
-    "bg-primary text-text-light hover:bg-primary-light focus:ring-primary/40",
-  outline:
-    "border-2 border-primary text-primary hover:bg-primary hover:text-text-light focus:ring-primary/40 bg-transparent",
-  ghost:
-    "text-primary hover:bg-primary/5 focus:ring-primary/20 bg-transparent",
+  primary: "button-primary",
+  secondary: "button-secondary",
+  outline: "button-outline",
+  ghost: "button-ghost",
+  gold: "button-gold",
 };
 
 export default function Button(props: ButtonProps) {
@@ -69,11 +66,7 @@ export default function Button(props: ButtonProps) {
   } = props;
 
   const baseClasses = `
-    inline-flex items-center justify-center font-semibold rounded-xl
-    transition-all duration-300 ease-out
-    focus:outline-none focus:ring-4 focus:ring-offset-2
-    active:scale-[0.98]
-    disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none
+    button
     ${sizeClasses[size]}
     ${variantClasses[variant]}
     ${fullWidth ? "w-full" : ""}

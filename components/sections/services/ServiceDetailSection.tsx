@@ -13,6 +13,7 @@ import {
   CheckCircleIcon,
   ArrowRightIcon,
   ZapIcon,
+  SmartphoneIcon,
 } from "@/components/ui/Icons";
 
 const serviceDetails = [
@@ -95,32 +96,6 @@ const serviceDetails = [
     ],
   },
   {
-    id: "business-automation",
-    name: "Business Process Automation",
-    icon: <AutomationIcon size={22} />,
-    tagline: "Eliminating manual bottlenecks by interconnecting operational tools into seamless workflows.",
-    challenges: [
-      "Double data entry across separate inventory, accounting, and logistics platforms.",
-      "Critical approval requests getting stuck in employee email inboxes.",
-      "Human error causing costly invoicing mistakes and compliance oversights.",
-    ],
-    solutions: [
-      "Custom integration bus connecting ERP, accounting (Xero/MYOB), and client portals.",
-      "Automated approval workflows with instant Slack/Teams/SMS escalation triggers.",
-      "Real-time audit logging and error alert monitoring guaranteeing process reliability.",
-    ],
-    deliverables: [
-      "Multi-System API Integration Hub",
-      "Automated Document & Invoice Generator",
-      "Real-Time Process Monitoring Console",
-    ],
-    outcomes: [
-      { label: "Process Execution Speed", value: "10x Faster" },
-      { label: "Human Error Rate", value: "Near 0%" },
-      { label: "Team Productivity", value: "+50%" },
-    ],
-  },
-  {
     id: "web-development",
     name: "Web Development",
     icon: <LayersIcon size={22} />,
@@ -144,6 +119,32 @@ const serviceDetails = [
       { label: "Page Load Speed", value: "< 0.6s" },
       { label: "Core Web Vitals", value: "100/100" },
       { label: "Organic Bounce Rate", value: "-40%" },
+    ],
+  },
+  {
+    id: "mobile-app-development",
+    name: "Mobile App Development",
+    icon: <SmartphoneIcon size={22} />,
+    tagline: "Native iOS, Android and cross-platform Flutter/React Native mobile applications built for scale.",
+    challenges: [
+      "Sluggish hybrid apps that lag, drain device battery, and receive 1-star reviews.",
+      "High cost and friction of maintaining two separate engineering teams for iOS and Android.",
+      "App Store and Google Play rejections due to complex privacy regulations and latency.",
+    ],
+    solutions: [
+      "Modern cross-platform architecture (Flutter / React Native) cutting development cost by up to 40% with native 60fps performance.",
+      "Single codebase architecture with automated testing and native device sensor integrations (Camera, GPS, Biometrics, Bluetooth).",
+      "End-to-end publishing, testflight distribution, and guaranteed App Store & Play Store compliance.",
+    ],
+    deliverables: [
+      "Native iOS (Swift) & Android (Kotlin) Builds",
+      "Cross-Platform Flutter / React Native App",
+      "App Store & Google Play Publishing Package",
+    ],
+    outcomes: [
+      { label: "Average App Rating", value: "4.9 ★" },
+      { label: "Crash-Free Sessions", value: "99.9%" },
+      { label: "Time-to-Market", value: "-40%" },
     ],
   },
   {
@@ -181,7 +182,7 @@ export default function ServiceDetailSection() {
     serviceDetails.find((s) => s.id === activeServiceId) || serviceDetails[0];
 
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative overflow-hidden">
+    <section className="section-padding bg-white relative overflow-hidden">
       <div className="container">
         <SectionHeading
           badge="In-Depth Service Breakdown"
@@ -196,15 +197,15 @@ export default function ServiceDetailSection() {
             <button
               key={service.id}
               onClick={() => setActiveServiceId(service.id)}
-              className={`flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 ${
+              className={`flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1] ${
                 activeServiceId === service.id
-                  ? "bg-slate-900 dark:bg-slate-800 text-white shadow-xl shadow-slate-900/10 ring-2 ring-cyan-500/50 scale-105"
-                  : "bg-slate-100 dark:bg-slate-900/60 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800"
+                  ? "bg-[#071A3D] text-white shadow-xl scale-105"
+                  : "bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC] hover:bg-[#EEF3FA]"
               }`}
             >
               <span
                 className={
-                  activeServiceId === service.id ? "text-cyan-400" : "text-slate-400"
+                  activeServiceId === service.id ? "text-[#D4AF37]" : "text-[#0D47A1]"
                 }
               >
                 {service.icon}
@@ -215,17 +216,17 @@ export default function ServiceDetailSection() {
         </div>
 
         {/* Active Service Card */}
-        <div className="bg-slate-50 dark:bg-[#0F172A] rounded-3xl p-6 sm:p-10 border border-slate-200/80 dark:border-slate-800 shadow-2xl transition-all duration-300">
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mb-10 pb-8 border-b border-slate-200 dark:border-slate-800">
+        <div className="bg-[#F7F9FC] rounded-3xl p-6 sm:p-10 border border-[#D9E1EC] shadow-2xl transition-all duration-300">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mb-10 pb-8 border-b border-[#D9E1EC]">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D47A1]/10 text-[#0D47A1] text-xs font-semibold uppercase tracking-wider mb-3">
                 <ZapIcon size={14} />
                 <span>Service Spotlight</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#D4AF37]">
                 {currentService.name}
               </h3>
-              <p className="text-slate-600 dark:text-slate-400 font-medium text-base mt-2">
+              <p className="text-[#4A5568] font-medium text-base mt-2">
                 {currentService.tagline}
               </p>
             </div>
@@ -243,16 +244,16 @@ export default function ServiceDetailSection() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10">
             {/* Common Pain Points Column */}
-            <div className="bg-white dark:bg-[#060e24] p-6 sm:p-8 rounded-2xl border border-red-500/20 shadow-sm">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#D9E1EC] shadow-sm">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center font-bold text-lg">
+                <div className="w-10 h-10 rounded-xl bg-[#071A3D]/10 text-[#071A3D] flex items-center justify-center font-bold text-lg">
                   !
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900 dark:text-white">
+                  <h4 className="text-lg font-bold text-[#D4AF37]">
                     The Bottlenecks You Face
                   </h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                  <p className="text-xs text-[#718096]">
                     Common obstacles destroying growth & speed
                   </p>
                 </div>
@@ -260,8 +261,8 @@ export default function ServiceDetailSection() {
 
               <ul className="space-y-4">
                 {currentService.challenges.map((c, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                    <span className="w-5 h-5 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
+                  <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568]">
+                    <span className="w-5 h-5 rounded-full bg-[#071A3D]/10 text-[#071A3D] flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
                       ✕
                     </span>
                     <span>{c}</span>
@@ -270,26 +271,20 @@ export default function ServiceDetailSection() {
               </ul>
             </div>
 
-            {/* Velosync Solution Column */}
-            <div className="rounded-3xl border border-cyan-500/30 bg-white dark:bg-[#0F172A] p-8 lg:p-10 shadow-xl">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                  <CheckCircleIcon size={22} />
-                </span>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                    Velosync Global Engineered Solution
-                  </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
-                    Custom architecture & automated workflows
-                  </p>
-                </div>
-              </div>
+            {/* Valosync Solution Column */}
+            <div className="bg-[#071A3D] p-8 rounded-3xl border border-[#0D47A1]/40 shadow-xl text-white">
+              <span className="px-3.5 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] font-semibold text-xs uppercase tracking-wider mb-6 inline-block">
+                The Solution
+              </span>
+              <h4 className="text-xl font-bold mb-6 text-white flex items-center gap-3">
+                <CheckCircleIcon size={24} className="text-[#D4AF37]" />
+                ValoSync Global Engineered Solution
+              </h4>
 
               <ul className="space-y-4">
                 {currentService.solutions.map((s, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                    <CheckCircleIcon size={18} className="text-cyan-500 flex-shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-200">
+                    <CheckCircleIcon size={18} className="text-[#D4AF37] flex-shrink-0 mt-0.5" />
                     <span className="font-medium">{s}</span>
                   </li>
                 ))}
@@ -298,15 +293,15 @@ export default function ServiceDetailSection() {
           </div>
 
           {/* Key Deliverables & ROI Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-slate-200 dark:border-slate-800">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-[#D9E1EC]">
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#718096] mb-4">
                 Key Project Deliverables
               </h4>
               <ul className="space-y-2.5">
                 {currentService.deliverables.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2.5 text-sm font-semibold text-slate-800 dark:text-slate-200">
-                    <div className="w-2 h-2 rounded-full bg-cyan-500" />
+                  <li key={idx} className="flex items-center gap-2.5 text-sm font-semibold text-[#D4AF37]">
+                    <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -314,19 +309,19 @@ export default function ServiceDetailSection() {
             </div>
 
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4 text-center md:text-left">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#718096] mb-4 text-center md:text-left">
                 Target Business Impact & ROI
               </h4>
               <div className="grid grid-cols-3 gap-3">
                 {currentService.outcomes.map((o, idx) => (
                   <div
                     key={idx}
-                    className="bg-white dark:bg-[#060e24] p-4 rounded-2xl text-center border border-slate-200 dark:border-slate-800/80"
+                    className="bg-white p-4 rounded-2xl text-center border border-[#D9E1EC]"
                   >
-                    <div className="text-xl sm:text-2xl font-extrabold text-cyan-500 mb-0.5">
+                    <div className="text-xl sm:text-2xl font-extrabold text-[#0D47A1] mb-0.5">
                       {o.value}
                     </div>
-                    <div className="text-[11px] font-semibold text-slate-600 dark:text-slate-400">
+                    <div className="text-[11px] font-semibold text-[#4A5568]">
                       {o.label}
                     </div>
                   </div>

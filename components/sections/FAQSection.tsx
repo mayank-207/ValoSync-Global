@@ -6,36 +6,36 @@ import FAQAccordion, { FAQItem } from "@/components/ui/FAQAccordion";
 
 const defaultFaqs: FAQItem[] = [
   {
-    question: "What does the 30-hour risk-free trial actually mean?",
+    question: "What types of projects does ValoSync Global deliver?",
     answer:
-      "Our 30-hour risk-free trial allows you to test our engineering squads and workflow on your actual project without upfront financial commitment. If you aren't completely satisfied with the velocity, code quality, and communication during the first 30 hours, you pay nothing.",
+      "We work across custom software, CRM platforms, web and WordPress development, business automation, cloud and DevOps support, SEO, digital marketing and social media management.",
   },
   {
-    question: "How quickly can I scale my team up or down?",
+    question: "Do you work with businesses across different regions and time zones?",
     answer:
-      "We operate on a flexible monthly model. You can add or remove team members with 2 weeks' notice. There are no minimum contract durations; we earn your continued business by delivering great work, not by locking you in.",
+      "Yes. Our services and communication approach are structured for seamless collaboration, including aligned working hours, practical scoping, clear milestones and regular project updates.",
   },
   {
-    question: "Do you work as a white-label partner for agencies?",
+    question: "Which technologies do you work with?",
     answer:
-      "Yes. We frequently act as dedicated white-label engineering and delivery partners for design studios, consulting firms, and digital agencies worldwide. All code, documentation, and client deliverables remain strictly under your brand and NDAs.",
+      "Our capabilities include Laravel, PHP, WordPress, .NET, React, Next.js, Node.js, MEAN and MERN technologies, along with cloud, automation and digital marketing platforms.",
   },
   {
-    question: "Who owns the source code and intellectual property (IP)?",
+    question: "Can you modernise or extend an existing system?",
     answer:
-      "You own 100% of the custom source code, databases, design assets, and intellectual property. Full repository ownership and deploy credentials are transferred directly to your organization with zero lock-in.",
+      "Yes. We can assess an existing application, identify priority improvements and plan integrations, feature development, performance work or phased modernisation.",
   },
   {
-    question: "How do you ensure seamless communication across different time zones?",
+    question: "How do you manage project communication?",
     answer:
-      "We assign dedicated technical project managers and align working sprint hours to provide substantial daily overlap with your team (US, UK, Australia, and APAC). We maintain transparency via Slack, Jira, bi-weekly video sprint reviews, and live staging environments.",
+      "We agree on communication channels, milestones, review points and responsibilities during project setup so stakeholders have clear visibility throughout delivery.",
   },
   {
-    question: "What tech stacks and architectures do you specialize in?",
+    question: "What happens after launch?",
     answer:
-      "We build modern, scalable web and mobile ecosystems using Next.js, React, Node.js, Python, TypeScript, React Native, Flutter, AWS, Azure, PostgreSQL, MongoDB, and integrated AI / LLM pipeline services.",
+      "Handover, maintenance and ongoing improvement options are defined according to the solution and your operational requirements.",
   },
-];
+]
 
 interface FAQSectionProps {
   title?: string;
@@ -48,14 +48,14 @@ interface FAQSectionProps {
 
 export default function FAQSection({
   title = "Frequently Asked Questions",
-  subtitle = "Have questions? Here are answers to our most commonly asked questions about our process, engagement models, and delivery guarantees.",
+  subtitle = "Find answers about our services, technology capabilities, delivery approach and post-launch support.",
   badge = "Got Questions?",
   faqs = defaultFaqs,
   className = "",
   defaultOpenIndex = 1,
 }: FAQSectionProps) {
   return (
-    <section id="faq" className={`section-padding bg-slate-50/50 dark:bg-[#060e24] ${className}`}>
+    <section id="faq" className={`section-padding bg-white ${className}`}>
       <div className="container max-w-4xl">
         <div className="text-left mb-10">
           <SectionHeading

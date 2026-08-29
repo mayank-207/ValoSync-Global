@@ -17,41 +17,24 @@ export default function FeatureCard({
 }: FeatureCardProps) {
   return (
     <div
-      className={`flex flex-col gap-3 p-6 rounded-xl border transition-all duration-300 hover:border-accent/30 hover:shadow-lg ${className}`}
-      style={{
-        background: "var(--surface-color)",
-        borderColor: "var(--border-color)",
-      }}
+      className={`flex flex-col gap-3 p-6 rounded-2xl border border-[#D9E1EC] bg-white shadow-sm transition-all duration-300 hover:border-[#0D47A1]/40 hover:shadow-md ${className}`}
     >
+      <div className="flex justify-between">
       {number && (
-        <span
-          className="text-4xl font-extrabold opacity-10 select-none"
-          style={{ color: "var(--accent-color)" }}
-        >
+        <span className="text-4xl font-extrabold text-[#D4AF37]/40 select-none">
           {number}
         </span>
       )}
       {icon && (
-        <div
-          className="inline-flex items-center justify-center w-12 h-12 rounded-lg"
-          style={{
-            background: "rgb(6 182 212 / 0.1)",
-            color: "var(--accent-color)",
-          }}
-        >
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] border border-[#0D47A1]/20">
           {icon}
         </div>
       )}
-      <h4
-        className="text-lg font-bold"
-        style={{ color: "var(--text-primary)" }}
-      >
+      </div>
+      <h4 className="text-lg font-bold text-[#1A1A1A]">
         {title}
       </h4>
-      <p
-        className="text-sm leading-relaxed"
-        style={{ color: "var(--text-secondary)" }}
-      >
+      <p className="text-sm leading-relaxed text-[#4A5568]">
         {description}
       </p>
     </div>
