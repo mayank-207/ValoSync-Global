@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "../ui/Logo";
 import Button from "../ui/Button";
 import { ArrowRightIcon, MenuIcon, CloseIcon, ChevronDownIcon } from "../ui/Icons";
@@ -16,7 +17,6 @@ const navItems = [
       { label: "Custom Software Development", href: "/services/custom-software" },
       { label: "CRM Development", href: "/services/crm-development" },
       { label: "AI Automation", href: "/services/ai-automation" },
-      { label: "Business Automation", href: "/services/business-automation" },
       { label: "Web Development", href: "/services/web-development" },
       { label: "Cloud & DevOps Support", href: "/services/cloud-devops" },
       { label: "Digital Marketing", href: "/services/digital-marketing" },
@@ -28,13 +28,20 @@ const navItems = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
+  // Auto close mobile menu on page navigation
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setOpenDropdown(null);
+  }, [pathname]);
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 15);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -55,9 +62,9 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white shadow-md border-b border-[#D9E1EC] py-3"
-          : "bg-transparent py-5"
+        isScrolled || isMobileMenuOpen
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#D9E1EC] py-2 sm:py-2.5"
+          : "bg-transparent py-2.5 sm:py-3"
       }`}
     >
       <div className="container">
@@ -65,10 +72,13 @@ export default function Header() {
           className="flex items-center justify-between"
           aria-label="Main navigation"
         >
-          <Logo variant={isScrolled ? "dark" : "light"} className="flex-shrink-0" />
+          <Logo
+            variant={isScrolled || isMobileMenuOpen ? "dark" : "light"}
+            className="flex-shrink-0"
+          />
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-1">
+          <ul className="hidden lg:flex items-center gap-0.5">
             {navItems.map((item) => (
               <li
                 key={item.label}
@@ -79,7 +89,7 @@ export default function Header() {
                 {item.dropdown ? (
                   <>
                     <button
-                      className={`flex items-center gap-1.5 px-4 py-2 text-sm font-bold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
+                      className={`flex items-center gap-1 px-3.5 py-1.5 text-sm font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
                         isScrolled
                           ? "text-[#1A1A1A] hover:text-[#0B3D91]"
                           : "text-white hover:text-[#D4AF37]"
@@ -107,7 +117,7 @@ export default function Header() {
                           <li key={subItem.label}>
                             <Link
                               href={subItem.href}
-                              className="block px-4 py-3 text-sm font-semibold text-[#1A1A1A] rounded-xl transition-all duration-200 hover:bg-[#0B3D91]/10 hover:text-[#0B3D91]"
+                              className="block px-4 py-2.5 text-sm font-semibold text-[#1A1A1A] rounded-xl transition-all duration-200 hover:bg-[#0B3D91]/10 hover:text-[#0B3D91]"
                             >
                               {subItem.label}
                             </Link>
@@ -119,7 +129,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`inline-block px-4 py-2 text-sm font-bold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
+                    className={`inline-block px-3.5 py-1.5 text-sm font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
                       isScrolled
                         ? "text-[#1A1A1A] hover:text-[#0B3D91]"
                         : "text-white hover:text-[#D4AF37]"
@@ -133,23 +143,25 @@ export default function Header() {
           </ul>
 
           {/* Desktop Right CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             <Button
               as="link"
               href="/contact"
               variant="primary"
-              size="md"
-              rightIcon={<ArrowRightIcon size={16} />}
+              size="sm"
+              rightIcon={<ArrowRightIcon size={15} />}
             >
               Get Started
             </Button>
           </div>
 
-          {/* Mobile Hamburger Toggle */}
+          {/* Mobile Hamburger Toggle Button */}
           <button
             type="button"
-            className={`lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-200 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
-              isScrolled ? "text-[#1A1A1A]" : "text-white"
+            className={`lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
+              isScrolled || isMobileMenuOpen
+                ? "text-[#071A33] hover:bg-slate-100"
+                : "text-white hover:bg-white/10"
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
@@ -165,54 +177,69 @@ export default function Header() {
         </nav>
       </div>
 
-      {/* Mobile Drawer Navigation */}
+      {/* Mobile Drawer Navigation (Slide-Down Full Screen Overlay) */}
       <div
         id="mobile-menu"
-        className={`lg:hidden fixed inset-x-0 top-[65px] bottom-0 z-40 transition-all duration-300 ease-out ${
+        className={`lg:hidden fixed inset-x-0 top-full h-[calc(100dvh-100%)] z-40 transition-all duration-300 ease-in-out ${
           isMobileMenuOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-4 pointer-events-none"
+            ? "opacity-100 translate-y-0 pointer-events-auto visible"
+            : "opacity-0 -translate-y-2 pointer-events-none invisible"
         }`}
       >
+        {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-black/40 backdrop-blur-xs"
           onClick={() => setIsMobileMenuOpen(false)}
           aria-hidden="true"
         />
+
+        {/* Navigation Content Card */}
         <nav
-          className="relative h-full overflow-y-auto bg-white shadow-2xl border-t border-[#D9E1EC]"
+          className="relative h-full overflow-y-auto bg-white shadow-2xl border-t border-[#D9E1EC] px-4 py-5 flex flex-col justify-between"
           aria-label="Mobile navigation"
         >
-          <ul className="container py-6 flex flex-col gap-1">
+          <ul className="flex flex-col gap-1">
             {navItems.map((item) => (
               <li key={item.label}>
                 {item.dropdown ? (
                   <div className="flex flex-col">
-                    <button
-                      type="button"
-                      className="flex items-center justify-between w-full px-4 py-3.5 text-base font-bold text-[#1A1A1A] rounded-xl transition-colors duration-200 hover:bg-[#F7F9FC] focus:outline-none"
-                      onClick={() =>
-                        setOpenDropdown(
-                          openDropdown === item.label ? null : item.label
-                        )
-                      }
-                      aria-expanded={openDropdown === item.label}
-                    >
-                      {item.label}
-                      <ChevronDownIcon
-                        size={16}
-                        className={`transition-transform duration-200 ${
-                          openDropdown === item.label ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
+                    <div className="flex items-center justify-between w-full rounded-xl transition-colors duration-200 hover:bg-[#F7F9FC]">
+                      <Link
+                        href={item.href}
+                        className="flex-1 px-4 py-3 text-base font-bold text-[#071A33]"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                      <button
+                        type="button"
+                        className="p-3 text-[#071A33] hover:text-[#0B3D91] focus:outline-none"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setOpenDropdown(
+                            openDropdown === item.label ? null : item.label
+                          );
+                        }}
+                        aria-expanded={openDropdown === item.label}
+                        aria-label={`Toggle ${item.label} sub-menu`}
+                      >
+                        <ChevronDownIcon
+                          size={18}
+                          className={`transition-transform duration-200 ${
+                            openDropdown === item.label
+                              ? "rotate-180 text-[#0B3D91]"
+                              : ""
+                          }`}
+                        />
+                      </button>
+                    </div>
                     {openDropdown === item.label && (
-                      <ul className="pl-4 mt-1 flex flex-col gap-1 border-l-2 border-[#0D47A1]/30 ml-4">
+                      <ul className="pl-3 my-1 flex flex-col gap-1 border-l-2 border-[#0B3D91]/20 ml-4">
                         {item.dropdown.map((subItem) => (
                           <li key={subItem.label}>
                             <Link
                               href={subItem.href}
-                              className="block px-4 py-2.5 text-sm font-semibold text-[#4A5568] rounded-lg transition-colors duration-200 hover:text-[#0D47A1]"
+                              className="block px-3 py-2 text-sm font-semibold text-slate-700 rounded-lg transition-colors duration-200 hover:bg-[#0B3D91]/10 hover:text-[#0B3D91]"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               {subItem.label}
@@ -225,7 +252,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-4 py-3.5 text-base font-bold text-[#1A1A1A] rounded-xl transition-colors duration-200 hover:bg-[#F7F9FC]"
+                    className="block px-4 py-3 text-base font-bold text-[#071A33] rounded-xl transition-colors duration-200 hover:bg-[#F7F9FC]"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -233,20 +260,24 @@ export default function Header() {
                 )}
               </li>
             ))}
-            <li className="pt-6 mt-4 border-t border-[#D9E1EC]">
-              <Button
-                as="link"
-                href="/contact"
-                variant="primary"
-                size="lg"
-                fullWidth
-                rightIcon={<ArrowRightIcon size={18} />}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Book Free Consultation
-              </Button>
-            </li>
           </ul>
+
+          <div className="pt-5 mt-4 border-t border-[#D9E1EC] flex flex-col gap-3">
+            <Button
+              as="link"
+              href="/contact"
+              variant="primary"
+              size="lg"
+              fullWidth
+              rightIcon={<ArrowRightIcon size={18} />}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Book Free Consultation
+            </Button>
+            <div className="text-center text-xs text-slate-500 font-medium">
+              contact@valosyncglobal.com
+            </div>
+          </div>
         </nav>
       </div>
     </header>

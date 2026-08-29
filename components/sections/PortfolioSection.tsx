@@ -39,7 +39,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="section-padding relative bg-[#F7F9FC]"
+      className="section-padding relative bg-white"
       aria-labelledby="portfolio-heading"
     >
       <div className="container">

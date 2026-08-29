@@ -142,9 +142,9 @@ export default function AboutSection() {
           {/* Right Column: Detailed Text */}
           <div className="lg:col-span-6">
             <SectionHeading
-              eyebrow="About Valosync Global"
+              // eyebrow="About Valosync Global"
               title="Built around your business, powered by practical technology."
-              description="ValoSync Global partners with businesses to build custom software, CRM platforms, web applications and connected digital solutions. We combine business understanding with practical technology to improve operations and support long-term growth."
+              // description="ValoSync Global partners with businesses to build custom software, CRM platforms, web applications and connected digital solutions. We combine business understanding with practical technology to improve operations and support long-term growth."
               align="left"
               className="mb-8"
               maxWidth="none"

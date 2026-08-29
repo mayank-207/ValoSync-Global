@@ -49,7 +49,7 @@ const processSteps = [
 
 export default function IndustryProcessSection() {
   return (
-    <section className="section-padding bg-[#F7F9FC] relative">
+    <section className="section-padding bg-white relative">
       <div className="container">
         <SectionHeading
           badge="Our Engagement Workflow"
@@ -58,11 +58,11 @@ export default function IndustryProcessSection() {
           center
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
           {processSteps.map((step, idx) => (
             <div
               key={idx}
-              className="relative flex flex-col p-6 rounded-2xl bg-white border border-[#D9E1EC] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+              className="p-6 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] hover:border-[#0B3D91]/40 hover:shadow-xl hover:bg-white transition-all duration-300 flex flex-col justify-between group"
             >
               {/* Step Number Badge */}
               <div className="flex items-center justify-between mb-6">

@@ -38,7 +38,7 @@ const steps = [
 
 export default function ServiceProcessSection() {
   return (
-    <section className="section-padding bg-[#F7F9FC] relative">
+    <section className="section-padding bg-white relative">
       <div className="container">
         <SectionHeading
           badge="Agile Delivery Framework"
@@ -51,10 +51,10 @@ export default function ServiceProcessSection() {
           {steps.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-2xl border border-[#D9E1EC] shadow-md relative hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="bg-[#F7F9FC] p-6 rounded-2xl border border-[#D9E1EC] shadow-sm relative hover:shadow-xl hover:bg-white hover:border-[#0B3D91]/40 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <span className="text-3xl font-extrabold text-[#0D47A1] block mb-3">
+                <span className="text-3xl font-extrabold text-[#0B3D91] block mb-3">
                   {item.step}
                 </span>
                 <h3 className="text-lg font-bold text-[#1A1A1A] mb-2 leading-snug">

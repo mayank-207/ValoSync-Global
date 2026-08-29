@@ -153,7 +153,7 @@ export default function IndustryDetailSection() {
     detailedSectors.find((s) => s.id === selectedSectorId) || detailedSectors[0];
 
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative overflow-hidden">
+    <section className="section-padding bg-[#F7F9FC] relative overflow-hidden">
       <div className="container">
         <SectionHeading
           badge="Deep-Dive Industry Breakdown"
@@ -170,8 +170,8 @@ export default function IndustryDetailSection() {
               onClick={() => setSelectedSectorId(sector.id)}
               className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl text-sm font-bold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1]/40 ${
                 selectedSectorId === sector.id
-                  ? "bg-[#071A3D] text-white shadow-xl shadow-[#071A3D]/20 ring-2 ring-[#0D47A1]/50"
-                  : "bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC] hover:bg-white hover:text-[#0D47A1]"
+                  ? "bg-[#071A33] text-white shadow-xl"
+                  : "bg-white text-[#4A5568] border border-[#D9E1EC] hover:bg-[#EEF3FA] hover:text-[#0B3D91]"
               }`}
             >
               <span
@@ -187,7 +187,7 @@ export default function IndustryDetailSection() {
         </div>
 
         {/* Selected Sector Deep-Dive Card */}
-        <div className="bg-[#F7F9FC] rounded-3xl p-6 sm:p-10 border border-[#D9E1EC] shadow-2xl transition-all duration-300">
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-[#D9E1EC] shadow-xl transition-all duration-300">
           <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mb-10 pb-8 border-b border-[#D9E1EC]">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D47A1]/10 text-[#0D47A1] text-xs font-bold uppercase tracking-wider mb-3">

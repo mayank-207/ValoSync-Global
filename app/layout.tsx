@@ -88,6 +88,16 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/images/logo.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/images/logo.png",
+    apple: [
+      { url: "/images/logo.png", type: "image/png" },
+    ],
+  },
   alternates: {
     canonical: "/",
     languages: {
@@ -108,8 +118,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0B1B3D" },
-    { media: "(prefers-color-scheme: dark)", color: "#060e24" },
+    { media: "(prefers-color-scheme: light)", color: "#0B3D91" },
+    { media: "(prefers-color-scheme: dark)", color: "#071A33" },
   ],
   width: "device-width",
   initialScale: 1,

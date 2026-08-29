@@ -77,9 +77,9 @@ export default function CTASection() {
                 </span>
               </h2>
 
-              <p className="text-base sm:text-lg leading-relaxed mb-8 max-w-xl text-slate-200">
+              {/* <p className="text-base sm:text-lg leading-relaxed mb-8 max-w-xl text-slate-200">
                 Discuss your custom software, CRM, web development, automation, cloud delivery or digital growth requirements with ValoSync Global.
-              </p>
+              </p> */}
 
               <div className="space-y-4">
                 {[
@@ -197,10 +197,10 @@ export default function CTASection() {
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                           className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] transition-all"
                         >
-                          <option value="Custom Software Development" className="text-slate-900 bg-white">Custom Software Development</option>
+                          <option value="Custom Software Development" className="text-slate-900 bg-white">Custom Software</option>
                           <option value="CRM Development" className="text-slate-900 bg-white">CRM Development</option>
                           <option value="AI Automation" className="text-slate-900 bg-white">AI Automation</option>
-                          <option value="Business Process Automation" className="text-slate-900 bg-white">Business Process Automation</option>
+                          <option value="Business Process Automation" className="text-slate-900 bg-white">Automation Process</option>
                           <option value="Web Development" className="text-slate-900 bg-white">Web Development</option>
                           <option value="Digital Marketing" className="text-slate-900 bg-white">Digital Marketing & SEO</option>
                         </select>
@@ -238,7 +238,7 @@ export default function CTASection() {
                       disabled={isSubmitting}
                       rightIcon={<ArrowRightIcon size={18} />}
                     >
-                      {isSubmitting ? "Sending Request..." : "Submit Consultation Request"}
+                      {isSubmitting ? "Sending Request..." : "Submit Request"}
                     </Button>
                   </form>
                 )}

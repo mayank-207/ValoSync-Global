@@ -95,7 +95,7 @@ export default function CaseStudyDetailSection() {
     spotlightCaseStudies.find((s) => s.id === selectedId) || spotlightCaseStudies[0];
 
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative overflow-hidden">
+    <section className="section-padding bg-white relative overflow-hidden">
       <div className="container">
         <SectionHeading
           badge="Deep-Dive Case Studies"

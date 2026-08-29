@@ -124,7 +124,7 @@ export default function HeroSection() {
                     </span>
                     <div>
                       <p className="text-white font-semibold font-sans text-sm">
-                        AI Automation Workflow
+                        AI Automation
                       </p>
                       <p className="text-[11px] text-slate-400">
                         Lead Processing & CRM Sync
@@ -143,7 +143,7 @@ export default function HeroSection() {
                     </span>
                     <div>
                       <p className="text-white font-semibold font-sans text-sm">
-                        Custom Software Architecture
+                        Custom Software
                       </p>
                       <p className="text-[11px] text-slate-400">
                         Next.js + Microservices
@@ -162,7 +162,7 @@ export default function HeroSection() {
                     </span>
                     <div>
                       <p className="text-white font-semibold font-sans text-sm">
-                        Lead Generation Pipeline
+                        Lead Generation
                       </p>
                       <p className="text-[11px] text-slate-400">
                         Market Targeting

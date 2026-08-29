@@ -34,7 +34,7 @@ const faqs = [
 
 export default function IndustryFAQSection() {
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative">
+    <section className="section-padding bg-[#F7F9FC] relative">
       <div className="container max-w-3xl mx-auto">
         <SectionHeading
           badge="Frequently Asked Questions"

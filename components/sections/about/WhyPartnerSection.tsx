@@ -40,6 +40,7 @@ export default function WhyPartnerSection() {
           title="Why Leading Businesses Choose ValoSync Global"
           subtitle="A comparative look at how our engineering excellence and client dedication set us apart."
           center
+          titleClassName="text-white"
         />
 
         {/* Comparison Table */}

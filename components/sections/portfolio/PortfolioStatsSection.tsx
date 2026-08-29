@@ -38,6 +38,7 @@ export default function PortfolioStatsSection() {
           title="Engineering Results That Drive Scale"
           subtitle="Our focus is on delivering concrete, trackable business outcomes rather than just lines of code."
           center
+          titleClassName="text-white"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">

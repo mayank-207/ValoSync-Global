@@ -35,13 +35,6 @@ const services = [
     href: "/services/ai-automation",
   },
   {
-    icon: <AutomationIcon size={28} />,
-    title: "Business Process Automation",
-    description:
-      "Automate complex manual business workflows to improve operational efficiency, eliminate human errors, and drastically reduce repetitive work.",
-    href: "/services/business-automation",
-  },
-  {
     icon: <LayersIcon size={28} />,
     title: "Web Development",
     description:
@@ -76,7 +69,7 @@ export default function ServicesSection() {
         <SectionHeading
           badge="Our Services"
           title="Digital Solutions Built Around Real Business Needs"
-          description="From custom software and CRM platforms to cloud delivery and digital growth, we help businesses choose and implement technology that creates practical value."
+          // description="From custom software and CRM platforms to cloud delivery and digital growth, we help businesses choose and implement technology that creates practical value."
           center
         />
 

@@ -25,7 +25,7 @@ export default function CompanyMissionSection() {
   ];
 
   return (
-    <section className="section-padding bg-[#F7F9FC] relative">
+    <section className="section-padding bg-white relative">
       <div className="container">
         <SectionHeading
           badge="Mission & Vision"
@@ -38,7 +38,7 @@ export default function CompanyMissionSection() {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="p-8 rounded-3xl bg-white border border-[#D9E1EC] shadow-md flex flex-col justify-between"
+              className="p-8 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] shadow-sm hover:shadow-xl hover:bg-white hover:border-[#0B3D91]/40 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <span className="p-3 rounded-2xl bg-[#0D47A1]/10 text-[#0D47A1] inline-block mb-6 border border-[#0D47A1]/20">

@@ -35,7 +35,7 @@ const teamRoles = [
 
 export default function TeamLeadershipSection() {
   return (
-    <section className="section-padding bg-[#F7F9FC] relative">
+    <section className="section-padding bg-white relative">
       <div className="container">
         <SectionHeading
           badge="Multidisciplinary Talent"
@@ -48,7 +48,7 @@ export default function TeamLeadershipSection() {
           {teamRoles.map((role, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-3xl bg-white border border-[#D9E1EC] hover:border-[#0D47A1]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="p-8 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] hover:border-[#0B3D91]/40 hover:shadow-xl hover:bg-white transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-[#0D47A1]/10 text-[#0D47A1] flex items-center justify-center mb-6 border border-[#0D47A1]/20">
@@ -65,9 +65,9 @@ export default function TeamLeadershipSection() {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#F0F4FA] text-xs font-medium text-[#718096]">
+              {/* <div className="mt-6 pt-4 border-t border-[#F0F4FA] text-xs font-medium text-[#718096]">
                 Dedicated ValoSync Global Engineering Division
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

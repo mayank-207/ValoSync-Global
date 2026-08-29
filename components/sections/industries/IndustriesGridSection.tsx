@@ -167,7 +167,7 @@ export default function IndustriesGridSection() {
       : industriesData.filter((item) => item.category === activeCategory);
 
   return (
-    <section id="sector-grid" className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative">
+    <section id="sector-grid" className="section-padding bg-white relative">
       <div className="container">
         <SectionHeading
           badge="Specialized Industry Solutions"

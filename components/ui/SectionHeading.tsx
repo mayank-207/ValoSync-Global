@@ -53,12 +53,12 @@ export default function SectionHeading({
         </span>
       )}
       <h2
-        className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-[#1A1A1A] ${titleClassName}`}
+        className={`text-3xl sm:text-4xl pb-4 lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-[#1A1A1A] ${titleClassName}`}
       >
         {title}
       </h2>
       {finalDescription && (
-        <p className="text-base sm:text-lg leading-relaxed text-[#4A5568]">
+        <p className="text-base sm:text-lg mb-2 leading-relaxed text-[#4A5568]">
           {finalDescription}
         </p>
       )}

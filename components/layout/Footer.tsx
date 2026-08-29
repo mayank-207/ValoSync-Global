@@ -21,7 +21,6 @@ const footerLinks = {
     { label: "Custom Software Development", href: "/services/custom-software" },
     { label: "CRM Development", href: "/services/crm-development" },
     { label: "AI Automation", href: "/services/ai-automation" },
-    { label: "Business Automation", href: "/services/business-automation" },
     { label: "Web Development", href: "/services/web-development" },
     { label: "Cloud & DevOps Support", href: "/services/cloud-devops" },
     { label: "Digital Marketing", href: "/services/digital-marketing" },
@@ -57,7 +56,7 @@ export default function Footer() {
     <footer className="relative mt-auto pt-16 bg-[#071A3D] text-white">
       <div className="relative container">
         {/* Pre-footer Call to Action Card */}
-        <section className="relative mb-16 p-8 md:p-12 rounded-3xl overflow-hidden shadow-2xl border border-[#0D47A1]/40 bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1]">
+        {/* <section className="relative mb-16 p-8 md:p-12 rounded-3xl overflow-hidden shadow-2xl border border-[#0D47A1]/40 bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1]">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-full mb-4 border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37]">
@@ -84,7 +83,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Footer Navigation Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16">

@@ -18,12 +18,12 @@ import {
   ChevronDownIcon,
 } from "@/components/ui/Icons";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import TechStackFilterShowcase, { TechCategory } from "@/components/sections/services/TechStackFilterShowcase";
 
 type ServiceSlug =
   | "custom-software"
   | "crm-development"
   | "ai-automation"
-  | "business-automation"
   | "web-development"
   | "cloud-devops"
   | "digital-marketing";
@@ -40,7 +40,7 @@ interface ServiceData {
   painPoints: string[];
   solutions: string[];
   capabilities: { title: string; description: string }[];
-  techStack: string[];
+  techStack: { name: string; role: string }[];
   metrics: { value: string; label: string }[];
   faqs: { question: string; answer: string }[];
 }
@@ -94,7 +94,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Designing high-throughput REST and GraphQL APIs to connect internal software with external partner ecosystems.",
       },
     ],
-    techStack: ["Next.js", "React", "Node.js", "Python", "PostgreSQL", "AWS / Docker"],
+    techStack: [
+      { name: "Next.js", role: "Full-Stack Framework" },
+      { name: "React", role: "Frontend UI Components" },
+      { name: "TypeScript", role: "Type-Safe Architecture" },
+      { name: "Node.js", role: "Backend Microservices" },
+      { name: "Python", role: "Data Logic & APIs" },
+      { name: "PostgreSQL", role: "Relational Database" },
+      { name: "Docker", role: "Container Security" },
+      { name: "AWS Cloud", role: "Elastic Infrastructure" },
+      { name: "GitHub Actions", role: "CI/CD Deployment" },
+      { name: "Tailwind CSS", role: "Modular Styling" },
+    ],
     metrics: [
       { value: "100%", label: "Source Code Ownership" },
       { value: "99.9%", label: "Uptime Guarantee" },
@@ -161,7 +172,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Track sales rep activity, deal conversion rates, revenue projections, and customer lifetime value in real time.",
       },
     ],
-    techStack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Twilio / WhatsApp API", "Stripe API"],
+    techStack: [
+      { name: "React", role: "Pipeline Dashboard" },
+      { name: "TypeScript", role: "Enterprise Logic" },
+      { name: "Node.js", role: "High-Speed APIs" },
+      { name: "PostgreSQL", role: "Customer Records" },
+      { name: "Twilio", role: "SMS & Telephony" },
+      { name: "WhatsApp API", role: "Direct Messaging" },
+      { name: "Stripe", role: "Recurring Billing" },
+      { name: "Google Analytics", role: "Attribution Funnels" },
+      { name: "Docker", role: "Secure Containers" },
+      { name: "AWS", role: "High Availability" },
+    ],
     metrics: [
       { value: "< 2 Mins", label: "Lead Response Time" },
       { value: "+35%", label: "Sales Conversion Rate" },
@@ -228,7 +250,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Automate report generation, email drafts, compliance checks, and summary generation across toolchains.",
       },
     ],
-    techStack: ["OpenAI / Anthropic APIs", "LangChain", "LlamaIndex", "Pinecone Vector DB", "Python / FastAPI", "Next.js"],
+    techStack: [
+      { name: "OpenAI GPT-4o", role: "LLM & Reasoning Engine" },
+      { name: "Anthropic Claude", role: "Complex Document Parsing" },
+      { name: "LangChain", role: "Agent Framework" },
+      { name: "Pinecone DB", role: "Vector Semantic Storage" },
+      { name: "Python", role: "FastAPI Backend" },
+      { name: "Next.js", role: "AI Web Interface" },
+      { name: "Docker", role: "Container Sandbox" },
+      { name: "AWS", role: "Cloud AI Infrastructure" },
+      { name: "GitHub Actions", role: "Automated Testing" },
+      { name: "PostgreSQL", role: "Vector Metadata DB" },
+    ],
     metrics: [
       { value: "99.2%", label: "Data Extraction Accuracy" },
       { value: "65%", label: "Support Automated" },
@@ -244,73 +277,6 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
         question: "How accurate is the document data extraction?",
         answer:
           "Our OCR and multi-modal AI pipelines achieve over 99% accuracy, featuring automated confidence scoring for human review when necessary.",
-      },
-    ],
-  },
-  "business-automation": {
-    title: "Business Process Automation",
-    badge: "Operational Workflow Orchestration",
-    metaTitle: "Business Process Automation Services Australia | Valosync Global",
-    metaDescription:
-      "Automate manual business processes, inter-departmental data sync, approval chains, and automated task dispatching for Australian growth teams and global enterprises.",
-    heroHeadline: "Streamline Operations & Eliminate Repetitive Manual Labor",
-    heroSubtitle:
-      "Interconnect your software applications, automate cross-departmental tasks, and eliminate costly human errors across your organization.",
-    iconName: "automation",
-    highlights: [
-      "Cross-App API Middleware",
-      "Automated Multi-Tier Approvals",
-      "Elimination of Human Error",
-      "Real-Time Operational Audit",
-    ],
-    painPoints: [
-      "Staff performing repetitive copy-paste work between disparate software systems.",
-      "Critical purchase orders and approval requests stalled in manager inboxes.",
-      "Billing discrepancies and inventory mismatches due to delayed manual updates.",
-    ],
-    solutions: [
-      "Custom integration middleware connecting inventory, accounting, CRM, and logistics.",
-      "Automated approval workflows with instant Slack, Teams, and SMS escalation alerts.",
-      "Real-time data synchronization ensuring better consistency across all software tools.",
-    ],
-    capabilities: [
-      {
-        title: "Multi-App Workflow Integration",
-        description:
-          "Sync data between Xero, Salesforce, Shopify, Google Sheets, and custom databases automatically.",
-      },
-      {
-        title: "Automated Document & Invoice Generation",
-        description:
-          "Instantly generate PDFs, contracts, shipping labels, and invoices upon transaction triggers.",
-      },
-      {
-        title: "Approval & Task Dispatch Engines",
-        description:
-          "Route requests automatically based on manager availability, price thresholds, or department rules.",
-      },
-      {
-        title: "System Audit & Error Monitoring",
-        description:
-          "Centralized monitoring console catching data anomalies and alerting admins before issues compound.",
-      },
-    ],
-    techStack: ["Node.js", "Python", "Zapier / Make APIs", "WebSockets", "Redis", "PostgreSQL"],
-    metrics: [
-      { value: "10x", label: "Execution Speed" },
-      { value: "20+ Hrs", label: "Saved / Team / Week" },
-      { value: "0%", label: "Manual Data Copying" },
-    ],
-    faqs: [
-      {
-        question: "Can you automate workflows across legacy systems without APIs?",
-        answer:
-          "Yes. We use robotic process automation (RPA) and custom headless scripts to interact with legacy systems safely.",
-      },
-      {
-        question: "What happens if a third-party app changes its API?",
-        answer:
-          "Our automated error monitoring triggers alerts instantly, and our support team updates integration schemas under SLA agreements.",
       },
     ],
   },
@@ -362,7 +328,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Custom component libraries tailored to your brand guidelines for consistent long-term scaling.",
       },
     ],
-    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "Stripe API"],
+    techStack: [
+      { name: "Next.js", role: "SSR & Static Web" },
+      { name: "React", role: "Interactive Frontend" },
+      { name: "TypeScript", role: "Strict Type Safety" },
+      { name: "Tailwind CSS", role: "Utility Design Tokens" },
+      { name: "Vercel", role: "Global Edge CDN" },
+      { name: "Stripe", role: "Payments & Invoicing" },
+      { name: "Google Analytics 4", role: "User Analytics" },
+      { name: "PostgreSQL", role: "Data Storage" },
+      { name: "GitHub Actions", role: "Automated Builds" },
+      { name: "Docker", role: "Dev Environment" },
+    ],
     metrics: [
       { value: "< 0.6s", label: "Average Load Speed" },
       { value: "100/100", label: "Core Web Vitals" },
@@ -429,7 +406,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Improve visibility, recovery readiness, resource usage and ongoing infrastructure maintenance.",
       },
     ],
-    techStack: ["AWS", "Azure", "Docker", "Linux", "GitHub Actions", "Vercel"],
+    techStack: [
+      { name: "AWS", role: "Cloud Compute & VPC" },
+      { name: "Microsoft Azure", role: "Enterprise Cloud" },
+      { name: "Google Cloud", role: "Data Storage & Compute" },
+      { name: "Docker", role: "Containerization" },
+      { name: "GitHub Actions", role: "CI/CD Automation" },
+      { name: "Vercel", role: "Serverless Deployment" },
+      { name: "Linux", role: "Production OS" },
+      { name: "PostgreSQL", role: "Database Clustering" },
+      { name: "Node.js", role: "API Microservices" },
+      { name: "Python", role: "Automation Scripts" },
+    ],
     metrics: [
       { value: "Plan", label: "Assess Requirements" },
       { value: "Build", label: "Automate Delivery" },
@@ -496,7 +484,18 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
           "Creating high-value whitepapers, case studies, and blog content that positions you as the market leader.",
       },
     ],
-    techStack: ["Google Analytics 4", "Google Search Console", "Google Ads", "Meta Ads", "Semrush", "Hotjar"],
+    techStack: [
+      { name: "Google Analytics", role: "GA4 Traffic & Attribution" },
+      { name: "Google Search Console", role: "Search Indexing" },
+      { name: "Google Ads", role: "High-Intent PPC" },
+      { name: "Meta Ads", role: "Social Retargeting" },
+      { name: "Semrush", role: "Keyword & Backlink Intel" },
+      { name: "HubSpot", role: "CRM & Inbound Automation" },
+      { name: "Stripe", role: "Revenue Tracking" },
+      { name: "Next.js", role: "Fast Landing Pages" },
+      { name: "Tailwind CSS", role: "Conversion UI Layout" },
+      { name: "GitHub Actions", role: "Continuous Optimization" },
+    ],
     metrics: [
       { value: "4.5x", label: "Average Campaign ROAS" },
       { value: "+220%", label: "Qualified Lead Volume" },
@@ -522,7 +521,6 @@ export async function generateStaticParams() {
     { slug: "custom-software" },
     { slug: "crm-development" },
     { slug: "ai-automation" },
-    { slug: "business-automation" },
     { slug: "web-development" },
     { slug: "cloud-devops" },
     { slug: "digital-marketing" },
@@ -628,13 +626,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         </section>
 
         {/* Problem vs Solution Section */}
-        <section className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative">
+        <section className="section-padding bg-[#F7F9FC] relative">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-[#0D47A1] dark:text-[#D4AF37] font-bold text-xs uppercase tracking-wider block mb-2">
+              <span className="text-[#0B3D91] font-bold text-xs uppercase tracking-wider block mb-2">
                 Problem & Solution
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A]">
                 Overcoming Common Industry Bottlenecks
               </h2>
             </div>
@@ -678,30 +676,32 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         </section>
 
         {/* Capabilities Grid */}
-        <section id="capabilities" className="section-padding bg-white dark:bg-[#060e24] relative">
+        <section id="capabilities" className="section-padding bg-white relative">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-[#0D47A1] dark:text-[#D4AF37] font-bold text-xs uppercase tracking-wider block mb-2">
+              <span className="text-[#0B3D91] font-bold text-xs uppercase tracking-wider block mb-2">
                 Core Modules & Features
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A1A]">
                 What We Build in {data.title}
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 cursor-pointer">
               {data.capabilities.map((cap, idx) => (
                 <div
                   key={idx}
-                  className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 hover:border-[#0D47A1]/40 transition-all duration-300"
+                  className="p-8 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] hover:border-[#0B3D91]/40 hover:shadow-xl hover:bg-white transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] font-bold flex items-center justify-center text-sm mb-4">
+                  <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-xl bg-[#0B3D91]/10 text-[#0B3D91] font-bold flex items-center justify-center text-sm mb-4 border border-[#0B3D91]/20">
                     0{idx + 1}
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">
                     {cap.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                  </div>
+                  <p className="text-[#4A5568] text-sm leading-relaxed">
                     {cap.description}
                   </p>
                 </div>
@@ -710,30 +710,29 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* Tech Stack Bar */}
-        <section className="py-16 bg-slate-900 text-white border-t border-slate-800">
-          <div className="container text-center">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-8">
-              Core Tech Stack & Frameworks
-            </h3>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {data.techStack.map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="px-5 py-2.5 rounded-xl bg-slate-800 text-[#D4AF37] text-sm font-semibold border border-slate-700/60"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Interactive Core Tech Stack, Frameworks & Tools with Filter Capsules */}
+        <TechStackFilterShowcase
+          initialServiceTitle={data.title}
+          defaultCategory={
+            slug === "custom-software"
+              ? "all"
+              : slug === "crm-development"
+              ? "backend"
+              : slug === "ai-automation"
+              ? "ai-automation"
+              : slug === "web-development"
+              ? "frontend"
+              : slug === "cloud-devops"
+              ? "database-cloud"
+              : "seo-marketing"
+          }
+        />
 
         {/* Dynamic FAQ Accordion */}
-        <section className="section-padding bg-slate-50 dark:bg-[#060e24]/80">
+        <section className="section-padding bg-[#F7F9FC]">
           <div className="container max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1A1A1A] mb-3">
                 {data.title} FAQs
               </h2>
             </div>

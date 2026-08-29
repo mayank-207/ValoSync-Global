@@ -51,7 +51,7 @@ const features = [
 export default function WhyChooseUsSection() {
   return (
     <section
-      className="section-padding relative bg-[#F7F9FC]"
+      className="section-padding relative bg-white"
       aria-labelledby="why-choose-heading"
     >
       <div className="container">
@@ -65,7 +65,7 @@ export default function WhyChooseUsSection() {
               className="mb-8"
             />
 
-            <div className="p-8 rounded-3xl border border-[#D9E1EC] bg-white shadow-md mb-8 relative overflow-hidden">
+            <div className="p-8 rounded-3xl border border-[#D9E1EC] bg-[#F7F9FC] shadow-sm mb-8 relative overflow-hidden">
               <div className="flex flex-col gap-6">
                 <div className="flex items-start gap-4">
                   <span className="p-3 rounded-2xl bg-[#0D47A1]/10 text-[#0D47A1] border border-[#0D47A1]/20 flex-shrink-0">
@@ -80,7 +80,7 @@ export default function WhyChooseUsSection() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-6 pt-4 border-t border-[#F0F4FA] text-xs">
+                <div className="flex items-center gap-6 pt-4 border-t border-[#D9E1EC] text-xs">
                   <div>
                     <span className="block text-2xl font-extrabold text-[#0D47A1]">
                       Clear
@@ -104,6 +104,7 @@ export default function WhyChooseUsSection() {
                 key={feature.title}
                 {...feature}
                 number={String(index + 1).padStart(2, "0")}
+                className="bg-[#F7F9FC] hover:bg-white"
               />
             ))}
           </div>

@@ -61,7 +61,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "custom-software",
     "crm-development",
     "ai-automation",
-    "business-automation",
     "web-development",
     "cloud-devops",
     "digital-marketing",

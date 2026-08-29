@@ -640,7 +640,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </section>
 
         {/* Client Story & Challenge vs Solution */}
-        <section id="case-details" className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative">
+        <section id="case-details" className="section-padding bg-[#F7F9FC] relative">
           <div className="container">
             {/* Overview */}
             <div className="max-w-3xl mx-auto mb-16 bg-white p-8 rounded-3xl border border-[#D9E1EC] shadow-md">
@@ -707,9 +707,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 {data.features.map((feat, idx) => (
                   <div
                     key={idx}
-                    className="p-7 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] shadow-sm"
+                    className="p-7 rounded-3xl bg-white border border-[#D9E1EC] shadow-sm hover:shadow-xl hover:border-[#0B3D91]/40 transition-all duration-300"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] font-bold flex items-center justify-center text-sm mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#0B3D91]/10 text-[#0B3D91] font-bold flex items-center justify-center text-sm mb-4 border border-[#0B3D91]/20">
                       0{idx + 1}
                     </div>
                     <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">

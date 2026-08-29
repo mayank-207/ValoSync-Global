@@ -10,12 +10,10 @@ import {
   PhoneIcon,
   MailIcon,
   MapPinIcon,
-  ClockIcon,
   CheckCircleIcon,
   ArrowRightIcon,
   SparkleIcon,
   ShieldIcon,
-  ChevronDownIcon,
 } from "@/components/ui/Icons";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 
@@ -105,7 +103,7 @@ export default function ContactPage() {
       <Header />
       <main id="main">
         {/* Contact Hero */}
-        <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
+        {/* <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[360px] bg-[#D4AF37]/15 blur-[130px] rounded-full pointer-events-none" />
 
@@ -126,10 +124,10 @@ export default function ContactPage() {
               Speak directly with our senior software architects to scope your custom software, CRM build, AI automation workflow, or digital lead generation campaign.
             </p>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact Method Cards */}
-        <section className="py-12 bg-slate-900 border-b border-slate-800 text-white">
+        <section className="pt-32 pb-20 py-12 bg-slate-900 border-b border-slate-800 text-white">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {contactMethods.map((item, idx) => (
@@ -157,12 +155,12 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Form Section */}
-        <section id="contact-form" className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative">
+        <section id="contact-form" className="section-padding bg-[#F7F9FC] relative">
           <div className="container">
-            <div className="max-w-4xl mx-auto bg-white dark:bg-[#0F172A] p-8 sm:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl">
+            <div className="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-3xl border border-[#D9E1EC] shadow-2xl">
               <SectionHeading
-                badge="Consultation Form"
-                title="Send Us Your Project Requirements"
+                // badge="Consultation Form"
+                title="Send Us Your Requirements"
                 subtitle="Fill out the form below to receive a custom proposal and 30-minute discovery session."
                 center
               />
@@ -331,7 +329,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact FAQs */}
-        <section className="section-padding bg-white dark:bg-[#060e24]">
+        <section className="section-padding bg-white">
           <div className="container max-w-3xl mx-auto">
             <SectionHeading
               badge="Consultation FAQs"

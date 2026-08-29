@@ -95,32 +95,6 @@ const serviceDetails = [
     ],
   },
   {
-    id: "business-automation",
-    name: "Business Process Automation",
-    icon: <AutomationIcon size={22} />,
-    tagline: "Eliminating manual bottlenecks by interconnecting operational tools into seamless workflows.",
-    challenges: [
-      "Double data entry across separate inventory, accounting, and logistics platforms.",
-      "Critical approval requests getting stuck in employee email inboxes.",
-      "Human error causing costly invoicing mistakes and compliance oversights.",
-    ],
-    solutions: [
-      "Custom integration bus connecting ERP, accounting (Xero/MYOB), and client portals.",
-      "Automated approval workflows with instant Slack/Teams/SMS escalation triggers.",
-      "Real-time audit logging and error alert monitoring guaranteeing process reliability.",
-    ],
-    deliverables: [
-      "Multi-System API Integration Hub",
-      "Automated Document & Invoice Generator",
-      "Real-Time Process Monitoring Console",
-    ],
-    outcomes: [
-      { label: "Process Execution Speed", value: "10x Faster" },
-      { label: "Human Error Rate", value: "Near 0%" },
-      { label: "Team Productivity", value: "+50%" },
-    ],
-  },
-  {
     id: "web-development",
     name: "Web Development",
     icon: <LayersIcon size={22} />,
@@ -181,7 +155,7 @@ export default function ServiceDetailSection() {
     serviceDetails.find((s) => s.id === activeServiceId) || serviceDetails[0];
 
   return (
-    <section className="section-padding bg-white dark:bg-[#060e24] relative overflow-hidden">
+    <section className="section-padding bg-white relative overflow-hidden">
       <div className="container">
         <SectionHeading
           badge="In-Depth Service Breakdown"
@@ -222,7 +196,7 @@ export default function ServiceDetailSection() {
                 <ZapIcon size={14} />
                 <span>Service Spotlight</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#D4AF37]">
                 {currentService.name}
               </h3>
               <p className="text-[#4A5568] font-medium text-base mt-2">
@@ -249,7 +223,7 @@ export default function ServiceDetailSection() {
                   !
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-[#1A1A1A]">
+                  <h4 className="text-lg font-bold text-[#D4AF37]">
                     The Bottlenecks You Face
                   </h4>
                   <p className="text-xs text-[#718096]">
@@ -282,8 +256,8 @@ export default function ServiceDetailSection() {
 
               <ul className="space-y-4">
                 {currentService.solutions.map((s, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-[#4A5568]">
-                    <CheckCircleIcon size={18} className="text-[#0D47A1] flex-shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-200">
+                    <CheckCircleIcon size={18} className="text-[#D4AF37] flex-shrink-0 mt-0.5" />
                     <span className="font-medium">{s}</span>
                   </li>
                 ))}
@@ -299,7 +273,7 @@ export default function ServiceDetailSection() {
               </h4>
               <ul className="space-y-2.5">
                 {currentService.deliverables.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2.5 text-sm font-semibold text-[#1A1A1A]">
+                  <li key={idx} className="flex items-center gap-2.5 text-sm font-semibold text-[#D4AF37]">
                     <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />
                     <span>{item}</span>
                   </li>

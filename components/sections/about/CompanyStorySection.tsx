@@ -37,7 +37,7 @@ const milestones = [
 
 export default function CompanyStorySection() {
   return (
-    <section className="section-padding bg-[#F7F9FC] relative overflow-hidden">
+    <section className="section-padding bg-white relative overflow-hidden">
       <div className="container">
         <SectionHeading
           badge="Company Evolution"
@@ -66,7 +66,7 @@ export default function CompanyStorySection() {
                   </div>
 
                   {/* Content Card */}
-                  <div className="w-full md:w-[calc(50%-2rem)] p-6 sm:p-8 rounded-3xl bg-white border border-[#D9E1EC] shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-full md:w-[calc(50%-2rem)] p-6 sm:p-8 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] shadow-sm hover:shadow-xl hover:bg-white hover:border-[#0B3D91]/40 transition-all duration-300">
                     <span className="inline-block px-3 py-1 rounded-full bg-[#0D47A1]/10 text-[#0D47A1] text-xs font-bold uppercase tracking-wider mb-3">
                       {m.phase}
                     </span>

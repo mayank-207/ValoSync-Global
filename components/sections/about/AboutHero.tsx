@@ -21,23 +21,23 @@ export default function AboutHero() {
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
             <SparkleIcon size={16} />
             <span>About ValoSync Global</span>
-          </div>
+          </div> */}
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 animate-fade-in-up">
-            Building High-Performing Software & Automation for Business Progress
+            Transforming Businesses with Intelligent Technology Solutions
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto mb-10 animate-fade-in-up animate-delay-100">
-            ValoSync Global is a forward-thinking technology company dedicated to empowering businesses and global enterprises with bespoke software platforms, intelligent CRM systems, and AI-driven process automation.
+            We build custom software, intelligent CRM platforms, automated workflows, and connected digital solutions that help businesses work smarter, scale faster, and deliver exceptional customer experiences.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
             <Button
               as="link"
               href="/services"
@@ -45,7 +45,7 @@ export default function AboutHero() {
               size="lg"
               rightIcon={<ArrowRightIcon size={18} />}
             >
-              Explore Our Capabilities
+              Capabilities
             </Button>
             <Button
               as="link"
@@ -56,21 +56,21 @@ export default function AboutHero() {
               Get In Touch
             </Button>
           </div>
-
-          {/* Stats Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 sm:p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-            {stats.map((stat, idx) => (
-              <div key={idx} className="text-center p-2">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#D4AF37] mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-xs sm:text-sm font-medium text-slate-200">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
+
+        {/* Wider Stats Bar */}
+        {/* <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 p-6 sm:p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl">
+          {stats.map((stat, idx) => (
+            <div key={idx} className="text-center p-3">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#D4AF37] mb-1.5">
+                {stat.value}
+              </div>
+              <div className="text-xs sm:text-sm font-semibold text-slate-200">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div> */}
       </div>
     </section>
   );

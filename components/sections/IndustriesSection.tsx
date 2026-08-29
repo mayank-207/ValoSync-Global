@@ -38,12 +38,12 @@ const industries = [
 export default function IndustriesSection() {
   return (
     <section
-      className="section-padding relative bg-white"
+      className="section-padding relative bg-[#F7F9FC]"
       aria-labelledby="industries-heading"
     >
       <div className="container">
         <SectionHeading
-          eyebrow="Industries We Serve"
+          // eyebrow="Industries We Serve"
           title="Deep Expertise Across Key Sectors"
           description="We bring industry-specific knowledge and proven frameworks to deliver solutions that address the unique challenges and opportunities of your sector."
           className="mb-16"
@@ -53,7 +53,7 @@ export default function IndustriesSection() {
           {industries.map((industry, index) => (
             <div
               key={industry.name}
-              className="group relative p-6 lg:p-8 rounded-2xl border border-[#D9E1EC] bg-[#F7F9FC] shadow-sm cursor-default transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-white hover:border-[#0D47A1]/50 hover:z-10"
+              className="group relative p-6 lg:p-8 rounded-2xl border border-[#D9E1EC] bg-white shadow-sm cursor-default transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#0B3D91]/50 hover:z-10"
               style={{
                 animationDelay: `${index * 50}ms`,
               }}

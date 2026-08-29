@@ -147,7 +147,7 @@ export default function PortfolioGridSection() {
   return (
     <section
       id="case-studies-grid"
-      className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative"
+      className="section-padding bg-white relative"
     >
       <div className="container">
         <SectionHeading

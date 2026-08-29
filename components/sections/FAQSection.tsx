@@ -55,7 +55,7 @@ export default function FAQSection({
   defaultOpenIndex = 1,
 }: FAQSectionProps) {
   return (
-    <section id="faq" className={`section-padding bg-[#F7F9FC] ${className}`}>
+    <section id="faq" className={`section-padding bg-white ${className}`}>
       <div className="container max-w-4xl">
         <div className="text-left mb-10">
           <SectionHeading

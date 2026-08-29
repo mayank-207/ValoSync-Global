@@ -49,10 +49,10 @@ export const servicesData = [
   },
   {
     slug: "ai-automation",
-    category: "Automation",
+    category: "AI & Automation",
     title: "AI Automation Solutions",
     description:
-      "Apply AI where it delivers practical value, including document processing, knowledge support and workflow assistance.",
+      "Apply AI where it delivers practical value, including document processing, knowledge support, workflow assistance and intelligent chatbots.",
     icon: <BrainIcon size={28} />,
     href: "/services/ai-automation",
     features: [
@@ -62,22 +62,6 @@ export const servicesData = [
     ],
     metrics: "Practical AI Integration",
     techStack: ["Python", "OpenAI / LangChain", "FastAPI", "Vector DBs"],
-  },
-  {
-    slug: "business-automation",
-    category: "Automation",
-    title: "Business Process Automation",
-    description:
-      "Reduce repetitive work by connecting tools, synchronising data and automating approvals, notifications and task flows.",
-    icon: <AutomationIcon size={28} />,
-    href: "/services/business-automation",
-    features: [
-      "End-to-End Workflow Orchestration",
-      "Third-Party ERP & Software Integration",
-      "Automated SLA & Approval Alerts",
-    ],
-    metrics: "Streamlined Workflows",
-    techStack: ["Node.js", "Zapier / Make APIs", "WebSockets", "Redis"],
   },
   {
     slug: "web-development",
@@ -129,7 +113,7 @@ export const servicesData = [
   },
 ];
 
-const categories = ["All", "Development", "Automation", "Cloud & Infrastructure", "Digital Growth"];
+const categories = ["All", "Development", "AI & Automation", "Cloud & Infrastructure", "Digital Growth"];
 
 export default function ServicesGridSection() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -142,7 +126,7 @@ export default function ServicesGridSection() {
   return (
     <section
       id="services-catalog"
-      className="section-padding bg-slate-50 dark:bg-[#060e24]/60 relative"
+      className="section-padding bg-[#F7F9FC] relative"
     >
       <div className="container">
         <SectionHeading
@@ -164,8 +148,8 @@ export default function ServicesGridSection() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1] ${
                 activeCategory === cat
-                  ? "bg-[#0D47A1] text-white shadow-md shadow-[#0D47A1]/20 scale-105"
-                  : "bg-white text-[#4A5568] border border-[#D9E1EC] hover:border-[#0D47A1]/40 hover:text-[#0D47A1]"
+                  ? "bg-[#0B3D91] text-white shadow-md"
+                  : "bg-[#F7F9FC] text-[#4A5568] border border-[#D9E1EC] hover:bg-[#EEF3FA] hover:text-[#0B3D91]"
               }`}
             >
               {cat}
@@ -174,7 +158,7 @@ export default function ServicesGridSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, index) => (
             <ServiceCard
               key={service.slug}

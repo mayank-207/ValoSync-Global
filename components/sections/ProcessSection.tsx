@@ -55,20 +55,20 @@ const processSteps = [
 export default function ProcessSection() {
   return (
     <section
-      className="section-padding relative bg-white"
+      className="section-padding relative bg-[#F7F9FC]"
       aria-labelledby="process-heading"
     >
-      <div className="container">
+      <div className="container cursor-pointer">
         <SectionHeading
-          eyebrow="Our Process"
-          title="How We Deliver Successful Projects"
-          description="Our four-stage delivery approach creates shared clarity from initial discovery through launch and ongoing improvement."
+          // eyebrow="Our Process"
+          title="Our Development Process"
+          // description="Our four-stage delivery approach creates shared clarity from initial discovery through launch and ongoing improvement."
           className="mb-16"
         />
 
         <div className="relative">
           <div
-            className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-slate-200"
+            className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-[#D9E1EC]"
             aria-hidden="true"
           />
 
@@ -80,7 +80,7 @@ export default function ProcessSection() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div
-                  className="relative h-full p-8 rounded-2xl border border-[#D9E1EC] bg-[#F7F9FC] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:bg-white hover:border-[#0D47A1]/30 overflow-hidden"
+                  className="relative h-full p-8 rounded-2xl border border-[#D9E1EC] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#0B3D91]/40 overflow-hidden"
                 >
                   <div
                     className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-10 pointer-events-none transition-all duration-300 group-hover:scale-125"
@@ -94,16 +94,12 @@ export default function ProcessSection() {
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-6">
                       <span className="text-xs font-extrabold uppercase tracking-widest text-[#0D47A1]">
-                        Step {step.step}
+                        {step.title}
                       </span>
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg font-extrabold bg-[#0D47A1]/10 text-[#0D47A1] border border-[#0D47A1]/20 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#0D47A1] group-hover:text-white">
                         {index + 1}
                       </div>
                     </div>
-
-                    <h3 className="text-xl font-bold mb-4 text-[#1A1A1A] transition-colors duration-300 group-hover:text-[#0D47A1]">
-                      {step.title}
-                    </h3>
 
                     <p className="text-sm leading-relaxed mb-6 text-[#4A5568]">
                       {step.description}

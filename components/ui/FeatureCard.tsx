@@ -19,6 +19,7 @@ export default function FeatureCard({
     <div
       className={`flex flex-col gap-3 p-6 rounded-2xl border border-[#D9E1EC] bg-white shadow-sm transition-all duration-300 hover:border-[#0D47A1]/40 hover:shadow-md ${className}`}
     >
+      <div className="flex justify-between">
       {number && (
         <span className="text-4xl font-extrabold text-[#D4AF37]/40 select-none">
           {number}
@@ -29,6 +30,7 @@ export default function FeatureCard({
           {icon}
         </div>
       )}
+      </div>
       <h4 className="text-lg font-bold text-[#1A1A1A]">
         {title}
       </h4>
