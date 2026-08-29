@@ -66,7 +66,7 @@ export default function TeamLeadershipSection() {
               </div>
 
               <div className="mt-6 pt-4 border-t border-[#F0F4FA] text-xs font-medium text-[#718096]">
-                Dedicated VeloSync Global Engineering Division
+                Dedicated ValoSync Global Engineering Division
               </div>
             </div>
           ))}

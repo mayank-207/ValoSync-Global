@@ -6,14 +6,14 @@ import FAQAccordion, { FAQItem } from "@/components/ui/FAQAccordion";
 
 const defaultFaqs: FAQItem[] = [
   {
-    question: "What types of projects does VeloSync Global deliver?",
+    question: "What types of projects does ValoSync Global deliver?",
     answer:
       "We work across custom software, CRM platforms, web and WordPress development, business automation, cloud and DevOps support, SEO, digital marketing and social media management.",
   },
   {
-    question: "Do you work with Australian businesses?",
+    question: "Do you work with businesses across different regions and time zones?",
     answer:
-      "Yes. Our services and communication approach are designed with Australian businesses in mind, including practical scoping, clear milestones and regular project updates.",
+      "Yes. Our services and communication approach are structured for seamless collaboration, including aligned working hours, practical scoping, clear milestones and regular project updates.",
   },
   {
     question: "Which technologies do you work with?",

@@ -59,7 +59,7 @@ const services = [
     icon: <MarketingIcon size={28} />,
     title: "Digital Marketing & SEO",
     description:
-      "Strengthen your digital presence through SEO, content, paid campaigns and social media management aligned with Australian audiences.",
+      "Strengthen your digital presence through SEO, content, paid campaigns and social media management aligned with target commercial audiences.",
     href: "/services/digital-marketing",
   },
 ];

@@ -21,7 +21,7 @@ const spotlightCaseStudies = [
     category: "CRM Development",
     icon: <CrmIcon size={24} />,
     summary:
-      "Engineered for an Australian B2B consulting firm dealing with complex multi-touch sales cycles and high-value contracts.",
+      "Engineered for an B2B consulting firm dealing with complex multi-touch sales cycles and high-value contracts.",
     challenge:
       "Legacy CRM caused 20+ hours of lost administrative labor per week per sales manager, while manual follow-up delays caused a 40% lead drop-off rate.",
     solution:
@@ -40,8 +40,8 @@ const spotlightCaseStudies = [
   },
   {
     id: "spotlight-marketing",
-    slug: "australian-lead-portal",
-    title: "Australian Lead Generation Engine",
+    slug: "lead-portal",
+    title: "Lead Generation Engine",
     category: "Digital Marketing & SEO",
     icon: <MarketingIcon size={24} />,
     summary:
@@ -184,7 +184,7 @@ export default function CaseStudyDetailSection() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#0D47A1] uppercase tracking-wider">
-                    VeloSync Global Solution
+                    ValoSync Global Solution
                   </h4>
                   <p className="text-xs text-[#718096]">
                     Engineered architecture & automation

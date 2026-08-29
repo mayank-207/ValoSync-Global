@@ -270,21 +270,15 @@ export default function ServiceDetailSection() {
               </ul>
             </div>
 
-            {/* Velosync Solution Column */}
-            <div className="rounded-3xl border border-[#0D47A1]/30 bg-white p-8 lg:p-10 shadow-xl">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="p-2.5 rounded-xl bg-[#0D47A1]/10 text-[#0D47A1] border border-[#0D47A1]/20">
-                  <CheckCircleIcon size={22} />
-                </span>
-                <div>
-                  <h3 className="text-xl font-bold text-[#1A1A1A]">
-                    VeloSync Global Engineered Solution
-                  </h3>
-                  <p className="text-xs text-[#718096]">
-                    Custom architecture & automated workflows
-                  </p>
-                </div>
-              </div>
+            {/* Valosync Solution Column */}
+            <div className="bg-[#071A3D] p-8 rounded-3xl border border-[#0D47A1]/40 shadow-xl text-white">
+              <span className="px-3.5 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] font-semibold text-xs uppercase tracking-wider mb-6 inline-block">
+                The Solution
+              </span>
+              <h4 className="text-xl font-bold mb-6 text-white flex items-center gap-3">
+                <CheckCircleIcon size={24} className="text-[#D4AF37]" />
+                ValoSync Global Engineered Solution
+              </h4>
 
               <ul className="space-y-4">
                 {currentService.solutions.map((s, idx) => (

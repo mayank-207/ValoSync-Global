@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "How do you ensure data security and regulatory compliance?",
     answer:
-      "Every software architecture we build strictly complies with relevant local regulations, including the Australian Privacy Principles (APPs), AHPRA guidelines for medtech, HIPAA compliance, and OAuth2 security protocols.",
+      "Every software architecture we build strictly complies with relevant local regulations, including the Privacy Principles (APPs), AHPRA guidelines for medtech, HIPAA compliance, and OAuth2 security protocols.",
   },
   {
     question: "What technology stack do you use for custom projects?",

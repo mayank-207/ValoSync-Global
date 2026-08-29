@@ -41,9 +41,9 @@ const values = [
     icon: <ZapIcon size={24} />,
   },
   {
-    title: "Australian & Global Compliance",
+    title: "Global Compliance",
     description:
-      "Tailored for Australian regulatory guidelines (APPs, ACCC) and global enterprise standards to ensure frictionless market launch.",
+      "Tailored for regulatory guidelines and global enterprise standards to ensure frictionless market launch.",
     icon: <GlobeIcon size={24} />,
   },
 ];
@@ -55,7 +55,7 @@ export default function CoreValuesSection() {
         <SectionHeading
           badge="Guiding Principles"
           title="The Core Values That Define Our Work"
-          subtitle="How VeloSync Global delivers excellence, trust, and long-term value to every business partnership."
+          subtitle="How ValoSync Global delivers excellence, trust, and long-term value to every business partnership."
           center
         />
 

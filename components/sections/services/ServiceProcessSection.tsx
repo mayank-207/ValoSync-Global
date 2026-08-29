@@ -26,7 +26,7 @@ const steps = [
     step: "04",
     title: "Security, QA & Compliance Testing",
     description:
-      "Rigorously testing for performance under load, cross-device responsiveness, end-to-end encryption, and Australian data privacy compliance.",
+      "Rigorously testing for performance under load, cross-device responsiveness, end-to-end encryption, and data privacy compliance.",
   },
   {
     step: "05",

@@ -12,7 +12,7 @@ import {
 const features = [
   {
     icon: <TargetIcon size={24} />,
-    title: "Australian Market Understanding",
+    title: "Market Understanding",
     description:
       "We consider local audiences, business expectations and commercial priorities when shaping each solution.",
   },
@@ -59,7 +59,7 @@ export default function WhyChooseUsSection() {
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <SectionHeading
               eyebrow="Why Choose Us"
-              title="Why Businesses Partner With VeloSync Global"
+              title="Why Businesses Partner With ValoSync Global"
               description="We combine business understanding, suitable technologies and transparent delivery to build reliable digital solutions."
               align="left"
               className="mb-8"

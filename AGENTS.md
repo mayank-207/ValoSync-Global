@@ -8,9 +8,9 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-# VeloSync Global Brand Color Guidelines
+# ValoSync Global Brand Color Guidelines
 
-Strictly enforce the official VeloSync Global color system across all codebase components:
+Strictly enforce the official ValoSync Global color system across all codebase components:
 - **Primary Blue**: `#0B3D91` (Dominant brand blue for primary actions, titles, buttons)
 - **Brand Blue**: `#1565C0` (Tech highlights & gradients)
 - **Gold Accent**: `#D4AF37` (Selective premium gold accents, icons, key highlights)

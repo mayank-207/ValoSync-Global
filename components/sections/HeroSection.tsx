@@ -42,7 +42,7 @@ export default function HeroSection() {
             <div className="animate-fade-in-up">
               <span className="inline-flex items-center gap-2 px-4 py-2 text-xs md:text-sm font-semibold rounded-full mb-6 border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37] backdrop-blur-md">
                 <SparkleIcon size={16} />
-                Technology Solutions for Australian Businesses
+                Technology Solutions for Businesses
               </span>
             </div>
 
@@ -55,12 +55,11 @@ export default function HeroSection() {
               <span className="block mt-1">
                 <span className="text-[#D4AF37]">Built Around Your Business</span>
               </span>
-              Designed for Sustainable Growth.
             </h1>
 
             {/* Hero Subtitle */}
             <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 max-w-2xl text-slate-200 animate-fade-in-up animate-delay-200">
-              VeloSync Global designs and develops custom software, CRM platforms, web applications and practical automation solutions that help Australian businesses simplify operations and grow with confidence.
+              ValoSync Global designs and develops custom software, CRM platforms, web applications and practical automation solutions that help businesses simplify operations and grow with confidence.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-10 animate-fade-in-up animate-delay-300">
@@ -108,7 +107,7 @@ export default function HeroSection() {
                   <div className="w-3 h-3 rounded-full bg-[#D4AF37]" />
                   <div className="w-3 h-3 rounded-full bg-[#F5E6B3]" />
                   <span className="ml-2 text-xs font-mono text-slate-400">
-                    velosync-engine.v1.0.ts
+                    valosync-engine.v1.1
                   </span>
                 </div>
                 <span className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30">
@@ -166,7 +165,7 @@ export default function HeroSection() {
                         Lead Generation Pipeline
                       </p>
                       <p className="text-[11px] text-slate-400">
-                        Australian Market Targeting
+                        Market Targeting
                       </p>
                     </div>
                   </div>
@@ -208,10 +207,10 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <p className="text-lg font-extrabold text-[#1A1A1A]">
-                    Australia Focus
+                    Quality
                   </p>
                   <p className="text-xs font-semibold text-[#4A5568]">
-                    Australian Market Insight
+                    Built with quality
                   </p>
                 </div>
               </div>

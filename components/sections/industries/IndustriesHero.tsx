@@ -6,7 +6,7 @@ import { ArrowRightIcon, SparkleIcon, ShieldIcon, CheckCircleIcon, ZapIcon } fro
 
 export default function IndustriesHero() {
   const highlights = [
-    "Australian SME & Enterprise Focus",
+    "SME & Enterprise Focus",
     "Domain-Specific Custom Architectures",
     "ISO & Security Compliance Ready",
     "AI & Workflow Automation Integrated",
@@ -36,7 +36,7 @@ export default function IndustriesHero() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto mb-10 animate-fade-in-up animate-delay-100">
-            VeloSync Global engineers tailored software platforms, high-performance CRMs, intelligent AI workflows, and digital growth engines designed for the complex requirements of key modern industries.
+            ValoSync Global engineers tailored software platforms, high-performance CRMs, intelligent AI workflows, and digital growth engines designed for the complex requirements of key modern industries.
           </p>
 
           {/* Action CTAs */}

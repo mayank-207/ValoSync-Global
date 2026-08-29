@@ -12,29 +12,29 @@ import {
 } from "@/components/ui/Icons";
 
 export default function AustralianMarketSection() {
-  const australianFeatures = [
+  const enterpriseFeatures = [
     {
-      title: "Australian Data Security & Compliance",
+      title: "Data Security & Multi-Region Compliance",
       description:
-        "Engineered to strictly adhere to Privacy Act standards, ACCC guidelines, and local data residency requirements.",
+        "Engineered to strictly adhere to enterprise privacy standards, statutory regulations, and secure cloud residency requirements.",
       icon: <ShieldIcon size={24} />,
     },
     {
       title: "Elimination of Manual Business Bottlenecks",
       description:
-        "Solving high-cost manual work for Australian SMEs by automating invoicing, client booking, CRM, and order flows.",
+        "Solving high-cost manual work for growing enterprises by automating invoicing, client booking, CRM, and order flows.",
       icon: <ZapIcon size={24} />,
     },
     {
       title: "Time-Zone Alignment & Agile Delivery",
       description:
-        "Dedicated project managers available during Australian business hours (AEST/AWST) for seamless daily collaboration.",
+        "Dedicated project managers and engineering squads available during your core business hours for seamless daily collaboration.",
       icon: <ClockIcon size={24} />,
     },
     {
       title: "High-ROI Commercial Pricing Models",
       description:
-        "Flexible milestone-based & monthly retainer models designed to maximize budget efficiency for Australian growth teams.",
+        "Flexible milestone-based & monthly retainer models designed to maximize budget efficiency for ambitious growth teams.",
       icon: <TrendingUpIcon size={24} />,
     },
   ];
@@ -50,27 +50,27 @@ export default function AustralianMarketSection() {
           <div className="lg:col-span-5">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold tracking-wide mb-6">
               <GlobeIcon size={16} />
-              <span>Australian Market Ready</span>
+              <span>Enterprise Delivery Ready</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight mb-6">
               Empower Your{" "}
               <span className="text-[#D4AF37]">
-                Australian SME
+                Growing Business
               </span>{" "}
               With Scalable Digital Systems
             </h2>
 
             <p className="text-slate-200 text-base leading-relaxed mb-8">
-              Australian businesses face unique operational, staffing, and compliance challenges. VeloSync Global builds purpose-driven software and automation solutions that eliminate repetitive work, increase lead generation, and drive sustainable profit growth.
+              Growing companies face complex operational, workflow, and compliance challenges. ValoSync Global builds purpose-driven software and automation solutions that eliminate repetitive work, increase lead conversion, and drive sustainable profit growth.
             </p>
 
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm mb-8">
               <div className="text-sm font-semibold text-[#D4AF37] mb-2">
-                Ideal Customer Profile (ICP) Commitment
+                Tailored Architecture Commitment
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Whether you are a growing service firm in Sydney, a logistics operator in Melbourne, or a healthcare practice in Brisbane, our technology packages are tailored to your exact business size and operational goals.
+                Whether you are a specialized professional services firm, a logistics operator, or a healthcare network, our technology packages are tailored to your exact business size and operational goals.
               </p>
             </div>
 
@@ -81,13 +81,13 @@ export default function AustralianMarketSection() {
               size="lg"
               rightIcon={<ArrowRightIcon size={18} />}
             >
-              Get Australian Market Proposal
+              Get Custom Proposal
             </Button>
           </div>
 
           {/* Right Column: Feature Cards Grid */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {australianFeatures.map((item, idx) => (
+            {enterpriseFeatures.map((item, idx) => (
               <div
                 key={idx}
                 className="p-6 rounded-2xl bg-[#071A3D]/90 border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group"

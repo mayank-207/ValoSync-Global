@@ -10,42 +10,42 @@ import IndustryFAQSection from "@/components/sections/industries/IndustryFAQSect
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Tailored Technology & Software Solutions",
+  title: "Industry Software Solutions Australia | Valosync Global",
   description:
-    "Explore how Velosync Global delivers custom software, CRM development, AI automation, and digital marketing tailored for Healthcare, Logistics, Fintech, Retail, Real Estate, and Australian SMEs.",
+    "Explore how Valosync Global delivers custom software, CRM development, AI automation, and cloud platforms tailored for Healthcare, Logistics, Fintech, Retail, and Australian enterprise sectors.",
   keywords: [
-    "Velosync Global Industries",
-    "Healthcare Software Development",
-    "Logistics Automation",
-    "Fintech CRM Development",
-    "Retail E-Commerce Solutions",
-    "Real Estate Lead CRM",
-    "Australian SME Software Solutions",
+    "Valosync Global Industries",
+    "Healthcare Software Development Australia",
+    "Fintech Software Engineering Australia",
+    "Logistics Software & GPS Tracking Australia",
+    "Retail & E-Commerce Web Platforms Australia",
+    "Real Estate CRM Software Australia",
+    "Australian Industry Software Solutions",
   ],
   alternates: {
     canonical: "/industries",
   },
   openGraph: {
-    title: "Industries We Serve | Velosync Global IT Solutions",
+    title: "Industry Software Solutions Australia | Valosync Global",
     description:
-      "Engineered custom software, CRM platforms, and AI automation tailored to your industry's specific challenges and regulatory requirements.",
-    url: "https://velosyncglobal.com/industries",
-    siteName: "Velosync Global",
+      "Industry-tailored software engineering, AI automation, and digital marketing for Healthcare, Finance, Logistics, and Australian commercial sectors.",
+    url: "https://valosyncglobal.com/industries",
+    siteName: "Valosync Global",
     type: "website",
     images: [
       {
         url: "/images/og-industries.jpg",
         width: 1200,
         height: 630,
-        alt: "Velosync Global Industry Solutions",
+        alt: "Valosync Global Industry Solutions Australia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industries We Serve | Velosync Global IT Solutions",
+    title: "Industry Software Solutions Australia | Valosync Global",
     description:
-      "Engineered custom software, CRM platforms, and AI automation tailored to your industry's specific challenges.",
+      "Industry-tailored software engineering, AI automation, and digital growth for Australian and global sectors.",
     images: ["/images/og-industries.jpg"],
   },
 };
@@ -64,7 +64,7 @@ export default function IndustriesPage() {
         {/* Deep-Dive Problem & Solution Breakdowns */}
         <IndustryDetailSection />
 
-        {/* Australian SME Market Focus */}
+        {/* Enterprise Market Execution & Delivery */}
         <AustralianMarketSection />
 
         {/* Engagement Methodology & Process */}

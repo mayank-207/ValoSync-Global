@@ -250,7 +250,7 @@ export default function IndustryDetailSection() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-[#1A1A1A]">
-                    VeloSync Global Engineered Solution
+                    ValoSync Global Engineered Solution
                   </h4>
                   <p className="text-xs text-[#718096]">
                     Tailored software, CRM & AI automation

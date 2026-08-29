@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand source of truth: 2026 VeloSync Global Brand Guidelines */
+  /* Brand source of truth: 2026 ValoSync Global Brand Guidelines */
   --brand-primary: #0B3D91;      /* Primary Blue - Dominant brand color for primary actions & key headings */
   --brand-primary-hover: #09337a;
   --brand-blue: #1565C0;         /* Brand Blue - Tech highlights & subtle gradients */

@@ -69,14 +69,14 @@ export default function ContactPage() {
     {
       icon: <MailIcon size={24} />,
       title: "Official Email",
-      detail: "contact@velosyncglobal.com",
+      detail: "contact@valosyncglobal.com",
       subtext: "Guaranteed reply within 24 hours",
-      href: "mailto:contact@velosyncglobal.com",
+      href: "mailto:contact@valosyncglobal.com",
     },
     {
       icon: <MapPinIcon size={24} />,
       title: "Global Delivery Hub",
-      detail: "Australia & Global Technology Hub",
+      detail: "Global Technology & Innovation Hub",
       subtext: "Engineering & Client Success",
       href: "#contact-form",
     },
@@ -94,7 +94,7 @@ export default function ContactPage() {
         "Yes. We strictly protect your proprietary ideas and business data under a 100% confidential NDA upon initial contact.",
     },
     {
-      question: "Can Velosync Global accommodate custom software timelines?",
+      question: "Can Valosync Global accommodate custom software timelines?",
       answer:
         "Absoutely. We offer both fixed milestone deliveries and dedicated agile engineering squads tailored to your launch dates.",
     },

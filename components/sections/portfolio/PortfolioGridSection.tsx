@@ -35,14 +35,14 @@ export const portfolioProjects = [
     featured: true,
   },
   {
-    slug: "australian-lead-portal",
-    title: "Australian Lead Generation & Quote Engine",
+    slug: "lead-portal",
+    title: "Lead Generation & Quote Engine",
     category: "Digital Marketing",
     industry: "Professional Services",
-    country: "Australia",
+    country: "Global",
     metric: "3.5x Qualified Inquiries",
     description:
-      "High-converting landing architecture and automated quote engines specifically tailored to attract and engage Australian commercial clients.",
+      "High-converting landing architecture and automated quote engines specifically tailored to attract and engage commercial clients.",
     icon: <MarketingIcon size={24} />,
     tags: ["React 19", "Automated Workflows", "SEO Suite", "Google Ads"],
     featured: true,

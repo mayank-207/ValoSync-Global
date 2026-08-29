@@ -3,9 +3,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Velosync Global",
+  title: "Terms & Conditions | Valosync Global",
   description:
-    "Velosync Global Terms and Conditions governing software engineering services, IP ownership, milestone payments, and client service level agreements (SLAs).",
+    "Valosync Global Terms and Conditions governing software engineering services, IP ownership, milestone payments, and client service level agreements (SLAs).",
   alternates: {
     canonical: "/terms-of-service",
   },
@@ -35,7 +35,7 @@ export default function TermsOfServicePage() {
                 1. Acceptance of Terms
               </h2>
               <p>
-                By accessing our website, requesting a consultation, or entering into a project statement of work (SOW) with Velosync Global, you agree to be bound by these Terms and Conditions. These terms govern all software engineering, CRM development, AI automation, web development, and digital marketing services provided by Velosync Global.
+                By accessing our website, requesting a consultation, or entering into a project statement of work (SOW) with Valosync Global, you agree to be bound by these Terms and Conditions. These terms govern all software engineering, CRM development, AI automation, web development, and digital marketing services provided by Valosync Global.
               </p>
             </section>
 
@@ -53,7 +53,7 @@ export default function TermsOfServicePage() {
                 3. Intellectual Property (IP) Transfer
               </h2>
               <p>
-                Upon receipt of full payment for agreed milestones, Velosync Global transfers 100% of custom source code rights, database schemas, software documentation, and design assets to the client. Velosync Global retains rights only to pre-existing open-source libraries or third-party frameworks incorporated into the solution.
+                Upon receipt of full payment for agreed milestones, Valosync Global transfers 100% of custom source code rights, database schemas, software documentation, and design assets to the client. Valosync Global retains rights only to pre-existing open-source libraries or third-party frameworks incorporated into the solution.
               </p>
             </section>
 
@@ -71,7 +71,7 @@ export default function TermsOfServicePage() {
                 5. Warranty & Service Level Agreements (SLAs)
               </h2>
               <p>
-                Velosync Global provides 30 to 90 days of complimentary post-launch warranty support covering bug fixes and performance optimization. Ongoing maintenance, 24/7 server monitoring, and SLA guarantees are governed under separate SLA support contracts.
+                Valosync Global provides 30 to 90 days of complimentary post-launch warranty support covering bug fixes and performance optimization. Ongoing maintenance, 24/7 server monitoring, and SLA guarantees are governed under separate SLA support contracts.
               </p>
             </section>
 

@@ -14,7 +14,7 @@ import {
 
 type CaseStudySlug =
   | "ai-enterprise-crm"
-  | "australian-lead-portal"
+  | "lead-portal"
   | "multi-tenant-erp"
   | "healthcare-telehealth-portal"
   | "logistics-dispatch-tracker"
@@ -47,15 +47,15 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "CRM Development",
     industry: "Financial Services",
     country: "Australia",
-    metaTitle: "AI Enterprise CRM Case Study | Velosync Global",
+    metaTitle: "AI Enterprise CRM Case Study | Valosync Global",
     metaDescription:
-      "Explore how Velosync Global engineered an AI-powered CRM with automated lead scoring and WhatsApp sync, driving 70% faster deal closure.",
+      "Explore how Valosync Global engineered an AI-powered CRM with automated lead scoring and WhatsApp sync, driving 70% faster deal closure.",
     heroHeadline: "AI-Powered Enterprise CRM Accelerating B2B Deal Closure",
     heroSubtitle:
-      "Engineered for an Australian enterprise consulting firm to eliminate sales friction, automate lead scoring, and unify omnichannel communication.",
+      "Engineered for an enterprise consulting firm to eliminate sales friction, automate lead scoring, and unify omnichannel communication.",
     metric: "70% Faster Deal Closure",
     clientOverview:
-      "Our client is a high-touch Australian enterprise advisory firm managing complex B2B sales cycles involving multiple stakeholders, custom contract terms, and high-value deals.",
+      "Our client is a high-touch enterprise advisory firm managing complex B2B sales cycles involving multiple stakeholders, custom contract terms, and high-value deals.",
     challenges: [
       "Sales reps losing 20+ hours weekly to manual CRM data entry and spreadsheet tracking.",
       "Inbound lead inquiries cooling down due to 24-hour delayed initial outreach.",
@@ -101,20 +101,20 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     ],
     techStack: ["Next.js", "TypeScript", "PostgreSQL", "OpenAI API", "Twilio WhatsApp", "AWS"],
   },
-  "australian-lead-portal": {
-    title: "Australian Lead Generation & Quote Engine",
+  "lead-portal": {
+    title: "Lead Generation & Quote Engine",
     category: "Digital Marketing",
     industry: "Professional Services",
     country: "Australia",
-    metaTitle: "Australian Lead Gen Portal Case Study | Velosync Global",
+    metaTitle: "Lead Gen Portal Case Study | Valosync Global",
     metaDescription:
-      "Discover how Velosync Global designed a high-converting web portal and Google Ads campaign delivering 3.5x qualified commercial leads.",
+      "Discover how Valosync Global designed a high-converting web portal and Google Ads campaign delivering 3.5x qualified commercial leads.",
     heroHeadline: "Conquering Commercial Search & Tripling Qualified Inquiries",
     heroSubtitle:
-      "A complete digital overhaul combining sub-second Next.js web design, technical SEO, and high-intent Google Search campaigns for Australian B2B buyers.",
+      "A complete digital overhaul combining sub-second Next.js web design, technical SEO, and high-intent Google Search campaigns for B2B buyers.",
     metric: "3.5x Qualified Inquiries",
     clientOverview:
-      "An established Australian commercial equipment and facility supplier targeting corporate facility managers across Sydney, Melbourne, and Brisbane.",
+      "An established commercial equipment and facility supplier targeting corporate facility managers across Sydney, Melbourne, and Brisbane.",
     challenges: [
       "Sluggish legacy website causing high bounce rates on mobile ad traffic.",
       "High cost-per-click on generic search terms yielding unqualified consumer inquiries.",
@@ -139,7 +139,7 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
       {
         title: "Technical SEO Domination",
         description:
-          "Comprehensive schema markup and local landing page targeting across major Australian metros.",
+          "Comprehensive schema markup and local landing page targeting across major metros.",
       },
       {
         title: "End-to-End GA4 Attribution",
@@ -165,9 +165,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Custom Software",
     industry: "Enterprise Operations",
     country: "Global",
-    metaTitle: "Multi-Tenant Business ERP Case Study | Velosync Global",
+    metaTitle: "Multi-Tenant Business ERP Case Study | Valosync Global",
     metaDescription:
-      "See how Velosync Global engineered a multi-tenant cloud ERP with automated Xero and Stripe integration, achieving 99.9% billing accuracy.",
+      "See how Valosync Global engineered a multi-tenant cloud ERP with automated Xero and Stripe integration, achieving 99.9% billing accuracy.",
     heroHeadline: "Cloud ERP & Automated Billing Streamlining Global Operations",
     heroSubtitle:
       "Architected for a multi-national logistics and technology company to unify project scheduling, multi-currency invoicing, and client milestone approvals.",
@@ -224,19 +224,19 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Custom Software",
     industry: "Healthcare",
     country: "Australia",
-    metaTitle: "Healthcare Telehealth Portal Case Study | Velosync Global",
+    metaTitle: "Healthcare Telehealth Portal Case Study | Valosync Global",
     metaDescription:
-      "Discover how Velosync Global delivered an AHPRA/HIPAA compliant telehealth portal with automated intake and EHR sync, dropping no-shows by 60%.",
+      "Discover how Valosync Global delivered an AHPRA/HIPAA compliant telehealth portal with automated intake and EHR sync, dropping no-shows by 60%.",
     heroHeadline: "AHPRA-Compliant Digital Health & Patient Intake Portal",
     heroSubtitle:
-      "Engineered for an Australian healthcare network to streamline patient onboarding, secure video consultation, and EHR record management.",
+      "Engineered for an healthcare network to streamline patient onboarding, secure video consultation, and EHR record management.",
     metric: "60% Lower Patient No-Shows",
     clientOverview:
       "A multi-clinic medical group in Australia providing specialized consultations both in-clinic and via secure digital health channels.",
     challenges: [
       "Paper patient intake forms causing long waiting room queues and data entry errors.",
       "High patient no-show rates due to lack of automated SMS and email reminders.",
-      "Strict AHPRA and Australian Privacy Principles compliance requirements.",
+      "Strict AHPRA and Privacy Principles compliance requirements.",
     ],
     solutions: [
       "Self-service digital patient intake portal accessible on any smartphone before visits.",
@@ -283,15 +283,15 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "AI & Automation",
     industry: "Logistics",
     country: "Australia",
-    metaTitle: "Logistics Fleet Tracking Case Study | Velosync Global",
+    metaTitle: "Logistics Fleet Tracking Case Study | Valosync Global",
     metaDescription:
-      "Learn how Velosync Global built a real-time GPS fleet tracking and automated dispatch portal for Australian logistics operators, saving 25+ hours/week.",
+      "Learn how Valosync Global built a real-time GPS fleet tracking and automated dispatch portal for logistics operators, saving 25+ hours/week.",
     heroHeadline: "Real-Time Fleet Telematics & Automated Dispatch Engine",
     heroSubtitle:
-      "Developed for an Australian transport & logistics company to optimize driver routes, automate customer tracking notifications, and sync inventory.",
+      "Developed for an transport & logistics company to optimize driver routes, automate customer tracking notifications, and sync inventory.",
     metric: "25+ Hours Saved / Week",
     clientOverview:
-      "An Australian freight and logistics provider operating a fleet of 40+ transport vehicles across interstate routes.",
+      "An freight and logistics provider operating a fleet of 40+ transport vehicles across interstate routes.",
     challenges: [
       "Manual phone dispatch communication consuming 20+ hours of operational labor weekly.",
       "Inability to provide customers with accurate real-time shipment arrival windows.",
@@ -342,15 +342,15 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Custom Software",
     industry: "Fintech",
     country: "Global",
-    metaTitle: "Fintech KYC Onboarding Case Study | Velosync Global",
+    metaTitle: "Fintech KYC Onboarding Case Study | Valosync Global",
     metaDescription:
-      "Read how Velosync Global engineered an encrypted KYC onboarding and automated loan evaluation engine, achieving instant customer verification.",
+      "Read how Valosync Global engineered an encrypted KYC onboarding and automated loan evaluation engine, achieving instant customer verification.",
     heroHeadline: "Automated KYC Onboarding & Instant Credit Evaluation",
     heroSubtitle:
       "Built for an emerging digital lending platform to eliminate paper verification, prevent fraud, and accelerate borrower onboarding.",
     metric: "Instant Onboarding Turnaround",
     clientOverview:
-      "A fast-growing fintech company offering digital working capital loans to Australian SMEs and micro-enterprises.",
+      "A fast-growing fintech company offering digital working capital loans to SMEs and micro-enterprises.",
     challenges: [
       "Slow, paper-heavy onboarding taking up to 5 business days for borrower approval.",
       "High application drop-off rate during manual bank statement submission steps.",
@@ -401,15 +401,15 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Web & E-Commerce",
     industry: "Retail",
     country: "Australia",
-    metaTitle: "Headless E-Commerce Case Study | Velosync Global",
+    metaTitle: "Headless E-Commerce Case Study | Valosync Global",
     metaDescription:
-      "Explore how Velosync Global built a Next.js headless storefront delivering sub-second speed and a 38% increase in repeat customer purchases.",
+      "Explore how Valosync Global built a Next.js headless storefront delivering sub-second speed and a 38% increase in repeat customer purchases.",
     heroHeadline: "Sub-Second Headless Commerce Driving Repeat Customer Sales",
     heroSubtitle:
-      "Re-platforming an Australian retail brand from legacy monolithic architecture to a modern Next.js headless e-commerce ecosystem.",
+      "Re-platforming an retail brand from legacy monolithic architecture to a modern Next.js headless e-commerce ecosystem.",
     metric: "38% Increase in Repeat Purchases",
     clientOverview:
-      "A boutique Australian lifestyle brand selling high-value apparel and homewares online and through pop-up retail stores.",
+      "A boutique lifestyle brand selling high-value apparel and homewares online and through pop-up retail stores.",
     challenges: [
       "Legacy e-commerce store suffering 4+ second load times destroys mobile ad conversion.",
       "Disconnected inventory across physical stores and web channel causing stockouts.",
@@ -460,9 +460,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "AI & Automation",
     industry: "Manufacturing",
     country: "Global",
-    metaTitle: "Industrial IoT Dashboard Case Study | Velosync Global",
+    metaTitle: "Industrial IoT Dashboard Case Study | Valosync Global",
     metaDescription:
-      "Discover how Velosync Global built a real-time IoT manufacturing dashboard, reducing unplanned machine downtime by 40%.",
+      "Discover how Valosync Global built a real-time IoT manufacturing dashboard, reducing unplanned machine downtime by 40%.",
     heroHeadline: "Industry 4.0 IoT Telematics & Predictive Maintenance",
     heroSubtitle:
       "Developed for an industrial manufacturing facility to connect machine IoT sensors, track Overall Equipment Effectiveness (OEE), and predict maintenance.",
@@ -519,7 +519,7 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
 export async function generateStaticParams() {
   return [
     { slug: "ai-enterprise-crm" },
-    { slug: "australian-lead-portal" },
+    { slug: "lead-portal" },
     { slug: "multi-tenant-erp" },
     { slug: "healthcare-telehealth-portal" },
     { slug: "logistics-dispatch-tracker" },
@@ -540,7 +540,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!data) {
     return {
-      title: "Case Study Not Found | Velosync Global",
+      title: "Case Study Not Found | Valosync Global",
     };
   }
 
@@ -551,10 +551,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `/portfolio/${slug}`,
     },
     openGraph: {
-      title: `${data.title} | Velosync Global Case Study`,
+      title: `${data.title} | Valosync Global Case Study`,
       description: data.metaDescription,
-      url: `https://velosyncglobal.com/portfolio/${slug}`,
-      siteName: "Velosync Global",
+      url: `https://valosyncglobal.com/portfolio/${slug}`,
+      siteName: "Valosync Global",
       type: "website",
     },
   };
@@ -679,7 +679,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <div className="bg-white p-8 rounded-3xl border border-[#0D47A1]/30 shadow-lg">
                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
                   <CheckCircleIcon size={24} className="text-[#D4AF37]" />
-                  VeloSync Global Engineered Solution
+                  ValoSync Global Engineered Solution
                 </h3>
                 <ul className="space-y-4">
                   {data.solutions.map((s, idx) => (

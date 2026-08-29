@@ -14,12 +14,12 @@ const portfolio = [
     tags: ["Next.js", "AI Lead Scoring", "CRM Engine"],
   },
   {
-    title: "Australian Lead Generation Portal",
+    title: "Lead Generation Portal",
     category: "Web & Automation",
     metric: "3.5x Qualified Inquiries",
     description:
-      "High-converting landing architecture and automated quote engines specifically tailored to attract and engage Australian commercial clients.",
-    href: "/portfolio/australian-lead-portal",
+      "High-converting landing architecture and automated quote engines specifically tailored to attract and engage commercial clients.",
+    href: "/portfolio/lead-portal",
     icon: <ZapIcon size={28} />,
     tags: ["React 19", "Automated Workflows", "SEO Suite"],
   },
@@ -47,7 +47,7 @@ export default function PortfolioSection() {
           <SectionHeading
             eyebrow="Proven Impact"
             title="Featured Case Studies & Workflows"
-            description="Explore how Velosync Global delivers tailored software engineering, custom CRM systems, and AI business automation for enterprise growth."
+            description="Explore how Valosync Global delivers tailored software engineering, custom CRM systems, and AI business automation for enterprise growth."
             align="left"
             maxWidth="3xl"
             className="mb-0"

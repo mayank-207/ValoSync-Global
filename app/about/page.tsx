@@ -10,41 +10,42 @@ import TeamLeadershipSection from "@/components/sections/about/TeamLeadershipSec
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Us | Velosync Global - Digital Transformation & IT Solutions",
+  title: "About Us | Australian Software Engineering & IT Solutions | Valosync Global",
   description:
-    "Learn about Velosync Global, a premier IT solutions company delivering custom software development, CRM engineering, AI automation, and digital growth strategies for Australian SMEs and global clients.",
+    "Learn about Valosync Global, delivering bespoke software engineering, intelligent CRM development, and AI automation for Australian and international businesses.",
   keywords: [
-    "About Velosync Global",
-    "IT Solutions Company Australia",
-    "Custom Software Engineering",
-    "CRM Development Team",
-    "AI Automation Agency",
-    "Digital Transformation Partner",
+    "About Valosync Global",
+    "Australian Software Engineering Firm",
+    "Custom Software Developers Australia",
+    "CRM Development Company Australia",
+    "AI Automation Agency Australia",
+    "Software Engineering Sydney Melbourne",
+    "IT Consulting Australia",
   ],
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Us | Velosync Global IT Solutions",
+    title: "About Us | Australian Software Engineering & IT Solutions | Valosync Global",
     description:
-      "Empowering businesses with custom software, intelligent CRM systems, and AI automation tailored to modern enterprise challenges.",
-    url: "https://velosyncglobal.com/about",
-    siteName: "Velosync Global",
+      "Engineered technology solutions built around your business goals. Discover our team, values, and client-first delivery model for Australian and global clients.",
+    url: "https://valosyncglobal.com/about",
+    siteName: "Valosync Global",
     type: "website",
     images: [
       {
         url: "/images/og-about.jpg",
         width: 1200,
         height: 630,
-        alt: "Velosync Global Team & Mission",
+        alt: "Valosync Global Team & Mission Australia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | Velosync Global IT Solutions",
+    title: "About Us | Australian Software Engineering & IT Solutions | Valosync Global",
     description:
-      "Empowering businesses with custom software, intelligent CRM systems, and AI automation.",
+      "Engineered technology solutions built around your business goals for Australian and international clients.",
     images: ["/images/og-about.jpg"],
   },
 };

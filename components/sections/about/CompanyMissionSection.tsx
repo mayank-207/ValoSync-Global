@@ -13,7 +13,7 @@ export default function CompanyMissionSection() {
     {
       title: "Our Vision",
       description:
-        "To become a globally recognized IT solutions leader and trusted digital transformation partner for Australian SMEs and international organizations.",
+        "To become a globally recognized IT solutions leader and trusted digital transformation partner for SMEs and international organizations.",
       icon: <EyeIcon size={28} />,
     },
     {
@@ -29,8 +29,8 @@ export default function CompanyMissionSection() {
       <div className="container">
         <SectionHeading
           badge="Mission & Vision"
-          title="Empowering Australian Businesses Through Intelligent Technology"
-          subtitle="At VeloSync Global, we don't just write code—we re-engineer business operations to achieve unprecedented speed, accuracy, and profitability."
+          title="Empowering Businesses Through Intelligent Technology"
+          subtitle="At ValoSync Global, we don't just write code—we re-engineer business operations to achieve unprecedented speed, accuracy, and profitability."
           center
         />
 
@@ -54,7 +54,7 @@ export default function CompanyMissionSection() {
 
               <div className="pt-4 border-t border-[#F0F4FA] flex items-center gap-2 text-xs font-semibold text-[#0D47A1]">
                 <CheckCircleIcon size={16} className="text-[#D4AF37]" />
-                <span>VeloSync Global Pillar</span>
+                <span>ValoSync Global Pillar</span>
               </div>
             </div>
           ))}

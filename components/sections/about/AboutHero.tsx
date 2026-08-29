@@ -7,7 +7,7 @@ import { ArrowRightIcon, SparkleIcon, CheckCircleIcon, ShieldIcon, UsersIcon, Aw
 export default function AboutHero() {
   const stats = [
     { label: "Client Satisfaction Focus", value: "100%" },
-    { label: "Target Market Preparedness", value: "Australia & Global" },
+    { label: "Target Market Readiness", value: "Global & Enterprise" },
     { label: "Core Solution Verticals", value: "Software, CRM, AI" },
     { label: "Development Standards", value: "ISO & Agile" },
   ];
@@ -23,17 +23,17 @@ export default function AboutHero() {
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
             <SparkleIcon size={16} />
-            <span>About VeloSync Global</span>
+            <span>About ValoSync Global</span>
           </div>
 
-          {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6 animate-fade-in-up">
-            Architecting Purpose-Built Software, CRMs & AI Workflows for Modern Growth
+          {/* Main Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 animate-fade-in-up">
+            Building High-Performing Software & Automation for Business Progress
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto mb-10 animate-fade-in-up animate-delay-100">
-            VeloSync Global is a forward-thinking technology company dedicated to empowering Australian businesses and global enterprises with bespoke software platforms, intelligent CRM systems, and AI-driven process automation.
+            ValoSync Global is a forward-thinking technology company dedicated to empowering businesses and global enterprises with bespoke software platforms, intelligent CRM systems, and AI-driven process automation.
           </p>
 
           {/* CTAs */}

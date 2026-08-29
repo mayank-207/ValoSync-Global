@@ -37,7 +37,7 @@ export default function ServicesHero() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto mb-10 animate-fade-in-up animate-delay-100">
-            VeloSync Global helps Australian businesses plan, build and improve custom software, CRM platforms, websites, cloud delivery and digital growth initiatives.
+            ValoSync Global helps businesses plan, build and improve custom software, CRM platforms, websites, cloud delivery and digital growth initiatives.
           </p>
 
           {/* Action CTAs */}

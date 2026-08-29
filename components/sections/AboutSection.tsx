@@ -13,7 +13,7 @@ import {
 
 export default function AboutSection() {
   const coreValues = [
-    "Australian Market Understanding",
+    "Market Understanding",
     "Clear and Collaborative Delivery",
     "Cross-Functional Project Support",
     "Security-Conscious Development",
@@ -62,7 +62,7 @@ export default function AboutSection() {
                 </span>
                 <div>
                   <h3 className="text-xl font-bold text-white">
-                    VeloSync Global Standard
+                    ValoSync Global Standard
                   </h3>
                   <p className="text-xs text-slate-300">
                     Practical Technology. Clear Business Outcomes.
@@ -91,7 +91,7 @@ export default function AboutSection() {
                     Market Alignment
                   </span>
                   <p className="text-[11px] text-slate-400 mt-1">
-                    Solutions shaped around Australian business needs.
+                    Solutions shaped around business needs.
                   </p>
                 </div>
               </div>
@@ -142,9 +142,9 @@ export default function AboutSection() {
           {/* Right Column: Detailed Text */}
           <div className="lg:col-span-6">
             <SectionHeading
-              eyebrow="About Velosync Global"
-              title="A Technology Partner Focused on Practical Business Progress"
-              description="VeloSync Global partners with Australian businesses to build custom software, CRM platforms, web applications and connected digital solutions. We combine business understanding with practical technology to improve operations and support long-term growth."
+              eyebrow="About Valosync Global"
+              title="Built around your business, powered by practical technology."
+              description="ValoSync Global partners with businesses to build custom software, CRM platforms, web applications and connected digital solutions. We combine business understanding with practical technology to improve operations and support long-term growth."
               align="left"
               className="mb-8"
               maxWidth="none"
@@ -190,7 +190,7 @@ export default function AboutSection() {
               size="lg"
               rightIcon={<ArrowRightIcon size={18} />}
             >
-              Learn More About VeloSync Global
+              Learn More About ValoSync Global
             </Button>
           </div>
         </div>

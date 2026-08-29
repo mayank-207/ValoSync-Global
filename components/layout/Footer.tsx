@@ -39,13 +39,13 @@ const contactInfo = [
   {
     icon: <MailIcon size={18} />,
     label: "Official Email",
-    value: "contact@velosyncglobal.com",
-    href: "mailto:contact@velosyncglobal.com",
+    value: "contact@valosyncglobal.com",
+    href: "mailto:contact@valosyncglobal.com",
   },
   {
     icon: <MapPinIcon size={18} />,
     label: "Global Reach",
-    value: "Supporting Australian Businesses",
+    value: "Supporting Businesses",
     href: "/contact",
   },
 ];
@@ -68,7 +68,7 @@ export default function Footer() {
                 <span className="text-[#D4AF37]">Digital Growth?</span>
               </h2>
               <p className="text-sm md:text-base leading-relaxed text-slate-300">
-                Talk with VeloSync Global about custom software, CRM, web development, automation, cloud delivery or digital growth requirements.
+                Talk with ValoSync Global about custom software, CRM, web development, automation, cloud delivery or digital growth requirements.
               </p>
             </div>
             <div className="flex lg:justify-end">
@@ -94,7 +94,7 @@ export default function Footer() {
               className="text-sm leading-relaxed mb-6 max-w-md"
               style={{ color: "var(--color-inverse-muted)" }}
             >
-              VeloSync Global builds custom software, CRM platforms, websites and connected digital solutions, supported by cloud delivery and digital growth services.
+              ValoSync Global builds custom software, CRM platforms, websites and connected digital solutions, supported by cloud delivery and digital growth services.
             </p>
             <div className="flex flex-col gap-3.5">
               {contactInfo.map((item) => (
@@ -207,29 +207,29 @@ export default function Footer() {
             className="text-xs text-center md:text-left"
             style={{ color: "var(--color-inverse-muted)" }}
           >
-            © {currentYear} Velosync Global. All rights reserved. Technology solutions built around your business.
+            © {currentYear} Valosync Global. All rights reserved. Technology solutions built around your business.
           </p>
 
           <div className="flex items-center gap-3">
             {[
               {
                 icon: <LinkedinIcon size={18} />,
-                href: "https://linkedin.com/company/velosyncglobal",
+                href: "https://linkedin.com/company/valosyncglobal",
                 label: "LinkedIn Company Account",
               },
               {
                 icon: <InstagramIcon size={18} />,
-                href: "https://instagram.com/velosyncglobal",
+                href: "https://instagram.com/valosyncglobal",
                 label: "Instagram Company Account",
               },
               {
                 icon: <TwitterIcon size={18} />,
-                href: "https://twitter.com/velosyncglobal",
+                href: "https://twitter.com/valosyncglobal",
                 label: "Twitter Account",
               },
               {
                 icon: <GithubIcon size={18} />,
-                href: "https://github.com/velosyncglobal",
+                href: "https://github.com/valosyncglobal",
                 label: "GitHub Repositories",
               },
             ].map((social) => (

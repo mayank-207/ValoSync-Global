@@ -172,7 +172,7 @@ export default function IndustriesGridSection() {
         <SectionHeading
           badge="Specialized Industry Solutions"
           title="Engineered for Your Industry's Specific Challenges"
-          subtitle="Discover how Velosync Global delivers tailored software, CRM, AI automation, and digital marketing strategies suited for your vertical."
+          subtitle="Discover how Valosync Global delivers tailored software, CRM, AI automation, and digital marketing strategies suited for your vertical."
           center
         />
 

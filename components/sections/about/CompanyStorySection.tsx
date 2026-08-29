@@ -29,9 +29,9 @@ const milestones = [
   },
   {
     phase: "Phase 5 — September 2026+",
-    title: "Australian Market Expansion",
+    title: "Market Expansion",
     description:
-      "Acquiring and delivering high-value software, CRM development, AI automation, and digital marketing projects for Australian SMEs.",
+      "Acquiring and delivering high-value software, CRM development, AI automation, and digital marketing projects for high-growth enterprises and businesses.",
   },
 ];
 

@@ -116,7 +116,7 @@ export const servicesData = [
     category: "Digital Growth",
     title: "Digital Marketing & SEO",
     description:
-      "SEO, paid media, content and social media services designed to improve visibility and generate relevant opportunities in the Australian market.",
+      "SEO, paid media, content and social media services designed to improve visibility and generate relevant commercial opportunities.",
     icon: <MarketingIcon size={28} />,
     href: "/services/digital-marketing",
     features: [

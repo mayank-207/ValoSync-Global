@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import JsonLd from "@/components/seo/JsonLd";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,28 +16,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://velosyncglobal.com"),
+  metadataBase: new URL("https://valosyncglobal.com"),
   title: {
-    default: "VeloSync Global | Custom Software & CRM Development Australia",
-    template: "%s | Velosync Global",
+    default: "ValoSync Global | Custom Software, CRM & AI Development Australia",
+    template: "%s | Valosync Global",
   },
   description:
-    "VeloSync Global builds custom software, CRM platforms, web applications and practical automation solutions for Australian businesses.",
+    "ValoSync Global provides enterprise custom software development, bespoke CRM platforms, AI workflow automation, and cloud DevOps solutions for Australian businesses and global enterprises.",
   keywords: [
-    "Velosync Global",
     "custom software development Australia",
-    "software development",
-    "CRM development",
-    "business process automation",
-    "Cloud and DevOps support",
-    "web development",
-    "WordPress development",
-    "Australian software company",
-    "IT solutions",
+    "software development company Australia",
+    "CRM development Australia",
+    "custom CRM solutions Australia",
+    "AI automation agency Australia",
+    "web application development Sydney",
+    "software engineers Melbourne",
+    "IT solutions Brisbane Australia",
+    "business process automation Australia",
+    "cloud DevOps support Australia",
+    "enterprise software developers Australia",
+    "Australian software engineering firm",
+    "B2B CRM software Australia",
+    "Valosync Global",
+    "custom software Sydney",
+    "software company Australia",
+    "IT consulting Australia",
+    "Next.js web development",
   ],
-  authors: [{ name: "Velosync Global" }],
-  creator: "Velosync Global",
-  publisher: "Velosync Global",
+  authors: [{ name: "Valosync Global" }],
+  creator: "Valosync Global",
+  publisher: "Valosync Global",
   formatDetection: {
     email: false,
     address: false,
@@ -44,28 +53,29 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://velosyncglobal.com",
-    siteName: "Velosync Global",
-    title: "VeloSync Global | Custom Software & CRM Development Australia",
+    locale: "en_AU",
+    alternateLocale: ["en_US", "en_GB"],
+    url: "https://valosyncglobal.com",
+    siteName: "Valosync Global",
+    title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
     description:
-      "VeloSync Global builds custom software, CRM platforms, web applications and practical automation solutions for Australian businesses.",
+      "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "VeloSync Global - Custom Software and CRM Solutions",
+        alt: "ValoSync Global - Custom Software & CRM Development Australia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VeloSync Global | Custom Software & CRM Development Australia",
+    title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
     description:
-      "VeloSync Global builds custom software, CRM platforms, web applications and practical automation solutions for Australian businesses.",
+      "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
     images: ["/images/og-image.jpg"],
-    creator: "@velosyncglobal",
+    creator: "@valosyncglobal",
   },
   robots: {
     index: true,
@@ -80,6 +90,18 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+    languages: {
+      "en-AU": "https://valosyncglobal.com",
+      "en": "https://valosyncglobal.com",
+      "x-default": "https://valosyncglobal.com",
+    },
+  },
+  other: {
+    "geo.region": "AU",
+    "geo.placename": "Australia",
+    "geo.position": "-25.274398;133.775136",
+    "ICBM": "-25.274398, 133.775136",
+    "target-country": "AU",
   },
   category: "technology",
 };
@@ -104,7 +126,10 @@ export default function RootLayout({ children }: LayoutProps) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <JsonLd />
+        {children}
+      </body>
     </html>
   );
 }

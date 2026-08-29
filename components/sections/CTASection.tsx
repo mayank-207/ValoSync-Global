@@ -78,7 +78,7 @@ export default function CTASection() {
               </h2>
 
               <p className="text-base sm:text-lg leading-relaxed mb-8 max-w-xl text-slate-200">
-                Discuss your custom software, CRM, web development, automation, cloud delivery or digital growth requirements with VeloSync Global.
+                Discuss your custom software, CRM, web development, automation, cloud delivery or digital growth requirements with ValoSync Global.
               </p>
 
               <div className="space-y-4">

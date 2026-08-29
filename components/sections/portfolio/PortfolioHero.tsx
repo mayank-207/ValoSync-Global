@@ -10,7 +10,7 @@ export default function PortfolioHero() {
     { label: "Projects Delivered", value: "50+" },
     { label: "Client Satisfaction", value: "99.4%" },
     { label: "Average Client ROI", value: "3.5x" },
-    { label: "Target Market Focus", value: "Australia & Global" },
+    { label: "Global Reach", value: "Multi-Region" },
   ];
 
   return (
@@ -37,7 +37,7 @@ export default function PortfolioHero() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto mb-10 animate-fade-in-up animate-delay-100">
-            Explore how Velosync Global engineers high-impact custom software, intelligent CRM systems, AI workflow automation, and digital lead generation engines for clients across Australia and worldwide.
+            Explore how Valosync Global engineers high-impact custom software, intelligent CRM systems, AI workflow automation, and digital lead generation engines for clients worldwide.
           </p>
 
           {/* Action CTAs */}

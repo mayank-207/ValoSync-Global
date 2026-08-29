@@ -49,9 +49,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "custom-software": {
     title: "Custom Software Development",
     badge: "Bespoke Enterprise Software",
-    metaTitle: "Custom Software Development Services | Velosync Global",
+    metaTitle: "Custom Software Development Services Australia | Valosync Global",
     metaDescription:
-      "Engineered bespoke software applications, scalable microservices, SaaS platforms, and API integrations tailored for your exact business requirements.",
+      "Engineered bespoke software applications, scalable microservices, SaaS platforms, and API integrations for Australian businesses and global enterprises.",
     heroHeadline: "Bespoke Software Platforms Built to Scale Your Business",
     heroSubtitle:
       "Transform your operational vision into high-performing, cloud-native software built specifically around your proprietary workflows and growth goals.",
@@ -116,12 +116,12 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "crm-development": {
     title: "CRM Development",
     badge: "Intelligent Sales & Customer Management",
-    metaTitle: "Custom CRM Development Services | Velosync Global",
+    metaTitle: "Custom CRM Development Services Australia | Valosync Global",
     metaDescription:
-      "Build custom CRM platforms engineered to manage sales pipelines, customer interactions, lead scoring, and automated client onboarding.",
+      "Build custom CRM platforms engineered for sales pipelines, automated lead scoring, client onboarding, and CRM solutions for Australian and international businesses.",
     heroHeadline: "Custom CRM Platforms Built for Business-Focused Sales Teams",
     heroSubtitle:
-      "Eliminate clunky generic CRMs. Velosync Global engineers tailored sales pipelines, automated lead scoring, and omnichannel client management systems.",
+      "Eliminate clunky generic CRMs. Valosync Global engineers tailored sales pipelines, automated lead scoring, and omnichannel client management systems.",
     iconName: "crm",
     highlights: [
       "Tailored Pipeline Stages",
@@ -183,9 +183,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "ai-automation": {
     title: "AI Automation Solutions",
     badge: "Intelligent Artificial Intelligence & ML",
-    metaTitle: "AI Automation & Custom LLM Services | Velosync Global",
+    metaTitle: "AI Automation & Custom LLM Services Australia | Valosync Global",
     metaDescription:
-      "Deploy custom AI solutions, RAG knowledge bots, intelligent document extraction pipelines, and 24/7 conversational agents.",
+      "Deploy custom AI solutions, RAG knowledge bots, intelligent document extraction pipelines, and 24/7 conversational agents for Australian and global organizations.",
     heroHeadline: "Harness AI to Automate Complex Workflows & Data Processing",
     heroSubtitle:
       "Empower your workforce with enterprise AI assistants, automated medical & invoice extraction engines, and intelligent customer support bots.",
@@ -250,9 +250,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "business-automation": {
     title: "Business Process Automation",
     badge: "Operational Workflow Orchestration",
-    metaTitle: "Business Process Automation Services | Velosync Global",
+    metaTitle: "Business Process Automation Services Australia | Valosync Global",
     metaDescription:
-      "Automate manual business processes, inter-departmental data sync, approval chains, and automated task dispatching.",
+      "Automate manual business processes, inter-departmental data sync, approval chains, and automated task dispatching for Australian growth teams and global enterprises.",
     heroHeadline: "Streamline Operations & Eliminate Repetitive Manual Labor",
     heroSubtitle:
       "Interconnect your software applications, automate cross-departmental tasks, and eliminate costly human errors across your organization.",
@@ -317,9 +317,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "web-development": {
     title: "Web Development",
     badge: "Ultra-Fast Web Platforms",
-    metaTitle: "Web Development Services | Next.js & Headless Apps | Velosync Global",
+    metaTitle: "Web Development Services Australia | Next.js & Headless Apps | Valosync Global",
     metaDescription:
-      "Engineered business websites, web applications, client portals, and headless e-commerce built with modern Next.js and high-performance tech stack.",
+      "Engineered business websites, web applications, client portals, and headless e-commerce built with modern Next.js for Australian businesses and global enterprises.",
     heroHeadline: "High-Performance Web Applications Built for Maximum Growth",
     heroSubtitle:
       "Deliver sub-second page loads, flawless mobile responsiveness, and high conversion rates with modern Next.js and React architecture.",
@@ -384,9 +384,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "cloud-devops": {
     title: "Cloud & DevOps Support",
     badge: "Reliable Cloud Delivery",
-    metaTitle: "Cloud & DevOps Support Services Australia | VeloSync Global",
+    metaTitle: "Cloud & DevOps Support Services Australia | Valosync Global",
     metaDescription:
-      "Cloud setup, application deployment, CI/CD pipelines, containerisation, monitoring and infrastructure optimisation for Australian businesses.",
+      "Cloud setup, application deployment, CI/CD pipelines, containerisation, monitoring and infrastructure optimisation for Australian enterprises and growing global businesses.",
     heroHeadline: "Build a More Reliable Path From Code to Production",
     heroSubtitle:
       "We help businesses establish practical cloud and DevOps foundations that improve deployment consistency, system visibility and ongoing maintainability.",
@@ -451,9 +451,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "digital-marketing": {
     title: "Digital Marketing & SEO",
     badge: "ROI-Focused Lead Generation",
-    metaTitle: "Digital Marketing & Technical SEO Services | Velosync Global",
+    metaTitle: "Digital Marketing & Technical SEO Services Australia | Valosync Global",
     metaDescription:
-      "Data-driven digital marketing campaigns, technical SEO optimization, lead generation funnels, and targeted audience acquisition.",
+      "Data-driven digital marketing campaigns, technical SEO optimization, lead generation funnels, and targeted customer acquisition for Australian and global markets.",
     heroHeadline: "Data-Driven Digital Marketing That Supports Visibility and Sustainable Growth",
     heroSubtitle:
       "Scale your qualified lead pipeline with technical SEO, high-intent Google Ads, social media campaigns, and conversion rate optimization.",
@@ -540,7 +540,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!data) {
     return {
-      title: "Service Not Found | Velosync Global",
+      title: "Service Not Found | Valosync Global",
     };
   }
 
@@ -551,10 +551,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `/services/${slug}`,
     },
     openGraph: {
-      title: `${data.title} | Velosync Global`,
+      title: `${data.title} | Valosync Global`,
       description: data.metaDescription,
-      url: `https://velosyncglobal.com/services/${slug}`,
-      siteName: "Velosync Global",
+      url: `https://valosyncglobal.com/services/${slug}`,
+      siteName: "Valosync Global",
       type: "website",
     },
   };
@@ -662,7 +662,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="bg-white p-8 rounded-3xl border border-[#0D47A1]/30 shadow-lg">
                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
                   <CheckCircleIcon size={24} className="text-[#D4AF37]" />
-                  VeloSync Global Approach
+                  ValoSync Global Approach
                 </h3>
                 <ul className="space-y-4">
                   {data.solutions.map((s, idx) => (
