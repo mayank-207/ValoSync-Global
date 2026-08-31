@@ -1,5 +1,4 @@
 import Link from "next/link";
-import SectionHeading from "../ui/SectionHeading";
 import { ArrowRightIcon } from "../ui/Icons";
 
 const departments = [
@@ -51,13 +50,17 @@ export default function ServiceDepartmentsSection() {
   return (
     <section id="departments" className="section-padding bg-[#071A33] text-white">
       <div className="container">
-        <SectionHeading
-          badge="Service Departments"
-          title="Expertise Across Technology, Business and Property"
-          subtitle="Choose the department relevant to your needs. Each service area has its own specialists, process and enquiry pathway."
-          center
-          inverted
-        />
+        <div className="mx-auto mb-14 max-w-3xl text-center">
+          <span className="mb-4 inline-flex rounded-full border border-[#D4AF37]/35 bg-[#D4AF37]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#D4AF37]">
+            Service Departments
+          </span>
+          <h2 className="mb-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            Expertise Across Technology, Business and Property
+          </h2>
+          <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
+            Choose the department relevant to your needs. Each service area has its own specialists, process and enquiry pathway.
+          </p>
+        </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {departments.map((department) => (
             <Link
