@@ -27,11 +27,11 @@ export default function Logo({
     },
     md: {
       wrapper: "gap-2.5 sm:gap-3",
-      emblem: "w-10 h-10 sm:w-11 sm:h-11",
-      title: "text-2xl sm:text-[25px] font-black tracking-tight",
-      subtitle: "text-[10px] sm:text-[11px] tracking-[0.32em] mt-0.5",
-      scale: "scale-110",
-      imgSize: 50,
+      emblem: "w-10 h-10 sm:w-12 sm:h-12",
+      title: "text-[22px] sm:text-[26px] font-black tracking-tight",
+      subtitle: "text-[9px] sm:text-[11px] tracking-[0.3em] mt-0.5",
+      scale: "scale-100",
+      imgSize: 48,
     },
     lg: {
       wrapper: "gap-3 sm:gap-3.5",
@@ -48,7 +48,7 @@ export default function Logo({
   return (
     <Link
       href="/"
-      className={`inline-flex items-center align-middle group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 rounded-xl transition-opacity hover:opacity-95 ${currentSize.wrapper} ${className}`}
+      className={`inline-flex items-center self-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 rounded-xl transition-opacity hover:opacity-95 ${currentSize.wrapper} ${className}`}
       aria-label="ValoSync Global - Home"
     >
       {/* Official ValoSync Global Emblem Logo Mark */}
