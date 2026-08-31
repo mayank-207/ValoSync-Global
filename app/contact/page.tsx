@@ -262,11 +262,16 @@ export default function ContactPage() {
                       >
                         <option value="Custom Software Development">Custom Software Development</option>
                         <option value="Mobile App Development">Mobile App Development (iOS & Android)</option>
-                        <option value="CRM Development">CRM Development</option>
+                        <option value="Application Development">Application Development</option>
                         <option value="AI Automation">AI Automation</option>
                         <option value="Business Process Automation">Business Process Automation</option>
                         <option value="Web Development">Web Development</option>
                         <option value="Digital Marketing">Digital Marketing & SEO</option>
+                        <option value="Accounting Services">Accounting Services</option>
+                        <option value="Conveyancing Services">Conveyancing Services</option>
+                        <option value="Civil Engineering Services">Civil Engineering Services</option>
+                        <option value="Real Estate Services">Real Estate Services</option>
+                        <option value="Home Loan Services">Home Loan Services</option>
                       </select>
                     </div>
 
