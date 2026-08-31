@@ -556,6 +556,69 @@ img {
   background: var(--color-surface);
 }
 
+
+.footer-action {
+  display: flex;
+  min-height: 5.5rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  color: var(--color-text-inverse);
+  transition:
+    background var(--transition-base),
+    color var(--transition-base);
+}
+
+.footer-action small {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--brand-gold);
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-action span {
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.footer-action:hover {
+  color: var(--brand-gold-light);
+}
+
+.footer-social {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-inverse-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-inverse);
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.footer-social:hover {
+  background: var(--color-inverse-subtle);
+  border-color: var(--color-gold-border-alpha);
+  color: var(--brand-gold);
+}
+
+@media (min-width: 640px) {
+  .footer-action {
+    padding-inline: 1.5rem;
+  }
+
+  .footer-action:first-child {
+    padding-left: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .corporate-proof-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
