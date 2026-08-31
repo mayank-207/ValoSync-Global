@@ -20,11 +20,18 @@ const footerLinks = {
   services: [
     { label: "Custom Software Development", href: "/services/custom-software" },
     { label: "Mobile App Development", href: "/services/mobile-app-development" },
-    { label: "CRM Development", href: "/services/crm-development" },
+    { label: "Application Development", href: "/services/application-development" },
     { label: "AI Automation", href: "/services/ai-automation" },
     { label: "Web Development", href: "/services/web-development" },
     { label: "Cloud & DevOps Support", href: "/services/cloud-devops" },
     { label: "Digital Marketing", href: "/services/digital-marketing" },
+  ],
+  departments: [
+    { label: "Accounting", href: "/accounting" },
+    { label: "Conveyancing", href: "/conveyancing" },
+    { label: "Civil Engineering", href: "/civil-engineering" },
+    { label: "Real Estate", href: "/real-estate" },
+    { label: "Home Loans", href: "/home-loans" },
   ],
   industries: [
     { label: "Healthcare & MedTech", href: "/industries#healthcare" },
@@ -87,14 +94,14 @@ export default function Footer() {
         </section> */}
 
         {/* Footer Navigation Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 pb-16">
           <div className="lg:col-span-2">
             <Logo variant="light" className="mb-6" />
             <p
               className="text-sm leading-relaxed mb-6 max-w-md"
               style={{ color: "var(--color-inverse-muted)" }}
             >
-              ValoSync Global builds custom software, CRM platforms, websites and connected digital solutions, supported by cloud delivery and digital growth services.
+              ValoSync Global connects technology, accounting, conveyancing, civil engineering, real estate and home-loan support through clearly defined service departments.
             </p>
             <div className="flex flex-col gap-3.5">
               {contactInfo.map((item) => (
@@ -180,6 +187,28 @@ export default function Footer() {
               className="text-xs font-bold uppercase tracking-wider mb-5"
               style={{ color: "var(--text-light)" }}
             >
+              Departments
+            </h3>
+            <ul className="flex flex-col gap-3">
+              {footerLinks.departments.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm font-medium transition-colors duration-200 hover:text-accent"
+                    style={{ color: "var(--color-inverse-muted)" }}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3
+              className="text-xs font-bold uppercase tracking-wider mb-5"
+              style={{ color: "var(--text-light)" }}
+            >
               Industries
             </h3>
             <ul className="flex flex-col gap-3">
@@ -207,7 +236,7 @@ export default function Footer() {
             className="text-xs text-center md:text-left"
             style={{ color: "var(--color-inverse-muted)" }}
           >
-            © {currentYear} Valosync Global. All rights reserved. Technology solutions built around your business.
+            © {currentYear} Valosync Global. All rights reserved. Integrated technology, business and property services.
           </p>
 
           <div className="flex items-center gap-3">
