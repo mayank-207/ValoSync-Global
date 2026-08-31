@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -12,7 +11,6 @@ import {
   MapPinIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  SparkleIcon,
   ShieldIcon,
 } from "@/components/ui/Icons";
 import FAQAccordion from "@/components/ui/FAQAccordion";
@@ -161,7 +159,7 @@ export default function ContactPage() {
               <SectionHeading
                 // badge="Consultation Form"
                 title="Send Us Your Requirements"
-                subtitle="Fill out the form below to receive a custom proposal and 30-minute discovery session."
+                subtitle="Share your requirement and we will connect you with the appropriate department."
                 center
               />
 
@@ -171,10 +169,10 @@ export default function ContactPage() {
                     <CheckCircleIcon size={44} />
                   </div>
                   <h3 className="text-2xl font-bold text-[#1A1A1A]">
-                    Consultation Request Sent!
+                    Enquiry Sent!
                   </h3>
                   <p className="text-sm text-[#4A5568] max-w-md mx-auto leading-relaxed">
-                    Thank you, <strong className="text-[#0D47A1]">{formData.name}</strong>. Our lead solutions architect will review your submission and contact you at <span className="font-semibold text-[#1A1A1A]">{formData.email}</span> within 24 hours.
+                    Thank you, <strong className="text-[#0D47A1]">{formData.name}</strong>. The relevant department will review your submission and contact you at <span className="font-semibold text-[#1A1A1A]">{formData.email}</span> within 24 hours.
                   </p>
                   <Button
                     onClick={() => setSubmitted(false)}
@@ -182,7 +180,7 @@ export default function ContactPage() {
                     size="md"
                     className="mt-6"
                   >
-                    Submit Another Project Inquiry
+                    Submit Another Enquiry
                   </Button>
                 </div>
               ) : (
@@ -271,7 +269,7 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="budget" className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1A1A1A]">
-                        Estimated Budget Range
+                        Budget or Scope
                       </label>
                       <select
                         id="budget"
@@ -279,6 +277,7 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                         className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
                       >
+                        <option value="To be discussed">To be discussed</option>
                         <option value="Under $10,000">Under $10,000</option>
                         <option value="$10,000 - $25,000">$10,000 - $25,000</option>
                         <option value="$25,000 - $50,000">$25,000 - $50,000</option>
