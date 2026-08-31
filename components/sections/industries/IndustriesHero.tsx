@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { ArrowRightIcon, SparkleIcon, ShieldIcon, CheckCircleIcon, ZapIcon } from "@/components/ui/Icons";
 
@@ -14,6 +15,15 @@ export default function IndustriesHero() {
 
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1] text-white overflow-hidden">
+      <Image
+        src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1800&q=80"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover object-center opacity-20"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#041026]/95 via-[#071A3D]/85 to-[#0D47A1]/70" aria-hidden="true" />
       {/* Background Glow & Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#D4AF37]/15 blur-[120px] rounded-full pointer-events-none" />

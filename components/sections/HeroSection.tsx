@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "../ui/Button";
 import {
   ArrowRightIcon,
@@ -18,6 +19,16 @@ const proofPoints = [
 export default function HeroSection() {
   return (
     <section className="corporate-hero" aria-labelledby="hero-heading">
+      <Image
+        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=82"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center opacity-35"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#041026] via-[#071A3D]/95 to-[#071A3D]/65" aria-hidden="true" />
       <div className="corporate-hero-grid" aria-hidden="true" />
 
       <div className="relative container pt-32 sm:pt-36 lg:pt-44">
@@ -25,18 +36,18 @@ export default function HeroSection() {
           <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-gold">
               <span className="w-8 h-px bg-gold" />
-              Synchronizing ideas with technology
+              One global group. Multiple areas of expertise
             </p>
             <h1
               id="hero-heading"
               className="mt-6 text-4xl sm:text-5xl lg:text-7xl font-bold tracking-[-0.04em] leading-[1.02] text-white"
             >
-              Business transformation.
-              <span className="block text-gold">Technology execution.</span>
-              Sustainable growth.
+              Specialist services for
+              <span className="block text-gold">business, property</span>
+              and sustainable growth.
             </h1>
             <p className="mt-7 max-w-2xl text-base sm:text-lg leading-8 text-slate-200">
-              ValoSync Global helps businesses simplify operations and move forward with custom applications, connected platforms, intelligent automation and digital growth services.
+              ValoSync Global brings together specialist capabilities across technology, accounting, conveyancing, civil engineering, real estate and home loans through one trusted organisation.
             </p>
             <div className="mt-9 flex flex-col sm:flex-row gap-3">
               <Button
@@ -48,8 +59,8 @@ export default function HeroSection() {
               >
                 Schedule a consultation
               </Button>
-              <Link href="/services" className="corporate-hero-link">
-                Explore our services <ArrowRightIcon size={18} />
+              <Link href="#departments" className="corporate-hero-link">
+                Explore our departments <ArrowRightIcon size={18} />
               </Link>
             </div>
           </div>
@@ -57,12 +68,12 @@ export default function HeroSection() {
           <aside className="corporate-hero-aside">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">Integrated delivery</p>
             <h2 className="mt-4 text-2xl font-bold text-white">
-              From business challenge to working solution.
+              One relationship. The right specialist expertise.
             </h2>
             <ul className="mt-6 space-y-4">
               {[
-                { icon: <LayersIcon size={18} />, text: "Strategy, design, engineering and QA" },
-                { icon: <ShieldIcon size={18} />, text: "Security-conscious project delivery" },
+                { icon: <LayersIcon size={18} />, text: "Specialist support across six departments" },
+                { icon: <ShieldIcon size={18} />, text: "Clear, responsible client engagement" },
                 { icon: <GlobeIcon size={18} />, text: "Global perspective with focused collaboration" },
               ].map((item) => (
                 <li key={item.text} className="flex items-start gap-3 text-sm leading-6 text-slate-200">
