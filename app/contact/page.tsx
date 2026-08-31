@@ -26,8 +26,8 @@ export default function ContactPage() {
     email: "",
     phone: "",
     company: "",
-    service: "Custom Software Development",
-    budget: "$10,000 - $25,000",
+    service: "Technology Services",
+    budget: "To be discussed",
     message: "",
   });
 
@@ -59,7 +59,7 @@ export default function ContactPage() {
   const contactMethods = [
     {
       icon: <PhoneIcon size={24} />,
-      title: "Sales & Inquiries",
+      title: "General Enquiries",
       detail: "+61 (02) 8000 0000 / +91 98765 43210",
       subtext: "Mon-Fri from 9am to 6pm (AEST)",
       href: "tel:+61280000000",
@@ -74,8 +74,8 @@ export default function ContactPage() {
     {
       icon: <MapPinIcon size={24} />,
       title: "Global Delivery Hub",
-      detail: "Global Technology & Innovation Hub",
-      subtext: "Engineering & Client Success",
+      detail: "Global Service Coordination",
+      subtext: "Department and Client Support",
       href: "#contact-form",
     },
   ];
@@ -84,7 +84,7 @@ export default function ContactPage() {
     {
       question: "How quickly will your team respond to my inquiry?",
       answer:
-        "Our technical architects review all submissions within 24 business hours to schedule a 30-minute discovery consultation.",
+        "Our team reviews each submission and directs it to the relevant department for an appropriate follow-up.",
     },
     {
       question: "Do you sign a Non-Disclosure Agreement (NDA) before discussing my project?",
@@ -92,9 +92,9 @@ export default function ContactPage() {
         "Yes. We strictly protect your proprietary ideas and business data under a 100% confidential NDA upon initial contact.",
     },
     {
-      question: "Can Valosync Global accommodate custom software timelines?",
+      question: "How will my enquiry reach the correct department?",
       answer:
-        "Absoutely. We offer both fixed milestone deliveries and dedicated agile engineering squads tailored to your launch dates.",
+        "Select the most relevant department in the form. If your requirement crosses service areas, our team will coordinate the initial review and confirm the appropriate contacts.",
     },
   ];
 
@@ -260,13 +260,12 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                         className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
                       >
-                        <option value="Custom Software Development">Custom Software Development</option>
-                        <option value="Mobile App Development">Mobile App Development (iOS & Android)</option>
-                        <option value="CRM Development">CRM Development</option>
-                        <option value="AI Automation">AI Automation</option>
-                        <option value="Business Process Automation">Business Process Automation</option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Digital Marketing">Digital Marketing & SEO</option>
+                        <option value="Technology Services">Technology Services</option>
+                          <option value="Accounting Services">Accounting Services</option>
+                          <option value="Conveyancing Services">Conveyancing Services</option>
+                          <option value="Civil Engineering Services">Civil Engineering Services</option>
+                          <option value="Real Estate Services">Real Estate Services</option>
+                          <option value="Home Loan Services">Home Loan Services</option>
                       </select>
                     </div>
 
@@ -290,12 +289,12 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-700 dark:text-slate-300">
-                      Project Goals & Brief Description
+                      Requirements and Brief Description
                     </label>
                     <textarea
                       id="message"
                       rows={4}
-                      placeholder="Outline your requirements, operational challenges, or target launch timeline..."
+                      placeholder="Outline your requirements, priorities and any relevant timing..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
@@ -321,7 +320,7 @@ export default function ContactPage() {
                     disabled={isSubmitting}
                     rightIcon={<ArrowRightIcon size={18} />}
                   >
-                    {isSubmitting ? "Sending Request..." : "Submit Project Inquiry"}
+                    {isSubmitting ? "Sending Request..." : "Submit Enquiry"}
                   </Button>
                 </form>
               )}
@@ -333,9 +332,9 @@ export default function ContactPage() {
         <section className="section-padding bg-white">
           <div className="container max-w-3xl mx-auto">
             <SectionHeading
-              badge="Consultation FAQs"
+              badge="Service Enquiry FAQs"
               title="Frequently Asked Questions"
-              subtitle="Quick answers regarding your discovery call, NDA protection, and scope proposals."
+              subtitle="Quick answers about submitting an enquiry and connecting with the appropriate department."
               center
             />
             <FAQAccordion items={contactFaqs} defaultOpenIndex={0} />
