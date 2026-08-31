@@ -20,7 +20,6 @@ const departmentLinks = [
 const companyLinks = [
   { label: "About Us", href: "/about" },
   { label: "Industries", href: "/industries" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
 ];
 
