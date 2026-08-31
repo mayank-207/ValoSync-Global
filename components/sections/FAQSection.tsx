@@ -6,9 +6,9 @@ import FAQAccordion, { FAQItem } from "@/components/ui/FAQAccordion";
 
 const defaultFaqs: FAQItem[] = [
   {
-    question: "What types of projects does ValoSync Global deliver?",
+    question: "What services does ValoSync Global provide?",
     answer:
-      "We work across custom software, CRM platforms, web and WordPress development, business automation, cloud and DevOps support, SEO, digital marketing and social media management.",
+      "ValoSync Global operates through six departments: Technology, Accounting, Conveyancing, Civil Engineering, Real Estate and Home Loans. Each department has a dedicated service pathway under the wider ValoSync Global organisation.",
   },
   {
     question: "Do you work with businesses across different regions and time zones?",
@@ -16,14 +16,14 @@ const defaultFaqs: FAQItem[] = [
       "Yes. Our services and communication approach are structured for seamless collaboration, including aligned working hours, practical scoping, clear milestones and regular project updates.",
   },
   {
-    question: "Which technologies do you work with?",
+    question: "Can more than one department support my enquiry?",
     answer:
-      "Our capabilities include Laravel, PHP, WordPress, .NET, React, Next.js, Node.js, MEAN and MERN technologies, along with cloud, automation and digital marketing platforms.",
+      "Yes. Where requirements cross service areas, we coordinate the initial conversation and connect you with the relevant specialists. Responsibilities and engagement terms are confirmed by each department.",
   },
   {
-    question: "Can you modernise or extend an existing system?",
+    question: "Does each department have specialist expertise?",
     answer:
-      "Yes. We can assess an existing application, identify priority improvements and plan integrations, feature development, performance work or phased modernisation.",
+      "Yes. Every department has its own capabilities, process and enquiry pathway while operating under the ValoSync Global brand. Service availability is confirmed for each engagement.",
   },
   {
     question: "How do you manage project communication?",
@@ -31,9 +31,9 @@ const defaultFaqs: FAQItem[] = [
       "We agree on communication channels, milestones, review points and responsibilities during project setup so stakeholders have clear visibility throughout delivery.",
   },
   {
-    question: "What happens after launch?",
+    question: "What happens after the initial enquiry?",
     answer:
-      "Handover, maintenance and ongoing improvement options are defined according to the solution and your operational requirements.",
+      "We review your requirement, direct it to the appropriate department and confirm the next steps, scope and responsible contacts.",
   },
 ]
 
@@ -48,7 +48,7 @@ interface FAQSectionProps {
 
 export default function FAQSection({
   title = "Frequently Asked Questions",
-  subtitle = "Find answers about our services, technology capabilities, delivery approach and post-launch support.",
+  subtitle = "Find answers about our departments, coordinated service model and client engagement approach.",
   badge = "Got Questions?",
   faqs = defaultFaqs,
   className = "",
