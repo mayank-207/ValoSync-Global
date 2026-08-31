@@ -5,33 +5,33 @@ import { CheckCircleIcon, SparkleIcon, ZapIcon, GlobeIcon } from "@/components/u
 const milestones = [
   {
     phase: "Phase 1 — August 2026",
-    title: "Legal & Administrative Foundation",
+    title: "Corporate Foundation",
     description:
-      "Company registration, business domain setup, official communication channels, comprehensive NDAs, privacy policies, and financial framework.",
+      "Establishing the parent organisation, corporate identity, governance principles and shared operating foundation.",
   },
   {
     phase: "Phase 2 — Infrastructure",
-    title: "Development & CI/CD Infrastructure",
+    title: "Department Structure",
     description:
-      "Establishment of centralized Git organization, staging testing servers, automated backup systems, branching strategy, and QA standards.",
+      "Defining focused departments across technology, accounting, conveyancing, civil engineering, real estate and home loans.",
   },
   {
     phase: "Phase 3 — Presence",
-    title: "Website & Digital Infrastructure Launch",
+    title: "Connected Service Experience",
     description:
-      "Deployment of modern Next.js website, service portals, lead enquiry forms, consultation booking workflows, analytics, and SEO baseline.",
+      "Creating clear enquiry pathways, shared communication standards and a consistent experience across every department.",
   },
   {
     phase: "Phase 4 — Operations",
-    title: "Operational Office Launch",
+    title: "Operational Readiness",
     description:
-      "Full setup of developer workstations, project management whiteboards, QA environments, and team onboarding ready for 1 September launch.",
+      "Building specialist capacity, documented processes and coordinated support for professional client delivery.",
   },
   {
     phase: "Phase 5 — September 2026+",
     title: "Market Expansion",
     description:
-      "Acquiring and delivering high-value software, CRM development, AI automation, and digital marketing projects for high-growth enterprises and businesses.",
+      "Expanding department capabilities and client relationships across Australian and international markets.",
   },
 ];
 
@@ -41,8 +41,8 @@ export default function CompanyStorySection() {
       <div className="container">
         <SectionHeading
           badge="Company Evolution"
-          title="Built on Structure, Engineered for Growth"
-          subtitle="Our systematic August implementation roadmap laid the groundwork for a world-class IT consultancy."
+          title="Built on Structure, Connected for Growth"
+          subtitle="Our operating model is designed to grow specialist departments without losing consistency, accountability or client focus."
           center
         />
 
