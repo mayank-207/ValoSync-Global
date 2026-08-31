@@ -70,11 +70,12 @@ export default function Header() {
     >
       <div className="container">
         <nav
-          className="flex items-center justify-between"
+          className="flex min-h-12 items-center justify-between"
           aria-label="Main navigation"
         >
           <Logo
-            variant={isScrolled || isMobileMenuOpen || pathname === "/" ? "dark" : "light"}
+            variant={isScrolled || isMobileMenuOpen ? "dark" : "light"}
+            size="md"
             className="flex-shrink-0"
           />
 
