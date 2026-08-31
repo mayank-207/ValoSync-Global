@@ -64,8 +64,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMobileMenuOpen
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#D9E1EC] py-2 sm:py-2.5"
-          : "bg-transparent py-2.5 sm:py-3"
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-border py-2 sm:py-2.5"
+          : "bg-primary-dark/90 backdrop-blur-md border-b border-white/10 py-2.5 sm:py-3"
       }`}
     >
       <div className="container">
@@ -90,10 +90,10 @@ export default function Header() {
                 {item.dropdown ? (
                   <>
                     <button
-                      className={`flex items-center gap-1 px-3.5 py-1.5 text-sm font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
+                      className={`flex items-center gap-1 px-3.5 py-1.5 text-sm font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
                         isScrolled
-                          ? "text-[#1A1A1A] hover:text-[#0B3D91]"
-                          : "text-white hover:text-[#D4AF37]"
+                          ? "text-text-primary hover:text-primary"
+                          : "text-white hover:text-gold"
                       }`}
                       aria-expanded={openDropdown === item.label}
                       aria-haspopup="true"
@@ -113,12 +113,12 @@ export default function Header() {
                           : "opacity-0 -translate-y-2 pointer-events-none"
                       }`}
                     >
-                      <ul className="w-72 p-2 rounded-2xl shadow-2xl border bg-white border-[#D9E1EC]">
+                      <ul className="w-72 p-2 rounded-2xl shadow-2xl border bg-white border-border">
                         {item.dropdown.map((subItem) => (
                           <li key={subItem.label}>
                             <Link
                               href={subItem.href}
-                              className="block px-4 py-2.5 text-sm font-semibold text-[#1A1A1A] rounded-xl transition-all duration-200 hover:bg-[#0B3D91]/10 hover:text-[#0B3D91]"
+                              className="block px-4 py-2.5 text-sm font-semibold text-text-primary rounded-xl transition-all duration-200 hover:bg-primary/10 hover:text-primary"
                             >
                               {subItem.label}
                             </Link>
@@ -130,10 +130,10 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`inline-block px-3.5 py-1.5 text-sm font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
+                    className={`inline-block px-3.5 py-1.5 text-sm font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
                       isScrolled
-                        ? "text-[#1A1A1A] hover:text-[#0B3D91]"
-                        : "text-white hover:text-[#D4AF37]"
+                        ? "text-text-primary hover:text-primary"
+                        : "text-white hover:text-gold"
                     }`}
                   >
                     {item.label}
@@ -159,9 +159,9 @@ export default function Header() {
           {/* Mobile Hamburger Toggle Button */}
           <button
             type="button"
-            className={`lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 ${
+            className={`lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
               isScrolled || isMobileMenuOpen
-                ? "text-[#071A33] hover:bg-slate-100"
+                ? "text-primary-dark hover:bg-slate-100"
                 : "text-white hover:bg-white/10"
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -196,7 +196,7 @@ export default function Header() {
 
         {/* Navigation Content Card */}
         <nav
-          className="relative h-full overflow-y-auto bg-white shadow-2xl border-t border-[#D9E1EC] px-4 py-5 flex flex-col justify-between"
+          className="relative h-full overflow-y-auto bg-white shadow-2xl border-t border-border px-4 py-5 flex flex-col justify-between"
           aria-label="Mobile navigation"
         >
           <ul className="flex flex-col gap-1">
@@ -204,17 +204,17 @@ export default function Header() {
               <li key={item.label}>
                 {item.dropdown ? (
                   <div className="flex flex-col">
-                    <div className="flex items-center justify-between w-full rounded-xl transition-colors duration-200 hover:bg-[#F7F9FC]">
+                    <div className="flex items-center justify-between w-full rounded-xl transition-colors duration-200 hover:bg-surface">
                       <Link
                         href={item.href}
-                        className="flex-1 px-4 py-3 text-base font-bold text-[#071A33]"
+                        className="flex-1 px-4 py-3 text-base font-bold text-primary-dark"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {item.label}
                       </Link>
                       <button
                         type="button"
-                        className="p-3 text-[#071A33] hover:text-[#0B3D91] focus:outline-none"
+                        className="p-3 text-primary-dark hover:text-primary focus:outline-none"
                         onClick={(e) => {
                           e.stopPropagation();
                           setOpenDropdown(
@@ -228,19 +228,19 @@ export default function Header() {
                           size={18}
                           className={`transition-transform duration-200 ${
                             openDropdown === item.label
-                              ? "rotate-180 text-[#0B3D91]"
+                              ? "rotate-180 text-primary"
                               : ""
                           }`}
                         />
                       </button>
                     </div>
                     {openDropdown === item.label && (
-                      <ul className="pl-3 my-1 flex flex-col gap-1 border-l-2 border-[#0B3D91]/20 ml-4">
+                      <ul className="pl-3 my-1 flex flex-col gap-1 border-l-2 border-primary/20 ml-4">
                         {item.dropdown.map((subItem) => (
                           <li key={subItem.label}>
                             <Link
                               href={subItem.href}
-                              className="block px-3 py-2 text-sm font-semibold text-slate-700 rounded-lg transition-colors duration-200 hover:bg-[#0B3D91]/10 hover:text-[#0B3D91]"
+                              className="block px-3 py-2 text-sm font-semibold text-slate-700 rounded-lg transition-colors duration-200 hover:bg-primary/10 hover:text-primary"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               {subItem.label}
@@ -253,7 +253,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-4 py-3 text-base font-bold text-[#071A33] rounded-xl transition-colors duration-200 hover:bg-[#F7F9FC]"
+                    className="block px-4 py-3 text-base font-bold text-primary-dark rounded-xl transition-colors duration-200 hover:bg-surface"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -263,7 +263,7 @@ export default function Header() {
             ))}
           </ul>
 
-          <div className="pt-5 mt-4 border-t border-[#D9E1EC] flex flex-col gap-3">
+          <div className="pt-5 mt-4 border-t border-border flex flex-col gap-3">
             <Button
               as="link"
               href="/contact"
