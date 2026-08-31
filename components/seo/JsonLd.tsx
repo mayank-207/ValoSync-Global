@@ -3,15 +3,15 @@ import React from "react";
 export default function JsonLd() {
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": ["Organization", "ProfessionalService", "ITService"],
+    "@type": ["Organization", "ProfessionalService"],
     "@id": "https://valosyncglobal.com/#organization",
     name: "ValoSync Global",
-    alternateName: ["ValoSync", "ValoSync Global Software", "Valosync IT Solutions"],
+    alternateName: ["ValoSync", "ValoSync Global Group"],
     url: "https://valosyncglobal.com",
     logo: "https://valosyncglobal.com/images/logo.png",
     image: "https://valosyncglobal.com/images/og-image.jpg",
     description:
-      "ValoSync Global provides enterprise custom software development, bespoke CRM platforms, AI workflow automation, web applications, and cloud DevOps engineering for Australian businesses and global enterprises.",
+      "ValoSync Global is a multi-department professional services organisation operating across technology, accounting, conveyancing, civil engineering, real estate and home loans.",
     email: "contact@valosyncglobal.com",
     areaServed: [
       {
@@ -53,16 +53,14 @@ export default function JsonLd() {
       "Global",
     ],
     knowsAbout: [
-      "Custom Software Development Australia",
-      "CRM Development Services Australia",
-      "AI Workflow Automation Australia",
-      "Web Application Development Sydney",
-      "Software Engineering Melbourne",
-      "Business Process Automation Australia",
-      "Cloud & DevOps Support Australia",
-      "Australian Privacy Principles Software Compliance",
-      "Next.js Development",
-      "Full Stack Software Engineering",
+      "Technology Services",
+      "Accounting Services",
+      "Conveyancing Services",
+      "Civil Engineering Services",
+      "Real Estate Services",
+      "Home Loan Services",
+      "Professional Services Australia",
+      "Integrated Business Services",
     ],
     sameAs: [
       "https://linkedin.com/company/valosyncglobal",
@@ -86,7 +84,7 @@ export default function JsonLd() {
     url: "https://valosyncglobal.com",
     name: "ValoSync Global",
     description:
-      "Custom Software, CRM Platforms, AI Automation & Digital Solutions for Australian and Global Businesses.",
+      "Integrated business, property, engineering, finance and technology services for Australian and global clients.",
     publisher: {
       "@id": "https://valosyncglobal.com/#organization",
     },
