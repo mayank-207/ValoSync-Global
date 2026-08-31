@@ -11,39 +11,39 @@ import {
 
 const values = [
   {
-    title: "Engineering Quality & Standards",
+    title: "Professional Standards",
     description:
-      "We strictly build maintainable, type-safe, and modular codebases using Next.js, React, Node, and Python designed for enterprise scale.",
+      "We apply clear responsibilities, consistent quality expectations and appropriate professional oversight to every engagement.",
     icon: <CodeIcon size={24} />,
   },
   {
-    title: "Uncompromising Data Security",
+    title: "Trust and Responsibility",
     description:
-      "Data protection, privacy policies, NDAs, and ISO compliance standards are embedded into every layer of our system architecture.",
+      "We handle client information and service responsibilities carefully, with confidentiality and relevant compliance considerations.",
     icon: <ShieldIcon size={24} />,
   },
   {
-    title: "Client-Centric Customization",
+    title: "Client-Focused Service",
     description:
-      "We never force generic templates. Every CRM, web portal, and automation sequence is custom-crafted around your precise business workflow.",
+      "Each department begins with the client's actual requirement and shapes its service pathway around the appropriate outcome.",
     icon: <UsersIcon size={24} />,
   },
   {
-    title: "Measurable Business ROI",
+    title: "Practical Value",
     description:
-      "Our solutions are evaluated on concrete outcomes—saving admin hours, reducing process costs, and increasing lead conversion rates.",
+      "Our work is designed to produce clear, useful outcomes rather than unnecessary complexity.",
     icon: <AwardIcon size={24} />,
   },
   {
-    title: "Agile & Transparent Delivery",
+    title: "Transparent Communication",
     description:
-      "Clear milestone reporting, bi-weekly development demos, and dedicated communication keep you fully informed from start to finish.",
+      "Defined contacts, visible next steps and timely updates help clients remain informed throughout the engagement.",
     icon: <ZapIcon size={24} />,
   },
   {
-    title: "Global Compliance",
+    title: "Global Perspective",
     description:
-      "Tailored for regulatory guidelines and global enterprise standards to ensure frictionless market launch.",
+      "We combine global business awareness with the professional and regulatory requirements relevant to each service.",
     icon: <GlobeIcon size={24} />,
   },
 ];
