@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { CodeIcon, UsersIcon, ShieldIcon, MarketingIcon, BrainIcon } from "@/components/ui/Icons";
+import { CodeIcon, ShieldIcon, MarketingIcon, BrainIcon } from "@/components/ui/Icons";
 
 const teamRoles = [
   {
