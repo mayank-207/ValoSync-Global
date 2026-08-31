@@ -66,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceSlugs = [
     "custom-software",
     "mobile-app-development",
-    "crm-development",
+    "application-development",
     "ai-automation",
     "web-development",
     "cloud-devops",
