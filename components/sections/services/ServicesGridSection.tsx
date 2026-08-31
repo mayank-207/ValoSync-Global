@@ -49,13 +49,13 @@ export const servicesData = [
     techStack: ["Flutter", "React Native", "Swift", "Kotlin"],
   },
   {
-    slug: "crm-development",
+    slug: "application-development",
     category: "Development",
-    title: "CRM Development",
+    title: "Application Development",
     description:
-      "CRM platforms tailored to your customer journey, sales process, follow-ups, reporting and internal operations.",
+      "business applications tailored to your customer journey, sales process, follow-ups, reporting and internal operations.",
     icon: <CrmIcon size={28} />,
-    href: "/services/crm-development",
+    href: "/services/application-development",
     features: [
       "Custom Lead Pipeline & Scoring",
       "Automated WhatsApp & Email Sync",
