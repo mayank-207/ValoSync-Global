@@ -5,7 +5,6 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import {
   CodeIcon,
-  CrmIcon,
   BrainIcon,
   AutomationIcon,
   LayersIcon,
@@ -49,20 +48,20 @@ export const servicesData = [
     techStack: ["Flutter", "React Native", "Swift", "Kotlin"],
   },
   {
-    slug: "crm-development",
+    slug: "application-development",
     category: "Development",
-    title: "CRM Development",
+    title: "Application Development",
     description:
-      "CRM platforms tailored to your customer journey, sales process, follow-ups, reporting and internal operations.",
-    icon: <CrmIcon size={28} />,
-    href: "/services/crm-development",
+      "Web, mobile and business applications designed around your users, workflows, data and integration requirements.",
+    icon: <CodeIcon size={28} />,
+    href: "/services/application-development",
     features: [
-      "Custom Lead Pipeline & Scoring",
-      "Automated WhatsApp & Email Sync",
-      "Real-Time Sales Performance Analytics",
+      "Laravel, PHP & .NET Applications",
+      "MEAN & MERN Development",
+      "API Integration & Modernisation",
     ],
-    metrics: "Connected Customer Operations",
-    techStack: ["React", "TypeScript", "PostgreSQL", "REST/GraphQL"],
+    metrics: "Applications Built Around Your Operations",
+    techStack: ["Laravel / PHP", ".NET", "MEAN", "MERN"],
   },
   {
     slug: "ai-automation",
