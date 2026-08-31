@@ -44,8 +44,8 @@ const serviceDetails = [
     ],
   },
   {
-    id: "crm-development",
-    name: "CRM Development",
+    id: "application-development",
+    name: "Application Development",
     icon: <CrmIcon size={22} />,
     tagline: "Intelligent customer relationship management engines built around your unique sales process.",
     challenges: [
