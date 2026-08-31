@@ -22,7 +22,7 @@ import TechStackFilterShowcase, { TechCategory } from "@/components/sections/ser
 
 type ServiceSlug =
   | "custom-software"
-  | "crm-development"
+  | "application-development"
   | "ai-automation"
   | "web-development"
   | "mobile-app-development"
@@ -125,81 +125,81 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       },
     ],
   },
-  "crm-development": {
-    title: "CRM Development",
-    badge: "Intelligent Sales & Customer Management",
-    metaTitle: "Custom CRM Development Services Australia | Valosync Global",
+  "application-development": {
+    title: "Application Development",
+    badge: "Web, Mobile & Business Applications",
+    metaTitle: "Application Development Services Australia | ValoSync Global",
     metaDescription:
-      "Build custom CRM platforms engineered for sales pipelines, automated lead scoring, client onboarding, and CRM solutions for Australian and international businesses.",
-    heroHeadline: "Custom CRM Platforms Built for Business-Focused Sales Teams",
+      "Custom web, mobile and business application development using Laravel, PHP, .NET, MEAN, MERN and modern cloud technologies.",
+    heroHeadline: "Applications Designed Around How Your Business Works",
     heroSubtitle:
-      "Eliminate clunky generic CRMs. Valosync Global engineers tailored sales pipelines, automated lead scoring, and omnichannel client management systems.",
-    iconName: "crm",
+      "Plan, build and improve secure, maintainable applications that connect users, workflows, data and business operations.",
+    iconName: "code",
     highlights: [
-      "Tailored Pipeline Stages",
-      "Automated Lead Scoring",
-      "WhatsApp & Email Sync",
-      "Real-Time Sales Analytics",
+      "Web & Business Applications",
+      "Laravel, PHP & .NET",
+      "MEAN & MERN Development",
+      "Integration & Modernisation",
     ],
     painPoints: [
-      "Sales reps losing 15+ hours weekly to manual spreadsheet updates.",
-      "High lead drop-off due to slow response times and lack of automated assignment.",
-      "Executive team lacking real-time visibility into deal forecasts and conversion metrics.",
+      "Disconnected tools creating duplicate work and inconsistent business information.",
+      "Legacy applications that are difficult to maintain, integrate or scale.",
+      "Generic software that does not match the organisation's actual workflows.",
     ],
     solutions: [
-      "Custom CRM dashboard with instant lead capture and auto-assignment triggers.",
-      "Omnichannel messaging (WhatsApp/Email/SMS) logged automatically under contact profiles.",
-      "Executive analytics dashboards tracking real-time conversion velocity.",
+      "Application architecture shaped around users, processes, integrations and operating requirements.",
+      "A suitable technology stack selected according to maintainability, security and delivery goals.",
+      "Phased development with clear milestones, stakeholder reviews and quality assurance.",
     ],
     capabilities: [
       {
-        title: "Lead Pipeline Management",
+        title: "Business Web Applications",
         description:
-          "Kanban and list views for deal stages, auto-tagging, lead scoring, and automated follow-up reminders.",
+          "Secure portals, operational systems and workflow applications designed around defined business processes.",
       },
       {
-        title: "Omnichannel Communication Sync",
+        title: "Mobile & Cross-Platform Applications",
         description:
-          "Seamlessly integrate WhatsApp Business API, Gmail/Outlook, and SMS so every customer touchpoint is recorded.",
+          "Connected mobile experiences for customers, field teams and internal operations across relevant devices.",
       },
       {
-        title: "Automated Onboarding & Contracts",
+        title: "Application Modernisation",
         description:
-          "Generate instant proposals, e-signature requests, and client onboarding forms directly from deal stages.",
+          "Improve existing platforms through code upgrades, interface redesign, performance work and phased re-architecture.",
       },
       {
-        title: "Custom Reporting & Analytics",
+        title: "API & System Integration",
         description:
-          "Track sales rep activity, deal conversion rates, revenue projections, and customer lifetime value in real time.",
+          "Connect applications, databases and third-party platforms to improve information flow and reduce duplicate work.",
       },
     ],
     techStack: [
-      { name: "React", role: "Pipeline Dashboard" },
-      { name: "TypeScript", role: "Enterprise Logic" },
-      { name: "Node.js", role: "High-Speed APIs" },
-      { name: "PostgreSQL", role: "Customer Records" },
-      { name: "Twilio", role: "SMS & Telephony" },
-      { name: "WhatsApp API", role: "Direct Messaging" },
-      { name: "Stripe", role: "Recurring Billing" },
-      { name: "Google Analytics", role: "Attribution Funnels" },
-      { name: "Docker", role: "Secure Containers" },
-      { name: "AWS", role: "High Availability" },
+      { name: "Laravel", role: "PHP Application Framework" },
+      { name: "PHP", role: "Business Application Backend" },
+      { name: ".NET", role: "Enterprise Applications" },
+      { name: "React", role: "Interactive Interfaces" },
+      { name: "Angular", role: "Structured Frontend Apps" },
+      { name: "Node.js", role: "APIs & Services" },
+      { name: "MongoDB", role: "Document Data Storage" },
+      { name: "MySQL", role: "Relational Business Data" },
+      { name: "Docker", role: "Consistent Deployment" },
+      { name: "AWS", role: "Cloud Infrastructure" },
     ],
     metrics: [
-      { value: "< 2 Mins", label: "Lead Response Time" },
-      { value: "+35%", label: "Sales Conversion Rate" },
-      { value: "15+ Hrs", label: "Saved / Rep / Week" },
+      { value: "Plan", label: "Define Requirements" },
+      { value: "Build", label: "Deliver in Milestones" },
+      { value: "Improve", label: "Support Long-Term Growth" },
     ],
     faqs: [
       {
-        question: "Can custom CRM integrate with our existing accounting software?",
+        question: "Can you improve an application that is already in use?",
         answer:
-          "Yes. We seamlessly connect custom CRMs with Xero, MYOB, QuickBooks, and bank payment gateways.",
+          "Yes. We can assess the current codebase, architecture and user experience, then recommend priority improvements or a phased modernisation plan.",
       },
       {
-        question: "Is training provided for our sales team?",
+        question: "How do you select the technology stack?",
         answer:
-          "Yes. We provide complete video tutorials, user documentation, and live onboarding sessions for your staff.",
+          "We consider the required features, existing systems, team capability, security, maintainability, hosting and long-term operating needs.",
       },
     ],
   },
@@ -598,7 +598,7 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
 export async function generateStaticParams() {
   return [
     { slug: "custom-software" },
-    { slug: "crm-development" },
+    { slug: "application-development" },
     { slug: "ai-automation" },
     { slug: "web-development" },
     { slug: "mobile-app-development" },
