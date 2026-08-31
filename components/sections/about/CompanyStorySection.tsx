@@ -1,6 +1,5 @@
 import React from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { CheckCircleIcon, SparkleIcon, ZapIcon, GlobeIcon } from "@/components/ui/Icons";
 
 const milestones = [
   {
