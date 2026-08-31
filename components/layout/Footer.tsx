@@ -19,7 +19,6 @@ const departmentLinks = [
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Industries", href: "/industries" },
   { label: "Contact", href: "/contact" },
 ];
 
