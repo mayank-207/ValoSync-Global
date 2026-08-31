@@ -13,33 +13,33 @@ export default function Logo({
   size = "md",
 }: LogoProps) {
   const isLight = variant === "light";
-  const textColor = isLight ? "#FFFFFF" : "#071A33";
+  const textColor = isLight ? "var(--color-text-inverse)" : "var(--brand-secondary)";
 
   // Size styling maps for emblem and typography
   const sizeStyles = {
     sm: {
-      wrapper: "gap-2.5",
-      emblem: "w-9 h-9 sm:w-10 sm:h-10",
+      wrapper: "gap-2 sm:gap-2.5",
+      emblem: "w-8 h-8 sm:w-9 sm:h-9",
       title: "text-lg sm:text-xl font-black tracking-tight",
       subtitle: "text-[9px] sm:text-[10px] tracking-[0.25em] mt-0.5",
-      scale: "scale-115",
-      imgSize: 44,
+      scale: "scale-105",
+      imgSize: 40,
     },
     md: {
-      wrapper: "gap-3 sm:gap-3.5",
-      emblem: "w-11 h-11 sm:w-12 sm:h-12",
+      wrapper: "gap-2.5 sm:gap-3",
+      emblem: "w-10 h-10 sm:w-11 sm:h-11",
       title: "text-2xl sm:text-[25px] font-black tracking-tight",
       subtitle: "text-[10px] sm:text-[11px] tracking-[0.32em] mt-0.5",
-      scale: "scale-125",
-      imgSize: 58,
+      scale: "scale-110",
+      imgSize: 50,
     },
     lg: {
-      wrapper: "gap-4",
-      emblem: "w-16 h-16 sm:w-20 sm:h-20",
+      wrapper: "gap-3 sm:gap-3.5",
+      emblem: "w-14 h-14 sm:w-16 sm:h-16",
       title: "text-3xl sm:text-4xl font-black tracking-tight",
       subtitle: "text-xs sm:text-sm tracking-[0.32em] mt-1",
-      scale: "scale-125",
-      imgSize: 84,
+      scale: "scale-110",
+      imgSize: 72,
     },
   };
 
@@ -48,7 +48,7 @@ export default function Logo({
   return (
     <Link
       href="/"
-      className={`inline-flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3D91]/40 rounded-xl transition-opacity hover:opacity-95 ${currentSize.wrapper} ${className}`}
+      className={`inline-flex items-center align-middle group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 rounded-xl transition-opacity hover:opacity-95 ${currentSize.wrapper} ${className}`}
       aria-label="ValoSync Global - Home"
     >
       {/* Official ValoSync Global Emblem Logo Mark */}
@@ -61,7 +61,7 @@ export default function Logo({
           width={currentSize.imgSize}
           height={currentSize.imgSize}
           priority
-          className={`w-full h-full object-contain filter drop-shadow-sm ${currentSize.scale} group-hover:scale-130 transition-transform duration-300 ease-out`}
+          className={`w-full h-full object-contain filter drop-shadow-sm ${currentSize.scale} group-hover:scale-115 transition-transform duration-300 ease-out`}
         />
       </div>
 
@@ -74,7 +74,7 @@ export default function Logo({
           VALOSYNC
         </span>
         <span
-          className={`${currentSize.subtitle} font-extrabold uppercase text-[#D4AF37] leading-none`}
+          className={`${currentSize.subtitle} font-extrabold uppercase text-gold leading-none`}
         >
           Global
         </span>
