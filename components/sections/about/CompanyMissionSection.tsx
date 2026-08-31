@@ -7,19 +7,19 @@ export default function CompanyMissionSection() {
     {
       title: "Our Mission",
       description:
-        "To liberate businesses from manual administrative bottlenecks by building high-performing custom software, intelligent CRMs, and automated workflow ecosystems.",
+        "To make specialist business and property services easier to access through clearly defined departments operating under one trusted organisation.",
       icon: <RocketIcon size={28} />,
     },
     {
       title: "Our Vision",
       description:
-        "To become a globally recognized IT solutions leader and trusted digital transformation partner for SMEs and international organizations.",
+        "To build a globally respected multi-service organisation known for professional standards, coordinated support and practical client outcomes.",
       icon: <EyeIcon size={28} />,
     },
     {
       title: "Our Core Focus",
       description:
-        "Solving high-value operational challenges through domain-specific software engineering, strict data privacy compliance, and continuous ROI delivery.",
+        "Connecting clients with the right departmental expertise while maintaining clear ownership, responsible delivery and consistent communication.",
       icon: <TargetIcon size={28} />,
     },
   ];
@@ -29,8 +29,8 @@ export default function CompanyMissionSection() {
       <div className="container">
         <SectionHeading
           badge="Mission & Vision"
-          title="Empowering Businesses Through Intelligent Technology"
-          subtitle="At ValoSync Global, we don't just write code—we re-engineer business operations to achieve unprecedented speed, accuracy, and profitability."
+          title="Bringing Specialist Expertise Together Under One Brand"
+          subtitle="ValoSync Global connects focused departments across technology, finance, property and engineering through a coordinated service model."
           center
         />
 
