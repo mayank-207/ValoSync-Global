@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import DepartmentPage, { DepartmentPageData } from "@/components/sections/departments/DepartmentPage";
+import DepartmentPage, { type DepartmentPageData } from "@/components/sections/departments/DepartmentPage";
 
 export const metadata: Metadata = {
   title: "Civil Engineering Project Support | ValoSync Global",
