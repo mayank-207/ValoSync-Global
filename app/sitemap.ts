@@ -60,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceSlugs = [
     "custom-software",
     "mobile-app-development",
-    "crm-development",
+    "application-development",
     "ai-automation",
     "web-development",
     "cloud-devops",
@@ -71,6 +71,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/services/${slug}`,
     lastModified,
     changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  const departmentSlugs = [
+    "accounting",
+    "conveyancing",
+    "civil-engineering",
+    "real-estate",
+    "home-loans",
+  ];
+
+  const departmentRoutes: MetadataRoute.Sitemap = departmentSlugs.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified,
+    changeFrequency: "monthly",
     priority: 0.85,
   }));
 
@@ -93,5 +108,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...portfolioRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...departmentRoutes, ...portfolioRoutes];
 }
