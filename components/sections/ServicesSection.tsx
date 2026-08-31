@@ -74,8 +74,8 @@ export default function ServicesSection() {
     >
       <div className="container">
         <SectionHeading
-          badge="Our Services"
-          title="Digital Solutions Built Around Real Business Needs"
+          badge="Technology Department"
+          title="Technology Services and Digital Capabilities"
           // description="From custom software and CRM platforms to cloud delivery and digital growth, we help businesses choose and implement technology that creates practical value."
           center
         />
@@ -98,7 +98,7 @@ export default function ServicesSection() {
             size="lg"
             rightIcon={<ArrowRightIcon size={18} />}
           >
-            Discuss Your Project
+            Talk to Our Technology Team
           </Button>
         </div>
       </div>
