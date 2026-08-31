@@ -22,7 +22,7 @@ import TechStackFilterShowcase, { TechCategory } from "@/components/sections/ser
 
 type ServiceSlug =
   | "custom-software"
-  | "crm-development"
+  | "application-development"
   | "ai-automation"
   | "web-development"
   | "mobile-app-development"
@@ -125,12 +125,12 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
       },
     ],
   },
-  "crm-development": {
-    title: "CRM Development",
+  "application-development": {
+    title: "Application Development",
     badge: "Intelligent Sales & Customer Management",
-    metaTitle: "Custom CRM Development Services Australia | Valosync Global",
+    metaTitle: "Custom Application Development Services Australia | Valosync Global",
     metaDescription:
-      "Build custom CRM platforms engineered for sales pipelines, automated lead scoring, client onboarding, and CRM solutions for Australian and international businesses.",
+      "Build custom business applications engineered for sales pipelines, automated lead scoring, client onboarding, and CRM solutions for Australian and international businesses.",
     heroHeadline: "Custom CRM Platforms Built for Business-Focused Sales Teams",
     heroSubtitle:
       "Eliminate clunky generic CRMs. Valosync Global engineers tailored sales pipelines, automated lead scoring, and omnichannel client management systems.",
@@ -598,7 +598,7 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
 export async function generateStaticParams() {
   return [
     { slug: "custom-software" },
-    { slug: "crm-development" },
+    { slug: "application-development" },
     { slug: "ai-automation" },
     { slug: "web-development" },
     { slug: "mobile-app-development" },
@@ -796,7 +796,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           defaultCategory={
             slug === "custom-software"
               ? "all"
-              : slug === "crm-development"
+              : slug === "application-development"
               ? "backend"
               : slug === "ai-automation"
               ? "ai-automation"
