@@ -10,25 +10,17 @@ import TeamLeadershipSection from "@/components/sections/about/TeamLeadershipSec
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Us | Australian Software Engineering & IT Solutions | Valosync Global",
+  title: "About ValoSync Global | Integrated Business & Property Services",
   description:
-    "Learn about Valosync Global, delivering bespoke software engineering, intelligent CRM development, and AI automation for Australian and international businesses.",
-  keywords: [
-    "About Valosync Global",
-    "Australian Software Engineering Firm",
-    "Custom Software Developers Australia",
-    "CRM Development Company Australia",
-    "AI Automation Agency Australia",
-    "Software Engineering Sydney Melbourne",
-    "IT Consulting Australia",
-  ],
+    "Learn how ValoSync Global connects Technology, Accounting, Conveyancing, Civil Engineering, Real Estate and Home Loan departments under one organisation.",
+  keywords: ["About ValoSync Global", "multi-service organisation", "business services Australia", "property services", "professional services"],
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About Us | Australian Software Engineering & IT Solutions | Valosync Global",
     description:
-      "Engineered technology solutions built around your business goals. Discover our team, values, and client-first delivery model for Australian and global clients.",
+      "Discover ValoSync Global's coordinated, multi-department service model for Australian and global clients.",
     url: "https://valosyncglobal.com/about",
     siteName: "Valosync Global",
     type: "website",
@@ -37,7 +29,7 @@ export const metadata: Metadata = {
         url: "/images/og-about.jpg",
         width: 1200,
         height: 630,
-        alt: "Valosync Global Team & Mission Australia",
+        alt: "ValoSync Global departments and corporate mission",
       },
     ],
   },
@@ -45,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Us | Australian Software Engineering & IT Solutions | Valosync Global",
     description:
-      "Engineered technology solutions built around your business goals for Australian and international clients.",
+      "Connected specialist services across business, property, engineering and technology.",
     images: ["/images/og-about.jpg"],
   },
 };
