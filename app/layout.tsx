@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US", "en_GB"],
     url: "https://valosyncglobal.com",
     siteName: "Valosync Global",
-    title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
+    title: "ValoSync Global | Business, Property & Technology Services",
     description:
       "Integrated technology, accounting, conveyancing, civil engineering, real estate and home-loan services for Australian and global clients.",
     images: [
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
+    title: "ValoSync Global | Business, Property & Technology Services",
     description:
-      "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
+      "Integrated technology, accounting, conveyancing, civil engineering, real estate and home-loan services for Australian and global clients.",
     images: ["/images/logo.png"],
     creator: "@valosyncglobal",
   },
