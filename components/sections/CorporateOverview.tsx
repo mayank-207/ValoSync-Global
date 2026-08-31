@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "../ui/Button";
 import {
   ArrowRightIcon,
@@ -13,6 +14,57 @@ import {
   ShieldIcon,
   UsersIcon,
 } from "../ui/Icons";
+
+const businessAreas = [
+  {
+    number: "01",
+    title: "Technology Services",
+    description: "Applications, digital platforms, automation, cloud delivery and digital growth.",
+    href: "/services",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
+    alt: "Detailed blue electronic circuit board representing technology services",
+  },
+  {
+    number: "02",
+    title: "Accounting Services",
+    description: "Structured bookkeeping, reporting, accounting and business administration support.",
+    href: "/contact",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=82",
+    alt: "Financial documents, calculator and laptop arranged for professional accounting work",
+  },
+  {
+    number: "03",
+    title: "Conveyancing Services",
+    description: "Coordinated support for property contracts, transfers, settlements and documentation.",
+    href: "/contact",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
+    alt: "House keys and property documents representing conveyancing support",
+  },
+  {
+    number: "04",
+    title: "Civil Engineering Services",
+    description: "Planning, documentation, coordination and practical project-support services.",
+    href: "/contact",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82",
+    alt: "Civil engineering team reviewing plans at a construction site",
+  },
+  {
+    number: "05",
+    title: "Real Estate Services",
+    description: "Property sales, purchases, leasing, management and market-support services.",
+    href: "/contact",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82",
+    alt: "Contemporary residential property representing real estate services",
+  },
+  {
+    number: "06",
+    title: "Home Loan Services",
+    description: "Guided support for home buyers, refinancing and property-investment lending enquiries.",
+    href: "/contact",
+    image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=82",
+    alt: "Modern family home representing home loan support",
+  },
+];
 
 const valueCards = [
   {
@@ -159,7 +211,54 @@ export default function CorporateOverview() {
         </div>
       </section>
 
-      <section className="corporate-section bg-surface" aria-labelledby="services-heading">
+      <section id="departments" className="corporate-section bg-surface" aria-labelledby="departments-heading">
+        <div className="container">
+          <div className="corporate-heading-grid">
+            <div>
+              <p className="corporate-eyebrow">Our departments</p>
+              <h2 id="departments-heading" className="corporate-title">
+                Six specialist areas. One accountable global organisation.
+              </h2>
+            </div>
+            <p className="corporate-lead">
+              Every department has equal standing, relevant expertise and a clear enquiry pathway. Choose the area that best matches your requirement.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {businessAreas.map((area) => (
+              <Link
+                key={area.title}
+                href={area.href}
+                className="group overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"
+              >
+                <div className="relative aspect-[16/9] overflow-hidden bg-primary-dark">
+                  <Image
+                    src={area.image}
+                    alt={area.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-primary-dark/10 to-transparent" aria-hidden="true" />
+                  <span className="absolute left-5 top-5 rounded-full border border-white/25 bg-primary-dark/70 px-3 py-1 text-xs font-bold tracking-widest text-gold backdrop-blur">
+                    {area.number}
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-text-primary">{area.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-text-secondary">{area.description}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary">
+                    Explore department <ArrowRightIcon size={16} className="transition-transform group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="corporate-section bg-background" aria-labelledby="services-heading">
         <div className="container">
           <div className="corporate-heading-grid">
             <div>
