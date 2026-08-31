@@ -20,7 +20,8 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden text-white"\n      style={{ background: "var(--gradient-hero)" }}
+      className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden text-white"
+      style={{ background: "var(--gradient-hero)" }}
       aria-labelledby="hero-heading"
     >
       {/* Subtle Background Lighting & Grid */}
