@@ -4,31 +4,31 @@ import { CodeIcon, UsersIcon, ShieldIcon, MarketingIcon, BrainIcon } from "@/com
 
 const teamRoles = [
   {
-    title: "Full-Stack Software Engineers",
-    focus: "Next.js, React, Node.js, Python, PostgreSQL, AWS Cloud Architecture",
+    title: "Technology Specialists",
+    focus: "Applications, platforms, automation, cloud and digital growth",
     description:
-      "Crafting high-speed frontends and resilient backend API microservices built for heavy enterprise loads.",
+      "Planning and delivering technology solutions aligned with practical operational requirements.",
     icon: <CodeIcon size={26} />,
   },
   {
-    title: "UI/UX & Graphic Designers",
-    focus: "Figma, Design Systems, Modern Typography, Responsive Micro-Interactions",
+    title: "Accounting Professionals",
+    focus: "Bookkeeping, reporting, financial administration and coordination",
     description:
-      "Creating intuitive user interfaces and cohesive brand aesthetics that captivate users and drive conversion.",
+      "Supporting clear financial records, reporting and day-to-day accounting requirements.",
     icon: <BrainIcon size={26} />,
   },
   {
-    title: "Quality Assurance (QA) Engineers",
-    focus: "Automated Testing, Security Auditing, Performance Benchmarking",
+    title: "Property and Conveyancing Specialists",
+    focus: "Transactions, documentation, leasing and property coordination",
     description:
-      "Executing end-to-end regression suites, stress tests, and vulnerability checks before every code release.",
+      "Guiding relevant property enquiries through organised communication and documentation.",
     icon: <ShieldIcon size={26} />,
   },
   {
-    title: "SEO & Digital Marketing Specialists",
-    focus: "Technical SEO, Lead Generation Funnels, Content & Analytics",
+    title: "Engineering and Lending Specialists",
+    focus: "Civil project support, home-loan enquiries and coordinated service",
     description:
-      "Optimizing organic reach, lead acquisition funnels, and customer retention campaigns for business growth.",
+      "Providing dedicated support through the department relevant to each client's objectives.",
     icon: <MarketingIcon size={26} />,
   },
 ];
@@ -39,8 +39,8 @@ export default function TeamLeadershipSection() {
       <div className="container">
         <SectionHeading
           badge="Multidisciplinary Talent"
-          title="Engineered by Experts, Built for Impact"
-          subtitle="Our team combines technical rigor, aesthetic design, quality assurance, and growth marketing under one roof."
+          title="Specialist Departments, Connected by One Standard"
+          subtitle="Our structure brings different professional capabilities together while preserving specialist ownership in every department."
           center
         />
 
