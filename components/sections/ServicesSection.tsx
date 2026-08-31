@@ -2,7 +2,6 @@ import SectionHeading from "../ui/SectionHeading";
 import ServiceCard from "../ui/ServiceCard";
 import {
   CodeIcon,
-  CrmIcon,
   BrainIcon,
   AutomationIcon,
   LayersIcon,
@@ -29,11 +28,11 @@ const services = [
     href: "/services/mobile-app-development",
   },
   {
-    icon: <CrmIcon size={28} />,
-    title: "CRM Development",
+    icon: <CodeIcon size={28} />,
+    title: "Application Development",
     description:
-      "Build custom CRM systems to streamline customer management, automate sales pipelines, organize lead tracking, and manage business operations.",
-    href: "/services/crm-development",
+      "Build web, mobile and business applications using Laravel, PHP, .NET, MEAN, MERN and technologies suited to your operating requirements.",
+    href: "/services/application-development",
   },
   {
     icon: <BrainIcon size={28} />,
