@@ -18,30 +18,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://valosyncglobal.com"),
   title: {
-    default: "ValoSync Global | Custom Software, CRM & AI Development Australia",
+    default: "ValoSync Global | Business, Property & Technology Services",
     template: "%s | Valosync Global",
   },
   description:
-    "ValoSync Global provides enterprise custom software development, bespoke CRM platforms, AI workflow automation, and cloud DevOps solutions for Australian businesses and global enterprises.",
+    "ValoSync Global brings together Technology, Accounting, Conveyancing, Civil Engineering, Real Estate and Home Loan services under one trusted global organisation.",
   keywords: [
-    "custom software development Australia",
-    "software development company Australia",
-    "CRM development Australia",
-    "custom CRM solutions Australia",
-    "AI automation agency Australia",
-    "web application development Sydney",
-    "software engineers Melbourne",
-    "IT solutions Brisbane Australia",
-    "business process automation Australia",
-    "cloud DevOps support Australia",
-    "enterprise software developers Australia",
-    "Australian software engineering firm",
-    "B2B CRM software Australia",
-    "Valosync Global",
-    "custom software Sydney",
-    "software company Australia",
-    "IT consulting Australia",
-    "Next.js web development",
+    "ValoSync Global",
+    "business services Australia",
+    "technology services Australia",
+    "accounting services",
+    "conveyancing support",
+    "civil engineering services",
+    "real estate services",
+    "home loan support",
+    "global professional services",
   ],
   authors: [{ name: "Valosync Global" }],
   creator: "Valosync Global",
@@ -59,13 +50,13 @@ export const metadata: Metadata = {
     siteName: "Valosync Global",
     title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
     description:
-      "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
+      "Integrated technology, accounting, conveyancing, civil engineering, real estate and home-loan services for Australian and global clients.",
     images: [
       {
         url: "/images/logo.png",
         width: 800,
         height: 800,
-        alt: "ValoSync Global - Custom Software & CRM Development Australia",
+        alt: "ValoSync Global integrated business and property services",
       },
     ],
   },
@@ -116,7 +107,7 @@ export const metadata: Metadata = {
     "ICBM": "-25.274398, 133.775136",
     "target-country": "AU",
   },
-  category: "technology",
+  category: "business services",
 };
 
 export const viewport: Viewport = {
