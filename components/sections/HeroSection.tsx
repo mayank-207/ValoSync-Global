@@ -10,10 +10,10 @@ import {
 } from "../ui/Icons";
 
 const proofPoints = [
-  { value: "Business-first", label: "Solution strategy" },
-  { value: "End-to-end", label: "Delivery capability" },
-  { value: "Transparent", label: "Project collaboration" },
-  { value: "Scalable", label: "Technology foundations" },
+  { value: "Six departments", label: "Specialist expertise" },
+  { value: "One group", label: "Coordinated access" },
+  { value: "Transparent", label: "Client communication" },
+  { value: "Professional", label: "Service standards" },
 ];
 
 export default function HeroSection() {
@@ -86,7 +86,7 @@ export default function HeroSection() {
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gold text-primary-dark">
                 <CheckIcon size={15} />
               </span>
-              Clear scope, milestones and ownership
+              Clear next steps, responsibility and ownership
             </div>
           </aside>
         </div>
