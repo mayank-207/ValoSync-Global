@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
-import { ArrowRightIcon, CheckCircleIcon, ZapIcon, ShieldIcon } from "@/components/ui/Icons";
+import { ArrowRightIcon, CheckCircleIcon } from "@/components/ui/Icons";
 
 export default function WhyPartnerSection() {
   const comparison = [
