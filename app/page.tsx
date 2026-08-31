@@ -1,12 +1,8 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import AboutSection from "@/components/sections/AboutSection";
-import ServicesSection from "@/components/sections/ServicesSection";
-import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
-import ProcessSection from "@/components/sections/ProcessSection";
+import CorporateOverview from "@/components/sections/CorporateOverview";
 import PortfolioSection from "@/components/sections/PortfolioSection";
-import IndustriesSection from "@/components/sections/IndustriesSection";
 import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
 
@@ -16,12 +12,8 @@ export default function Home() {
       <Header />
       <main id="main">
         <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <WhyChooseUsSection />
-        <ProcessSection />
+        <CorporateOverview />
         <PortfolioSection />
-        <IndustriesSection />
         <FAQSection />
         <CTASection />
       </main>
@@ -29,4 +21,3 @@ export default function Home() {
     </>
   );
 }
-
