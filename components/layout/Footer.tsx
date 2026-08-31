@@ -27,6 +27,7 @@ const footerLinks = {
     { label: "Digital Marketing", href: "/services/digital-marketing" },
   ],
   departments: [
+    { label: "Technology", href: "/services" },
     { label: "Accounting", href: "/accounting" },
     { label: "Conveyancing", href: "/conveyancing" },
     { label: "Civil Engineering", href: "/civil-engineering" },
@@ -101,7 +102,7 @@ export default function Footer() {
               className="text-sm leading-relaxed mb-6 max-w-md"
               style={{ color: "var(--color-inverse-muted)" }}
             >
-              ValoSync Global connects technology, accounting, conveyancing, civil engineering, real estate and home-loan support through clearly defined service departments.
+              ValoSync Global is an umbrella organisation connecting six specialist departments across technology, finance, property and project services.
             </p>
             <div className="flex flex-col gap-3.5">
               {contactInfo.map((item) => (
@@ -165,7 +166,7 @@ export default function Footer() {
               className="text-xs font-bold uppercase tracking-wider mb-5"
               style={{ color: "var(--text-light)" }}
             >
-              Services
+              Technology Services
             </h3>
             <ul className="flex flex-col gap-3">
               {footerLinks.services.map((link) => (
