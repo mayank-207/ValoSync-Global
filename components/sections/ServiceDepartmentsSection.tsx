@@ -52,13 +52,13 @@ export default function ServiceDepartmentsSection() {
       <div className="container">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <span className="mb-4 inline-flex rounded-full border border-[#D4AF37]/35 bg-[#D4AF37]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#D4AF37]">
-            Service Departments
+            Our Business Departments
           </span>
           <h2 className="mb-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Expertise Across Technology, Business and Property
+            Six Departments. One Global Organisation.
           </h2>
           <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
-            Choose the department relevant to your needs. Each service area has its own specialists, process and enquiry pathway.
+            ValoSync Global brings distinct capabilities together under one trusted brand. Each department has equal standing, dedicated expertise and a clear enquiry pathway.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
