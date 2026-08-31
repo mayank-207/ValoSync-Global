@@ -22,7 +22,6 @@ const navItems = [
       { label: "Home Loan Services", href: "/home-loans" },
     ],
   },
-  { label: "Industries", href: "/industries" },
   { label: "Contact", href: "/contact" },
 ];
 
