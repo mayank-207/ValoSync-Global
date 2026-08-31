@@ -11,22 +11,10 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   {
-    label: "Services",
-    href: "/services",
-    dropdown: [
-      { label: "Custom Software Development", href: "/services/custom-software" },
-      { label: "Mobile App Development", href: "/services/mobile-app-development" },
-      { label: "Application Development", href: "/services/application-development" },
-      { label: "AI Automation", href: "/services/ai-automation" },
-      { label: "Web Development", href: "/services/web-development" },
-      { label: "Cloud & DevOps Support", href: "/services/cloud-devops" },
-      { label: "Digital Marketing", href: "/services/digital-marketing" },
-    ],
-  },
-  {
-    label: "Departments",
+    label: "Our Departments",
     href: "/#departments",
     dropdown: [
+      { label: "Technology Services", href: "/services" },
       { label: "Accounting Services", href: "/accounting" },
       { label: "Conveyancing Services", href: "/conveyancing" },
       { label: "Civil Engineering Services", href: "/civil-engineering" },
