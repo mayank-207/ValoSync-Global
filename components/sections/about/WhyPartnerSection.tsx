@@ -6,29 +6,29 @@ import { ArrowRightIcon, CheckCircleIcon, ZapIcon, ShieldIcon } from "@/componen
 export default function WhyPartnerSection() {
   const comparison = [
     {
-      feature: "Custom Workflow Architecture",
-      valosync: "100% Tailored to your exact business operations",
-      others: "Rigid pre-made templates with forced limits",
+      feature: "Service Access",
+      valosync: "One clear entry point across six departments",
+      others: "Separate providers and disconnected enquiries",
     },
     {
-      feature: "Data Privacy & Compliance",
-      valosync: "Built-in Privacy Act, HIPAA & ISO standards",
-      others: "Ad-hoc compliance added as an afterthought",
+      feature: "Specialist Ownership",
+      valosync: "Requirements directed to the relevant department",
+      others: "Unclear responsibility across generalist teams",
     },
     {
-      feature: "Technology Stack",
-      valosync: "Modern Next.js 16, React, Node.js, Python AI",
-      others: "Outdated monolithic platforms & bloated code",
+      feature: "Cross-Department Coordination",
+      valosync: "Connected support when requirements overlap",
+      others: "Clients coordinate multiple providers themselves",
     },
     {
-      feature: "Support & Communication",
-      valosync: "Dedicated technical leads with AEST/AWST availability",
-      others: "Offshore ticket queues with slow response times",
+      feature: "Communication",
+      valosync: "Defined contacts, responsibilities and next steps",
+      others: "Inconsistent updates across separate suppliers",
     },
     {
-      feature: "Full Lifecycle Ownership",
-      valosync: "Strategy, Custom Software, CRM, AI & Growth Marketing",
-      others: "Siloed developers who ignore marketing & CRM integration",
+      feature: "Professional Standards",
+      valosync: "Consistent service principles under one parent brand",
+      others: "Different standards across unrelated providers",
     },
   ];
 
@@ -38,7 +38,7 @@ export default function WhyPartnerSection() {
         <SectionHeading
           badge="The Valosync Advantage"
           title="Why Leading Businesses Choose ValoSync Global"
-          subtitle="A comparative look at how our engineering excellence and client dedication set us apart."
+          subtitle="A coordinated model designed to make specialist business and property services easier to navigate."
           center
           titleClassName="text-white"
         />
@@ -81,7 +81,7 @@ export default function WhyPartnerSection() {
             size="lg"
             rightIcon={<ArrowRightIcon size={18} />}
           >
-            Start Your Project Consultation
+            Discuss Your Requirements
           </Button>
         </div>
       </div>
