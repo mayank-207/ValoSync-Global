@@ -10,7 +10,6 @@ import {
   ZapIcon,
   SparkleIcon,
   CodeIcon,
-  CrmIcon,
   BrainIcon,
   AutomationIcon,
   LayersIcon,
@@ -796,7 +795,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           defaultCategory={
             slug === "custom-software"
               ? "all"
-              : slug === "crm-development"
+              : slug === "application-development"
               ? "backend"
               : slug === "ai-automation"
               ? "ai-automation"
