@@ -62,7 +62,7 @@ export default function Logo({
           width={currentSize.imgSize}
           height={currentSize.imgSize}
           priority
-          className={`w-full h-full object-contain filter drop-shadow-sm ${currentSize.scale} group-hover:scale-115 transition-transform duration-300 ease-out`}
+          className={`W-8 object-contain filter drop-shadow-sm ${currentSize.scale} group-hover:scale-115 transition-transform duration-300 ease-out`}
         />
       </div>
 
