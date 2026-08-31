@@ -16,26 +16,26 @@ export default function AboutSection() {
     "Market Understanding",
     "Clear and Collaborative Delivery",
     "Cross-Functional Project Support",
-    "Security-Conscious Development",
-    "Post-Launch Support Options",
-    "Solutions Tailored to Your Operations",
+    "Professional and Responsible Delivery",
+    "Ongoing Client Support Options",
+    "Services Aligned to Your Requirements",
   ];
 
   const highlights = [
     {
       icon: <AwardIcon size={24} />,
       title: "Quality First",
-      description: "Structured QA, code reviews and release checks.",
+      description: "Consistent standards and clear review points across engagements.",
     },
     {
       icon: <UsersIcon size={24} />,
       title: "Dedicated Teams",
-      description: "Development, design, QA and project coordination.",
+      description: "Specialists aligned to the department relevant to your needs.",
     },
     {
       icon: <BriefcaseIcon size={24} />,
-      title: "Scalable Architecture",
-      description: "Architecture selected to support your current and future needs.",
+      title: "Connected Expertise",
+      description: "Distinct departments supported by one coordinated organisation.",
     },
   ];
 
@@ -65,7 +65,7 @@ export default function AboutSection() {
                     ValoSync Global Standard
                   </h3>
                   <p className="text-xs text-slate-300">
-                    Practical Technology. Clear Business Outcomes.
+                    Specialist Expertise. Connected Service.
                   </p>
                 </div>
               </div>
@@ -110,10 +110,10 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white">
-                      Collaborative Technology Delivery
+                      Coordinated Department Support
                     </p>
                     <p className="text-xs text-slate-300">
-                      Clear communication from scope to launch
+                      A clear pathway from enquiry to delivery
                     </p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export default function AboutSection() {
                   Post-Launch Support
                 </p>
                 <p className="text-xs text-[#4A5568]">
-                  Maintenance options available
+                  Support aligned to each service
                 </p>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function AboutSection() {
           <div className="lg:col-span-6">
             <SectionHeading
               // eyebrow="About Valosync Global"
-              title="Built around your business, powered by practical technology."
+              title="One organisation, multiple specialist departments."
               // description="ValoSync Global partners with businesses to build custom software, CRM platforms, web applications and connected digital solutions. We combine business understanding with practical technology to improve operations and support long-term growth."
               align="left"
               className="mb-8"
