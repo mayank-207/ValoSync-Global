@@ -198,11 +198,16 @@ export default function CTASection() {
                           className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] transition-all"
                         >
                           <option value="Custom Software Development" className="text-slate-900 bg-white">Custom Software</option>
-                          <option value="CRM Development" className="text-slate-900 bg-white">CRM Development</option>
+                          <option value="Application Development" className="text-slate-900 bg-white">Application Development</option>
                           <option value="AI Automation" className="text-slate-900 bg-white">AI Automation</option>
                           <option value="Business Process Automation" className="text-slate-900 bg-white">Automation Process</option>
                           <option value="Web Development" className="text-slate-900 bg-white">Web Development</option>
                           <option value="Digital Marketing" className="text-slate-900 bg-white">Digital Marketing & SEO</option>
+                          <option value="Accounting Services" className="text-slate-900 bg-white">Accounting Services</option>
+                          <option value="Conveyancing Services" className="text-slate-900 bg-white">Conveyancing Services</option>
+                          <option value="Civil Engineering Services" className="text-slate-900 bg-white">Civil Engineering Services</option>
+                          <option value="Real Estate Services" className="text-slate-900 bg-white">Real Estate Services</option>
+                          <option value="Home Loan Services" className="text-slate-900 bg-white">Home Loan Services</option>
                         </select>
                       </div>
                     </div>
