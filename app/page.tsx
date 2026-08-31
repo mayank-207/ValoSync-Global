@@ -17,13 +17,13 @@ export default function Home() {
       <Header />
       <main id="main">
         <HeroSection />
-        <AboutSection />
-        <ServicesSection />
         <ServiceDepartmentsSection />
+        <AboutSection />
         <WhyChooseUsSection />
         <ProcessSection />
-        <PortfolioSection />
         <IndustriesSection />
+        <PortfolioSection />
+        <ServicesSection />
         <FAQSection />
         <CTASection />
       </main>
