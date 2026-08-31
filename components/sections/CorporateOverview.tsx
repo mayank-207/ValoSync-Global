@@ -1,19 +1,38 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../ui/Button";
 import {
   ArrowRightIcon,
-  AutomationIcon,
-  BrainIcon,
   BriefcaseIcon,
   CheckIcon,
-  CodeIcon,
   GlobeIcon,
   LayersIcon,
-  MarketingIcon,
   ShieldIcon,
   UsersIcon,
 } from "../ui/Icons";
+
+const valueCards = [
+  {
+    icon: <GlobeIcon size={26} />,
+    title: "One global organisation",
+    description: "A single parent brand connecting multiple specialist service areas with a consistent professional standard.",
+  },
+  {
+    icon: <BriefcaseIcon size={26} />,
+    title: "Six focused departments",
+    description: "Dedicated capabilities across technology, accounting, conveyancing, civil engineering, real estate and home loans.",
+  },
+  {
+    icon: <UsersIcon size={26} />,
+    title: "Coordinated client support",
+    description: "A clear starting point for every enquiry, including requirements that involve more than one service area.",
+  },
+  {
+    icon: <LayersIcon size={26} />,
+    title: "Practical delivery",
+    description: "Defined responsibilities, transparent communication and an engagement model shaped around each requirement.",
+  },
+];
 
 const businessAreas = [
   {
@@ -28,15 +47,15 @@ const businessAreas = [
     number: "02",
     title: "Accounting Services",
     description: "Structured bookkeeping, reporting, accounting and business administration support.",
-    href: "/contact",
+    href: "/accounting",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=82",
-    alt: "Financial documents, calculator and laptop arranged for professional accounting work",
+    alt: "Financial documents and calculator arranged for professional accounting work",
   },
   {
     number: "03",
     title: "Conveyancing Services",
     description: "Coordinated support for property contracts, transfers, settlements and documentation.",
-    href: "/contact",
+    href: "/conveyancing",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
     alt: "House keys and property documents representing conveyancing support",
   },
@@ -44,7 +63,7 @@ const businessAreas = [
     number: "04",
     title: "Civil Engineering Services",
     description: "Planning, documentation, coordination and practical project-support services.",
-    href: "/contact",
+    href: "/civil-engineering",
     image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82",
     alt: "Civil engineering team reviewing plans at a construction site",
   },
@@ -52,7 +71,7 @@ const businessAreas = [
     number: "05",
     title: "Real Estate Services",
     description: "Property sales, purchases, leasing, management and market-support services.",
-    href: "/contact",
+    href: "/real-estate",
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82",
     alt: "Contemporary residential property representing real estate services",
   },
@@ -60,148 +79,51 @@ const businessAreas = [
     number: "06",
     title: "Home Loan Services",
     description: "Guided support for home buyers, refinancing and property-investment lending enquiries.",
-    href: "/contact",
+    href: "/home-loans",
     image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=82",
     alt: "Modern family home representing home loan support",
   },
 ];
 
-const valueCards = [
+const engagementSteps = [
   {
-    icon: <BriefcaseIcon size={26} />,
-    title: "Business-led solutions",
-    description:
-      "We begin with your operational priorities, then shape the right technology and delivery model around them.",
+    title: "Understand your requirement",
+    description: "We clarify your objectives, priorities and the type of specialist support required.",
   },
   {
-    icon: <CodeIcon size={26} />,
-    title: "Modern technology",
-    description:
-      "Practical platforms, applications and integrations engineered for reliability, usability and long-term value.",
+    title: "Connect the right department",
+    description: "Your enquiry is directed to the department with the most relevant capability and responsibility.",
   },
   {
-    icon: <UsersIcon size={26} />,
-    title: "Cross-functional expertise",
-    description:
-      "Strategy, design, engineering, QA and growth specialists coordinated through one accountable delivery team.",
+    title: "Confirm scope and next steps",
+    description: "The responsible team outlines the service pathway, expected inputs and commercial approach.",
   },
   {
-    icon: <LayersIcon size={26} />,
-    title: "Scalable execution",
-    description:
-      "Clear phases, measurable milestones and maintainable architecture that can evolve as your business grows.",
-  },
-];
-
-const services = [
-  {
-    number: "01",
-    icon: <CodeIcon size={25} />,
-    title: "Custom Software & Applications",
-    description:
-      "Purpose-built web and mobile applications that simplify workflows, improve visibility and support business growth.",
-    href: "/services/custom-software",
-  },
-  {
-    number: "02",
-    icon: <LayersIcon size={25} />,
-    title: "CRM & Business Platforms",
-    description:
-      "Connected systems for customers, projects, referrals, operations, reporting and cross-team collaboration.",
-    href: "/services/crm-development",
-  },
-  {
-    number: "03",
-    icon: <BrainIcon size={25} />,
-    title: "AI & Intelligent Automation",
-    description:
-      "Practical automation for repetitive processes, document handling, customer engagement and internal knowledge.",
-    href: "/services/ai-automation",
-  },
-  {
-    number: "04",
-    icon: <GlobeIcon size={25} />,
-    title: "Web & Digital Experience",
-    description:
-      "Fast, accessible and SEO-ready websites designed to communicate credibility and convert business enquiries.",
-    href: "/services/web-development",
-  },
-  {
-    number: "05",
-    icon: <AutomationIcon size={25} />,
-    title: "Cloud & DevOps Support",
-    description:
-      "Reliable deployment, infrastructure, monitoring and delivery practices for secure, scalable digital products.",
-    href: "/services/cloud-devops",
-  },
-  {
-    number: "06",
-    icon: <MarketingIcon size={25} />,
-    title: "Digital Growth Services",
-    description:
-      "SEO, paid campaigns, content and social media support aligned to visibility, demand generation and measurable leads.",
-    href: "/services/digital-marketing",
-  },
-];
-
-const industries = [
-  "Professional Services",
-  "Finance & Accounting",
-  "Real Estate",
-  "Civil Engineering",
-  "Home Loans",
-  "Healthcare",
-  "Retail & Commerce",
-  "Logistics",
-];
-
-const deliveryGroups = [
-  {
-    title: "Your business challenge",
-    description:
-      "We clarify the operational problem, stakeholders, risks and expected outcomes before recommending a solution.",
-    points: ["Discovery workshops", "Process mapping", "Scope and priority definition"],
-  },
-  {
-    title: "Technology enablement",
-    description:
-      "We translate approved priorities into usable, secure and maintainable digital systems.",
-    points: ["Application engineering", "Integrations and automation", "Cloud-ready delivery"],
-  },
-  {
-    title: "Controlled execution",
-    description:
-      "Transparent milestones and review cycles keep business and delivery teams aligned.",
-    points: ["Dedicated coordination", "Quality assurance", "Progress visibility"],
-  },
-  {
-    title: "Continuous improvement",
-    description:
-      "After launch, we support stability, adoption and phased enhancement based on real operational feedback.",
-    points: ["Handover and training", "Maintenance options", "Growth roadmap"],
+    title: "Deliver with visibility",
+    description: "Communication, milestones and responsibilities remain clear throughout the engagement.",
   },
 ];
 
 export default function CorporateOverview() {
   return (
     <>
-      <section className="corporate-section bg-background" aria-labelledby="value-heading">
+      <section className="corporate-section bg-background" aria-labelledby="overview-heading">
         <div className="container">
           <div className="corporate-heading-grid">
             <div>
-              <p className="corporate-eyebrow">What we do</p>
-              <h2 id="value-heading" className="corporate-title">
-                Simplifying operations for a complex business world.
+              <p className="corporate-eyebrow">Who we are</p>
+              <h2 id="overview-heading" className="corporate-title">
+                Connected expertise for a changing business environment.
               </h2>
             </div>
             <p className="corporate-lead">
-              ValoSync Global combines business understanding, technology and disciplined execution to create solutions that are practical today and ready for tomorrow.
+              ValoSync Global is the parent organisation for focused business, property and professional-service departments. We make specialist support easier to access through one coordinated group.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-px mt-12 overflow-hidden rounded-2xl border border-border bg-border">
+          <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 xl:grid-cols-4">
             {valueCards.map((item) => (
-              <article key={item.title} className="group bg-white p-7 lg:p-8 min-h-64 transition-colors hover:bg-surface">
+              <article key={item.title} className="group min-h-64 bg-white p-7 transition-colors hover:bg-surface lg:p-8">
                 <span className="corporate-icon">{item.icon}</span>
                 <h3 className="mt-10 text-xl font-bold text-text-primary">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-text-secondary">{item.description}</p>
@@ -217,11 +139,11 @@ export default function CorporateOverview() {
             <div>
               <p className="corporate-eyebrow">Our departments</p>
               <h2 id="departments-heading" className="corporate-title">
-                Six specialist areas. One accountable global organisation.
+                Six specialist areas. Equal importance. One trusted organisation.
               </h2>
             </div>
             <p className="corporate-lead">
-              Every department has equal standing, relevant expertise and a clear enquiry pathway. Choose the area that best matches your requirement.
+              Each department has dedicated capabilities, its own service pathway and equal standing within ValoSync Global. Select the area that best matches your requirement.
             </p>
           </div>
 
@@ -258,121 +180,73 @@ export default function CorporateOverview() {
         </div>
       </section>
 
-      <section className="corporate-section bg-background" aria-labelledby="services-heading">
-        <div className="container">
-          <div className="corporate-heading-grid">
-            <div>
-              <p className="corporate-eyebrow">Integrated services</p>
-              <h2 id="services-heading" className="corporate-title">
-                One delivery partner across strategy, technology and growth.
-              </h2>
-            </div>
-            <div>
-              <p className="corporate-lead">
-                Our service portfolio supports the full digital lifecycle—from defining the right solution through implementation, launch and ongoing improvement.
-              </p>
-              <Link href="/services" className="corporate-text-link">
-                View all services <ArrowRightIcon size={17} />
-              </Link>
-            </div>
+      <section className="corporate-industry-band" aria-labelledby="connected-heading">
+        <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <p className="corporate-eyebrow text-gold">Connected service model</p>
+            <h2 id="connected-heading" className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              The right expertise, without navigating separate organisations.
+            </h2>
+            <p className="mt-5 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
+              Some requirements sit within one department. Others may involve finance, property, engineering or technology together. Our umbrella structure provides a clear starting point.
+            </p>
+            <Button as="link" href="/contact" variant="gold" size="md" className="mt-8" rightIcon={<ArrowRightIcon size={17} />}>
+              Discuss your requirements
+            </Button>
           </div>
-
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 mt-12">
-            {services.map((service) => (
-              <article key={service.title} className="corporate-service-card group">
-                <div className="flex items-start justify-between gap-4">
-                  <span className="corporate-icon">{service.icon}</span>
-                  <span className="text-xs font-bold tracking-widest text-text-muted">{service.number}</span>
-                </div>
-                <h3 className="mt-8 text-xl font-bold text-text-primary">{service.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-text-secondary">{service.description}</p>
-                <Link href={service.href} className="corporate-card-link" aria-label={`Learn more about ${service.title}`}>
-                  Learn more <ArrowRightIcon size={16} />
-                </Link>
-              </article>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              "Dedicated department expertise",
+              "Coordinated initial assessment",
+              "Clear ownership and communication",
+              "Professional service standards",
+            ].map((point) => (
+              <div key={point} className="flex items-start gap-3 border-b border-white/15 py-5 text-sm font-semibold text-white">
+                <span className="mt-0.5 text-gold"><CheckIcon size={17} /></span>
+                {point}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="corporate-industry-band" aria-labelledby="industries-heading">
-        <div className="container">
-          <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-20">
-            <div>
-              <p className="corporate-eyebrow text-gold">Industries</p>
-              <h2 id="industries-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-                Domain-aware solutions, built around real operations.
-              </h2>
-              <p className="mt-5 max-w-xl text-sm sm:text-base leading-7 text-slate-300">
-                We combine technology capability with an understanding of how service-based and operational businesses actually work.
-              </p>
-              <Button as="link" href="/industries" variant="gold" size="md" className="mt-8" rightIcon={<ArrowRightIcon size={17} />}>
-                Explore industries
-              </Button>
-            </div>
-            <div className="grid sm:grid-cols-2 border-t border-white/15">
-              {industries.map((industry, index) => (
-                <Link
-                  key={industry}
-                  href="/industries"
-                  className="group flex items-center justify-between gap-4 py-5 border-b border-white/15 sm:odd:pr-6 sm:even:pl-6 text-sm font-semibold text-white hover:text-gold transition-colors"
-                >
-                  <span><span className="mr-3 text-xs text-slate-500">{String(index + 1).padStart(2, "0")}</span>{industry}</span>
-                  <ArrowRightIcon size={16} className="transition-transform group-hover:translate-x-1" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="corporate-section bg-background" aria-labelledby="delivery-heading">
+      <section className="corporate-section bg-background" aria-labelledby="engagement-heading">
         <div className="container">
           <div className="corporate-heading-grid">
             <div>
-              <p className="corporate-eyebrow">What we deliver</p>
-              <h2 id="delivery-heading" className="corporate-title">
-                Business outcomes supported by clear, accountable execution.
+              <p className="corporate-eyebrow">How we engage</p>
+              <h2 id="engagement-heading" className="corporate-title">
+                A clear pathway from enquiry to accountable delivery.
               </h2>
             </div>
             <p className="corporate-lead">
-              Our approach connects people, process and technology. Every engagement is structured around visibility, quality and measurable progress.
+              Our approach is designed to make a diversified service organisation simple to navigate while preserving specialist ownership within every department.
             </p>
           </div>
 
           <div className="mt-12 border-t border-border">
-            {deliveryGroups.map((group, index) => (
-              <article key={group.title} className="grid lg:grid-cols-[80px_0.8fr_1.2fr] gap-5 lg:gap-10 py-8 border-b border-border">
+            {engagementSteps.map((step, index) => (
+              <article key={step.title} className="grid gap-5 border-b border-border py-8 lg:grid-cols-[80px_0.8fr_1.2fr] lg:gap-10">
                 <span className="text-sm font-bold text-primary">{String(index + 1).padStart(2, "0")}</span>
-                <div>
-                  <h3 className="text-xl font-bold text-text-primary">{group.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-text-secondary">{group.description}</p>
-                </div>
-                <ul className="grid sm:grid-cols-3 gap-3 lg:pt-1">
-                  {group.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2 text-sm font-semibold text-text-primary">
-                      <span className="mt-0.5 text-primary"><CheckIcon size={16} /></span>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-xl font-bold text-text-primary">{step.title}</h3>
+                <p className="text-sm leading-7 text-text-secondary">{step.description}</p>
               </article>
             ))}
           </div>
 
-          <div className="mt-12 corporate-trust-panel">
+          <div className="corporate-trust-panel mt-12">
             <div>
-              <p className="corporate-eyebrow">Why ValoSync</p>
-              <h3 className="text-2xl sm:text-3xl font-bold text-text-primary">
-                A focused team, transparent communication and solutions built for practical adoption.
+              <p className="corporate-eyebrow">The ValoSync standard</p>
+              <h3 className="text-2xl font-bold text-text-primary sm:text-3xl">
+                Specialist knowledge, coordinated service and transparent communication.
               </h3>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: <ShieldIcon size={20} />, label: "Security-conscious delivery" },
-                { icon: <UsersIcon size={20} />, label: "Cross-functional project team" },
-                { icon: <GlobeIcon size={20} />, label: "Global delivery perspective" },
-                { icon: <LayersIcon size={20} />, label: "Scalable solution architecture" },
+                { icon: <ShieldIcon size={20} />, label: "Responsible service delivery" },
+                { icon: <UsersIcon size={20} />, label: "Relevant specialist teams" },
+                { icon: <GlobeIcon size={20} />, label: "Global business perspective" },
+                { icon: <LayersIcon size={20} />, label: "Connected department model" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-3 text-sm font-semibold text-text-primary">
                   <span className="text-primary">{item.icon}</span>
