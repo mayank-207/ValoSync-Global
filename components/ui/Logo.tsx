@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logoImg from "@/public/images/logo.png";
 
 type LogoProps = {
   variant?: "dark" | "light";
@@ -56,7 +57,7 @@ export default function Logo({
         className={`relative flex-shrink-0 flex items-center justify-center overflow-visible ${currentSize.emblem}`}
       >
         <Image
-          src="/images/logo.png"
+          src={logoImg}
           alt="ValoSync Global Emblem Logo"
           width={currentSize.imgSize}
           height={currentSize.imgSize}
