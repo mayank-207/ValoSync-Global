@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    ...["accounting", "conveyancing", "civil-engineering", "real-estate", "home-loans"].map((department) => ({
+      url: `${baseUrl}/${department}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    })),
     {
       url: `${baseUrl}/portfolio`,
       lastModified,
