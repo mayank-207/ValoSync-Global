@@ -8,14 +8,13 @@ import {
   MapPinIcon,
 } from "../ui/Icons";
 
-const serviceLinks = [
-  { label: "Custom Software", href: "/services/custom-software" },
-  { label: "Application Development", href: "/services/mobile-app-development" },
-  { label: "CRM Platforms", href: "/services/crm-development" },
-  { label: "AI Automation", href: "/services/ai-automation" },
-  { label: "Web Development", href: "/services/web-development" },
-  { label: "Cloud & DevOps", href: "/services/cloud-devops" },
-  { label: "Digital Growth", href: "/services/digital-marketing" },
+const departmentLinks = [
+  { label: "Technology Services", href: "/services" },
+  { label: "Accounting Services", href: "/accounting" },
+  { label: "Conveyancing Services", href: "/conveyancing" },
+  { label: "Civil Engineering Services", href: "/civil-engineering" },
+  { label: "Real Estate Services", href: "/real-estate" },
+  { label: "Home Loan Services", href: "/home-loans" },
 ];
 
 const companyLinks = [
@@ -52,17 +51,17 @@ export default function Footer() {
           <div>
             <Logo variant="light" />
             <p className="mt-6 max-w-md text-sm leading-7 text-slate-300">
-              ValoSync Global combines business understanding and technology execution to deliver custom applications, connected platforms, automation and sustainable digital growth.
+              ValoSync Global is an umbrella organisation connecting specialist departments across technology, finance, property and project services.
             </p>
             <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-gold">
-              Synchronizing Ideas with Technology
+              Connected Expertise. Coordinated Delivery.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-gold">Services</h2>
+            <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-gold">Our Departments</h2>
             <ul className="mt-5 grid sm:grid-cols-2 gap-x-6 gap-y-3">
-              {serviceLinks.map((link) => (
+              {departmentLinks.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-sm text-slate-300 hover:text-white transition-colors">
                     {link.label}
