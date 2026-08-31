@@ -12,7 +12,7 @@ export default function CTASection() {
     name: "",
     email: "",
     phone: "",
-    service: "Custom Software Development",
+    service: "Technology Services",
     message: "",
   });
 
@@ -64,16 +64,16 @@ export default function CTASection() {
             <div className="lg:col-span-6 text-white">
               <span className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-full mb-6 border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37]">
                 <SparkleIcon size={14} />
-                Start a Project Conversation
+                Start a Service Conversation
               </span>
 
               <h2
                 id="cta-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white"
               >
-                Ready to Turn Your{" "}
+                Ready to Move Your{" "}
                 <span className="block text-[#D4AF37] mt-1">
-                  Business Challenge Into a Working Solution?
+                  Next Requirement Forward?
                 </span>
               </h2>
 
@@ -83,9 +83,9 @@ export default function CTASection() {
 
               <div className="space-y-4">
                 {[
-                  "Initial Project Discovery Conversation",
-                  "Confidentiality Options for Sensitive Projects",
-                  "Clear Scope, Milestones and Commercial Proposal",
+                  "Initial Needs and Service Discovery",
+                  "Connection to the Relevant Department",
+                  "Clear Next Steps and Engagement Pathway",
                 ].map((point) => (
                   <div key={point} className="flex items-center gap-3 text-sm font-medium">
                     <span className="p-1 rounded-full bg-[#D4AF37]/20 text-[#D4AF37]">
@@ -106,7 +106,7 @@ export default function CTASection() {
                       <CheckCircleIcon size={36} />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900">
-                      Consultation Request Sent!
+                      Enquiry Sent!
                     </h3>
                     <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
                       Thank you, <strong className="text-[#0D47A1]">{formData.name}</strong>. Our team will review your requirements and contact you at <span className="font-semibold text-slate-900">{formData.email}</span> as soon as possible.
@@ -123,10 +123,10 @@ export default function CTASection() {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <h3 className="text-xl font-bold mb-1 text-slate-900">
-                        Book a Free Consultation
+                        Request a Consultation
                       </h3>
                       <p className="text-xs text-slate-500 mb-4">
-                        Share a few details so we can prepare for a useful project conversation.
+                        Share a few details and we will direct your enquiry to the relevant department.
                       </p>
                     </div>
 
@@ -197,7 +197,7 @@ export default function CTASection() {
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                           className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] transition-all"
                         >
-                          <option value="Custom Software Development" className="text-slate-900 bg-white">Custom Software</option>
+                          <option value="Technology Services" className="text-slate-900 bg-white">Technology Services</option>
                           <option value="Application Development" className="text-slate-900 bg-white">Application Development</option>
                           <option value="AI Automation" className="text-slate-900 bg-white">AI Automation</option>
                           <option value="Business Process Automation" className="text-slate-900 bg-white">Automation Process</option>
