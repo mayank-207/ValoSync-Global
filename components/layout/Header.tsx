@@ -74,7 +74,7 @@ export default function Header() {
           aria-label="Main navigation"
         >
           <Logo
-            variant={isScrolled || isMobileMenuOpen ? "dark" : "light"}
+            variant={isScrolled || isMobileMenuOpen || pathname === "/" ? "dark" : "light"}
             className="flex-shrink-0"
           />
 
