@@ -23,7 +23,6 @@ const navItems = [
     ],
   },
   { label: "Industries", href: "/industries" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
 ];
 
