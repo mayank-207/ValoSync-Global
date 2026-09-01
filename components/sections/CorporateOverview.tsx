@@ -20,7 +20,7 @@ const businessAreas = [
     number: "01",
     title: "Technology Services",
     description: "Applications, digital platforms, automation, cloud delivery and digital growth.",
-    href: "/services",
+    href: "/departments/technology",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
     alt: "Detailed blue electronic circuit board representing technology services",
   },
@@ -28,7 +28,7 @@ const businessAreas = [
     number: "02",
     title: "Accounting Services",
     description: "Structured bookkeeping, reporting, accounting and business administration support.",
-    href: "/contact",
+    href: "/departments/accounting",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=82",
     alt: "Financial documents, calculator and laptop arranged for professional accounting work",
   },
@@ -36,7 +36,7 @@ const businessAreas = [
     number: "03",
     title: "Conveyancing Services",
     description: "Coordinated support for property contracts, transfers, settlements and documentation.",
-    href: "/contact",
+    href: "/departments/conveyancing",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
     alt: "House keys and property documents representing conveyancing support",
   },
@@ -44,7 +44,7 @@ const businessAreas = [
     number: "04",
     title: "Civil Engineering Services",
     description: "Planning, documentation, coordination and practical project-support services.",
-    href: "/contact",
+    href: "/departments/civil-engineering",
     image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82",
     alt: "Civil engineering team reviewing plans at a construction site",
   },
@@ -52,7 +52,7 @@ const businessAreas = [
     number: "05",
     title: "Real Estate Services",
     description: "Property sales, purchases, leasing, management and market-support services.",
-    href: "/contact",
+    href: "/departments/real-estate",
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82",
     alt: "Contemporary residential property representing real estate services",
   },
@@ -60,9 +60,57 @@ const businessAreas = [
     number: "06",
     title: "Home Loan Services",
     description: "Guided support for home buyers, refinancing and property-investment lending enquiries.",
-    href: "/contact",
+    href: "/departments/home-loans",
     image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=82",
     alt: "Modern family home representing home loan support",
+  },
+  {
+    number: "07",
+    title: "Town Planning Services",
+    description: "Council DA approvals, site zoning analysis, environmental planning & subdivision advice.",
+    href: "/departments/town-planning",
+    image: "/images/town-planning.jpg",
+    alt: "Town planning blueprints and development layout",
+  },
+  {
+    number: "08",
+    title: "Architecture & Design",
+    description: "Residential & commercial architectural drafting, 3D renders & building code compliance.",
+    href: "/departments/architecture",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=82",
+    alt: "Modern architectural building design",
+  },
+  {
+    number: "09",
+    title: "Financial Planning & Wealth",
+    description: "Strategic investment portfolios, SMSF creation, superannuation & retirement planning.",
+    href: "/departments/financial-planning",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=82",
+    alt: "Financial planning and investment growth consulting",
+  },
+  {
+    number: "10",
+    title: "Legal & Corporate Advisory",
+    description: "Commercial contracts, IP protection, shareholder deeds & legal dispute resolution.",
+    href: "/departments/legal-advisory",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=82",
+    alt: "Corporate legal gavel and contract documents",
+  },
+  {
+    number: "11",
+    title: "Insurance & Risk Advisory",
+    description: "Commercial liability, landlord protection, cyber security risk cover & claims advocacy.",
+    href: "/departments/insurance",
+    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=82",
+    alt: "Corporate risk protection and insurance concept",
+  },
+  {
+    number: "12",
+    title: "HR & Talent Advisory",
+    description: "Executive recruitment, Fair Work compliance, offshore team building & HR frameworks.",
+    href: "/departments/hr-advisory",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=82",
+    alt: "Corporate executive team collaborating",
   },
 ];
 
@@ -217,7 +265,7 @@ export default function CorporateOverview() {
             <div>
               <p className="corporate-eyebrow">Our departments</p>
               <h2 id="departments-heading" className="corporate-title">
-                Six specialist areas. One accountable global organisation.
+                Twelve specialist areas. One accountable global organisation.
               </h2>
             </div>
             <p className="corporate-lead">

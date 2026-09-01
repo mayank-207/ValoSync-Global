@@ -59,8 +59,8 @@ export default function HeroSection() {
               >
                 Schedule a consultation
               </Button>
-              <Link href="#departments" className="corporate-hero-link">
-                Explore our departments <ArrowRightIcon size={18} />
+              <Link href="/departments" className="corporate-hero-link">
+                Explore our 6 departments <ArrowRightIcon size={18} />
               </Link>
             </div>
           </div>

@@ -13,11 +13,11 @@ import {
 
 export default function AboutSection() {
   const coreValues = [
-    "Market Understanding",
+    "Integrated 6-Department Support",
     "Clear and Collaborative Delivery",
-    "Cross-Functional Project Support",
-    "Security-Conscious Development",
-    "Post-Launch Support Options",
+    "Cross-Functional Operational Experts",
+    "Security & Confidentiality Safeguards",
+    "End-to-End Project Accountability",
     "Solutions Tailored to Your Operations",
   ];
 
@@ -25,17 +25,17 @@ export default function AboutSection() {
     {
       icon: <AwardIcon size={24} />,
       title: "Quality First",
-      description: "Structured QA, code reviews and release checks.",
+      description: "Structured governance, compliance & quality checks.",
     },
     {
       icon: <UsersIcon size={24} />,
       title: "Dedicated Teams",
-      description: "Development, design, QA and project coordination.",
+      description: "Subject matter experts across all 6 departments.",
     },
     {
       icon: <BriefcaseIcon size={24} />,
-      title: "Scalable Architecture",
-      description: "Architecture selected to support your current and future needs.",
+      title: "Scalable Execution",
+      description: "Integrated capabilities to support your long-term growth.",
     },
   ];
 

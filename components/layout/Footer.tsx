@@ -8,6 +8,21 @@ import {
   MapPinIcon,
 } from "../ui/Icons";
 
+const departmentLinks = [
+  { label: "Technology Services", href: "/departments/technology" },
+  { label: "Accounting Services", href: "/departments/accounting" },
+  { label: "Conveyancing Services", href: "/departments/conveyancing" },
+  { label: "Civil Engineering", href: "/departments/civil-engineering" },
+  { label: "Real Estate Services", href: "/departments/real-estate" },
+  { label: "Home Loan Services", href: "/departments/home-loans" },
+  { label: "Town Planning", href: "/departments/town-planning" },
+  { label: "Architecture & Design", href: "/departments/architecture" },
+  { label: "Financial Planning", href: "/departments/financial-planning" },
+  { label: "Legal Advisory", href: "/departments/legal-advisory" },
+  { label: "Insurance Advisory", href: "/departments/insurance" },
+  { label: "HR & Talent Advisory", href: "/departments/hr-advisory" },
+];
+
 const serviceLinks = [
   { label: "Custom Software", href: "/services/custom-software" },
   { label: "Application Development", href: "/services/mobile-app-development" },
@@ -20,6 +35,7 @@ const serviceLinks = [
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
+  { label: "All Departments", href: "/departments" },
   { label: "Industries", href: "/industries" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
@@ -48,20 +64,33 @@ export default function Footer() {
       </div>
 
       <div className="container py-14 lg:py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_0.8fr] gap-10 lg:gap-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div>
             <Logo variant="light" />
             <p className="mt-6 max-w-md text-sm leading-7 text-slate-300">
-              ValoSync Global combines business understanding and technology execution to deliver custom applications, connected platforms, automation and sustainable digital growth.
+              ValoSync Global provides integrated expertise across Technology, Accounting, Conveyancing, Civil Engineering, Real Estate, and Home Loans under one trusted organization.
             </p>
             <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-gold">
-              Synchronizing Ideas with Technology
+              Integrated Multi-Department Group
             </p>
           </div>
 
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-gold">Services</h2>
-            <ul className="mt-5 grid sm:grid-cols-2 gap-x-6 gap-y-3">
+            <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-gold">Departments</h2>
+            <ul className="mt-5 space-y-3">
+              {departmentLinks.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-sm text-slate-300 hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-gold">Technology Services</h2>
+            <ul className="mt-5 space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-sm text-slate-300 hover:text-white transition-colors">

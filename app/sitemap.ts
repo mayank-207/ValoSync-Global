@@ -70,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceRoutes: MetadataRoute.Sitemap = serviceSlugs.map((slug) => ({
     url: `${baseUrl}/services/${slug}`,
     lastModified,
-    changeFrequency: "weekly",
+    changeFrequency: "weekly" as const,
     priority: 0.85,
   }));
 
@@ -89,9 +89,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const portfolioRoutes: MetadataRoute.Sitemap = portfolioSlugs.map((slug) => ({
     url: `${baseUrl}/portfolio/${slug}`,
     lastModified,
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: 0.75,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...portfolioRoutes];
+  // Department routes
+  const departmentSlugs = [
+    "technology",
+    "accounting",
+    "conveyancing",
+    "civil-engineering",
+    "real-estate",
+    "home-loans",
+    "town-planning",
+    "architecture",
+    "financial-planning",
+    "legal-advisory",
+    "insurance",
+    "hr-advisory",
+  ];
+
+  const departmentRoutes: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/departments`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    ...departmentSlugs.map((slug) => ({
+      url: `${baseUrl}/departments/${slug}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    })),
+  ];
+
+  return [...staticRoutes, ...departmentRoutes, ...serviceRoutes, ...portfolioRoutes];
 }

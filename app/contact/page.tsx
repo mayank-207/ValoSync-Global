@@ -252,7 +252,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="service" className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1A1A1A]">
-                        Primary Service Required *
+                        Department / Service Required *
                       </label>
                       <select
                         id="service"
@@ -260,13 +260,29 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                         className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
                       >
-                        <option value="Custom Software Development">Custom Software Development</option>
-                        <option value="Mobile App Development">Mobile App Development (iOS & Android)</option>
-                        <option value="CRM Development">CRM Development</option>
-                        <option value="AI Automation">AI Automation</option>
-                        <option value="Business Process Automation">Business Process Automation</option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Digital Marketing">Digital Marketing & SEO</option>
+                        <optgroup label="Core Departments">
+                          <option value="Technology Services">Technology Services</option>
+                          <option value="Accounting Services">Accounting Services</option>
+                          <option value="Conveyancing Services">Conveyancing Services</option>
+                          <option value="Civil Engineering Services">Civil Engineering Services</option>
+                          <option value="Real Estate Services">Real Estate Services</option>
+                          <option value="Home Loan Services">Home Loan Services</option>
+                          <option value="Town Planning Services">Town Planning Services</option>
+                          <option value="Architecture & Building Design">Architecture & Building Design</option>
+                          <option value="Financial Planning & Wealth">Financial Planning & Wealth</option>
+                          <option value="Legal & Corporate Advisory">Legal & Corporate Advisory</option>
+                          <option value="Insurance & Risk Advisory">Insurance & Risk Advisory</option>
+                          <option value="HR & Talent Advisory">HR & Talent Advisory</option>
+                        </optgroup>
+                        <optgroup label="Specialized Technology Services">
+                          <option value="Custom Software Development">Custom Software Development</option>
+                          <option value="Mobile App Development">Mobile App Development</option>
+                          <option value="CRM Development">CRM Development</option>
+                          <option value="AI Automation">AI Automation</option>
+                          <option value="Web Development">Web Development</option>
+                          <option value="Cloud & DevOps Support">Cloud & DevOps Support</option>
+                          <option value="Digital Marketing">Digital Marketing & SEO</option>
+                        </optgroup>
                       </select>
                     </div>
 
