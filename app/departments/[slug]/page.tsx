@@ -106,15 +106,13 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
                 >
                   Consult with {data.title}
                 </Button>
-                <Button
-                  as="link"
+                <Link
                   href="#capabilities"
-                  variant="outline"
-                  size="lg"
-                  leftIcon={<ZapIcon size={18} className="text-[#D4AF37]" />}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-white rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/40 backdrop-blur-sm transition-all duration-200"
                 >
-                  View Capabilities
-                </Button>
+                  <ZapIcon size={16} className="text-[#D4AF37]" />
+                  <span>View Capabilities</span>
+                </Link>
               </div>
 
               {/* Highlights */}

@@ -199,7 +199,7 @@ export default function ContactPage() {
                         placeholder="e.g. Alex Smith"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
+                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:border-[#0B3D91] transition-colors text-[#1A1A1A]"
                       />
                     </div>
 
@@ -214,7 +214,7 @@ export default function ContactPage() {
                         placeholder="alex@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
+                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:border-[#0B3D91] transition-colors text-[#1A1A1A]"
                       />
                     </div>
                   </div>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                         placeholder="+61 400 000 000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
+                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:border-[#0B3D91] transition-colors text-[#1A1A1A]"
                       />
                     </div>
 
@@ -244,7 +244,7 @@ export default function ContactPage() {
                         placeholder="Acme Corp"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
+                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:border-[#0B3D91] transition-colors text-[#1A1A1A]"
                       />
                     </div>
                   </div>
@@ -258,7 +258,7 @@ export default function ContactPage() {
                         id="service"
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
+                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:border-[#0B3D91] transition-colors text-[#1A1A1A]"
                       >
                         <optgroup label="Core Departments">
                           <option value="Technology Services">Technology Services</option>
@@ -294,7 +294,7 @@ export default function ContactPage() {
                         id="budget"
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
+                        className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:border-[#0B3D91] transition-colors text-[#1A1A1A]"
                       >
                         <option value="Under $10,000">Under $10,000</option>
                         <option value="$10,000 - $25,000">$10,000 - $25,000</option>
@@ -314,7 +314,7 @@ export default function ContactPage() {
                       placeholder="Outline your requirements, operational challenges, or target launch timeline..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] text-[#1A1A1A]"
+                      className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:border-[#0B3D91] transition-colors text-[#1A1A1A]"
                     />
                   </div>
 

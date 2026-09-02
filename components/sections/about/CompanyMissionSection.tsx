@@ -25,13 +25,14 @@ export default function CompanyMissionSection() {
   ];
 
   return (
-    <section className="section-padding bg-white relative">
+    <section className="py-10 sm:py-14 md:py-16 bg-white relative">
       <div className="container">
         <SectionHeading
           badge="Mission & Vision"
           title="Empowering Businesses Through Intelligent Technology"
           subtitle="At ValoSync Global, we don't just write code—we re-engineer business operations to achieve unprecedented speed, accuracy, and profitability."
           center
+          className="mb-8 sm:mb-10"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

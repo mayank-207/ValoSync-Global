@@ -50,13 +50,14 @@ const values = [
 
 export default function CoreValuesSection() {
   return (
-    <section className="section-padding bg-[#F7F9FC] relative">
+    <section className="py-10 sm:py-14 md:py-16 bg-[#F7F9FC] relative">
       <div className="container">
         <SectionHeading
           badge="Guiding Principles"
           title="The Core Values That Define Our Work"
           subtitle="How ValoSync Global delivers excellence, trust, and long-term value to every business partnership."
           center
+          className="mb-8 sm:mb-10"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

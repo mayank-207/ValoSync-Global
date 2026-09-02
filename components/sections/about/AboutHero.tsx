@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "@/components/ui/Button";
+import Link from "next/link";
 import { ArrowRightIcon, CheckCircleIcon } from "@/components/ui/Icons";
 
 export default function AboutHero() {
@@ -26,13 +26,20 @@ export default function AboutHero() {
                 </span>
               ))}
             </div>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button as="link" href="/#departments" variant="primary" size="lg" rightIcon={<ArrowRightIcon size={18} />}>
-                Explore Departments
-              </Button>
-              <Button as="link" href="/contact" variant="outline" size="lg">
-                Get In Touch
-              </Button>
+            <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
+              <Link
+                href="/departments"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-[#0B3D91] hover:bg-[#1565C0] border border-[#0B3D91] shadow-sm hover:shadow-md transition-all duration-200"
+              >
+                <span>Explore Departments</span>
+                <ArrowRightIcon size={15} />
+              </Link>
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/40 transition-all duration-200"
+              >
+                <span>Get In Touch</span>
+              </Link>
             </div>
           </div>
           <div className="relative">

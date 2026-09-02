@@ -206,7 +206,7 @@ export default function Header() {
                                 }`}
                               >
                                 <span>{tab.title}</span>
-                                <ChevronDownIcon
+                                <ArrowRightIcon
                                   size={13}
                                   className={`transition-transform duration-200 ${
                                     isActive
@@ -295,7 +295,7 @@ export default function Header() {
                                 }`}
                               >
                                 <span>{tab.title}</span>
-                                <ChevronDownIcon
+                                <ArrowRightIcon
                                   size={13}
                                   className={`transition-transform duration-200 ${
                                     isActive
@@ -360,8 +360,8 @@ export default function Header() {
               as="link"
               href="/contact"
               variant="primary"
-              size="sm"
-              rightIcon={<ArrowRightIcon size={15} />}
+              size="md"
+              rightIcon={<ArrowRightIcon size={16} />}
             >
               Get Started
             </Button>

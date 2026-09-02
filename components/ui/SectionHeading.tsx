@@ -47,8 +47,7 @@ export default function SectionHeading({
       className={`flex flex-col gap-4 ${alignClasses[finalAlign]} ${maxWidthClass} ${className}`}
     >
       {finalEyebrow && (
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 text-xs sm:text-sm font-semibold rounded-full bg-[#0D47A1]/10 text-[#0D47A1] border border-[#0D47A1]/20">
-          <span className="w-2 h-2 rounded-full bg-[#D4AF37]" />
+        <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#0B3D91] mb-1 block">
           {finalEyebrow}
         </span>
       )}

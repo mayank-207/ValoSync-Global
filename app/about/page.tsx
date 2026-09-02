@@ -5,7 +5,6 @@ import AboutHero from "@/components/sections/about/AboutHero";
 import CompanyMissionSection from "@/components/sections/about/CompanyMissionSection";
 import CoreValuesSection from "@/components/sections/about/CoreValuesSection";
 import CompanyStorySection from "@/components/sections/about/CompanyStorySection";
-import WhyPartnerSection from "@/components/sections/about/WhyPartnerSection";
 import TeamLeadershipSection from "@/components/sections/about/TeamLeadershipSection";
 import CTASection from "@/components/sections/CTASection";
 
@@ -66,9 +65,6 @@ export default function AboutPage() {
 
         {/* Company Evolution & Growth Timeline */}
         <CompanyStorySection />
-
-        {/* Why Partner With Us / Competitive Advantage */}
-        <WhyPartnerSection />
 
         {/* Multidisciplinary Team & Expertise */}
         <TeamLeadershipSection />

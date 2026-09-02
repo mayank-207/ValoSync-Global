@@ -9,18 +9,9 @@ import {
 } from "../ui/Icons";
 
 const departmentLinks = [
-  { label: "Technology Services", href: "/departments/technology" },
-  { label: "Accounting Services", href: "/departments/accounting" },
-  { label: "Conveyancing Services", href: "/departments/conveyancing" },
-  { label: "Civil Engineering", href: "/departments/civil-engineering" },
-  { label: "Real Estate Services", href: "/departments/real-estate" },
-  { label: "Home Loan Services", href: "/departments/home-loans" },
-  { label: "Town Planning", href: "/departments/town-planning" },
-  { label: "Architecture & Design", href: "/departments/architecture" },
-  { label: "Financial Planning", href: "/departments/financial-planning" },
-  { label: "Legal Advisory", href: "/departments/legal-advisory" },
-  { label: "Insurance Advisory", href: "/departments/insurance" },
-  { label: "HR & Talent Advisory", href: "/departments/hr-advisory" },
+  { label: "Property & Construction", href: "/departments" },
+  { label: "Finance & Legal", href: "/departments" },
+  { label: "Technology & HR", href: "/departments" },
 ];
 
 const serviceLinks = [

@@ -63,9 +63,9 @@ export default function PortfolioHero() {
             </Button>
             <Link
               href="#case-studies-grid"
-              className="inline-flex items-center gap-2.5 px-7 py-4 text-base font-bold rounded-xl border border-white/20 bg-white/10 text-white hover:bg-white/20 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 text-sm font-bold rounded-xl border border-white/20 bg-white/10 text-white hover:bg-white/20 transition-all duration-200"
             >
-              <ZapIcon size={18} className="text-[#D4AF37]" />
+              <ZapIcon size={16} className="text-[#D4AF37]" />
               Explore Case Studies
             </Link>
           </div>

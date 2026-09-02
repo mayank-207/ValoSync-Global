@@ -145,7 +145,7 @@ export default function CTASection() {
                           placeholder="e.g. Alex Smith"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] transition-all"
+                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:border-[#0B3D91] transition-colors"
                         />
                       </div>
                       <div>
@@ -162,7 +162,7 @@ export default function CTASection() {
                           placeholder="alex@company.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] transition-all"
+                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:border-[#0B3D91] transition-colors"
                         />
                       </div>
                     </div>
@@ -181,7 +181,7 @@ export default function CTASection() {
                           placeholder="+61 400 000 000"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] transition-all"
+                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:border-[#0B3D91] transition-colors"
                         />
                       </div>
                       <div>
@@ -195,7 +195,7 @@ export default function CTASection() {
                           id="service"
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] transition-all"
+                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-slate-50/80 text-slate-900 focus:bg-white focus:outline-none focus:border-[#0B3D91] transition-colors"
                         >
                           <option value="Custom Software Development" className="text-slate-900 bg-white">Custom Software</option>
                           <option value="CRM Development" className="text-slate-900 bg-white">CRM Development</option>
@@ -220,7 +220,7 @@ export default function CTASection() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Tell us about your target timeline, business goals, or current application..."
-                        className="w-full px-4 py-3 text-sm rounded-xl border border-[#D9E1EC] bg-[#F7F9FC] text-[#1A1A1A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0D47A1] focus:border-[#0D47A1] transition-all"
+                        className="w-full px-4 py-3 text-sm rounded-xl border border-[#D9E1EC] bg-[#F7F9FC] text-[#1A1A1A] focus:bg-white focus:outline-none focus:border-[#0B3D91] transition-colors"
                       />
                     </div>
 

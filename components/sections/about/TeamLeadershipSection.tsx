@@ -35,13 +35,14 @@ const teamRoles = [
 
 export default function TeamLeadershipSection() {
   return (
-    <section className="section-padding bg-white relative">
+    <section className="pt-6 pb-12 sm:pt-8 sm:pb-14 md:pt-8 md:pb-16 bg-white relative">
       <div className="container">
         <SectionHeading
           badge="Multidisciplinary Talent"
           title="Engineered by Experts, Built for Impact"
           subtitle="Our team combines technical rigor, aesthetic design, quality assurance, and growth marketing under one roof."
           center
+          className="mb-8 sm:mb-10"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">

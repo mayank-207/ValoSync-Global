@@ -4,7 +4,6 @@ import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CTASection from "@/components/sections/CTASection";
-import Button from "@/components/ui/Button";
 import { ArrowRightIcon, CheckCircleIcon, LayersIcon } from "@/components/ui/Icons";
 import { departmentsData } from "@/lib/departmentsData";
 
@@ -67,18 +66,18 @@ export default function DepartmentsPage() {
                       </span>
                     </div>
 
-                    <div className="p-6 sm:p-8">
+                    <div className="p-6 sm:p-7 pb-4">
                       <span className="text-xs font-bold text-[#0B3D91] uppercase tracking-wider block mb-2">
                         {dept.badge}
                       </span>
                       <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">
                         {dept.title}
                       </h2>
-                      <p className="text-sm text-[#4A5568] leading-relaxed mb-6">
+                      <p className="text-sm text-[#4A5568] leading-relaxed mb-5">
                         {dept.heroSubtitle}
                       </p>
 
-                      <ul className="space-y-2 mb-6 border-t border-[#D9E1EC] pt-4">
+                      <ul className="space-y-2 border-t border-[#D9E1EC] pt-4">
                         {dept.highlights.slice(0, 3).map((hl, idx) => (
                           <li key={idx} className="flex items-center gap-2 text-xs font-semibold text-[#1A1A1A]">
                             <CheckCircleIcon size={14} className="text-[#D4AF37]" />
@@ -89,17 +88,14 @@ export default function DepartmentsPage() {
                     </div>
                   </div>
 
-                  <div className="p-6 sm:p-8 pt-0">
-                    <Button
-                      as="link"
+                  <div className="pb-6 pt-1 text-center">
+                    <Link
                       href={`/departments/${dept.slug}`}
-                      variant="outline"
-                      size="md"
-                      fullWidth
-                      rightIcon={<ArrowRightIcon size={16} />}
+                      className="inline-flex items-center justify-center gap-1.5 text-sm font-bold text-[#0B3D91] hover:text-[#1565C0] transition-colors group/link"
                     >
-                      Explore {dept.title}
-                    </Button>
+                      <span>Learn More</span>
+                      <ArrowRightIcon size={15} className="transition-transform duration-200 group-hover/link:translate-x-1" />
+                    </Link>
                   </div>
                 </div>
               ))}
