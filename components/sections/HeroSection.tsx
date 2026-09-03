@@ -54,7 +54,7 @@ export default function HeroSection() {
               <Button
                 as="link"
                 href="/contact"
-                variant="gold"
+                variant="primary"
                 size="md"
                 rightIcon={<ArrowRightIcon size={16} />}
               >

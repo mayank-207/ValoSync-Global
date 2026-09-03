@@ -15,7 +15,7 @@ export type DepartmentSlug =
 export interface DepartmentData {
   slug: DepartmentSlug;
   number: string;
-  category: "Property & Construction" | "Finance & Legal" | "Tech & Corporate Growth";
+  category: "Property & Built Environment" | "Finance, Risk & Advisory" | "Technology & People";
   title: string;
   badge: string;
   metaTitle: string;
@@ -37,7 +37,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   technology: {
     slug: "technology",
     number: "01",
-    category: "Tech & Corporate Growth",
+    category: "Technology & People",
     title: "Technology Services",
     badge: "Digital Platforms & Software",
     metaTitle: "Technology & Software Engineering Services | ValoSync Global",
@@ -116,7 +116,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   accounting: {
     slug: "accounting",
     number: "02",
-    category: "Finance & Legal",
+    category: "Finance, Risk & Advisory",
     title: "Accounting Services",
     badge: "Financial Precision & Advisory",
     metaTitle: "Corporate Accounting & Financial Management Services | ValoSync Global",
@@ -193,7 +193,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   conveyancing: {
     slug: "conveyancing",
     number: "03",
-    category: "Property & Construction",
+    category: "Property & Built Environment",
     title: "Conveyancing Services",
     badge: "Property Legal & Settlement Co-ordination",
     metaTitle: "Property Conveyancing & Legal Settlement Services | ValoSync Global",
@@ -270,7 +270,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   "civil-engineering": {
     slug: "civil-engineering",
     number: "04",
-    category: "Property & Construction",
+    category: "Property & Built Environment",
     title: "Civil Engineering Services",
     badge: "Structural Planning & Project Co-ordination",
     metaTitle: "Civil & Structural Engineering Services | ValoSync Global",
@@ -347,7 +347,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   "real-estate": {
     slug: "real-estate",
     number: "05",
-    category: "Property & Construction",
+    category: "Property & Built Environment",
     title: "Real Estate Services",
     badge: "Property Advisory & Asset Management",
     metaTitle: "Real Estate Advisory, Sales & Property Management | ValoSync Global",
@@ -424,7 +424,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   "home-loans": {
     slug: "home-loans",
     number: "06",
-    category: "Finance & Legal",
+    category: "Finance, Risk & Advisory",
     title: "Home Loan Services",
     badge: "Mortgage Brokerage & Finance Solutions",
     metaTitle: "Home Loans, Mortgage Brokerage & Refinancing | ValoSync Global",
@@ -501,7 +501,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   "town-planning": {
     slug: "town-planning",
     number: "07",
-    category: "Property & Construction",
+    category: "Property & Built Environment",
     title: "Town Planning Services",
     badge: "Development Approvals & Zoning Advisory",
     metaTitle: "Town Planning, DA Approvals & Land Zoning Services | ValoSync Global",
@@ -578,7 +578,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   architecture: {
     slug: "architecture",
     number: "08",
-    category: "Property & Construction",
+    category: "Property & Built Environment",
     title: "Architecture & Building Design",
     badge: "Bespoke Architectural Concepts & Drafting",
     metaTitle: "Architectural Design, Drafting & 3D Renderings | ValoSync Global",
@@ -655,7 +655,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   "financial-planning": {
     slug: "financial-planning",
     number: "09",
-    category: "Finance & Legal",
+    category: "Finance, Risk & Advisory",
     title: "Financial Planning & Wealth",
     badge: "Strategic Wealth Accumulation & Retirement",
     metaTitle: "Financial Planning, Wealth Management & SMSF | ValoSync Global",
@@ -732,7 +732,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   "legal-advisory": {
     slug: "legal-advisory",
     number: "10",
-    category: "Finance & Legal",
+    category: "Finance, Risk & Advisory",
     title: "Legal & Corporate Advisory",
     badge: "Commercial Law & Business Governance",
     metaTitle: "Commercial Legal Advisory & Business Governance | ValoSync Global",
@@ -809,7 +809,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   insurance: {
     slug: "insurance",
     number: "11",
-    category: "Finance & Legal",
+    category: "Finance, Risk & Advisory",
     title: "Insurance & Risk Advisory",
     badge: "Corporate & Property Risk Protection",
     metaTitle: "Commercial & Property Insurance Advisory | ValoSync Global",
@@ -886,7 +886,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
   "hr-advisory": {
     slug: "hr-advisory",
     number: "12",
-    category: "Tech & Corporate Growth",
+    category: "Technology & People",
     title: "HR & Talent Advisory",
     badge: "Human Resources & Executive Talent Search",
     metaTitle: "HR Advisory, Talent Acquisition & Workforce Management | ValoSync Global",

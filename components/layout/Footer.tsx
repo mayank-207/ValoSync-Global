@@ -9,9 +9,9 @@ import {
 } from "../ui/Icons";
 
 const departmentLinks = [
-  { label: "Property & Construction", href: "/departments" },
-  { label: "Finance & Legal", href: "/departments" },
-  { label: "Technology & HR", href: "/departments" },
+  { label: "Property & Built Environment", href: "/departments#property" },
+  { label: "Finance, Risk & Advisory", href: "/departments#finance" },
+  { label: "Technology & People", href: "/departments#technology" },
 ];
 
 const serviceLinks = [
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container py-14 lg:py-20">
+      <div className="container pt-12 lg:pt-16 pb-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div>
             <Logo variant="light" />
@@ -114,7 +114,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-7 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="mt-10 pt-6 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>© {currentYear} ValoSync Global. All rights reserved.</p>
           <div className="flex gap-5">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>

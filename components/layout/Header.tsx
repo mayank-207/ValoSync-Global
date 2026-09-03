@@ -26,21 +26,21 @@ interface CategoryTab {
 const departmentTabs: CategoryTab[] = [
   {
     id: "property",
-    title: "Property & Construction",
+    title: "Property & Built Environment",
     items: [
-      { label: "Conveyancing Services", href: "/departments/conveyancing" },
-      { label: "Civil Engineering Services", href: "/departments/civil-engineering" },
-      { label: "Real Estate Services", href: "/departments/real-estate" },
-      { label: "Town Planning Services", href: "/departments/town-planning" },
-      { label: "Architecture & Design", href: "/departments/architecture" },
+      { label: "Conveyancing", href: "/departments/conveyancing" },
+      { label: "Civil Engineering", href: "/departments/civil-engineering" },
+      { label: "Real Estate", href: "/departments/real-estate" },
+      { label: "Town Planning", href: "/departments/town-planning" },
+      { label: "Architecture & Building Design", href: "/departments/architecture" },
     ],
   },
   {
     id: "finance",
-    title: "Finance & Legal",
+    title: "Finance, Risk & Advisory",
     items: [
-      { label: "Accounting Services", href: "/departments/accounting" },
-      { label: "Home Loan Services", href: "/departments/home-loans" },
+      { label: "Accounting", href: "/departments/accounting" },
+      { label: "Home Loans", href: "/departments/home-loans" },
       { label: "Financial Planning & Wealth", href: "/departments/financial-planning" },
       { label: "Legal & Corporate Advisory", href: "/departments/legal-advisory" },
       { label: "Insurance & Risk Advisory", href: "/departments/insurance" },
@@ -48,7 +48,7 @@ const departmentTabs: CategoryTab[] = [
   },
   {
     id: "technology",
-    title: "Technology & HR",
+    title: "Technology & People",
     items: [
       { label: "Technology Services", href: "/departments/technology" },
       { label: "HR & Talent Advisory", href: "/departments/hr-advisory" },
@@ -235,15 +235,6 @@ export default function Header() {
                                 </Link>
                               ));
                             })()}
-                          </div>
-                          <div className="pt-2 mt-2 border-t border-slate-100">
-                            <Link
-                              href="/departments"
-                              className="flex items-center justify-between px-3 py-1.5 text-xs font-bold text-[#0B3D91] hover:text-[#D4AF37] transition-colors rounded hover:bg-slate-50"
-                            >
-                              <span>View All 12 Departments</span>
-                              <ArrowRightIcon size={13} />
-                            </Link>
                           </div>
                         </div>
                       </div>
@@ -462,13 +453,6 @@ export default function Header() {
                             ))}
                           </div>
                         ))}
-                        <Link
-                          href="/departments"
-                          className="block px-3 py-2 text-xs font-bold text-[#0B3D91] bg-slate-100 rounded-lg text-center mt-1"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          View All 12 Departments →
-                        </Link>
                       </div>
                     )}
                   </div>

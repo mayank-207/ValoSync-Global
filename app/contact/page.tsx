@@ -260,18 +260,22 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                         className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:border-[#0B3D91] transition-colors text-[#1A1A1A]"
                       >
-                        <optgroup label="Core Departments">
-                          <option value="Technology Services">Technology Services</option>
-                          <option value="Accounting Services">Accounting Services</option>
-                          <option value="Conveyancing Services">Conveyancing Services</option>
-                          <option value="Civil Engineering Services">Civil Engineering Services</option>
-                          <option value="Real Estate Services">Real Estate Services</option>
-                          <option value="Home Loan Services">Home Loan Services</option>
-                          <option value="Town Planning Services">Town Planning Services</option>
+                        <optgroup label="Property & Built Environment">
+                          <option value="Conveyancing">Conveyancing</option>
+                          <option value="Civil Engineering">Civil Engineering</option>
+                          <option value="Real Estate">Real Estate</option>
+                          <option value="Town Planning">Town Planning</option>
                           <option value="Architecture & Building Design">Architecture & Building Design</option>
+                        </optgroup>
+                        <optgroup label="Finance, Risk & Advisory">
+                          <option value="Accounting">Accounting</option>
+                          <option value="Home Loans">Home Loans</option>
                           <option value="Financial Planning & Wealth">Financial Planning & Wealth</option>
                           <option value="Legal & Corporate Advisory">Legal & Corporate Advisory</option>
                           <option value="Insurance & Risk Advisory">Insurance & Risk Advisory</option>
+                        </optgroup>
+                        <optgroup label="Technology & People">
+                          <option value="Technology Services">Technology Services</option>
                           <option value="HR & Talent Advisory">HR & Talent Advisory</option>
                         </optgroup>
                         <optgroup label="Specialized Technology Services">

@@ -354,7 +354,7 @@ export default function CorporateOverview() {
               <p className="mt-5 max-w-xl text-sm sm:text-base leading-7 text-slate-300">
                 We combine technology capability with an understanding of how service-based and operational businesses actually work.
               </p>
-              <Button as="link" href="/industries" variant="gold" size="md" className="mt-8" rightIcon={<ArrowRightIcon size={17} />}>
+              <Button as="link" href="/industries" variant="primary" size="md" className="mt-8" rightIcon={<ArrowRightIcon size={17} />}>
                 Explore industries
               </Button>
             </div>
