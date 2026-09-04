@@ -1,3 +1,5 @@
 Production deployment trigger
 Source branch: main
-Requested: 2026-09-03 UTC
+Source commit: eec6a915ae2fbd55279be8012d11230a63ad2eaa
+Requested: 2026-09-04 UTC
+Reason: Manual production redeploy from latest main
