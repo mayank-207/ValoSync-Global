@@ -95,6 +95,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Department routes
   const departmentSlugs = [
+    "engineering-project-management",
+    "loan-finance-management",
+    "accounting-taxation-compliance",
+    "property-real-estate-management",
+    "conveyancing-property-settlement",
+    "software-company",
     "technology",
     "accounting",
     "conveyancing",
