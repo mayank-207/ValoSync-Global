@@ -1,9 +1,8 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import IndustryCard from "@/components/ui/IndustryCard";
 import {
+  AutomotiveIcon,
   HealthcareIcon,
   LogisticsIcon,
   FinanceIcon,
@@ -12,10 +11,25 @@ import {
   ManufacturingIcon,
   EducationIcon,
   BriefcaseIcon,
-  FilterIcon,
 } from "@/components/ui/Icons";
 
 export const industriesData = [
+  {
+    id: "automotive",
+    title: "Automotive & Smart Mobility",
+    category: "Automotive",
+    description:
+      "Connected vehicle telematics, EV charging networks, automated spare parts supply chains, and high-performance dealership CRM software.",
+    icon: <AutomotiveIcon size={28} />,
+    keyFeatures: [
+      "Connected Vehicle Telematics & CAN-Bus",
+      "EV Fleet Charging & Battery Analytics",
+      "Automated Dealership & Spare Parts SCM",
+    ],
+    metrics: "35% Faster Parts Dispatch",
+    techStack: ["Next.js", "Python IoT", "MQTT", "AWS IoT Core"],
+    highlight: false,
+  },
   {
     id: "healthcare",
     title: "Healthcare & Life Sciences",
@@ -146,60 +160,20 @@ export const industriesData = [
   },
 ];
 
-const categories = [
-  "All",
-  "Healthcare",
-  "Logistics",
-  "Finance",
-  "Retail",
-  "Real Estate",
-  "Services",
-  "Manufacturing",
-  "Education",
-];
-
 export default function IndustriesGridSection() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredIndustries =
-    activeCategory === "All"
-      ? industriesData
-      : industriesData.filter((item) => item.category === activeCategory);
-
   return (
     <section id="sector-grid" className="section-padding bg-white relative">
       <div className="container">
         <SectionHeading
           badge="Specialized Industry Solutions"
           title="Engineered for Your Industry's Specific Challenges"
-          subtitle="Discover how Valosync Global delivers tailored software, CRM, AI automation, and digital marketing strategies suited for your vertical."
+          subtitle="Discover how ValoSync Global delivers tailored software, CRM, AI automation, and digital marketing strategies suited for your vertical."
           center
         />
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          <div className="flex items-center gap-2 pr-3 text-slate-400 text-xs font-semibold uppercase tracking-wider hidden sm:flex">
-            <FilterIcon size={14} />
-            <span>Filter:</span>
-          </div>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D47A1]/40 ${
-                activeCategory === cat
-                  ? "bg-[#0D47A1] text-white shadow-md shadow-[#0D47A1]/20 scale-105"
-                  : "bg-white text-[#4A5568] border border-[#D9E1EC] hover:border-[#0D47A1] hover:text-[#0D47A1]"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Industry Cards Grid */}
+        {/* Industry Cards Grid (Direct display with all industries, no redundant filter) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredIndustries.map((ind) => (
+          {industriesData.map((ind) => (
             <IndustryCard key={ind.id} {...ind} />
           ))}
         </div>
