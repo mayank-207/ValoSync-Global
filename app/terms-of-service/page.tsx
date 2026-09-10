@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
+import LegalPageContent from "@/components/sections/legal/LegalPageContent";
 import {
   SparkleIcon,
   ShieldIcon,
@@ -267,112 +268,17 @@ export default function TermsOfServicePage() {
         {/* Main Content Area */}
         <section className="section-padding bg-[#F7F9FC]">
           <div className="container">
-            <div className="grid lg:grid-cols-12 gap-10 items-start">
-              {/* Left Column: Sticky Table of Contents & Quick Help */}
-              <div className="lg:col-span-4 lg:sticky lg:top-32 space-y-6">
-                {/* Navigation Card */}
-                <div className="p-6 sm:p-7 rounded-3xl bg-white border border-[#D9E1EC] shadow-sm">
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-[#0B3D91] mb-4 flex items-center gap-2">
-                    <LayersIcon size={18} />
-                    <span>Table of Contents</span>
-                  </h3>
-                  <nav className="space-y-1.5">
-                    {sections.map((sec) => (
-                      <a
-                        key={sec.id}
-                        href={`#${sec.id}`}
-                        className="group flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-[#4A5568] hover:text-[#0B3D91] hover:bg-[#F7F9FC] transition-all"
-                      >
-                        <span className="truncate">{sec.title}</span>
-                        {/* <span className="text-[11px] font-mono text-[#718096] group-hover:text-[#0B3D91]">
-                          {sec.number}
-                        </span> */}
-                      </a>
-                    ))}
-                  </nav>
-                </div>
-
-                {/* Legal Assistance Box */}
-                <div className="p-6 sm:p-7 rounded-3xl bg-[#071A33] text-white border border-white/10 shadow-lg">
-                <div className="flex gap-4 mb-2">
-                  <span className="p-3 rounded-2xl bg-[#D4AF37]/15 text-[#D4AF37] inline-block mb-4">
-                    <MailIcon size={22} />
-                  </span>
-                  <h4 className="text-lg font-bold text-white mb-2">
-                    Contract Clarification?
-                  </h4>
-                  </div>
-                  <p className="text-xs text-slate-300 leading-relaxed mb-5">
-                    Need customized Enterprise Master Service Agreements (MSAs), bespoke SLA clauses, or vendor onboarding forms?
-                  </p>
-                  <Button
-                    as="link"
-                    href="/contact"
-                    variant="primary"
-                    size="sm"
-                    className="w-full justify-center"
-                    rightIcon={<ArrowRightIcon size={14} />}
-                  >
-                    Contact Legal Team
-                  </Button>
-                </div>
-              </div>
-
-              {/* Right Column: Detailed Clause Breakdown Cards */}
-              <div className="lg:col-span-8 space-y-8">
-                {sections.map((sec) => (
-                  <article
-                    key={sec.id}
-                    id={sec.id}
-                    className="p-8 sm:p-10 rounded-3xl bg-white border border-[#D9E1EC] shadow-sm transition-all duration-300 hover:shadow-md scroll-mt-36"
-                  >
-                    {/* Header */}
-                    <div className="flex items-start justify-between gap-4 mb-6 pb-6 border-b border-[#D9E1EC]">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-[#0B3D91]/10 text-[#0B3D91] flex items-center justify-center font-bold text-lg border border-[#0B3D91]/20 flex-shrink-0">
-                          {sec.number}
-                        </div>
-                        <div>
-                          <h2 className="text-xl sm:text-2xl font-extrabold text-[#1A1A1A]">
-                            {sec.title}
-                          </h2>
-                          <p className="text-xs text-[#718096] mt-1 font-medium">
-                            {sec.summary}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="prose max-w-none text-[#4A5568]">
-                      {sec.content}
-                    </div>
-                  </article>
-                ))}
-
-                {/* Bottom Assistance Banner */}
-                <div className="p-8 rounded-3xl bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1] text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      Ready to kick off your project?
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-200 max-w-lg">
-                      Schedule a technical discovery session with our architects to review scope, milestone timelines, and commercial estimates.
-                    </p>
-                  </div>
-                  <Button
-                    as="link"
-                    href="/contact"
-                    variant="primary"
-                    size="md"
-                    className="flex-shrink-0"
-                    rightIcon={<ArrowRightIcon size={16} />}
-                  >
-                    Book Discovery Call
-                  </Button>
-                </div>
-              </div>
-            </div>
+            <LegalPageContent
+              sections={sections}
+              helpBox={{
+                icon: <MailIcon size={22} />,
+                title: "Contract Clarification?",
+                description:
+                  "Need customized Enterprise Master Service Agreements (MSAs), bespoke SLA clauses, or vendor onboarding forms?",
+                buttonText: "Contact Legal Team",
+                buttonHref: "/contact",
+              }}
+            />
           </div>
         </section>
       </main>
