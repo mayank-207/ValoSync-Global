@@ -18,99 +18,51 @@ import {
 const businessAreas = [
   {
     number: "01",
-    title: "Technology Services",
-    description: "Applications, digital platforms, automation, cloud delivery and digital growth.",
-    href: "/departments/technology",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
-    alt: "Detailed blue electronic circuit board representing technology services",
+    title: "Engineering & Project Management",
+    description: "Civil infrastructure, council town planning approvals, architectural design, and on-site project management.",
+    href: "/departments/engineering-project-management",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82",
+    alt: "Civil engineering team reviewing structural plans and project management schedule",
   },
   {
     number: "02",
-    title: "Accounting Services",
-    description: "Structured bookkeeping, reporting, accounting and business administration support.",
-    href: "/departments/accounting",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=82",
-    alt: "Financial documents, calculator and laptop arranged for professional accounting work",
+    title: "Loan & Finance Management",
+    description: "Residential mortgages, commercial business lending, financial planning, and asset risk protection.",
+    href: "/departments/loan-finance-management",
+    image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=82",
+    alt: "Modern family home representing home loan and wealth advisory support",
   },
   {
     number: "03",
-    title: "Conveyancing Services",
-    description: "Coordinated support for property contracts, transfers, settlements and documentation.",
-    href: "/departments/conveyancing",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
-    alt: "House keys and property documents representing conveyancing support",
+    title: "Accounting, Taxation & Compliance",
+    description: "Corporate bookkeeping, statutory tax optimization, corporate governance, and payroll administration.",
+    href: "/departments/accounting-taxation-compliance",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=82",
+    alt: "Financial compliance audit documents, balance sheet and laptop",
   },
   {
     number: "04",
-    title: "Civil Engineering Services",
-    description: "Planning, documentation, coordination and practical project-support services.",
-    href: "/departments/civil-engineering",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82",
-    alt: "Civil engineering team reviewing plans at a construction site",
+    title: "Property & Real Estate Management",
+    description: "Real estate sales, active property asset care, tenant leasing, and development feasibility.",
+    href: "/departments/property-real-estate-management",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82",
+    alt: "Contemporary residential and commercial property management",
   },
   {
     number: "05",
-    title: "Real Estate Services",
-    description: "Property sales, purchases, leasing, management and market-support services.",
-    href: "/departments/real-estate",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82",
-    alt: "Contemporary residential property representing real estate services",
+    title: "Conveyancing & Property Settlement",
+    description: "Certified legal title transfers, contract reviews, stamp duty processing, and electronic PEXA settlements.",
+    href: "/departments/conveyancing-property-settlement",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
+    alt: "House keys and property legal documents representing conveyancing support",
   },
   {
     number: "06",
-    title: "Home Loan Services",
-    description: "Guided support for home buyers, refinancing and property-investment lending enquiries.",
-    href: "/departments/home-loans",
-    image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=82",
-    alt: "Modern family home representing home loan support",
-  },
-  {
-    number: "07",
-    title: "Town Planning Services",
-    description: "Council DA approvals, site zoning analysis, environmental planning & subdivision advice.",
-    href: "/departments/town-planning",
-    image: "/images/town-planning.jpg",
-    alt: "Town planning blueprints and development layout",
-  },
-  {
-    number: "08",
-    title: "Architecture & Design",
-    description: "Residential & commercial architectural drafting, 3D renders & building code compliance.",
-    href: "/departments/architecture",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=82",
-    alt: "Modern architectural building design",
-  },
-  {
-    number: "09",
-    title: "Financial Planning & Wealth",
-    description: "Strategic investment portfolios, SMSF creation, superannuation & retirement planning.",
-    href: "/departments/financial-planning",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=82",
-    alt: "Financial planning and investment growth consulting",
-  },
-  {
-    number: "10",
-    title: "Legal & Corporate Advisory",
-    description: "Commercial contracts, IP protection, shareholder deeds & legal dispute resolution.",
-    href: "/departments/legal-advisory",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=82",
-    alt: "Corporate legal gavel and contract documents",
-  },
-  {
-    number: "11",
-    title: "Insurance & Risk Advisory",
-    description: "Commercial liability, landlord protection, cyber security risk cover & claims advocacy.",
-    href: "/departments/insurance",
-    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=82",
-    alt: "Corporate risk protection and insurance concept",
-  },
-  {
-    number: "12",
-    title: "HR & Talent Advisory",
-    description: "Executive recruitment, Fair Work compliance, offshore team building & HR frameworks.",
-    href: "/departments/hr-advisory",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=82",
-    alt: "Corporate executive team collaborating",
+    title: "Software Company",
+    description: "Custom software platforms, mobile applications, web portals, CRM systems, and AI automation engines.",
+    href: "/departments/software-company",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
+    alt: "High-tech software code development and cloud server network",
   },
 ];
 
@@ -265,11 +217,11 @@ export default function CorporateOverview() {
             <div>
               <p className="corporate-eyebrow">Our departments</p>
               <h2 id="departments-heading" className="corporate-title">
-                Twelve specialist areas. One accountable global organisation.
+                Six core departments. One accountable global organisation.
               </h2>
             </div>
             <p className="corporate-lead">
-              Every department has equal standing, relevant expertise and a clear enquiry pathway. Choose the area that best matches your requirement.
+              Every department brings deep specialist expertise and dedicated delivery pathways. Choose the area that best matches your requirement.
             </p>
           </div>
 

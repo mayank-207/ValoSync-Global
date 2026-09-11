@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Button from "./Button";
 import { ArrowRightIcon, CheckCircleIcon } from "./Icons";
 
@@ -15,35 +16,39 @@ export type IndustryCardProps = {
 };
 
 export default function IndustryCard({
+  id,
   title,
   category,
   description,
   icon,
   keyFeatures,
-  metrics,
+  metrics: _metrics,
   techStack,
   highlight = false,
 }: IndustryCardProps) {
+  const detailUrl = `/industries/${id}`;
+
   return (
     <article
       className={`group relative flex flex-col h-full rounded-2xl p-6 sm:p-8 transition-all duration-300 border ${
         highlight
           ? "bg-gradient-to-b from-[#071A3D] to-[#041026] border-[#0D47A1]/50 text-white shadow-xl"
-          : "bg-white border-[#D9E1EC] hover:border-[#0D47A1]/50 hover:shadow-xl hover:-translate-y-1"
+          : "bg-white border-[#D9E1EC] hover:border-[#0B3D91] hover:shadow-xl hover:-translate-y-1"
       }`}
     >
       {/* Category Tag & Icon */}
       <div className="flex items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div
+          <Link
+            href={detailUrl}
             className={`w-14 h-14 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${
               highlight
                 ? "bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30"
-                : "bg-[#0D47A1]/10 text-[#0D47A1] border border-[#0D47A1]/20"
+                : "bg-[#0B3D91]/10 text-[#0B3D91] border border-[#0B3D91]/20"
             }`}
           >
             {icon}
-          </div>
+          </Link>
           <span
             className={`text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full ${
               highlight
@@ -54,16 +59,20 @@ export default function IndustryCard({
             {category}
           </span>
         </div>
-
       </div>
 
       {/* Title */}
-      <h3
-        className={`text-xl font-bold mb-3 transition-colors duration-200 group-hover:text-[#0D47A1] ${
-          highlight ? "text-white group-hover:text-[#D4AF37]" : "text-[#1A1A1A]"
-        }`}
-      >
-        {title}
+      <h3 className="text-xl font-bold mb-3">
+        <Link
+          href={detailUrl}
+          className={`transition-colors duration-200 ${
+            highlight
+              ? "text-white group-hover:text-[#D4AF37]"
+              : "text-[#1A1A1A] group-hover:text-[#0B3D91]"
+          }`}
+        >
+          {title}
+        </Link>
       </h3>
 
       {/* Description */}
@@ -90,7 +99,7 @@ export default function IndustryCard({
               <CheckCircleIcon
                 size={16}
                 className={`mt-0.5 flex-shrink-0 ${
-                  highlight ? "text-[#D4AF37]" : "text-[#0D47A1]"
+                  highlight ? "text-[#D4AF37]" : "text-[#0B3D91]"
                 }`}
               />
               <span className={highlight ? "text-slate-200" : "text-[#1A1A1A]"}>
@@ -121,13 +130,13 @@ export default function IndustryCard({
       <div className="pt-2">
         <Button
           as="link"
-          href="/contact"
+          href={detailUrl}
           variant={highlight ? "gold" : "primary"}
           size="sm"
           fullWidth
           rightIcon={<ArrowRightIcon size={14} />}
         >
-          Request Industry Solution
+          Explore Industry Solutions
         </Button>
       </div>
     </article>

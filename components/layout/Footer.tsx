@@ -9,9 +9,12 @@ import {
 } from "../ui/Icons";
 
 const departmentLinks = [
-  { label: "Property & Built Environment", href: "/departments#property" },
-  { label: "Finance, Risk & Advisory", href: "/departments#finance" },
-  { label: "Technology & People", href: "/departments#technology" },
+  { label: "Engineering & Project Management", href: "/departments/engineering-project-management" },
+  { label: "Loan & Finance Management", href: "/departments/loan-finance-management" },
+  { label: "Accounting, Taxation & Compliance", href: "/departments/accounting-taxation-compliance" },
+  { label: "Property & Real Estate Management", href: "/departments/property-real-estate-management" },
+  { label: "Conveyancing & Property Settlement", href: "/departments/conveyancing-property-settlement" },
+  { label: "Software Company", href: "/departments/software-company" },
 ];
 
 const serviceLinks = [
@@ -59,7 +62,7 @@ export default function Footer() {
           <div>
             <Logo variant="light" />
             <p className="mt-6 max-w-md text-sm leading-7 text-slate-300">
-              ValoSync Global provides integrated expertise across Technology, Accounting, Conveyancing, Civil Engineering, Real Estate, and Home Loans under one trusted organization.
+              ValoSync Global provides integrated expertise across Engineering & Project Management, Loan & Finance, Accounting & Compliance, Property & Real Estate, Conveyancing, and Enterprise Software under one trusted organization.
             </p>
             <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-gold">
               Integrated Multi-Department Group

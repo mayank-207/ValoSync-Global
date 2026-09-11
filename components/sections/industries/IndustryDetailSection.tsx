@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import {
+  AutomotiveIcon,
   HealthcareIcon,
   LogisticsIcon,
   FinanceIcon,
@@ -12,14 +13,35 @@ import {
   ManufacturingIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  TrendingUpIcon,
-  ShieldIcon,
   ZapIcon,
 } from "@/components/ui/Icons";
 
 const detailedSectors = [
   {
+    id: "automotive-detail",
+    slug: "automotive",
+    name: "Automotive & Smart Mobility",
+    icon: <AutomotiveIcon size={24} />,
+    tagline: "Connected vehicle telematics, EV charging hubs, and automated parts SCM.",
+    challenges: [
+      "Fragmented vehicle sensor data preventing proactive maintenance and diagnostics.",
+      "EV fleet charging bottlenecks driving up commercial depot electricity costs.",
+      "Prolonged spare parts order and dispatch lag between regional workshops and warehouses.",
+    ],
+    solutions: [
+      "Unified Automotive Telemetry Hub with real-time CAN-bus metrics and anomaly alerts.",
+      "Smart EV Depot Charging Management dynamically balancing load and electricity tariffs.",
+      "Automated Spare Parts SCM platform syncing inventories with workshop job cards.",
+    ],
+    outcomes: [
+      { label: "Fleet Unplanned Downtime", value: "-38%" },
+      { label: "Depot Energy Charging Costs", value: "-24%" },
+      { label: "Parts Order Turnaround", value: "< 4 Hours" },
+    ],
+  },
+  {
     id: "healthcare-detail",
+    slug: "healthcare",
     name: "Healthcare & Life Sciences",
     icon: <HealthcareIcon size={24} />,
     tagline: "Digitizing patient experiences with zero-friction compliance.",
@@ -41,6 +63,7 @@ const detailedSectors = [
   },
   {
     id: "logistics-detail",
+    slug: "logistics",
     name: "Logistics & Supply Chain",
     icon: <LogisticsIcon size={24} />,
     tagline: "End-to-end fleet tracking and automated dispatch management.",
@@ -62,6 +85,7 @@ const detailedSectors = [
   },
   {
     id: "finance-detail",
+    slug: "finance",
     name: "Financial Services & Fintech",
     icon: <FinanceIcon size={24} />,
     tagline: "High-security financial portals and automated approval engines.",
@@ -83,6 +107,7 @@ const detailedSectors = [
   },
   {
     id: "retail-detail",
+    slug: "retail",
     name: "Retail & E-Commerce",
     icon: <RetailIcon size={24} />,
     tagline: "High-converting headless commerce & AI customer retention.",
@@ -104,6 +129,7 @@ const detailedSectors = [
   },
   {
     id: "realestate-detail",
+    slug: "realestate",
     name: "Real Estate & Property",
     icon: <RealEstateIcon size={24} />,
     tagline: "Automating property management and high-intent lead conversion.",
@@ -125,6 +151,7 @@ const detailedSectors = [
   },
   {
     id: "manufacturing-detail",
+    slug: "manufacturing",
     name: "Manufacturing & Industry 4.0",
     icon: <ManufacturingIcon size={24} />,
     tagline: "Shop-floor visibility and automated production scheduling.",
@@ -147,7 +174,7 @@ const detailedSectors = [
 ];
 
 export default function IndustryDetailSection() {
-  const [selectedSectorId, setSelectedSectorId] = useState("healthcare-detail");
+  const [selectedSectorId, setSelectedSectorId] = useState("automotive-detail");
 
   const currentSector =
     detailedSectors.find((s) => s.id === selectedSectorId) || detailedSectors[0];
@@ -190,27 +217,29 @@ export default function IndustryDetailSection() {
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-[#D9E1EC] shadow-xl transition-all duration-300">
           <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mb-10 pb-8 border-b border-[#D9E1EC]">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D47A1]/10 text-[#0D47A1] text-xs font-bold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B3D91]/10 text-[#0B3D91] text-xs font-bold uppercase tracking-wider mb-3">
                 <ZapIcon size={14} className="text-[#D4AF37]" />
                 <span>Sector Spotlight</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">
                 {currentSector.name}
               </h3>
-              <p className="text-slate-600 dark:text-slate-400 font-medium text-base mt-2">
+              <p className="text-slate-600 font-medium text-base mt-2">
                 {currentSector.tagline}
               </p>
             </div>
 
-            <Button
-              as="link"
-              href="/contact"
-              variant="primary"
-              size="md"
-              rightIcon={<ArrowRightIcon size={16} />}
-            >
-              Discuss {currentSector.name} Solution
-            </Button>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <Button
+                as="link"
+                href={`/industries/${currentSector.slug}`}
+                variant="primary"
+                size="md"
+                rightIcon={<ArrowRightIcon size={16} />}
+              >
+                View Dedicated {currentSector.name} Page
+              </Button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10">

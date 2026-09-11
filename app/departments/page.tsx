@@ -10,7 +10,7 @@ import { departmentsData } from "@/lib/departmentsData";
 export const metadata: Metadata = {
   title: "Specialist Departments | ValoSync Global",
   description:
-    "Explore ValoSync Global's specialist departments: Technology Services, Accounting Services, Conveyancing, Civil Engineering, Real Estate, and Home Loans.",
+    "Explore ValoSync Global's 6 main departments: Engineering & Project Management, Loan & Finance Management, Accounting, Taxation & Compliance, Property & Real Estate Management, Conveyancing & Property Settlement, and Software Company.",
   alternates: {
     canonical: "/departments",
   },
@@ -25,25 +25,46 @@ interface DepartmentGroup {
 
 const departmentGroups: DepartmentGroup[] = [
   {
-    id: "property",
-    title: "Property & Built Environment",
+    id: "engineering-project-management",
+    title: "Engineering & Project Management",
     description:
-      "End-to-end expertise spanning conveyancing, civil engineering, real estate, town planning, and architectural building design.",
-    slugs: ["conveyancing", "civil-engineering", "real-estate", "town-planning", "architecture"],
+      "End-to-end civil infrastructure, council town planning approvals, architectural design, and comprehensive on-site project oversight.",
+    slugs: ["engineering-project-management", "civil-engineering", "town-planning", "architecture"],
   },
   {
-    id: "finance",
-    title: "Finance, Risk & Advisory",
+    id: "loan-finance-management",
+    title: "Loan & Finance Management",
     description:
-      "Integrated financial precision, mortgage brokerage, strategic wealth planning, corporate legal governance, and risk protection.",
-    slugs: ["accounting", "home-loans", "financial-planning", "legal-advisory", "insurance"],
+      "Accredited residential mortgages, commercial debt structuring, financial planning, wealth accumulation, and asset risk protection.",
+    slugs: ["loan-finance-management", "home-loans", "financial-planning", "insurance"],
   },
   {
-    id: "technology",
-    title: "Technology & People",
+    id: "accounting-taxation-compliance",
+    title: "Accounting, Taxation & Compliance",
     description:
-      "Enterprise custom software engineering, cloud infrastructure, AI automation workflows, and strategic human resource talent advisory.",
-    slugs: ["technology", "hr-advisory"],
+      "Corporate bookkeeping, statutory tax optimization, corporate governance, legal contract advisory, and compliant payroll systems.",
+    slugs: ["accounting-taxation-compliance", "accounting", "legal-advisory"],
+  },
+  {
+    id: "property-real-estate-management",
+    title: "Property & Real Estate Management",
+    description:
+      "Strategic residential and commercial property sales, active asset management, high-visibility leasing, and development feasibility.",
+    slugs: ["property-real-estate-management", "real-estate"],
+  },
+  {
+    id: "conveyancing-property-settlement",
+    title: "Conveyancing & Property Settlement",
+    description:
+      "Certified legal title transfers, fast Section 32 contract reviews, stamp duty processing, and electronic PEXA property settlements.",
+    slugs: ["conveyancing-property-settlement", "conveyancing"],
+  },
+  {
+    id: "software-company",
+    title: "Software Company",
+    description:
+      "Bespoke enterprise software, scalable cloud architecture, mobile apps, CRM systems, and AI automation workflow engines.",
+    slugs: ["software-company", "technology", "hr-advisory"],
   },
 ];
 
@@ -59,13 +80,13 @@ export default function DepartmentsPage() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
                 <LayersIcon size={16} className="text-[#D4AF37]" />
-                <span>One Global Group • 3 Department Divisions</span>
+                <span>One Global Group • 6 Core Departments</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6">
                 Specialist Capability Across Key Business Sectors
               </h1>
               <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-8">
-                ValoSync Global provides dedicated operational expertise across Property & Built Environment, Finance, Risk & Advisory, and Technology & People under one trusted organization.
+                ValoSync Global delivers integrated operational expertise across Engineering & Project Management, Loan & Finance, Accounting & Compliance, Property & Real Estate, Conveyancing, and Software Development under one trusted group.
               </p>
 
               {/* Quick Jump Category Pills */}

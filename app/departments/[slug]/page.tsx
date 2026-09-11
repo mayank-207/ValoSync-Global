@@ -21,6 +21,12 @@ interface PageProps {
 
 export async function generateStaticParams() {
   return [
+    { slug: "engineering-project-management" },
+    { slug: "loan-finance-management" },
+    { slug: "accounting-taxation-compliance" },
+    { slug: "property-real-estate-management" },
+    { slug: "conveyancing-property-settlement" },
+    { slug: "software-company" },
     { slug: "technology" },
     { slug: "accounting" },
     { slug: "conveyancing" },

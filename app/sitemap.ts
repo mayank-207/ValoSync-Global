@@ -95,6 +95,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Department routes
   const departmentSlugs = [
+    "engineering-project-management",
+    "loan-finance-management",
+    "accounting-taxation-compliance",
+    "property-real-estate-management",
+    "conveyancing-property-settlement",
+    "software-company",
     "technology",
     "accounting",
     "conveyancing",
@@ -109,20 +115,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "hr-advisory",
   ];
 
-  const departmentRoutes: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/departments`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    ...departmentSlugs.map((slug) => ({
-      url: `${baseUrl}/departments/${slug}`,
-      lastModified,
-      changeFrequency: "weekly" as const,
-      priority: 0.85,
-    })),
+  // Industry routes
+  const industrySlugs = [
+    "automotive",
+    "healthcare",
+    "logistics",
+    "finance",
+    "retail",
+    "realestate",
+    "professional",
+    "manufacturing",
+    "education",
   ];
 
-  return [...staticRoutes, ...departmentRoutes, ...serviceRoutes, ...portfolioRoutes];
+  const industryRoutes: MetadataRoute.Sitemap = industrySlugs.map((slug) => ({
+    url: `${baseUrl}/industries/${slug}`,
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...departmentRoutes,
+    ...industryRoutes,
+    ...serviceRoutes,
+    ...portfolioRoutes,
+  ];
 }

@@ -25,33 +25,65 @@ interface CategoryTab {
 
 const departmentTabs: CategoryTab[] = [
   {
-    id: "property",
-    title: "Property & Built Environment",
+    id: "engineering-project-management",
+    title: "Engineering & Project Management",
     items: [
-      { label: "Conveyancing", href: "/departments/conveyancing" },
       { label: "Civil Engineering", href: "/departments/civil-engineering" },
-      { label: "Real Estate", href: "/departments/real-estate" },
       { label: "Town Planning", href: "/departments/town-planning" },
       { label: "Architecture & Building Design", href: "/departments/architecture" },
+      { label: "Construction & Project Oversight", href: "/departments/engineering-project-management" },
     ],
   },
   {
-    id: "finance",
-    title: "Finance, Risk & Advisory",
+    id: "loan-finance-management",
+    title: "Loan & Finance Management",
     items: [
-      { label: "Accounting", href: "/departments/accounting" },
-      { label: "Home Loans", href: "/departments/home-loans" },
+      { label: "Home Loans & Mortgages", href: "/departments/home-loans" },
       { label: "Financial Planning & Wealth", href: "/departments/financial-planning" },
-      { label: "Legal & Corporate Advisory", href: "/departments/legal-advisory" },
+      { label: "Commercial Finance & Refinancing", href: "/departments/loan-finance-management" },
       { label: "Insurance & Risk Advisory", href: "/departments/insurance" },
     ],
   },
   {
-    id: "technology",
-    title: "Technology & People",
+    id: "accounting-taxation-compliance",
+    title: "Accounting, Taxation & Compliance",
     items: [
-      { label: "Technology Services", href: "/departments/technology" },
-      { label: "HR & Talent Advisory", href: "/departments/hr-advisory" },
+      { label: "Corporate Accounting & Bookkeeping", href: "/departments/accounting" },
+      { label: "Taxation & Statutory Lodgments", href: "/departments/accounting-taxation-compliance" },
+      { label: "Legal & Corporate Governance", href: "/departments/legal-advisory" },
+      { label: "Payroll & Compliance Admin", href: "/departments/accounting-taxation-compliance" },
+    ],
+  },
+  {
+    id: "property-real-estate-management",
+    title: "Property & Real Estate Management",
+    items: [
+      { label: "Real Estate Sales & Advisory", href: "/departments/real-estate" },
+      { label: "Asset & Property Management", href: "/departments/property-real-estate-management" },
+      { label: "Commercial & Residential Leasing", href: "/departments/property-real-estate-management" },
+      { label: "Development Feasibility & Advisory", href: "/departments/property-real-estate-management" },
+    ],
+  },
+  {
+    id: "conveyancing-property-settlement",
+    title: "Conveyancing & Property Settlement",
+    items: [
+      { label: "Residential Conveyancing", href: "/departments/conveyancing" },
+      { label: "Commercial Property Settlement", href: "/departments/conveyancing-property-settlement" },
+      { label: "Contract & Section 32 Review", href: "/departments/conveyancing" },
+      { label: "Title Transfers & Stamp Duty", href: "/departments/conveyancing-property-settlement" },
+    ],
+  },
+  {
+    id: "software-company",
+    title: "Software Company",
+    items: [
+      { label: "Custom Software & SaaS", href: "/services/custom-software" },
+      { label: "Mobile App Development", href: "/services/mobile-app-development" },
+      { label: "Web Development & Portals", href: "/services/web-development" },
+      { label: "CRM & ERP Platform Architecture", href: "/services/crm-development" },
+      { label: "AI Automation Solutions", href: "/services/ai-automation" },
+      { label: "Cloud & DevOps Infrastructure", href: "/services/cloud-devops" },
     ],
   },
 ];
@@ -101,7 +133,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [activeDeptId, setActiveDeptId] = useState<string>("property");
+  const [activeDeptId, setActiveDeptId] = useState<string>("engineering-project-management");
   const [activeServiceId, setActiveServiceId] = useState<string>("software");
 
   // Auto close mobile menu on page navigation
@@ -188,9 +220,9 @@ export default function Header() {
                       }`}
                     >
                       {/* Proowrx-Style Clean 2-Column Submenu Container */}
-                      <div className="w-[490px] rounded-b-md shadow-xl bg-white border-t-[3px] border-[#071A33] border-x border-b border-slate-200 overflow-hidden grid grid-cols-12 text-left">
+                      <div className="w-[580px] rounded-b-md shadow-xl bg-white border-t-[3px] border-[#071A33] border-x border-b border-slate-200 overflow-hidden grid grid-cols-12 text-left">
                         {/* Left Column Categories */}
-                        <div className="col-span-5 bg-white p-2 space-y-1">
+                        <div className="col-span-6 bg-white p-2 space-y-1">
                           {departmentTabs.map((tab) => {
                             const isActive = activeDeptId === tab.id;
                             return (
@@ -199,16 +231,16 @@ export default function Header() {
                                 type="button"
                                 onMouseEnter={() => setActiveDeptId(tab.id)}
                                 onClick={() => setActiveDeptId(tab.id)}
-                                className={`w-full flex items-center justify-between px-3 py-2.5 rounded text-sm font-bold transition-all text-left ${
+                                className={`w-full flex items-center justify-between px-3 py-2 rounded text-xs font-bold transition-all text-left ${
                                   isActive
                                     ? "bg-[#F3F5F8] text-[#071A33]"
                                     : "text-[#1A1A1A] hover:bg-[#F8FAFC] hover:text-[#0B3D91]"
                                 }`}
                               >
-                                <span>{tab.title}</span>
+                                <span className="leading-snug">{tab.title}</span>
                                 <ArrowRightIcon
-                                  size={13}
-                                  className={`transition-transform duration-200 ${
+                                  size={12}
+                                  className={`transition-transform duration-200 flex-shrink-0 ml-1.5 ${
                                     isActive
                                       ? "text-[#071A33] opacity-100"
                                       : "text-slate-400 opacity-40"
@@ -220,7 +252,7 @@ export default function Header() {
                         </div>
 
                         {/* Right Column Sub-Items */}
-                        <div className="col-span-7 p-2.5 bg-white border-l border-slate-200 flex flex-col justify-between">
+                        <div className="col-span-6 p-2.5 bg-white border-l border-slate-200 flex flex-col justify-between">
                           <div className="space-y-1">
                             {(() => {
                               const activeTab =
@@ -229,7 +261,7 @@ export default function Header() {
                                 <Link
                                   key={subItem.label}
                                   href={subItem.href}
-                                  className="block px-3 py-2 text-sm font-bold text-[#071A33] rounded hover:bg-[#F3F5F8] hover:text-[#0B3D91] transition-colors"
+                                  className="block px-3 py-2 text-xs font-bold text-[#071A33] rounded hover:bg-[#F3F5F8] hover:text-[#0B3D91] transition-colors"
                                 >
                                   {subItem.label}
                                 </Link>
@@ -453,6 +485,13 @@ export default function Header() {
                             ))}
                           </div>
                         ))}
+                        <Link
+                          href="/departments"
+                          className="block px-3 py-2 text-xs font-bold text-[#0B3D91] bg-slate-100 rounded-lg text-center mt-1"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Explore All Departments →
+                        </Link>
                       </div>
                     )}
                   </div>

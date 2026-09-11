@@ -1,4 +1,10 @@
 export type DepartmentSlug =
+  | "engineering-project-management"
+  | "loan-finance-management"
+  | "accounting-taxation-compliance"
+  | "property-real-estate-management"
+  | "conveyancing-property-settlement"
+  | "software-company"
   | "technology"
   | "accounting"
   | "conveyancing"
@@ -15,7 +21,7 @@ export type DepartmentSlug =
 export interface DepartmentData {
   slug: DepartmentSlug;
   number: string;
-  category: "Property & Built Environment" | "Finance, Risk & Advisory" | "Technology & People";
+  category: string;
   title: string;
   badge: string;
   metaTitle: string;
@@ -959,4 +965,469 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
       { title: "Performance & Retention Systems", description: "Structured KPI/OKR frameworks for employee growth." },
     ],
   },
+
+  "engineering-project-management": {
+    slug: "engineering-project-management",
+    number: "01",
+    category: "Engineering & Project Management",
+    title: "Engineering & Project Management",
+    badge: "Infrastructure & Project Delivery",
+    metaTitle: "Engineering & Project Management Services | ValoSync Global",
+    metaDescription:
+      "Integrated civil engineering, town planning approvals, architectural design, construction oversight, and end-to-end infrastructure project management.",
+    heroHeadline: "Precision Civil Engineering & Infrastructure Project Management",
+    heroSubtitle:
+      "From feasibility analysis and council town planning approvals to architectural drafting and on-site construction oversight, we deliver complex development projects on schedule and within budget.",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82",
+    alt: "Civil engineering team reviewing structural plans and project management schedule",
+    highlights: [
+      "Council Planning & DA Approvals",
+      "Civil Infrastructure & Stormwater",
+      "Architectural & Building Design",
+      "End-to-End Construction Oversight",
+    ],
+    painPoints: [
+      "Costly council permit delays and uncoordinated development applications.",
+      "Fragmented communication between civil engineers, architects, and site contractors.",
+      "Severe budget blowouts resulting from scope creep and unmonitored project variations.",
+    ],
+    solutions: [
+      "Unified in-house engineering and planning teams delivering rapid permit turnaround.",
+      "Comprehensive civil documentation, 3D modeling, and strict building code adherence.",
+      "Rigorous construction milestone tracking, cost-control reporting, and contractor audits.",
+    ],
+    capabilities: [
+      {
+        title: "Civil Engineering & Drainage Infrastructure",
+        description:
+          "Stormwater management plans (SMP), MUSIC modeling, sediment control, flood impact analysis, and road design.",
+      },
+      {
+        title: "Town Planning & Council Approvals",
+        description:
+          "Development Applications (DA), Planning Scheme Amendments, site rezoning analysis, and council liaison.",
+      },
+      {
+        title: "Architecture & Building Design",
+        description:
+          "Residential, commercial, and industrial architectural drafting, 3D rendering, and National Construction Code compliance.",
+      },
+      {
+        title: "Construction & Project Management",
+        description:
+          "Tender evaluation, contractor management, critical path scheduling, quality assurance, and site handover.",
+      },
+    ],
+    metrics: [
+      { value: "98%", label: "DA Approval Rate" },
+      { value: "100%", label: "Code Compliance" },
+      { value: "-25%", label: "Holding Time Saved" },
+    ],
+    faqs: [
+      {
+        question: "How does ValoSync coordinate town planning and civil engineering together?",
+        answer:
+          "Our town planners and civil engineers work collaboratively under one roof. When formulating a development application, stormwater and access engineering are modeled simultaneously, eliminating council RFIs and delays.",
+      },
+      {
+        question: "Do you handle construction oversight on site?",
+        answer:
+          "Yes, we provide end-to-end project management services including contractor supervision, site inspections, milestone verification, and progress payment certifications.",
+      },
+    ],
+    keyServices: [
+      { title: "Civil Engineering", description: "Stormwater, drainage, earthworks, and infrastructure design.", href: "/departments/civil-engineering" },
+      { title: "Town Planning", description: "Council DA approvals, rezoning feasibility, and master plans.", href: "/departments/town-planning" },
+      { title: "Architecture & Design", description: "Modern architectural drafting and 3D visualization.", href: "/departments/architecture" },
+      { title: "Project Management", description: "On-site construction oversight and timeline controls.", href: "/departments/engineering-project-management" },
+    ],
+  },
+
+  "loan-finance-management": {
+    slug: "loan-finance-management",
+    number: "02",
+    category: "Loan & Finance Management",
+    title: "Loan & Finance Management",
+    badge: "Lending, Wealth & Capital Advisory",
+    metaTitle: "Loan & Finance Management Services | ValoSync Global",
+    metaDescription:
+      "Accredited home loans, commercial finance, strategic wealth management, refinancing advisory, and risk protection tailored to your capital objectives.",
+    heroHeadline: "Strategic Loan Brokerage, Capital Structuring & Wealth Advisory",
+    heroSubtitle:
+      "Navigate lending and wealth creation with institutional clarity. We connect clients to over 40 tier-one lenders, structure commercial finance, and manage wealth portfolios for long-term growth.",
+    image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=82",
+    alt: "Financial charts and residential property lending advisory",
+    highlights: [
+      "Access to 40+ Bank & Specialist Lenders",
+      "Tailored Residential & Commercial Loans",
+      "Strategic Wealth & SMSF Planning",
+      "Comprehensive Risk & Insurance Coverage",
+    ],
+    painPoints: [
+      "Opaque bank lending policies and lengthy mortgage approval waiting periods.",
+      "Suboptimal loan structuring costing thousands in unnecessary interest payments.",
+      "Lack of coordination between borrowing strategy, tax efficiency, and wealth building.",
+    ],
+    solutions: [
+      "End-to-end loan application packaging with accelerated pre-approval pathways.",
+      "Access to exclusive wholesale lending rates and flexible repayment terms.",
+      "Synchronized mortgage brokerage and wealth planning for maximum capital compounding.",
+    ],
+    capabilities: [
+      {
+        title: "Home Loans & Residential Mortgages",
+        description:
+          "First-home buyer loans, refinancing, equity extraction, and property investment loan portfolio structuring.",
+      },
+      {
+        title: "Commercial & Development Finance",
+        description:
+          "Asset finance, commercial property mortgages, construction facilities, and business working capital loans.",
+      },
+      {
+        title: "Financial Planning & Wealth Management",
+        description:
+          "Bespoke wealth creation roadmaps, superannuation consolidation, retirement planning, and Self-Managed Super Funds.",
+      },
+      {
+        title: "Insurance & Risk Advisory",
+        description:
+          "Key person insurance, income protection, business interruption coverage, and asset preservation.",
+      },
+    ],
+    metrics: [
+      { value: "40+", label: "Lending Institution Panels" },
+      { value: "$120M+", label: "Total Debt Structured" },
+      { value: "0.45%", label: "Average Rate Improvement" },
+    ],
+    faqs: [
+      {
+        question: "How do your brokers secure better loan rates than going directly to a bank?",
+        answer:
+          "We analyze policies across 40+ lenders simultaneously and leverage wholesale broker volume to negotiate competitive interest rates, fee waivers, and favorable borrowing terms.",
+      },
+      {
+        question: "Can you assist with complex company trusts and SMSF borrowing?",
+        answer:
+          "Yes, we specialize in non-standard borrowing structures including unit trusts, corporate trustees, and Self-Managed Super Fund (SMSF) limited recourse borrowing arrangements.",
+      },
+    ],
+    keyServices: [
+      { title: "Home Loans & Mortgages", description: "Residential property finance and refinancing solutions.", href: "/departments/home-loans" },
+      { title: "Financial Planning & Wealth", description: "Holistic wealth accumulation and retirement roadmaps.", href: "/departments/financial-planning" },
+      { title: "Commercial Lending", description: "Business capital, equipment, and development funding.", href: "/departments/loan-finance-management" },
+      { title: "Risk & Insurance Protection", description: "Tailored personal and commercial liability coverage.", href: "/departments/insurance" },
+    ],
+  },
+
+  "accounting-taxation-compliance": {
+    slug: "accounting-taxation-compliance",
+    number: "03",
+    category: "Accounting, Taxation & Compliance",
+    title: "Accounting, Taxation & Compliance",
+    badge: "Corporate Precision & Governance",
+    metaTitle: "Accounting, Taxation & Corporate Compliance | ValoSync Global",
+    metaDescription:
+      "Strategic corporate bookkeeping, statutory tax optimization, corporate compliance, financial reporting, and payroll management for thriving enterprises.",
+    heroHeadline: "Corporate Accounting, Tax Optimization & Regulatory Compliance",
+    heroSubtitle:
+      "Eliminate compliance risk and unlock fiscal clarity. We deliver structured bookkeeping, proactive tax planning, corporate legal advisory, and audit-ready governance frameworks.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=82",
+    alt: "Financial compliance audit documents, balance sheet and laptop",
+    highlights: [
+      "Proactive Tax Optimization & Advisory",
+      "100% Statutory Compliance Guarantee",
+      "Real-Time Cloud Ledger Bookkeeping",
+      "Corporate Legal & Governance Support",
+    ],
+    painPoints: [
+      "Unexpected year-end tax liabilities due to reactive accounting practices.",
+      "Missed corporate lodgment deadlines resulting in severe regulatory penalties.",
+      "Time-consuming manual bookkeeping taking focus away from business development.",
+    ],
+    solutions: [
+      "Quarterly forecasting and proactive legal tax minimization strategies.",
+      "Automated cloud ledgers with daily reconciliations and receipt extraction.",
+      "End-to-end ASIC and statutory filing schedules ensuring zero non-compliance penalties.",
+    ],
+    capabilities: [
+      {
+        title: "Corporate Accounting & Financial Reporting",
+        description:
+          "Periodic management accounts, balance sheet reconciliations, cash flow forecasting, and KPI dashboards.",
+      },
+      {
+        title: "Taxation Planning & Lodgment",
+        description:
+          "Company tax returns, GST/BAS statements, capital gains tax advisory, and international transfer pricing.",
+      },
+      {
+        title: "Legal & Corporate Governance",
+        description:
+          "Company secretarial services, shareholder agreements, director resolutions, and commercial contract reviews.",
+      },
+      {
+        title: "Payroll & Superannuation Administration",
+        description:
+          "Single Touch Payroll (STP) processing, superannuation compliance, leave entitlements, and award calculations.",
+      },
+    ],
+    metrics: [
+      { value: "100%", label: "Statutory Lodgment Rate" },
+      { value: "Zero", label: "Late Penalty Guarantee" },
+      { value: "30%+", label: "Admin Time Saved" },
+    ],
+    faqs: [
+      {
+        question: "How do you help businesses reduce their tax legally?",
+        answer:
+          "We structure your business entities, trust distributions, capital allowances, and research R&D tax incentives proactively throughout the financial year rather than after year-end.",
+      },
+      {
+        question: "Do you integrate with modern accounting software like Xero and QuickBooks?",
+        answer:
+          "Yes, we are certified specialists in Xero, MYOB, and QuickBooks, connecting bank feeds, automated invoicing, and digital receipt capture directly to your books.",
+      },
+    ],
+    keyServices: [
+      { title: "Corporate Accounting", description: "Accurate ledger management and executive reporting.", href: "/departments/accounting" },
+      { title: "Taxation Advisory", description: "Strategic tax planning, BAS, and annual lodgments.", href: "/departments/accounting-taxation-compliance" },
+      { title: "Legal & Corporate Advisory", description: "Governance, contracts, and commercial risk mitigation.", href: "/departments/legal-advisory" },
+      { title: "Payroll Management", description: "Compliant Single Touch Payroll and superannuation.", href: "/departments/accounting-taxation-compliance" },
+    ],
+  },
+
+  "property-real-estate-management": {
+    slug: "property-real-estate-management",
+    number: "04",
+    category: "Property & Real Estate Management",
+    title: "Property & Real Estate Management",
+    badge: "Asset Optimization & Sales",
+    metaTitle: "Property & Real Estate Management Services | ValoSync Global",
+    metaDescription:
+      "Strategic real estate sales, commercial and residential asset management, property leasing, and high-yield portfolio development advisory.",
+    heroHeadline: "Full-Lifecycle Property Advisory, Real Estate Sales & Asset Management",
+    heroSubtitle:
+      "Maximize capital appreciation and net rental yield across commercial and residential portfolios with our full-service property sales, leasing, and asset care division.",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82",
+    alt: "Modern high-value residential and commercial property management",
+    highlights: [
+      "Strategic Property Sales & Acquisitions",
+      "Rigorous Tenant Screening & Zero Rent Arrears",
+      "Commercial & Residential Asset Preservation",
+      "Development Feasibility & Portfolio Growth",
+    ],
+    painPoints: [
+      "Extended vacancy periods reducing annual net rental yield.",
+      "Inadequate tenant screening leading to property damage and payment defaults.",
+      "Unoptimized property acquisitions lacking structured demographic and feasibility analysis.",
+    ],
+    solutions: [
+      "Targeted marketing campaigns achieving rapid tenant occupancy within 14 days.",
+      "Routine digital inspections, automated rent collection, and preventative asset care.",
+      "Data-backed property acquisition advisory identifying prime high-growth corridors.",
+    ],
+    capabilities: [
+      {
+        title: "Real Estate Sales & Advisory",
+        description:
+          "Market appraisals, off-market acquisitions, vendor advocacy, negotiation, and auction representation.",
+      },
+      {
+        title: "Asset & Property Management",
+        description:
+          "Rent collection, tenant dispute management, routine photographic condition reports, and financial accounting.",
+      },
+      {
+        title: "Commercial & Residential Leasing",
+        description:
+          "Targeted property marketing, lease negotiation, retail lease compliance, and bond lodgments.",
+      },
+      {
+        title: "Development Feasibility & Advisory",
+        description:
+          "Yield calculations, market absorption studies, site amalgamation, and off-the-plan project sales.",
+      },
+    ],
+    metrics: [
+      { value: "99.2%", label: "On-Time Rent Collection" },
+      { value: "< 14 Days", label: "Average Vacancy Time" },
+      { value: "$350M+", label: "Portfolio Value Managed" },
+    ],
+    faqs: [
+      {
+        question: "How do you select quality tenants for our rental properties?",
+        answer:
+          "We conduct exhaustive identity checks, national tenancy database (NTD/TICA) verifications, employment and income checks, and direct reference calls with prior property managers.",
+      },
+      {
+        question: "Can you manage commercial and retail leases as well as residential?",
+        answer:
+          "Yes, we have specialist commercial property managers skilled in commercial retail legislation, outgoings reconciliations, and long-term lease negotiations.",
+      },
+    ],
+    keyServices: [
+      { title: "Real Estate Sales", description: "Strategic residential and commercial property sales.", href: "/departments/real-estate" },
+      { title: "Property Asset Care", description: "Comprehensive management, maintenance, and rent collection.", href: "/departments/property-real-estate-management" },
+      { title: "Leasing Services", description: "High-visibility tenant sourcing and leasing campaigns.", href: "/departments/property-real-estate-management" },
+      { title: "Development Advisory", description: "Project feasibility and off-the-plan sales coordination.", href: "/departments/property-real-estate-management" },
+    ],
+  },
+
+  "conveyancing-property-settlement": {
+    slug: "conveyancing-property-settlement",
+    number: "05",
+    category: "Conveyancing & Property Settlement",
+    title: "Conveyancing & Property Settlement",
+    badge: "Legal Title & Property Settlement",
+    metaTitle: "Conveyancing & Property Settlement Services | ValoSync Global",
+    metaDescription:
+      "Certified legal title transfers, contract reviews, Section 32 statements, stamp duty processing, and PEXA electronic property settlements.",
+    heroHeadline: "Risk-Free Property Conveyancing & Digital Settlement Services",
+    heroSubtitle:
+      "Safeguard your property transactions with certified conveyancing experts. From pre-contract Section 32 reviews to electronic PEXA settlements, we protect your legal and financial interests.",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
+    alt: "Property settlement legal documents, keys and deed transfer papers",
+    highlights: [
+      "PEXA Certified Digital Settlement",
+      "Fast 24-Hour Contract & Section 32 Reviews",
+      "Fixed-Fee Transparent Pricing",
+      "Comprehensive Title & Easement Searches",
+    ],
+    painPoints: [
+      "Undisclosed caveats, easements, or zoning restrictions discovered after contract signing.",
+      "Settlement delays caused by miscommunication between lenders and solicitors.",
+      "Unexpected legal fees and opaque disbursement charges.",
+    ],
+    solutions: [
+      "Comprehensive pre-signing contract analysis identifying restrictive clauses and hidden liabilities.",
+      "Direct PEXA workspace integration ensuring seamless on-time fund transfer and title handover.",
+      "Transparent fixed-fee legal representation with zero hidden billable surprises.",
+    ],
+    capabilities: [
+      {
+        title: "Residential Property Conveyancing",
+        description:
+          "Purchase and sale settlements for houses, townhouses, apartments, vacant land, and off-the-plan builds.",
+      },
+      {
+        title: "Commercial Property Settlement",
+        description:
+          "Commercial warehouses, retail offices, GST going-concern exemptions, and lease assignments.",
+      },
+      {
+        title: "Contract & Section 32 Vendor Statements",
+        description:
+          "Thorough legal examination of disclosure statements, special conditions, and auction contracts.",
+      },
+      {
+        title: "Title Transfers & Stamp Duty Processing",
+        description:
+          "Spousal transfers, survivorship applications, family trust transfers, and State Revenue Office exemptions.",
+      },
+    ],
+    metrics: [
+      { value: "5,000+", label: "Settlements Executed" },
+      { value: "100%", label: "PEXA Digital Accuracy" },
+      { value: "24-Hour", label: "Contract Review Speed" },
+    ],
+    faqs: [
+      {
+        question: "When should I engage a conveyancer when buying property?",
+        answer:
+          "Before you sign anything or make an offer at auction. Having us review the Contract of Sale and Section 32 vendor statement beforehand protects you from costly hidden covenants and illegal building works.",
+      },
+      {
+        question: "How does electronic PEXA settlement benefit buyers and sellers?",
+        answer:
+          "PEXA replaces slow physical settlement rooms with instant electronic funds transfer and digital title registry updates, ensuring sellers receive cleared funds and buyers receive registered title on the same day.",
+      },
+    ],
+    keyServices: [
+      { title: "Residential Conveyancing", description: "End-to-end buying and selling legal settlement.", href: "/departments/conveyancing" },
+      { title: "Contract & Section 32 Review", description: "Fast pre-signing legal examination and advice.", href: "/departments/conveyancing" },
+      { title: "Commercial Settlement", description: "Commercial property transfers, retail leases, and GST.", href: "/departments/conveyancing-property-settlement" },
+      { title: "Title Transfers", description: "Spousal, family, and trust property title transfers.", href: "/departments/conveyancing-property-settlement" },
+    ],
+  },
+
+  "software-company": {
+    slug: "software-company",
+    number: "06",
+    category: "Software Company",
+    title: "Software Company",
+    badge: "Enterprise Software & Cloud Platforms",
+    metaTitle: "Software Company | Custom Software & Cloud Development | ValoSync Global",
+    metaDescription:
+      "Full-scale custom software development, Next.js web applications, mobile apps, CRM systems, AI automation, and cloud microservices.",
+    heroHeadline: "Custom Enterprise Software, Web & Mobile Applications, and AI Solutions",
+    heroSubtitle:
+      "We engineer bespoke software platforms, scalable cloud infrastructure, high-converting web applications, and AI automated workflow engines designed to accelerate operational growth.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
+    alt: "High-tech software code development and cloud server network",
+    highlights: [
+      "100% Client Code IP Ownership",
+      "Modern Next.js & Cloud Microservices",
+      "Private AI & Workflow Automation",
+      "Custom CRM & ERP Business Systems",
+    ],
+    painPoints: [
+      "Rigid off-the-shelf software with expensive recurring user seat licenses.",
+      "Manual administrative bottlenecks and disconnected business tools.",
+      "Fragile legacy applications unable to support expanding business scale.",
+    ],
+    solutions: [
+      "Custom software architecture built 100% around your proprietary operations.",
+      "Intelligent AI engines automating document extraction and repetitive customer tasks.",
+      "Cloud-native microservices offering 99.9% uptime, enterprise security, and rapid performance.",
+    ],
+    capabilities: [
+      {
+        title: "Custom Software & SaaS Platforms",
+        description:
+          "Enterprise web platforms, customer portals, and multi-tenant SaaS products built with Next.js, React, Node.js, and PostgreSQL.",
+      },
+      {
+        title: "Mobile App Development",
+        description:
+          "High-performance native and cross-platform iOS and Android mobile applications built with React Native and Flutter.",
+      },
+      {
+        title: "CRM & ERP Platform Architecture",
+        description:
+          "Tailored sales pipelines, automated billing, team dispatch management, and operational dashboards.",
+      },
+      {
+        title: "AI Automation & Cloud Infrastructure",
+        description:
+          "Automated document processing, private LLM assistants, AWS cloud setup, CI/CD pipelines, and DevOps support.",
+      },
+    ],
+    metrics: [
+      { value: "100%", label: "Source Code IP Ownership" },
+      { value: "99.9%", label: "System Uptime Guarantee" },
+      { value: "3x+", label: "Operational Velocity" },
+    ],
+    faqs: [
+      {
+        question: "Do we retain full ownership of our custom software source code?",
+        answer:
+          "Yes. Complete source code repositories, intellectual property rights, database schemas, and infrastructure credentials are 100% transferred to your company upon project milestone completion.",
+      },
+      {
+        question: "What technology stack does your software engineering team use?",
+        answer:
+          "We use modern, enterprise-proven technologies including Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Redis, Docker, and AWS/Vercel cloud infrastructure.",
+      },
+    ],
+    keyServices: [
+      { title: "Custom Software Development", description: "Bespoke web and cloud platforms built to your specifications.", href: "/services/custom-software" },
+      { title: "Mobile App Development", description: "Cross-platform iOS and Android apps with offline support.", href: "/services/mobile-app-development" },
+      { title: "Web Development", description: "Lightning-fast Next.js portals and web applications.", href: "/services/web-development" },
+      { title: "CRM Development", description: "Custom business management and lead pipeline tools.", href: "/services/crm-development" },
+      { title: "AI Automation Solutions", description: "Private AI workflows and document extraction engines.", href: "/services/ai-automation" },
+      { title: "Cloud & DevOps Support", description: "Containerized cloud infrastructure and CI/CD pipelines.", href: "/services/cloud-devops" },
+    ],
+  },
 };
+

@@ -260,32 +260,44 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                         className="w-full px-4 py-3 text-sm rounded-xl border bg-[#F7F9FC] border-[#D9E1EC] focus:outline-none focus:border-[#0B3D91] transition-colors text-[#1A1A1A]"
                       >
-                        <optgroup label="Property & Built Environment">
-                          <option value="Conveyancing">Conveyancing</option>
-                          <option value="Civil Engineering">Civil Engineering</option>
-                          <option value="Real Estate">Real Estate</option>
-                          <option value="Town Planning">Town Planning</option>
+                        <optgroup label="1. Engineering & Project Management">
+                          <option value="Engineering & Project Management">Engineering & Project Management (Full Service)</option>
+                          <option value="Civil Engineering">Civil Engineering & Drainage</option>
+                          <option value="Town Planning">Town Planning & Council Approvals</option>
                           <option value="Architecture & Building Design">Architecture & Building Design</option>
                         </optgroup>
-                        <optgroup label="Finance, Risk & Advisory">
-                          <option value="Accounting">Accounting</option>
-                          <option value="Home Loans">Home Loans</option>
+                        <optgroup label="2. Loan & Finance Management">
+                          <option value="Loan & Finance Management">Loan & Finance Management (Full Service)</option>
+                          <option value="Home Loans">Home Loans & Mortgages</option>
+                          <option value="Commercial Lending">Commercial & Business Lending</option>
                           <option value="Financial Planning & Wealth">Financial Planning & Wealth</option>
-                          <option value="Legal & Corporate Advisory">Legal & Corporate Advisory</option>
                           <option value="Insurance & Risk Advisory">Insurance & Risk Advisory</option>
                         </optgroup>
-                        <optgroup label="Technology & People">
-                          <option value="Technology Services">Technology Services</option>
-                          <option value="HR & Talent Advisory">HR & Talent Advisory</option>
+                        <optgroup label="3. Accounting, Taxation & Compliance">
+                          <option value="Accounting, Taxation & Compliance">Accounting, Taxation & Compliance (Full Service)</option>
+                          <option value="Accounting">Corporate Accounting & Bookkeeping</option>
+                          <option value="Taxation Advisory">Taxation Planning & Lodgments</option>
+                          <option value="Legal & Corporate Advisory">Legal & Corporate Governance</option>
                         </optgroup>
-                        <optgroup label="Specialized Technology Services">
+                        <optgroup label="4. Property & Real Estate Management">
+                          <option value="Property & Real Estate Management">Property & Real Estate Management (Full Service)</option>
+                          <option value="Real Estate Sales">Real Estate Sales & Acquisitions</option>
+                          <option value="Property Management">Asset & Property Management</option>
+                          <option value="Commercial Leasing">Commercial & Residential Leasing</option>
+                        </optgroup>
+                        <optgroup label="5. Conveyancing & Property Settlement">
+                          <option value="Conveyancing & Property Settlement">Conveyancing & Property Settlement (Full Service)</option>
+                          <option value="Conveyancing">Residential Conveyancing</option>
+                          <option value="Commercial Settlement">Commercial Property Settlement</option>
+                          <option value="Contract & Section 32 Review">Contract & Section 32 Review</option>
+                        </optgroup>
+                        <optgroup label="6. Software Company">
                           <option value="Custom Software Development">Custom Software Development</option>
                           <option value="Mobile App Development">Mobile App Development</option>
-                          <option value="CRM Development">CRM Development</option>
-                          <option value="AI Automation">AI Automation</option>
-                          <option value="Web Development">Web Development</option>
-                          <option value="Cloud & DevOps Support">Cloud & DevOps Support</option>
-                          <option value="Digital Marketing">Digital Marketing & SEO</option>
+                          <option value="CRM Development">CRM & ERP Development</option>
+                          <option value="AI Automation">AI Automation & Workflow</option>
+                          <option value="Web Development">Web Development & Portals</option>
+                          <option value="Cloud & DevOps Support">Cloud & DevOps Infrastructure</option>
                         </optgroup>
                       </select>
                     </div>
