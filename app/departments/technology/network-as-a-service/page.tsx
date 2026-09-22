@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -77,17 +78,26 @@ export default function NetworkAsAServicePage() {
     <>
       <Header />
       <main id="main">
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#071A33] via-[#0B3D91] to-[#071A33] pt-32 pb-20 text-white md:pt-40 md:pb-28">
-          <div className="absolute -right-24 top-12 h-80 w-80 rounded-full bg-[#1565C0]/30 blur-3xl" aria-hidden="true" />
+        <section className="relative isolate overflow-hidden bg-[#071A33] pt-32 pb-20 text-white md:pt-40 md:pb-28">
+          <Image
+            src="/images/naas-network-hero.webp"
+            alt="Network switches and neatly routed cables in a modern data centre"
+            fill
+            fetchPriority="high"
+            sizes="100vw"
+            className="object-cover object-[68%_center] md:object-center"
+          />
+          <div className="absolute inset-0 bg-[#071A33]/70 md:bg-gradient-to-r md:from-[#071A33]/95 md:via-[#071A33]/80 md:to-[#071A33]/25" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071A33]/55 via-transparent to-[#071A33]/20" aria-hidden="true" />
           <div className="container relative z-10">
             <div className="max-w-3xl">
-              <Link href="/departments/technology" className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-[#D4AF37] hover:text-white">
+              <Link href="/departments/technology" className="mb-8 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#D4AF37] hover:text-white">
                 <GlobeIcon size={18} /> Technology Services
               </Link>
-              <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-                Network as a Service <span className="text-[#D4AF37]">(NaaS)</span>
+              <h1 className="mb-6 max-w-2xl text-4xl font-extrabold leading-[1.12] tracking-tight drop-shadow-lg sm:text-5xl md:text-6xl">
+                Network as a Service <span className="block text-[#D4AF37]">(NaaS)</span>
               </h1>
-              <p className="mb-9 max-w-2xl text-lg leading-relaxed text-slate-200 sm:text-xl">
+              <p className="mb-9 max-w-xl border-l-2 border-[#D4AF37] pl-5 text-lg font-medium leading-relaxed text-slate-100 drop-shadow-md sm:text-xl">
                 Flexible, managed network solutions that help businesses securely connect their teams, offices, cloud platforms and essential systems.
               </p>
               <Link href="/contact" className="inline-flex items-center gap-3 rounded-xl bg-[#D4AF37] px-6 py-4 font-bold text-[#071A33] transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
