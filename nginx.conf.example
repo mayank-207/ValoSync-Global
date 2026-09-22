@@ -1,0 +1,84 @@
+# Upstream definition for Next.js App
+upstream nextjs_upstream {
+    server 127.0.0.1:3000;
+    keepalive 64;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name yourdomain.com www.yourdomain.com;
+
+    # Maximum upload payload
+    client_max_body_size 20M;
+
+    # Gzip Compression for high performance
+    gzip on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml application/json application/javascript application/rss+xml application/atom+xml image/svg+xml font/woff font/woff2;
+
+    # Security Headers
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # Serve static Next.js assets directly with long-term caching
+    location /_next/static/ {
+        alias /var/www/valosync-global/.next/static/;
+        expires 365d;
+        access_log off;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    # Serve public static assets (images, icons) directly
+    location /images/ {
+        alias /var/www/valosync-global/public/images/;
+        expires 30d;
+        access_log off;
+        add_header Cache-Control "public, max-age=2592000";
+    }
+
+    location = /favicon.ico {
+        alias /var/www/valosync-global/public/favicon.ico;
+        access_log off;
+        log_not_found off;
+    }
+
+    location = /robots.txt {
+        proxy_pass http://nextjs_upstream;
+        proxy_set_header Host $host;
+    }
+
+    location = /sitemap.xml {
+        proxy_pass http://nextjs_upstream;
+        proxy_set_header Host $host;
+    }
+
+    # Proxy all dynamic requests, SSR pages, and API routes to Next.js
+    location / {
+        proxy_pass http://nextjs_upstream;
+        proxy_http_version 1.1;
+
+        # WebSocket support
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+
+        # Forwarded Client Headers
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+
+        # Proxy buffer settings
+        proxy_buffers 8 16k;
+        proxy_buffer_size 32k;
+
+        # Connection timeouts
+        proxy_connect_timeout 60s;
+        proxy_send_timeout 60s;
+        proxy_read_timeout 60s;
+    }
+}
