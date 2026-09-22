@@ -74,6 +74,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  const networkServiceRoute: MetadataRoute.Sitemap = [{
+    url: `${baseUrl}/departments/technology/network-as-a-service`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }];
+
   // Dynamic Case Study routes
   const portfolioSlugs = [
     "ai-enterprise-crm",
@@ -115,6 +122,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "hr-advisory",
   ];
 
+  const departmentRoutes: MetadataRoute.Sitemap = departmentSlugs.map((slug) => ({
+    url: `${baseUrl}/departments/${slug}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   // Industry routes
   const industrySlugs = [
     "automotive",
@@ -140,6 +154,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...departmentRoutes,
     ...industryRoutes,
     ...serviceRoutes,
+    ...networkServiceRoute,
     ...portfolioRoutes,
   ];
 }

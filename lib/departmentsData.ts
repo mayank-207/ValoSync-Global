@@ -48,7 +48,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Digital Platforms & Software",
     metaTitle: "Technology & Software Engineering Services | ValoSync Global",
     metaDescription:
-      "Engineered custom software platforms, high-conversion CRMs, AI workflow automation, mobile applications, and digital growth funnels for modern enterprises.",
+      "Custom software, mobile applications, AI automation, Cloud & DevOps, and managed network services for modern businesses.",
     heroHeadline: "Bespoke Technology, AI & Cloud Platforms Built to Scale Your Enterprise",
     heroSubtitle:
       "Transform your operational vision into high-performing, cloud-native software and automated digital systems engineered around your proprietary workflows.",
@@ -116,6 +116,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
       { title: "Web Development", description: "Fast, modern Next.js web applications and portals.", href: "/services/web-development" },
       { title: "Mobile App Development", description: "Cross-platform iOS and Android mobile solutions.", href: "/services/mobile-app-development" },
       { title: "Cloud & DevOps Support", description: "Infrastructure setup, CI/CD pipelines, and cloud security.", href: "/services/cloud-devops" },
+      { title: "Network as a Service (NaaS)", description: "Managed networks connecting teams, offices, cloud platforms and essential systems.", href: "/departments/technology/network-as-a-service" },
     ],
   },
 
@@ -1359,7 +1360,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Enterprise Software & Cloud Platforms",
     metaTitle: "Software Company | Custom Software & Cloud Development | ValoSync Global",
     metaDescription:
-      "Full-scale custom software development, Next.js web applications, mobile apps, CRM systems, AI automation, and cloud microservices.",
+      "Custom software, web and mobile applications, AI automation, cloud delivery and managed network services.",
     heroHeadline: "Custom Enterprise Software, Web & Mobile Applications, and AI Solutions",
     heroSubtitle:
       "We engineer bespoke software platforms, scalable cloud infrastructure, high-converting web applications, and AI automated workflow engines designed to accelerate operational growth.",
@@ -1427,7 +1428,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
       { title: "CRM Development", description: "Custom business management and lead pipeline tools.", href: "/services/crm-development" },
       { title: "AI Automation Solutions", description: "Private AI workflows and document extraction engines.", href: "/services/ai-automation" },
       { title: "Cloud & DevOps Support", description: "Containerized cloud infrastructure and CI/CD pipelines.", href: "/services/cloud-devops" },
+      { title: "Network as a Service (NaaS)", description: "Managed connectivity for offices, remote teams and cloud systems.", href: "/departments/technology/network-as-a-service" },
     ],
   },
 };
-

@@ -298,6 +298,7 @@ export default function ContactPage() {
                           <option value="AI Automation">AI Automation & Workflow</option>
                           <option value="Web Development">Web Development & Portals</option>
                           <option value="Cloud & DevOps Support">Cloud & DevOps Infrastructure</option>
+                          <option value="Network as a Service (NaaS)">Network as a Service (NaaS)</option>
                         </optgroup>
                       </select>
                     </div>

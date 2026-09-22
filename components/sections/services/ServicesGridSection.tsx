@@ -113,6 +113,18 @@ export const servicesData = [
     techStack: ["AWS / Azure", "Docker", "GitHub Actions", "Linux"],
   },
   {
+    slug: "network-as-a-service",
+    category: "Cloud & Infrastructure",
+    title: "Network as a Service (NaaS)",
+    description:
+      "Flexible, managed network solutions that help businesses securely connect their teams, offices, cloud platforms and essential systems.",
+    icon: <GlobeIcon size={28} />,
+    href: "/departments/technology/network-as-a-service",
+    features: ["Network Planning & Connectivity", "Multi-location & Remote Access", "Monitoring & Optimisation"],
+    metrics: "Connected Business Operations",
+    techStack: ["LAN / WAN", "Wi-Fi", "VPN", "Cloud Connectivity"],
+  },
+  {
     slug: "digital-marketing",
     category: "Digital Growth",
     title: "Digital Marketing & SEO",

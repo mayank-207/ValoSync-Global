@@ -63,7 +63,7 @@ const departmentGroups: DepartmentGroup[] = [
     id: "software-company",
     title: "Software Company",
     description:
-      "Bespoke enterprise software, scalable cloud architecture, mobile apps, CRM systems, and AI automation workflow engines.",
+      "Custom software, applications, cloud and DevOps delivery, managed networks, and practical AI automation.",
     slugs: ["software-company", "technology", "hr-advisory"],
   },
 ];

@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import LegalPageContent from "@/components/sections/legal/LegalPageContent";
-import { LockIcon } from "@/components/ui/Icons";
+import {
   SparkleIcon,
   ShieldIcon,
   CheckCircleIcon,
