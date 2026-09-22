@@ -92,7 +92,12 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
             fetchPriority="high"
             className="object-cover object-[65%_center]"
           />
-          <div className="absolute inset-0 bg-[#071A33]/80 lg:bg-gradient-to-r lg:from-[#071A33]/95 lg:via-[#071A33]/80 lg:to-[#071A33]/30" aria-hidden="true" />
+          <div
+            className={`absolute inset-0 ${slug === "town-planning"
+              ? "bg-[#071A33]/65 lg:bg-gradient-to-r lg:from-[#071A33]/75 lg:via-[#071A33]/45 lg:to-[#071A33]/10"
+              : "bg-[#071A33]/80 lg:bg-gradient-to-r lg:from-[#071A33]/95 lg:via-[#071A33]/80 lg:to-[#071A33]/30"}`}
+            aria-hidden="true"
+          />
 
           <div className="container relative z-10">
             <div className="max-w-4xl">
