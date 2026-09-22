@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { siteOrigin } from "@/lib/shareMetadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://valosyncglobal.com";
+  const baseUrl = siteOrigin;
   const lastModified = new Date();
 
   // Core static pages

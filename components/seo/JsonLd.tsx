@@ -1,96 +1,35 @@
-import React from "react";
+import { siteOrigin } from "@/lib/shareMetadata";
 
 export default function JsonLd() {
+  const image = new URL("/share-image", siteOrigin);
+  image.searchParams.set("page", "/");
+  image.searchParams.set("title", "Connected Specialist Services");
+  image.searchParams.set("section", "ValoSync Global");
+  image.searchParams.set("visual", "/images/departments/overview-poster.webp");
+
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": ["Organization", "ProfessionalService", "ITService"],
-    "@id": "https://valosyncglobal.com/#organization",
+    "@type": "Organization",
+    "@id": `${siteOrigin}/#organization`,
     name: "ValoSync Global",
-    alternateName: ["ValoSync", "ValoSync Global Software", "Valosync IT Solutions"],
-    url: "https://valosyncglobal.com",
-    logo: "https://valosyncglobal.com/images/logo.png",
-    image: "https://valosyncglobal.com/images/og-image.jpg",
+    url: siteOrigin,
+    image: image.toString(),
     description:
-      "ValoSync Global provides enterprise custom software development, bespoke CRM platforms, AI workflow automation, web applications, and cloud DevOps engineering for Australian businesses and global enterprises.",
+      "ValoSync Global connects specialist teams across technology, accounting, conveyancing, civil engineering, real estate and home loans.",
     email: "contact@valosyncglobal.com",
-    areaServed: [
-      {
-        "@type": "Country",
-        name: "Australia",
-      },
-      {
-        "@type": "City",
-        name: "Sydney",
-      },
-      {
-        "@type": "City",
-        name: "Melbourne",
-      },
-      {
-        "@type": "City",
-        name: "Brisbane",
-      },
-      {
-        "@type": "City",
-        name: "Perth",
-      },
-      {
-        "@type": "City",
-        name: "Adelaide",
-      },
-      {
-        "@type": "Place",
-        name: "Global",
-      },
-    ],
-    serviceArea: [
-      "Australia",
-      "Sydney",
-      "Melbourne",
-      "Brisbane",
-      "Perth",
-      "Adelaide",
-      "Global",
-    ],
-    knowsAbout: [
-      "Custom Software Development Australia",
-      "CRM Development Services Australia",
-      "AI Workflow Automation Australia",
-      "Web Application Development Sydney",
-      "Software Engineering Melbourne",
-      "Business Process Automation Australia",
-      "Cloud & DevOps Support Australia",
-      "Australian Privacy Principles Software Compliance",
-      "Next.js Development",
-      "Full Stack Software Engineering",
-    ],
-    sameAs: [
-      "https://linkedin.com/company/valosyncglobal",
-      "https://twitter.com/valosyncglobal",
-      "https://instagram.com/valosyncglobal",
-      "https://github.com/valosyncglobal",
-    ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      email: "contact@valosyncglobal.com",
-      availableLanguage: ["English"],
-      areaServed: ["AU", "Global"],
-    },
+    areaServed: { "@type": "Country", name: "Australia" },
   };
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://valosyncglobal.com/#website",
-    url: "https://valosyncglobal.com",
+    "@id": `${siteOrigin}/#website`,
+    url: siteOrigin,
     name: "ValoSync Global",
     description:
-      "Custom Software, CRM Platforms, AI Automation & Digital Solutions for Australian and Global Businesses.",
-    publisher: {
-      "@id": "https://valosyncglobal.com/#organization",
-    },
-    inLanguage: ["en-AU", "en-US", "en"],
+      "Specialist services for business, property and growth.",
+    publisher: { "@id": `${siteOrigin}/#organization` },
+    inLanguage: "en-AU",
   };
 
   return (

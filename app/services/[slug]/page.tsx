@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { shareMetadata } from "@/lib/shareMetadata";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -52,9 +53,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "custom-software": {
     title: "Custom Software Development",
     badge: "Bespoke Enterprise Software",
-    metaTitle: "Custom Software Development Services Australia | Valosync Global",
+    metaTitle: "Custom Software Development Services Australia | ValoSync Global",
     metaDescription:
-      "Engineered bespoke software applications, scalable microservices, SaaS platforms, and API integrations for Australian businesses and global enterprises.",
+      "Explore custom business applications, integrations and software platforms shaped around your workflows.",
     heroHeadline: "Bespoke Software Platforms Built to Scale Your Business",
     heroSubtitle:
       "Transform your operational vision into high-performing, cloud-native software built specifically around your proprietary workflows and growth goals.",
@@ -130,9 +131,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "crm-development": {
     title: "CRM Development",
     badge: "Intelligent Sales & Customer Management",
-    metaTitle: "Custom CRM Development Services Australia | Valosync Global",
+    metaTitle: "Custom CRM Development Services Australia | ValoSync Global",
     metaDescription:
-      "Build custom CRM platforms engineered for sales pipelines, automated lead scoring, client onboarding, and CRM solutions for Australian and international businesses.",
+      "Explore tailored CRM applications for lead management, sales workflows and customer information.",
     heroHeadline: "Custom CRM Platforms Built for Business-Focused Sales Teams",
     heroSubtitle:
       "Eliminate clunky generic CRMs. Valosync Global engineers tailored sales pipelines, automated lead scoring, and omnichannel client management systems.",
@@ -208,9 +209,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "ai-automation": {
     title: "AI Automation Solutions",
     badge: "Intelligent Artificial Intelligence & ML",
-    metaTitle: "AI Automation & Custom LLM Services Australia | Valosync Global",
+    metaTitle: "AI Automation & Custom LLM Services Australia | ValoSync Global",
     metaDescription:
-      "Deploy custom AI solutions, RAG knowledge bots, intelligent document extraction pipelines, and 24/7 conversational agents for Australian and global organizations.",
+      "Explore practical AI automation for knowledge access, document workflows and repetitive tasks.",
     heroHeadline: "Harness AI to Automate Complex Workflows & Data Processing",
     heroSubtitle:
       "Empower your workforce with enterprise AI assistants, automated medical & invoice extraction engines, and intelligent customer support bots.",
@@ -286,9 +287,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "web-development": {
     title: "Web Development",
     badge: "Ultra-Fast Web Platforms",
-    metaTitle: "Web Development Services Australia | Next.js & Headless Apps | Valosync Global",
+    metaTitle: "Web Development Services Australia | Next.js & Headless Apps | ValoSync Global",
     metaDescription:
-      "Engineered business websites, web applications, client portals, and headless e-commerce built with modern Next.js for Australian businesses and global enterprises.",
+      "Explore websites, business portals and web applications designed around your goals.",
     heroHeadline: "High-Performance Web Applications Built for Maximum Growth",
     heroSubtitle:
       "Deliver sub-second page loads, flawless mobile responsiveness, and high conversion rates with modern Next.js and React architecture.",
@@ -364,9 +365,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "mobile-app-development": {
     title: "Mobile App Development",
     badge: "iOS, Android & Cross-Platform Apps",
-    metaTitle: "Mobile App Development Services Australia | iOS, Android & Flutter | Valosync Global",
+    metaTitle: "Mobile App Development Services Australia | iOS, Android & Flutter | ValoSync Global",
     metaDescription:
-      "Custom iOS and Android mobile app development, React Native, Flutter, and enterprise mobile applications built for Australian businesses and global enterprises.",
+      "Explore mobile applications for customers and teams across iOS and Android.",
     heroHeadline: "Native & Cross-Platform Mobile Apps Engineered for Performance",
     heroSubtitle:
       "Transform your product vision into high-performing, intuitive iOS & Android applications with offline sync, biometric security, and App Store approval guarantees.",
@@ -442,9 +443,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "cloud-devops": {
     title: "Cloud & DevOps Support",
     badge: "Reliable Cloud Delivery",
-    metaTitle: "Cloud & DevOps Support Services Australia | Valosync Global",
+    metaTitle: "Cloud & DevOps Support Services Australia | ValoSync Global",
     metaDescription:
-      "Cloud setup, application deployment, CI/CD pipelines, containerisation, monitoring and infrastructure optimisation for Australian enterprises and growing global businesses.",
+      "Explore cloud deployment, delivery pipelines, monitoring and operational support.",
     heroHeadline: "Build a More Reliable Path From Code to Production",
     heroSubtitle:
       "We help businesses establish practical cloud and DevOps foundations that improve deployment consistency, system visibility and ongoing maintainability.",
@@ -520,9 +521,9 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   "digital-marketing": {
     title: "Digital Marketing & SEO",
     badge: "ROI-Focused Lead Generation",
-    metaTitle: "Digital Marketing & Technical SEO Services Australia | Valosync Global",
+    metaTitle: "Digital Marketing & Technical SEO Services Australia | ValoSync Global",
     metaDescription:
-      "Data-driven digital marketing campaigns, technical SEO optimization, lead generation funnels, and targeted customer acquisition for Australian and global markets.",
+      "Explore SEO, digital campaigns, content planning and marketing support for business growth.",
     heroHeadline: "Data-Driven Digital Marketing That Supports Visibility and Sustainable Growth",
     heroSubtitle:
       "Scale your qualified lead pipeline with technical SEO, high-intent Google Ads, social media campaigns, and conversion rate optimization.",
@@ -661,13 +662,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `/services/${slug}`,
     },
-    openGraph: {
-      title: `${data.title} | Valosync Global`,
+    ...shareMetadata({
+      path: `/services/${slug}`,
+      title: data.metaTitle,
       description: data.metaDescription,
-      url: `https://valosyncglobal.com/services/${slug}`,
-      siteName: "Valosync Global",
-      type: "website",
-    },
+      section: "Technology Services",
+      visual: serviceHeroImages[slug].src,
+    }),
   };
 }
 

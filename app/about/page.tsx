@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { shareMetadata } from "@/lib/shareMetadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import AboutHero from "@/components/sections/about/AboutHero";
@@ -9,44 +10,16 @@ import TeamLeadershipSection from "@/components/sections/about/TeamLeadershipSec
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Us | Australian Software Engineering & IT Solutions | Valosync Global",
-  description:
-    "Learn about Valosync Global, delivering bespoke software engineering, intelligent CRM development, and AI automation for Australian and international businesses.",
-  keywords: [
-    "About Valosync Global",
-    "Australian Software Engineering Firm",
-    "Custom Software Developers Australia",
-    "CRM Development Company Australia",
-    "AI Automation Agency Australia",
-    "Software Engineering Sydney Melbourne",
-    "IT Consulting Australia",
-  ],
-  alternates: {
-    canonical: "/about",
-  },
-  openGraph: {
-    title: "About Us | Australian Software Engineering & IT Solutions | Valosync Global",
-    description:
-      "Engineered technology solutions built around your business goals. Discover our team, values, and client-first delivery model for Australian and global clients.",
-    url: "https://valosyncglobal.com/about",
-    siteName: "Valosync Global",
-    type: "website",
-    images: [
-      {
-        url: "/images/og-about.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Valosync Global Team & Mission Australia",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Us | Australian Software Engineering & IT Solutions | Valosync Global",
-    description:
-      "Engineered technology solutions built around your business goals for Australian and international clients.",
-    images: ["/images/og-about.jpg"],
-  },
+  title: { absolute: "About ValoSync Global | Connected Specialist Services" },
+  description: "Learn how ValoSync Global connects specialist departments across business, property, lending, engineering and technology.",
+  alternates: { canonical: "/about" },
+  ...shareMetadata({
+    path: "/about",
+    title: "About ValoSync Global | Connected Specialist Services",
+    description: "Learn how ValoSync Global connects specialist departments across business, property, lending, engineering and technology.",
+    section: "About",
+    visual: "/images/departments/property-real-estate-management.webp",
+  }),
 };
 
 export default function AboutPage() {
@@ -76,3 +49,4 @@ export default function AboutPage() {
     </>
   );
 }
+

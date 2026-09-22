@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { shareMetadata } from "@/lib/shareMetadata";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
@@ -7,19 +8,15 @@ import { ArrowRightIcon, CheckCircleIcon, GlobeIcon } from "@/components/ui/Icon
 
 export const metadata: Metadata = {
   title: { absolute: "Network as a Service (NaaS) | ValoSync Global" },
-  description:
-    "Explore flexible, managed network services for business locations, remote teams and cloud systems. Plan, connect, monitor and improve with ValoSync Global.",
-  alternates: {
-    canonical: "/departments/technology/network-as-a-service",
-  },
-  openGraph: {
+  description: "Explore managed network planning, connectivity and support for business locations, remote teams and cloud systems.",
+  alternates: { canonical: "/departments/technology/network-as-a-service" },
+  ...shareMetadata({
+    path: "/departments/technology/network-as-a-service",
     title: "Network as a Service (NaaS) | ValoSync Global",
-    description:
-      "Managed connectivity for business locations, remote teams and cloud systems.",
-    url: "https://valosyncglobal.com/departments/technology/network-as-a-service",
-    siteName: "ValoSync Global",
-    type: "website",
-  },
+    description: "Explore managed network planning, connectivity and support for business locations, remote teams and cloud systems.",
+    section: "Technology Services",
+    visual: "/images/naas-network-hero.webp",
+  }),
 };
 
 const capabilities = [

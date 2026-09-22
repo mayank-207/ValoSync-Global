@@ -48,7 +48,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Digital Platforms & Software",
     metaTitle: "Technology & Software Engineering Services | ValoSync Global",
     metaDescription:
-      "Custom software, mobile applications, AI automation, Cloud & DevOps, and managed network services for modern businesses.",
+      "Explore application development, automation, web and mobile apps, cloud delivery and managed networks with ValoSync Global.",
     heroHeadline: "Bespoke Technology, AI & Cloud Platforms Built to Scale Your Enterprise",
     heroSubtitle:
       "Transform your operational vision into high-performing, cloud-native software and automated digital systems engineered around your proprietary workflows.",
@@ -128,7 +128,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Financial Precision & Advisory",
     metaTitle: "Corporate Accounting & Financial Management Services | ValoSync Global",
     metaDescription:
-      "Structured bookkeeping, financial reporting, compliance management, tax advisory, and payroll administrative support for growing businesses.",
+      "Explore bookkeeping, financial reporting, payroll and accounting support for business operations.",
     heroHeadline: "Strategic Accounting & Financial Clarity for Growing Businesses",
     heroSubtitle:
       "Eliminate financial complexity with accurate bookkeeping, timely compliance reporting, structured payroll management, and proactive business financial advisory.",
@@ -205,7 +205,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Property Legal & Settlement Co-ordination",
     metaTitle: "Property Conveyancing & Legal Settlement Services | ValoSync Global",
     metaDescription:
-      "Expert property conveyancing support for residential and commercial property contracts, title searches, transfer documentation, and seamless settlement execution.",
+      "Explore conveyancing support for contracts, property documentation and settlement coordination.",
     heroHeadline: "Seamless Property Transfers & Stress-Free Settlement Execution",
     heroSubtitle:
       "Protect your property transactions with thorough contract reviews, title searches, settlement coordination, and transparent legal documentation guidance.",
@@ -282,7 +282,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Structural Planning & Project Co-ordination",
     metaTitle: "Civil & Structural Engineering Services | ValoSync Global",
     metaDescription:
-      "Comprehensive civil engineering, structural drafting, site planning, stormwater management, and development approval coordination for property projects.",
+      "Explore civil engineering planning, documentation and project coordination for property and infrastructure work.",
     heroHeadline: "Engineered Precision for Structural, Civil & Land Infrastructure",
     heroSubtitle:
       "Deliver safe, compliant, and cost-effective development projects with our civil planning, structural drafting, site coordination, and regulatory compliance expertise.",
@@ -359,7 +359,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Property Advisory & Asset Management",
     metaTitle: "Real Estate Advisory, Sales & Property Management | ValoSync Global",
     metaDescription:
-      "End-to-end real estate solutions: residential & commercial sales, property management, leasing, tenant placement, and strategic property investment guidance.",
+      "Explore real estate services covering property sales, leasing and management support.",
     heroHeadline: "Strategic Real Estate Services for Buyers, Sellers & Investors",
     heroSubtitle:
       "Maximize property value and portfolio growth through dedicated sales advocacy, proactive asset management, market research, and seamless leasing services.",
@@ -436,7 +436,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Mortgage Brokerage & Finance Solutions",
     metaTitle: "Home Loans, Mortgage Brokerage & Refinancing | ValoSync Global",
     metaDescription:
-      "Expert home loan and mortgage solutions: first home owner loans, competitive refinancing, property investment lending, and commercial finance advisory.",
+      "Explore home loan enquiries, refinancing options and lending support for different property needs.",
     heroHeadline: "Tailored Mortgage & Property Lending Solutions Built for You",
     heroSubtitle:
       "Navigate the home loan landscape with confidence. We compare lending options across leading banks and lenders to secure competitive rates and smooth loan approval.",
@@ -513,7 +513,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Development Approvals & Zoning Advisory",
     metaTitle: "Town Planning, DA Approvals & Land Zoning Services | ValoSync Global",
     metaDescription:
-      "Expert town planning, council Development Application (DA) management, site zoning feasibility studies, and master planning for property developments.",
+      "Explore town planning, development applications, land use and council coordination services.",
     heroHeadline: "Navigating Planning Approvals & Council DA Compliance with Confidence",
     heroSubtitle:
       "Unlock the development potential of your site with expert zoning analysis, planning statement preparation, environmental assessments, and council DA management.",
@@ -590,7 +590,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Bespoke Architectural Concepts & Drafting",
     metaTitle: "Architectural Design, Drafting & 3D Renderings | ValoSync Global",
     metaDescription:
-      "Modern architectural design, residential & commercial drafting, 3D photorealistic renderings, interior space planning, and construction documentation.",
+      "Explore architectural design, drafting, visualisation and documentation for property projects.",
     heroHeadline: "Visionary Architecture & Precision Building Design",
     heroSubtitle:
       "Bring your property vision to life with custom architectural concepts, detailed building blueprints, 3D renderings, and seamless integration with civil engineering.",
@@ -667,7 +667,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Strategic Wealth Accumulation & Retirement",
     metaTitle: "Financial Planning, Wealth Management & SMSF | ValoSync Global",
     metaDescription:
-      "Personalized financial planning, wealth accumulation, retirement strategies, Self-Managed Super Funds (SMSF), and tax-effective investment advisory.",
+      "Explore financial planning topics, wealth goals and retirement considerations with ValoSync Global.",
     heroHeadline: "Strategic Wealth Management Built for Your Life Goals",
     heroSubtitle:
       "Secure your family's future and accelerate wealth creation with tailored investment portfolios, retirement planning, SMSF guidance, and proactive risk protection.",
@@ -744,7 +744,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Commercial Law & Business Governance",
     metaTitle: "Commercial Legal Advisory & Business Governance | ValoSync Global",
     metaDescription:
-      "Comprehensive corporate legal advisory: commercial contracts, shareholder agreements, IP protection, employment compliance, and corporate dispute resolution.",
+      "Explore business contract, corporate governance and legal advisory enquiries with ValoSync Global.",
     heroHeadline: "Commercial Legal Guidance Safeguarding Your Business Operations",
     heroSubtitle:
       "Protect your enterprise with expert commercial legal contracts, corporate governance advice, IP enforcement, employment agreements, and strategic legal counsel.",
@@ -821,7 +821,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Corporate & Property Risk Protection",
     metaTitle: "Commercial & Property Insurance Advisory | ValoSync Global",
     metaDescription:
-      "Comprehensive business and property insurance broking: professional indemnity, public liability, landlord protection, cyber liability, and commercial property cover.",
+      "Explore insurance and risk advisory topics for business and property needs.",
     heroHeadline: "Proactive Risk Protection & Corporate Insurance Solutions",
     heroSubtitle:
       "Mitigate business and property vulnerabilities with tailored commercial insurance policies, asset protection, risk management audits, and fast claims advocacy.",
@@ -898,7 +898,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Human Resources & Executive Talent Search",
     metaTitle: "HR Advisory, Talent Acquisition & Workforce Management | ValoSync Global",
     metaDescription:
-      "Strategic HR advisory, executive recruitment, workplace compliance, offshore team integration, performance management, and team building solutions.",
+      "Explore HR advisory, recruitment, workforce planning and people management support.",
     heroHeadline: "Building High-Performing Teams & Compliant Workforces",
     heroSubtitle:
       "Scale your organization with expert talent acquisition, compliant employment frameworks, performance management systems, and strategic HR leadership.",
@@ -975,7 +975,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Infrastructure & Project Delivery",
     metaTitle: "Engineering & Project Management Services | ValoSync Global",
     metaDescription:
-      "Integrated civil engineering, town planning approvals, architectural design, construction oversight, and end-to-end infrastructure project management.",
+      "Explore engineering project planning, coordination and delivery support across related disciplines.",
     heroHeadline: "Precision Civil Engineering & Infrastructure Project Management",
     heroSubtitle:
       "From feasibility analysis and council town planning approvals to architectural drafting and on-site construction oversight, we deliver complex development projects on schedule and within budget.",
@@ -1052,7 +1052,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Lending, Wealth & Capital Advisory",
     metaTitle: "Loan & Finance Management Services | ValoSync Global",
     metaDescription:
-      "Accredited home loans, commercial finance, strategic wealth management, refinancing advisory, and risk protection tailored to your capital objectives.",
+      "Explore lending, refinancing and finance enquiries with support from the relevant specialist team.",
     heroHeadline: "Strategic Loan Brokerage, Capital Structuring & Wealth Advisory",
     heroSubtitle:
       "Navigate lending and wealth creation with institutional clarity. We connect clients to over 40 tier-one lenders, structure commercial finance, and manage wealth portfolios for long-term growth.",
@@ -1129,7 +1129,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Corporate Precision & Governance",
     metaTitle: "Accounting, Taxation & Corporate Compliance | ValoSync Global",
     metaDescription:
-      "Strategic corporate bookkeeping, statutory tax optimization, corporate compliance, financial reporting, and payroll management for thriving enterprises.",
+      "Explore accounting, tax administration, payroll and business reporting services.",
     heroHeadline: "Corporate Accounting, Tax Optimization & Regulatory Compliance",
     heroSubtitle:
       "Eliminate compliance risk and unlock fiscal clarity. We deliver structured bookkeeping, proactive tax planning, corporate legal advisory, and audit-ready governance frameworks.",
@@ -1206,7 +1206,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Asset Optimization & Sales",
     metaTitle: "Property & Real Estate Management Services | ValoSync Global",
     metaDescription:
-      "Strategic real estate sales, commercial and residential asset management, property leasing, and high-yield portfolio development advisory.",
+      "Explore property sales, leasing and real estate management support.",
     heroHeadline: "Full-Lifecycle Property Advisory, Real Estate Sales & Asset Management",
     heroSubtitle:
       "Maximize capital appreciation and net rental yield across commercial and residential portfolios with our full-service property sales, leasing, and asset care division.",
@@ -1283,7 +1283,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Legal Title & Property Settlement",
     metaTitle: "Conveyancing & Property Settlement Services | ValoSync Global",
     metaDescription:
-      "Certified legal title transfers, contract reviews, Section 32 statements, stamp duty processing, and PEXA electronic property settlements.",
+      "Explore conveyancing documentation, contract and property settlement support.",
     heroHeadline: "Risk-Free Property Conveyancing & Digital Settlement Services",
     heroSubtitle:
       "Safeguard your property transactions with certified conveyancing experts. From pre-contract Section 32 reviews to electronic PEXA settlements, we protect your legal and financial interests.",
@@ -1360,7 +1360,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     badge: "Enterprise Software & Cloud Platforms",
     metaTitle: "Software Company | Custom Software & Cloud Development | ValoSync Global",
     metaDescription:
-      "Custom software, web and mobile applications, AI automation, cloud delivery and managed network services.",
+      "Explore application development, cloud delivery, automation and digital services.",
     heroHeadline: "Custom Enterprise Software, Web & Mobile Applications, and AI Solutions",
     heroSubtitle:
       "We engineer bespoke software platforms, scalable cloud infrastructure, high-converting web applications, and AI automated workflow engines designed to accelerate operational growth.",

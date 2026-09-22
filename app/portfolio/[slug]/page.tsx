@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { shareMetadata } from "@/lib/shareMetadata";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -47,9 +48,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "CRM Development",
     industry: "Financial Services",
     country: "Australia",
-    metaTitle: "AI Enterprise CRM Case Study | Valosync Global",
+    metaTitle: "AI Enterprise CRM Case Study | ValoSync Global",
     metaDescription:
-      "Explore how Valosync Global engineered an AI-powered CRM with automated lead scoring and WhatsApp sync, driving 70% faster deal closure.",
+      "Explore an AI-supported CRM project, its workflow design and the capabilities involved.",
     heroHeadline: "AI-Powered Enterprise CRM Accelerating B2B Deal Closure",
     heroSubtitle:
       "Engineered for an enterprise consulting firm to eliminate sales friction, automate lead scoring, and unify omnichannel communication.",
@@ -106,9 +107,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Digital Marketing",
     industry: "Professional Services",
     country: "Australia",
-    metaTitle: "Lead Gen Portal Case Study | Valosync Global",
+    metaTitle: "Lead Gen Portal Case Study | ValoSync Global",
     metaDescription:
-      "Discover how Valosync Global designed a high-converting web portal and Google Ads campaign delivering 3.5x qualified commercial leads.",
+      "Explore a lead generation portal project and its website and campaign approach.",
     heroHeadline: "Conquering Commercial Search & Tripling Qualified Inquiries",
     heroSubtitle:
       "A complete digital overhaul combining sub-second Next.js web design, technical SEO, and high-intent Google Search campaigns for B2B buyers.",
@@ -165,9 +166,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Custom Software",
     industry: "Enterprise Operations",
     country: "Global",
-    metaTitle: "Multi-Tenant Business ERP Case Study | Valosync Global",
+    metaTitle: "Multi-Tenant Business ERP Case Study | ValoSync Global",
     metaDescription:
-      "See how Valosync Global engineered a multi-tenant cloud ERP with automated Xero and Stripe integration, achieving 99.9% billing accuracy.",
+      "Explore a multi-tenant ERP project with billing and operational workflows.",
     heroHeadline: "Cloud ERP & Automated Billing Streamlining Global Operations",
     heroSubtitle:
       "Architected for a multi-national logistics and technology company to unify project scheduling, multi-currency invoicing, and client milestone approvals.",
@@ -224,9 +225,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Custom Software",
     industry: "Healthcare",
     country: "Australia",
-    metaTitle: "Healthcare Telehealth Portal Case Study | Valosync Global",
+    metaTitle: "Healthcare Telehealth Portal Case Study | ValoSync Global",
     metaDescription:
-      "Discover how Valosync Global delivered an AHPRA/HIPAA compliant telehealth portal with automated intake and EHR sync, dropping no-shows by 60%.",
+      "Explore a digital health portal project covering patient intake and connected workflows.",
     heroHeadline: "AHPRA-Compliant Digital Health & Patient Intake Portal",
     heroSubtitle:
       "Engineered for an healthcare network to streamline patient onboarding, secure video consultation, and EHR record management.",
@@ -283,9 +284,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "AI & Automation",
     industry: "Logistics",
     country: "Australia",
-    metaTitle: "Logistics Fleet Tracking Case Study | Valosync Global",
+    metaTitle: "Logistics Fleet Tracking Case Study | ValoSync Global",
     metaDescription:
-      "Learn how Valosync Global built a real-time GPS fleet tracking and automated dispatch portal for logistics operators, saving 25+ hours/week.",
+      "Explore a logistics tracking project with fleet visibility and dispatch workflows.",
     heroHeadline: "Real-Time Fleet Telematics & Automated Dispatch Engine",
     heroSubtitle:
       "Developed for an transport & logistics company to optimize driver routes, automate customer tracking notifications, and sync inventory.",
@@ -342,9 +343,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Custom Software",
     industry: "Fintech",
     country: "Global",
-    metaTitle: "Fintech KYC Onboarding Case Study | Valosync Global",
+    metaTitle: "Fintech KYC Onboarding Case Study | ValoSync Global",
     metaDescription:
-      "Read how Valosync Global engineered an encrypted KYC onboarding and automated loan evaluation engine, achieving instant customer verification.",
+      "Explore a financial onboarding project covering identity checks and document workflows.",
     heroHeadline: "Automated KYC Onboarding & Instant Credit Evaluation",
     heroSubtitle:
       "Built for an emerging digital lending platform to eliminate paper verification, prevent fraud, and accelerate borrower onboarding.",
@@ -401,9 +402,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "Web & E-Commerce",
     industry: "Retail",
     country: "Australia",
-    metaTitle: "Headless E-Commerce Case Study | Valosync Global",
+    metaTitle: "Headless E-Commerce Case Study | ValoSync Global",
     metaDescription:
-      "Explore how Valosync Global built a Next.js headless storefront delivering sub-second speed and a 38% increase in repeat customer purchases.",
+      "Explore a headless commerce project with storefront and inventory workflows.",
     heroHeadline: "Sub-Second Headless Commerce Driving Repeat Customer Sales",
     heroSubtitle:
       "Re-platforming an retail brand from legacy monolithic architecture to a modern Next.js headless e-commerce ecosystem.",
@@ -460,9 +461,9 @@ const caseStudyMap: Record<CaseStudySlug, CaseStudyData> = {
     category: "AI & Automation",
     industry: "Manufacturing",
     country: "Global",
-    metaTitle: "Industrial IoT Dashboard Case Study | Valosync Global",
+    metaTitle: "Industrial IoT Dashboard Case Study | ValoSync Global",
     metaDescription:
-      "Discover how Valosync Global built a real-time IoT manufacturing dashboard, reducing unplanned machine downtime by 40%.",
+      "Explore a manufacturing dashboard project with equipment and operations data.",
     heroHeadline: "Industry 4.0 IoT Telematics & Predictive Maintenance",
     heroSubtitle:
       "Developed for an industrial manufacturing facility to connect machine IoT sensors, track Overall Equipment Effectiveness (OEE), and predict maintenance.",
@@ -550,13 +551,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `/portfolio/${slug}`,
     },
-    openGraph: {
-      title: `${data.title} | Valosync Global Case Study`,
+    ...shareMetadata({
+      path: `/portfolio/${slug}`,
+      title: data.metaTitle,
       description: data.metaDescription,
-      url: `https://valosyncglobal.com/portfolio/${slug}`,
-      siteName: "Valosync Global",
-      type: "website",
-    },
+      section: "Selected Projects",
+    }),
   };
 }
 

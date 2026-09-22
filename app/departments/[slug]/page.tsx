@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { shareMetadata } from "@/lib/shareMetadata";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -59,13 +60,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `/departments/${slug}`,
     },
-    openGraph: {
-      title: `${data.title} | ValoSync Global`,
+    ...shareMetadata({
+      path: `/departments/${slug}`,
+      title: data.metaTitle,
       description: data.metaDescription,
-      url: `https://valosyncglobal.com/departments/${slug}`,
-      siteName: "ValoSync Global",
-      type: "website",
-    },
+      section: "Our Departments",
+      visual: data.image,
+    }),
   };
 }
 
