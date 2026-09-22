@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CTASection from "@/components/sections/CTASection";
-import { ArrowRightIcon, CheckCircleIcon, LayersIcon } from "@/components/ui/Icons";
+import DepartmentHeroMotion from "@/components/ui/DepartmentHeroMotion";
+import { ArrowRightIcon, BriefcaseIcon, CheckCircleIcon, CodeIcon, FinanceIcon, LayersIcon, RealEstateIcon, ShieldIcon, ManufacturingIcon } from "@/components/ui/Icons";
 import { departmentsData } from "@/lib/departmentsData";
 
 export const metadata: Metadata = {
@@ -20,6 +22,7 @@ interface DepartmentGroup {
   id: string;
   title: string;
   description: string;
+  icon: ReactNode;
   slugs: (keyof typeof departmentsData)[];
 }
 
@@ -29,6 +32,7 @@ const departmentGroups: DepartmentGroup[] = [
     title: "Engineering & Project Management",
     description:
       "End-to-end civil infrastructure, council town planning approvals, architectural design, and comprehensive on-site project oversight.",
+    icon: <ManufacturingIcon size={23} />,
     slugs: ["engineering-project-management", "civil-engineering", "town-planning", "architecture"],
   },
   {
@@ -36,6 +40,7 @@ const departmentGroups: DepartmentGroup[] = [
     title: "Loan & Finance Management",
     description:
       "Accredited residential mortgages, commercial debt structuring, financial planning, wealth accumulation, and asset risk protection.",
+    icon: <FinanceIcon size={23} />,
     slugs: ["loan-finance-management", "home-loans", "financial-planning", "insurance"],
   },
   {
@@ -43,6 +48,7 @@ const departmentGroups: DepartmentGroup[] = [
     title: "Accounting, Taxation & Compliance",
     description:
       "Corporate bookkeeping, statutory tax optimization, corporate governance, legal contract advisory, and compliant payroll systems.",
+    icon: <BriefcaseIcon size={23} />,
     slugs: ["accounting-taxation-compliance", "accounting", "legal-advisory"],
   },
   {
@@ -50,6 +56,7 @@ const departmentGroups: DepartmentGroup[] = [
     title: "Property & Real Estate Management",
     description:
       "Strategic residential and commercial property sales, active asset management, high-visibility leasing, and development feasibility.",
+    icon: <RealEstateIcon size={23} />,
     slugs: ["property-real-estate-management", "real-estate"],
   },
   {
@@ -57,6 +64,7 @@ const departmentGroups: DepartmentGroup[] = [
     title: "Conveyancing & Property Settlement",
     description:
       "Certified legal title transfers, fast Section 32 contract reviews, stamp duty processing, and electronic PEXA property settlements.",
+    icon: <ShieldIcon size={23} />,
     slugs: ["conveyancing-property-settlement", "conveyancing"],
   },
   {
@@ -64,6 +72,7 @@ const departmentGroups: DepartmentGroup[] = [
     title: "Software Company",
     description:
       "Custom software, applications, cloud and DevOps delivery, managed networks, and practical AI automation.",
+    icon: <CodeIcon size={23} />,
     slugs: ["software-company", "technology", "hr-advisory"],
   },
 ];
@@ -74,8 +83,10 @@ export default function DepartmentsPage() {
       <Header />
       <main id="main">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+        <section className="relative isolate min-h-[36rem] overflow-hidden bg-[#071A33] pb-20 pt-32 text-white md:pb-28 md:pt-40">
+          <div className="absolute inset-0 bg-[url('/images/departments/overview-poster.webp')] bg-cover bg-center" aria-hidden="true" />
+          <DepartmentHeroMotion />
+          <div className="absolute inset-0 bg-[#071A33]/80 lg:bg-[#071A33]/72" aria-hidden="true" />
           <div className="container relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
@@ -95,7 +106,7 @@ export default function DepartmentsPage() {
                   <a
                     key={grp.id}
                     href={`#${grp.id}`}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl border border-white/20 bg-white/10 hover:bg-white/20 text-xs sm:text-sm font-semibold text-white transition-all backdrop-blur-sm"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl border border-white/30 bg-[#071A33]/60 hover:bg-[#0B3D91]/70 hover:border-[#D4AF37]/60 text-xs sm:text-sm font-semibold text-white transition-all backdrop-blur-sm motion-safe:hover:-translate-y-0.5"
                   >
                     <span>{grp.title}</span>
                     <span className="text-xs text-[#D4AF37]">({grp.slugs.length})</span>
@@ -111,19 +122,23 @@ export default function DepartmentsPage() {
           <div className="container space-y-16 sm:space-y-20">
             {departmentGroups.map((grp) => (
               <div key={grp.id} id={grp.id} className="scroll-mt-28 space-y-8">
-                <div className="border-b border-[#D9E1EC] pb-5">
-                  <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#0B3D91]">Division</span>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A33] mt-1">{grp.title}</h2>
-                  <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl">{grp.description}</p>
+                <div className="flex items-start gap-4 border-b border-[#D9E1EC] pb-5">
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#0B3D91]/15 bg-white text-[#0B3D91] shadow-sm" aria-hidden="true">{grp.icon}</span>
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#0B3D91]">Division</span>
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A33] mt-1">{grp.title}</h2>
+                    <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl">{grp.description}</p>
+                  </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {grp.slugs.map((slug) => {
                     const dept = departmentsData[slug];
                     return (
-                      <div
+                      <Link
                         key={dept.slug}
-                        className="group bg-white rounded-3xl overflow-hidden border border-[#D9E1EC] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                        href={`/departments/${dept.slug}`}
+                        className="group bg-white rounded-3xl overflow-hidden border border-[#D9E1EC] shadow-sm hover:border-[#0B3D91]/40 hover:shadow-xl focus-visible:ring-4 focus-visible:ring-[#D4AF37] transition-all duration-300 motion-safe:hover:-translate-y-1 flex flex-col justify-between"
                       >
                         <div>
                           <div className="relative aspect-[16/9] overflow-hidden bg-[#071A3D]">
@@ -163,15 +178,12 @@ export default function DepartmentsPage() {
                         </div>
 
                         <div className="pb-6 pt-1 text-center">
-                          <Link
-                            href={`/departments/${dept.slug}`}
-                            className="inline-flex items-center justify-center gap-1.5 text-sm font-bold text-[#0B3D91] hover:text-[#1565C0] transition-colors group/link"
-                          >
+                          <span className="inline-flex items-center justify-center gap-1.5 text-sm font-bold text-[#0B3D91] group-hover:text-[#1565C0] transition-colors">
                             <span>Learn More</span>
-                            <ArrowRightIcon size={15} className="transition-transform duration-200 group-hover/link:translate-x-1" />
-                          </Link>
+                            <ArrowRightIcon size={15} className="transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
+                          </span>
                         </div>
-                      </div>
+                      </Link>
                     );
                   })}
                 </div>
