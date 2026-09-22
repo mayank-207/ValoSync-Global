@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { ArrowRightIcon, CheckCircleIcon, GlobeIcon } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Network as a Service (NaaS) | ValoSync Global",
+  title: { absolute: "Network as a Service (NaaS) | ValoSync Global" },
   description:
     "Explore flexible, managed network services for business locations, remote teams and cloud systems. Plan, connect, monitor and improve with ValoSync Global.",
   alternates: {

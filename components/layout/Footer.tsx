@@ -24,6 +24,7 @@ const serviceLinks = [
   { label: "AI Automation", href: "/services/ai-automation" },
   { label: "Web Development", href: "/services/web-development" },
   { label: "Cloud & DevOps", href: "/services/cloud-devops" },
+  { label: "Network as a Service", href: "/departments/technology/network-as-a-service" },
   { label: "Digital Growth", href: "/services/digital-marketing" },
 ];
 
