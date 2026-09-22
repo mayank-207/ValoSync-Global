@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { shareMetadata } from "@/lib/shareMetadata";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -17,12 +18,15 @@ import {
 } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | ValoSync Global",
-  description:
-    "ValoSync Global Privacy Policy outlining compliance with Privacy Principles, data protection, confidentiality, and enterprise security standards.",
-  alternates: {
-    canonical: "/privacy-policy",
-  },
+  title: { absolute: "Privacy Policy | ValoSync Global" },
+  description: "Read how ValoSync Global collects, uses and handles information shared through this website and service enquiries.",
+  alternates: { canonical: "/privacy-policy" },
+  ...shareMetadata({
+    path: "/privacy-policy",
+    title: "Privacy Policy | ValoSync Global",
+    description: "Read how ValoSync Global collects, uses and handles information shared through this website and service enquiries.",
+    section: "Privacy",
+  }),
 };
 
 const sections = [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { shareMetadata } from "@/lib/shareMetadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import IndustriesHero from "@/components/sections/industries/IndustriesHero";
@@ -10,44 +11,16 @@ import IndustryFAQSection from "@/components/sections/industries/IndustryFAQSect
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Industry Software Solutions Australia | Valosync Global",
-  description:
-    "Explore how Valosync Global delivers custom software, CRM development, AI automation, and cloud platforms tailored for Healthcare, Logistics, Fintech, Retail, and Australian enterprise sectors.",
-  keywords: [
-    "Valosync Global Industries",
-    "Healthcare Software Development Australia",
-    "Fintech Software Engineering Australia",
-    "Logistics Software & GPS Tracking Australia",
-    "Retail & E-Commerce Web Platforms Australia",
-    "Real Estate CRM Software Australia",
-    "Australian Industry Software Solutions",
-  ],
-  alternates: {
-    canonical: "/industries",
-  },
-  openGraph: {
-    title: "Industry Software Solutions Australia | Valosync Global",
-    description:
-      "Industry-tailored software engineering, AI automation, and digital marketing for Healthcare, Finance, Logistics, and Australian commercial sectors.",
-    url: "https://valosyncglobal.com/industries",
-    siteName: "Valosync Global",
-    type: "website",
-    images: [
-      {
-        url: "/images/og-industries.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Valosync Global Industry Solutions Australia",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Industry Software Solutions Australia | Valosync Global",
-    description:
-      "Industry-tailored software engineering, AI automation, and digital growth for Australian and global sectors.",
-    images: ["/images/og-industries.jpg"],
-  },
+  title: { absolute: "Industries | ValoSync Global" },
+  description: "Explore technology solutions for healthcare, finance, logistics, retail, education and other industries supported by ValoSync Global.",
+  alternates: { canonical: "/industries" },
+  ...shareMetadata({
+    path: "/industries",
+    title: "Industries | ValoSync Global",
+    description: "Explore technology solutions for healthcare, finance, logistics, retail, education and other industries supported by ValoSync Global.",
+    section: "Industries",
+    visual: "/images/departments/engineering-project-management.webp",
+  }),
 };
 
 export default function IndustriesPage() {
@@ -80,3 +53,4 @@ export default function IndustriesPage() {
     </>
   );
 }
+

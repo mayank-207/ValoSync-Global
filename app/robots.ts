@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { siteOrigin } from "@/lib/shareMetadata";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -17,7 +18,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://valosyncglobal.com/sitemap.xml",
-    host: "https://valosyncglobal.com",
+    sitemap: `${siteOrigin}/sitemap.xml`,
+    host: siteOrigin,
   };
 }

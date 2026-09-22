@@ -71,7 +71,7 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     badge: "Mobility Engineering & EV Solutions",
     metaTitle: "Automotive Industry Software & EV Mobility Solutions | ValoSync Global",
     metaDescription:
-      "Accelerate the future of smart mobility with ValoSync Global automotive engineering. Connected vehicle telematics, EV fleet management, and resilient automotive supply chains.",
+      "Explore digital platforms and workflow solutions for automotive and mobility businesses.",
     heroHeadline: "Accelerate the Future of Connected Mobility, EV Platforms & Automotive Tech",
     heroSubtitle:
       "We empower OEMs, dealerships, and electric mobility providers across Australia and globally with cutting-edge automotive software engineering, telematics integration, and automated supply chains.",
@@ -217,7 +217,7 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     badge: "Digital Health & Clinical Engineering",
     metaTitle: "Healthcare Software Development Australia | ValoSync Global",
     metaDescription:
-      "HIPAA and AHPRA compliant digital health solutions, automated patient intake portals, EHR/EMR integration, and AI-driven clinical workflow automation.",
+      "Explore patient intake, health data workflows and digital platforms for healthcare organisations.",
     heroHeadline: "Secure, Compliant Digital Health Platforms That Elevate Patient Care",
     heroSubtitle:
       "Transforming healthcare providers, private practices, and clinical networks across Australia with HIPAA/AHPRA compliant software, automated patient intake, and unified EHR pipelines.",
@@ -363,7 +363,7 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     badge: "Fleet Telematics & Supply Chain Automation",
     metaTitle: "Logistics Software & GPS Tracking Systems Australia | ValoSync Global",
     metaDescription:
-      "Real-time fleet tracking portals, dispatch automation, inventory management systems, and automated shipment notification pipelines for Australian transport operators.",
+      "Explore fleet visibility, dispatch workflows and data tools for logistics businesses.",
     heroHeadline: "Real-Time Fleet Telematics & Intelligent Supply Chain Automation",
     heroSubtitle:
       "Eliminate dispatch blind spots, cut fuel overhead, and deliver transparency with real-time GPS tracking, warehouse ERP sync, and dynamic route optimization software.",
@@ -509,7 +509,7 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     badge: "Fintech Platforms & High-Security Portals",
     metaTitle: "Fintech Software Development & Financial Portals Australia | ValoSync Global",
     metaDescription:
-      "Secure client onboarding portals, automated loan & credit approval engines, compliance tracking CRMs, and encrypted document management for financial enterprises.",
+      "Explore onboarding, document workflows and digital platforms for financial services.",
     heroHeadline: "High-Security Financial Portals, Automated Underwriting & Fintech Software",
     heroSubtitle:
       "Engineered for Australian wealth managers, mortgage lenders, and fintech innovators who demand bank-grade encryption, automated KYC, and seamless regulatory compliance.",
@@ -655,7 +655,7 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     badge: "Headless Commerce & Digital Growth",
     metaTitle: "Retail & E-Commerce Web Platforms Australia | ValoSync Global",
     metaDescription:
-      "Custom multi-channel storefronts, inventory synchronization across channels, AI product recommendation engines, and customer retention CRMs for high-volume retail brands.",
+      "Explore e-commerce platforms, inventory workflows and digital tools for retail businesses.",
     heroHeadline: "Sub-Second Headless Commerce & Omnichannel Retail Platforms",
     heroSubtitle:
       "Unlock massive conversion leaps with lightning-fast Next.js headless storefronts, real-time inventory synchronization, and automated customer retention funnels.",
@@ -801,7 +801,7 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     badge: "Property Platforms & High-Intent CRMs",
     metaTitle: "Real Estate CRM Software & Property Portals Australia | ValoSync Global",
     metaDescription:
-      "Property listing portals, automated buyer lead nurturing CRMs, virtual property walkthrough integrations, and digital lease agreement management.",
+      "Explore property listing, enquiry and workflow platforms for real estate teams.",
     heroHeadline: "Property Listing Platforms, Automated Buyer CRMs & Digital Lease Portals",
     heroSubtitle:
       "Built for Australian agencies, property developers, and asset managers seeking automated lead follow-ups, interactive inspection booking, and digital tenant agreements.",
@@ -947,7 +947,7 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     badge: "Enterprise Portals & Practice Automation",
     metaTitle: "Professional Services Software & Client Portals | ValoSync Global",
     metaDescription:
-      "Custom client collaboration portals, automated project time tracking, proposal generators, and end-to-end client engagement management for corporate firms.",
+      "Explore client portals, project workflows and business tools for professional services.",
     heroHeadline: "Client Collaboration Portals & Practice Automation for Corporate Firms",
     heroSubtitle:
       "Streamline billable project delivery, automate proposal generation, and provide clients with an executive self-service workspace that differentiates your practice.",
@@ -1093,7 +1093,7 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     badge: "Industry 4.0 & Smart Operations",
     metaTitle: "Manufacturing Software & Industry 4.0 Systems | ValoSync Global",
     metaDescription:
-      "IoT data monitoring dashboards, automated shop-floor scheduling, quality control tracking, and custom ERP workflow software for modern manufacturing plants.",
+      "Explore production visibility, scheduling and operations software for manufacturers.",
     heroHeadline: "Industry 4.0 IoT Dashboards, Predictive Maintenance & Smart Manufacturing",
     heroSubtitle:
       "Bridge your shop-floor machinery with executive analytics. Real-time IoT sensor telemetry, automated production scheduling, and defect tracking built for modern manufacturing plants.",
@@ -1239,7 +1239,7 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     badge: "EdTech Platforms & Student Portals",
     metaTitle: "EdTech Software Development & Student Portals Australia | ValoSync Global",
     metaDescription:
-      "Custom learning management systems (LMS), student enrolment portals, automated course scheduling, and interactive assessment modules for universities and training providers.",
+      "Explore learning platforms, enrolment workflows and digital tools for education providers.",
     heroHeadline: "Next-Gen Learning Management Systems & Frictionless Student Enrolment",
     heroSubtitle:
       "Deliver engaging digital learning experiences with custom LMS architectures, automated student onboarding, interactive assessments, and real-time student analytics.",
@@ -1379,3 +1379,4 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
 };
 
 export const allIndustriesList: IndustryData[] = Object.values(industriesDataMap);
+

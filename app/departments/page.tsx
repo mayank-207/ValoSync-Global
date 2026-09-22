@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { shareMetadata } from "@/lib/shareMetadata";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,12 +11,16 @@ import { ArrowRightIcon, BriefcaseIcon, CheckCircleIcon, CodeIcon, FinanceIcon, 
 import { departmentsData } from "@/lib/departmentsData";
 
 export const metadata: Metadata = {
-  title: "Specialist Departments | ValoSync Global",
-  description:
-    "Explore ValoSync Global's 6 main departments: Engineering & Project Management, Loan & Finance Management, Accounting, Taxation & Compliance, Property & Real Estate Management, Conveyancing & Property Settlement, and Software Company.",
-  alternates: {
-    canonical: "/departments",
-  },
+  title: { absolute: "Our Departments | ValoSync Global" },
+  description: "Explore ValoSync Global departments across engineering, loans, accounting, property, conveyancing and technology to find the right specialist support.",
+  alternates: { canonical: "/departments" },
+  ...shareMetadata({
+    path: "/departments",
+    title: "Our Departments | ValoSync Global",
+    description: "Explore ValoSync Global departments across engineering, loans, accounting, property, conveyancing and technology to find the right specialist support.",
+    section: "Our Departments",
+    visual: "/images/departments/overview-poster.webp",
+  }),
 };
 
 interface DepartmentGroup {

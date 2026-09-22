@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import JsonLd from "@/components/seo/JsonLd";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,67 +17,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://valosyncglobal.com"),
+  metadataBase: new URL(siteOrigin),
   title: {
-    default: "ValoSync Global | Custom Software, CRM & AI Development Australia",
-    template: "%s | Valosync Global",
+    default: "ValoSync Global | Connected Specialist Services",
+    template: "%s",
   },
   description:
-    "ValoSync Global provides enterprise custom software development, bespoke CRM platforms, AI workflow automation, and cloud DevOps solutions for Australian businesses and global enterprises.",
-  keywords: [
-    "custom software development Australia",
-    "software development company Australia",
-    "CRM development Australia",
-    "custom CRM solutions Australia",
-    "AI automation agency Australia",
-    "web application development Sydney",
-    "software engineers Melbourne",
-    "IT solutions Brisbane Australia",
-    "business process automation Australia",
-    "cloud DevOps support Australia",
-    "enterprise software developers Australia",
-    "Australian software engineering firm",
-    "B2B CRM software Australia",
-    "Valosync Global",
-    "custom software Sydney",
-    "software company Australia",
-    "IT consulting Australia",
-    "Next.js web development",
-  ],
-  authors: [{ name: "Valosync Global" }],
-  creator: "Valosync Global",
-  publisher: "Valosync Global",
+    "ValoSync Global connects specialist teams across technology, accounting, conveyancing, civil engineering, real estate and home loans.",
+  authors: [{ name: "ValoSync Global" }],
+  creator: "ValoSync Global",
+  publisher: "ValoSync Global",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  openGraph: {
-    type: "website",
-    locale: "en_AU",
-    alternateLocale: ["en_US", "en_GB"],
-    url: "https://valosyncglobal.com",
-    siteName: "Valosync Global",
-    title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
+  ...shareMetadata({
+    path: "/",
+    title: "ValoSync Global | Connected Specialist Services",
     description:
-      "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
-    images: [
-      {
-        url: "/images/logo.png",
-        width: 800,
-        height: 800,
-        alt: "ValoSync Global - Custom Software & CRM Development Australia",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ValoSync Global | Custom Software, CRM & AI Development Australia",
-    description:
-      "Enterprise custom software development, intelligent CRM systems, AI automation, and cloud engineering tailored for Australian businesses and global enterprises.",
-    images: ["/images/logo.png"],
-    creator: "@valosyncglobal",
-  },
+      "ValoSync Global connects specialist teams across technology, accounting, conveyancing, civil engineering, real estate and home loans.",
+    section: "Business • Property • Technology",
+    visual: "/images/departments/overview-poster.webp",
+  }),
   robots: {
     index: true,
     follow: true,
@@ -104,9 +67,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      "en-AU": "https://valosyncglobal.com",
-      "en": "https://valosyncglobal.com",
-      "x-default": "https://valosyncglobal.com",
+      "en-AU": siteOrigin,
+      "en": siteOrigin,
+      "x-default": siteOrigin,
     },
   },
   other: {
@@ -116,7 +79,7 @@ export const metadata: Metadata = {
     "ICBM": "-25.274398, 133.775136",
     "target-country": "AU",
   },
-  category: "technology",
+  category: "business",
 };
 
 export const viewport: Viewport = {
