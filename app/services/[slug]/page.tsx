@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -595,6 +596,37 @@ const serviceContentMap: Record<ServiceSlug, ServiceData> = {
   },
 };
 
+const serviceHeroImages: Record<ServiceSlug, { src: string; alt: string }> = {
+  "custom-software": {
+    src: "/images/services/custom-software-hero.webp",
+    alt: "Software engineers reviewing an application architecture together",
+  },
+  "crm-development": {
+    src: "/images/services/crm-development-hero.webp",
+    alt: "Customer operations analyst reviewing a CRM pipeline",
+  },
+  "ai-automation": {
+    src: "/images/services/ai-automation-hero.webp",
+    alt: "Business documents being scanned into a digital workflow",
+  },
+  "web-development": {
+    src: "/images/services/web-development-hero.webp",
+    alt: "Responsive website being reviewed on desktop, laptop and tablet",
+  },
+  "mobile-app-development": {
+    src: "/images/services/mobile-app-development-hero.webp",
+    alt: "Mobile application being tested on a phone and tablet",
+  },
+  "cloud-devops": {
+    src: "/images/services/cloud-devops-hero.webp",
+    alt: "Cloud engineer monitoring a deployment pipeline and service health",
+  },
+  "digital-marketing": {
+    src: "/images/services/digital-marketing-hero.webp",
+    alt: "Marketing team reviewing campaign imagery and performance in a content studio",
+  },
+};
+
 export async function generateStaticParams() {
   return [
     { slug: "custom-software" },
@@ -647,31 +679,41 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const heroImage = serviceHeroImages[slug];
+
   return (
     <>
       <Header />
       <main id="main">
         {/* Dynamic Hero Section */}
-        <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#D4AF37]/15 blur-[120px] rounded-full pointer-events-none" />
+        <section className="relative isolate overflow-hidden bg-[#071A33] pt-32 pb-20 text-white md:pt-40 md:pb-28">
+          <Image
+            src={heroImage.src}
+            alt={heroImage.alt}
+            fill
+            fetchPriority="high"
+            sizes="100vw"
+            className="object-cover object-[70%_center] md:object-center"
+          />
+          <div className="absolute inset-0 bg-[#071A33]/75 md:bg-gradient-to-r md:from-[#071A33]/95 md:via-[#071A33]/85 md:to-[#071A33]/30" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071A33]/60 via-transparent to-[#071A33]/20" aria-hidden="true" />
 
           <div className="container relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
+            <div className="max-w-3xl">
+              <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#071A33]/50 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#D4AF37]">
                 <SparkleIcon size={16} className="text-[#D4AF37]" />
                 <span>{data.badge}</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6">
+              <h1 className="mb-6 text-4xl font-extrabold leading-[1.12] tracking-tight drop-shadow-lg sm:text-5xl md:text-6xl">
                 {data.heroHeadline}
               </h1>
 
-              <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto mb-10">
+              <p className="mb-10 max-w-2xl border-l-2 border-[#D4AF37] pl-5 text-lg font-medium leading-relaxed text-slate-100 drop-shadow-md sm:text-xl">
                 {data.heroSubtitle}
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+              <div className="mb-14 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Button
                   as="link"
                   href="/contact"
@@ -693,7 +735,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               </div>
 
               {/* Highlights */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-left pt-8 border-t border-slate-800/80">
+              <div className="grid grid-cols-2 gap-4 border-t border-white/25 pt-8 text-left md:grid-cols-4">
                 {data.highlights.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2">
                     <CheckCircleIcon size={18} className="text-[#D4AF37] flex-shrink-0 mt-0.5" />
