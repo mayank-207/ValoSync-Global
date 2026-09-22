@@ -52,8 +52,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Bespoke Technology, AI & Cloud Platforms Built to Scale Your Enterprise",
     heroSubtitle:
       "Transform your operational vision into high-performing, cloud-native software and automated digital systems engineered around your proprietary workflows.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
-    alt: "Electronic circuit board representing technology services",
+    image: "/images/departments/technology.webp",
+    alt: "Technology team reviewing a cloud architecture diagram",
     highlights: [
       "100% Client Code IP Ownership",
       "AI & Process Automation",
@@ -132,8 +132,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Strategic Accounting & Financial Clarity for Growing Businesses",
     heroSubtitle:
       "Eliminate financial complexity with accurate bookkeeping, timely compliance reporting, structured payroll management, and proactive business financial advisory.",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=82",
-    alt: "Financial documents, calculator and laptop arranged for professional accounting work",
+    image: "/images/departments/accounting.webp",
+    alt: "Accountant reconciling financial documents at a desk",
     highlights: [
       "Accurate Bookkeeping & Accounts",
       "Tax & Compliance Preparedness",
@@ -209,8 +209,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Seamless Property Transfers & Stress-Free Settlement Execution",
     heroSubtitle:
       "Protect your property transactions with thorough contract reviews, title searches, settlement coordination, and transparent legal documentation guidance.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
-    alt: "House keys and property documents representing conveyancing support",
+    image: "/images/departments/conveyancing.webp",
+    alt: "Conveyancer checking a property plan beside a model home",
     highlights: [
       "Rigorous Contract Review",
       "Electronic Settlement Co-ordination",
@@ -517,8 +517,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Navigating Planning Approvals & Council DA Compliance with Confidence",
     heroSubtitle:
       "Unlock the development potential of your site with expert zoning analysis, planning statement preparation, environmental assessments, and council DA management.",
-    image: "/images/town-planning.jpg",
-    alt: "Town planner and architectural blueprints for development planning",
+    image: "/images/departments/town-planning.webp",
+    alt: "Town planner reviewing a coastal precinct model and land-use plan",
     highlights: [
       "Council DA Application Management",
       "Site Zoning Feasibility Studies",
@@ -979,8 +979,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Precision Civil Engineering & Infrastructure Project Management",
     heroSubtitle:
       "From feasibility analysis and council town planning approvals to architectural drafting and on-site construction oversight, we deliver complex development projects on schedule and within budget.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82",
-    alt: "Civil engineering team reviewing structural plans and project management schedule",
+    image: "/images/departments/engineering-project-management.webp",
+    alt: "Project managers surveying a bridge construction site",
     highlights: [
       "Council Planning & DA Approvals",
       "Civil Infrastructure & Stormwater",
@@ -1056,8 +1056,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Strategic Loan Brokerage, Capital Structuring & Wealth Advisory",
     heroSubtitle:
       "Navigate lending and wealth creation with institutional clarity. We connect clients to over 40 tier-one lenders, structure commercial finance, and manage wealth portfolios for long-term growth.",
-    image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=82",
-    alt: "Financial charts and residential property lending advisory",
+    image: "/images/departments/loan-finance-management.webp",
+    alt: "Lending advisers reviewing a development model and finance documents",
     highlights: [
       "Access to 40+ Bank & Specialist Lenders",
       "Tailored Residential & Commercial Loans",
@@ -1133,8 +1133,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Corporate Accounting, Tax Optimization & Regulatory Compliance",
     heroSubtitle:
       "Eliminate compliance risk and unlock fiscal clarity. We deliver structured bookkeeping, proactive tax planning, corporate legal advisory, and audit-ready governance frameworks.",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=82",
-    alt: "Financial compliance audit documents, balance sheet and laptop",
+    image: "/images/departments/accounting-taxation-compliance.webp",
+    alt: "Specialist reviewing an audit binder and compliance documents",
     highlights: [
       "Proactive Tax Optimization & Advisory",
       "100% Statutory Compliance Guarantee",
@@ -1210,8 +1210,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Full-Lifecycle Property Advisory, Real Estate Sales & Asset Management",
     heroSubtitle:
       "Maximize capital appreciation and net rental yield across commercial and residential portfolios with our full-service property sales, leasing, and asset care division.",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82",
-    alt: "Modern high-value residential and commercial property management",
+    image: "/images/departments/property-real-estate-management.webp",
+    alt: "Property manager inspecting a mixed-use residential precinct",
     highlights: [
       "Strategic Property Sales & Acquisitions",
       "Rigorous Tenant Screening & Zero Rent Arrears",
@@ -1287,8 +1287,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Risk-Free Property Conveyancing & Digital Settlement Services",
     heroSubtitle:
       "Safeguard your property transactions with certified conveyancing experts. From pre-contract Section 32 reviews to electronic PEXA settlements, we protect your legal and financial interests.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
-    alt: "Property settlement legal documents, keys and deed transfer papers",
+    image: "/images/departments/conveyancing-property-settlement.webp",
+    alt: "Property settlement documents and keys being reviewed at a table",
     highlights: [
       "PEXA Certified Digital Settlement",
       "Fast 24-Hour Contract & Section 32 Reviews",
@@ -1364,8 +1364,8 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Custom Enterprise Software, Web & Mobile Applications, and AI Solutions",
     heroSubtitle:
       "We engineer bespoke software platforms, scalable cloud infrastructure, high-converting web applications, and AI automated workflow engines designed to accelerate operational growth.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
-    alt: "High-tech software code development and cloud server network",
+    image: "/images/departments/software-company.webp",
+    alt: "Software team reviewing an application interface at a workstation",
     highlights: [
       "100% Client Code IP Ownership",
       "Modern Next.js & Cloud Microservices",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CTASection from "@/components/sections/CTASection";
@@ -11,7 +12,6 @@ import {
   CheckCircleIcon,
   ZapIcon,
   SparkleIcon,
-  LayersIcon,
 } from "@/components/ui/Icons";
 import { departmentsData, DepartmentSlug } from "@/lib/departmentsData";
 
@@ -83,26 +83,33 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
       <Header />
       <main id="main">
         {/* Department Hero Section */}
-        <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#D4AF37]/15 blur-[120px] rounded-full pointer-events-none" />
+        <section className="relative isolate flex min-h-[42rem] items-center overflow-hidden bg-[#071A33] pb-16 pt-32 text-white md:pb-20 md:pt-40">
+          <Image
+            src={data.image}
+            alt=""
+            fill
+            sizes="100vw"
+            fetchPriority="high"
+            className="object-cover object-[65%_center]"
+          />
+          <div className="absolute inset-0 bg-[#071A33]/65 lg:bg-gradient-to-r lg:from-[#071A33]/75 lg:via-[#071A33]/45 lg:to-[#071A33]/10" aria-hidden="true" />
 
           <div className="container relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
+            <div className="max-w-4xl">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#071A33]/60 border border-[#D4AF37]/45 text-[#F5E6B3] text-xs sm:text-sm font-semibold tracking-wide mb-7 backdrop-blur-sm">
                 <SparkleIcon size={16} className="text-[#D4AF37]" />
                 <span>Department {data.number} • {data.badge}</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6">
+              <h1 className="max-w-4xl border-l-4 border-[#D4AF37] pl-5 text-4xl font-extrabold tracking-tight leading-[1.15] drop-shadow-md sm:text-5xl md:pl-7 md:text-6xl mb-6">
                 {data.heroHeadline}
               </h1>
 
-              <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto mb-10">
+              <p className="max-w-2xl text-lg sm:text-xl text-slate-100 font-normal leading-relaxed mb-9 drop-shadow-sm">
                 {data.heroSubtitle}
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
                 <Button
                   as="link"
                   href={`/contact?department=${data.slug}`}
@@ -114,7 +121,7 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
                 </Button>
                 <Link
                   href="#capabilities"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-white rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/40 backdrop-blur-sm transition-all duration-200"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-white rounded-xl border border-white/45 bg-[#071A33]/55 hover:bg-[#071A33]/80 hover:border-white/70 backdrop-blur-sm transition-all duration-200"
                 >
                   <ZapIcon size={16} className="text-[#D4AF37]" />
                   <span>View Capabilities</span>
@@ -122,7 +129,7 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
               </div>
 
               {/* Highlights */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-left pt-8 border-t border-slate-800/80">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 rounded-2xl border border-white/20 bg-[#071A33]/65 p-5 text-left backdrop-blur-md">
                 {data.highlights.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2">
                     <CheckCircleIcon size={18} className="text-[#D4AF37] flex-shrink-0 mt-0.5" />
@@ -218,10 +225,10 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
               {data.capabilities.map((cap, idx) => (
                 <div
                   key={idx}
-                  className="p-8 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] hover:border-[#0B3D91]/40 hover:shadow-xl hover:bg-white transition-all duration-300"
+                  className="group p-8 rounded-3xl bg-[#F7F9FC] border border-[#D9E1EC] hover:border-[#0B3D91]/40 hover:shadow-xl hover:bg-white motion-safe:hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#0B3D91]/10 text-[#0B3D91] font-bold flex items-center justify-center text-sm border border-[#0B3D91]/20">
+                    <div className="w-10 h-10 rounded-xl bg-[#0B3D91]/10 text-[#0B3D91] font-bold flex items-center justify-center text-sm border border-[#0B3D91]/20 transition-colors group-hover:bg-[#0B3D91] group-hover:text-white">
                       0{idx + 1}
                     </div>
                     <h3 className="text-xl font-bold text-[#1A1A1A]">
@@ -252,7 +259,7 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {data.keyServices.map((ks, idx) => (
-                  <div key={idx} className="bg-white p-6 rounded-2xl border border-[#D9E1EC] shadow-sm flex flex-col justify-between">
+                  <div key={idx} className="group bg-white p-6 rounded-2xl border border-[#D9E1EC] shadow-sm flex flex-col justify-between transition-all duration-300 hover:border-[#0B3D91]/40 hover:shadow-lg focus-within:border-[#0B3D91]/40 focus-within:shadow-lg motion-safe:hover:-translate-y-1">
                     <div>
                       <h4 className="text-lg font-bold text-[#1A1A1A] mb-2">{ks.title}</h4>
                       <p className="text-xs text-[#4A5568] leading-relaxed mb-4">{ks.description}</p>

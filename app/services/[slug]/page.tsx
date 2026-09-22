@@ -696,8 +696,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             sizes="100vw"
             className="object-cover object-[70%_center] md:object-center"
           />
-          <div className="absolute inset-0 bg-[#071A33]/75 md:bg-gradient-to-r md:from-[#071A33]/90 md:via-[#071A33]/60 md:to-[#071A33]/10" aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071A33]/35 via-transparent to-[#071A33]/15" aria-hidden="true" />
+          <div className="absolute inset-0 bg-[#071A33]/65 md:bg-gradient-to-r md:from-[#071A33]/75 md:via-[#071A33]/45 md:to-[#071A33]/10" aria-hidden="true" />
 
           <div className="container relative z-10">
             <div className="max-w-3xl">
