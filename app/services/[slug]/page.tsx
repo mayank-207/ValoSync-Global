@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -695,8 +696,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             sizes="100vw"
             className="object-cover object-[70%_center] md:object-center"
           />
-          <div className="absolute inset-0 bg-[#071A33]/75 md:bg-gradient-to-r md:from-[#071A33]/95 md:via-[#071A33]/85 md:to-[#071A33]/30" aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071A33]/60 via-transparent to-[#071A33]/20" aria-hidden="true" />
+          <div className="absolute inset-0 bg-[#071A33]/75 md:bg-gradient-to-r md:from-[#071A33]/90 md:via-[#071A33]/60 md:to-[#071A33]/10" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071A33]/35 via-transparent to-[#071A33]/15" aria-hidden="true" />
 
           <div className="container relative z-10">
             <div className="max-w-3xl">
@@ -723,15 +724,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 >
                   Discuss Your {data.title} Project
                 </Button>
-                <Button
-                  as="link"
+                <Link
                   href="#capabilities"
-                  variant="outline"
-                  size="lg"
-                  leftIcon={<ZapIcon size={18} className="text-[#D4AF37]" />}
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/50 bg-white/10 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-base"
                 >
+                  <ZapIcon size={18} className="text-[#D4AF37]" />
                   Explore Capabilities
-                </Button>
+                </Link>
               </div>
 
               {/* Highlights */}
