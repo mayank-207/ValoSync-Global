@@ -12,7 +12,7 @@ import CTASection from "@/components/sections/CTASection";
 export const metadata: Metadata = {
   title: "Technology & Software Engineering Services Australia | Valosync Global",
   description:
-    "Explore Valosync Global's end-to-end technology services: Custom Software Development Australia, CRM Engineering, AI Automation, Web Applications, and Cloud DevOps for Australian and global businesses.",
+    "Explore ValoSync Global technology services, including custom software, applications, AI automation, web development, Cloud & DevOps, and Network as a Service for Australian and global businesses.",
   keywords: [
     "Valosync Global Services",
     "Custom Software Development Australia",
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "Business Process Automation Australia",
     "Web Application Development Sydney Melbourne",
     "Cloud DevOps Support Australia",
+    "Network as a Service Australia",
     "Digital Marketing & SEO Australia",
     "Enterprise Software Solutions Australia",
   ],
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Technology & Software Engineering Services Australia | Valosync Global",
     description:
-      "Engineered custom software platforms, high-conversion CRMs, AI workflow automation, and digital growth funnels tailored for Australian businesses and global enterprises.",
+      "Software, applications, AI automation, cloud delivery, managed networks and digital growth services for Australian and global businesses.",
     url: "https://valosyncglobal.com/services",
     siteName: "Valosync Global",
     type: "website",

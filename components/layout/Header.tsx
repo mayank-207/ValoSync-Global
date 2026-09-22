@@ -84,6 +84,7 @@ const departmentTabs: CategoryTab[] = [
       { label: "CRM & ERP Platform Architecture", href: "/services/crm-development" },
       { label: "AI Automation Solutions", href: "/services/ai-automation" },
       { label: "Cloud & DevOps Infrastructure", href: "/services/cloud-devops" },
+      { label: "Network as a Service (NaaS)", href: "/departments/technology/network-as-a-service" },
     ],
   },
 ];
@@ -105,6 +106,7 @@ const serviceTabs: CategoryTab[] = [
     items: [
       { label: "AI Automation Solutions", href: "/services/ai-automation" },
       { label: "Cloud & DevOps Support", href: "/services/cloud-devops" },
+      { label: "Network as a Service (NaaS)", href: "/departments/technology/network-as-a-service" },
       { label: "Digital Marketing Services", href: "/services/digital-marketing" },
     ],
   },
