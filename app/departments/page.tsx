@@ -86,7 +86,7 @@ export default function DepartmentsPage() {
         <section className="relative isolate min-h-[36rem] overflow-hidden bg-[#071A33] pb-20 pt-32 text-white md:pb-28 md:pt-40">
           <div className="absolute inset-0 bg-[url('/images/departments/overview-poster.webp')] bg-cover bg-center" aria-hidden="true" />
           <DepartmentHeroMotion />
-          <div className="absolute inset-0 bg-[#071A33]/80 lg:bg-[#071A33]/72" aria-hidden="true" />
+          <div className="absolute inset-0 bg-[#071A33]/65 lg:bg-[#071A33]/55" aria-hidden="true" />
           <div className="container relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
@@ -149,7 +149,7 @@ export default function DepartmentsPage() {
                               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#071A3D]/80 via-[#071A3D]/20 to-transparent" aria-hidden="true" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#071A3D]/55 via-[#071A3D]/10 to-transparent" aria-hidden="true" />
                             <span className="absolute left-5 top-5 rounded-full border border-white/25 bg-[#071A3D]/80 px-3 py-1 text-xs font-bold tracking-widest text-[#D4AF37] backdrop-blur">
                               {dept.number}
                             </span>
