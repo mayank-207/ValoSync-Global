@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import LegalPageContent from "@/components/sections/legal/LegalPageContent";
+import { siteConfig } from "@/lib/siteConfig";
 import {
   SparkleIcon,
   ShieldIcon,
@@ -194,8 +195,8 @@ const sections = [
         <div className="p-5 rounded-2xl bg-[#F7F9FC] border border-[#D9E1EC]">
           <p className="text-xs sm:text-sm text-[#4A5568] leading-relaxed">
             To make an inquiry or submit a data subject access request, please contact our Data Protection & Privacy Desk at{" "}
-            <a href="mailto:privacy@valosyncglobal.com" className="text-[#0B3D91] font-bold hover:underline">
-              privacy@valosyncglobal.com
+            <a href={`mailto:${siteConfig.email.privacy}`} className="text-[#0B3D91] font-bold hover:underline">
+              {siteConfig.email.privacy}
             </a>. Inquiries are formally acknowledged and processed within 48 business hours.
           </p>
         </div>

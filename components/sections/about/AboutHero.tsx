@@ -45,7 +45,7 @@ export default function AboutHero() {
           <div className="relative">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/15 shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=82"
+                src="/images/heroes/about-hero.webp"
                 alt="Diverse professional team collaborating around a table"
                 fill
                 priority

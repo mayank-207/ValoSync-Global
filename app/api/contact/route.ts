@@ -14,7 +14,8 @@ export async function POST(req: Request) {
     }
 
     const resendApiKey = process.env.RESEND_API_KEY;
-    const adminEmail = process.env.ADMIN_EMAIL;
+    const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@valosyncglobal.com";
+    const adminEmail = process.env.ADMIN_EMAIL || contactEmail;
     const senderEmail = process.env.SENDER_EMAIL;
 
     // Resend requires a verified domain or its default 'onboarding@resend.dev' for the 'from' address.
@@ -125,7 +126,7 @@ export async function POST(req: Request) {
               ${message ? `<p style="margin: 4px 0; font-size: 13px;"><strong>Message:</strong> ${message}</p>` : ''}
             </div>
 
-            <p>If you have any urgent questions, feel free to reply directly to this email or reach us at <a href="mailto:contact@valosyncglobal.com" style="color: #06B6D4;">contact@valosyncglobal.com</a>.</p>
+            <p>If you have any urgent questions, feel free to reply directly to this email or reach us at <a href="mailto:${contactEmail}" style="color: #06B6D4;">${contactEmail}</a>.</p>
 
             <div class="footer">
               © ${new Date().getFullYear()} Valosync Global. All rights reserved.<br/>

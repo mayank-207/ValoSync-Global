@@ -6,7 +6,9 @@ import {
   LinkedinIcon,
   MailIcon,
   MapPinIcon,
+  PhoneIcon,
 } from "../ui/Icons";
+import { siteConfig } from "@/lib/siteConfig";
 
 const departmentLinks = [
   { label: "Engineering & Project Management", href: "/departments/engineering-project-management" },
@@ -43,14 +45,14 @@ export default function Footer() {
     <footer className="mt-auto bg-primary-dark text-white">
       <div className="border-y border-white/15">
         <div className="container grid sm:grid-cols-3">
-          <a href="mailto:contact@valosyncglobal.com" className="footer-action sm:border-r border-white/15">
+          <a href={`mailto:${siteConfig.email.contact}`} className="footer-action sm:border-r border-white/15">
             <MailIcon size={20} />
-            <span><small>Email</small>contact@valosyncglobal.com</span>
+            <span><small>Email</small>{siteConfig.email.contact}</span>
           </a>
-          <Link href="/contact" className="footer-action sm:border-r border-white/15">
-            <MapPinIcon size={20} />
-            <span><small>Project enquiries</small>Discuss your requirements</span>
-          </Link>
+          <a href={`tel:${siteConfig.phone.primaryTel}`} className="footer-action sm:border-r border-white/15">
+            <PhoneIcon size={20} />
+            <span><small>Call Us</small>{siteConfig.phone.primary}</span>
+          </a>
           <Link href="/contact" className="footer-action group">
             <ArrowRightIcon size={20} />
             <span><small>Consultation</small>Book a meeting</span>
@@ -68,6 +70,12 @@ export default function Footer() {
             <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-gold">
               Integrated Multi-Department Group
             </p>
+            <div className="mt-4 space-y-1.5 text-xs text-slate-300">
+              <p className="flex items-start gap-2">
+                <MapPinIcon size={15} className="text-gold shrink-0 mt-0.5" />
+                <span>{siteConfig.address.full}</span>
+              </p>
+            </div>
           </div>
 
           <div>
@@ -108,12 +116,16 @@ export default function Footer() {
               ))}
             </ul>
             <div className="mt-7 flex gap-3">
-              <a href="https://linkedin.com/company/valosyncglobal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="footer-social">
-                <LinkedinIcon size={18} />
-              </a>
-              <a href="https://instagram.com/valosyncglobal" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="footer-social">
-                <InstagramIcon size={18} />
-              </a>
+              {siteConfig.socials.linkedin && (
+                <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="footer-social">
+                  <LinkedinIcon size={18} />
+                </a>
+              )}
+              {siteConfig.socials.instagram && (
+                <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="footer-social">
+                  <InstagramIcon size={18} />
+                </a>
+              )}
             </div>
           </div>
         </div>

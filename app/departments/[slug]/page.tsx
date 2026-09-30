@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
+import { siteConfig } from "@/lib/siteConfig";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -55,10 +56,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: data.metaTitle,
+    title: { absolute: data.metaTitle },
     description: data.metaDescription,
+    keywords: [
+      data.title,
+      `${data.title} Australia`,
+      "ValoSync Global",
+      "specialist enterprise services",
+      "Australia India business services",
+    ],
     alternates: {
       canonical: `/departments/${slug}`,
+      languages: {
+        "en-AU": `${siteOrigin}/departments/${slug}`,
+        "en-IN": `${siteOrigin}/departments/${slug}`,
+        "en": `${siteOrigin}/departments/${slug}`,
+        "x-default": `${siteOrigin}/departments/${slug}`,
+      },
     },
     ...shareMetadata({
       path: `/departments/${slug}`,
@@ -79,8 +93,84 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const departmentSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${siteOrigin}/departments/${slug}#department`,
+    name: `${data.title} | ${siteConfig.name}`,
+    description: data.metaDescription,
+    url: `${siteOrigin}/departments/${slug}`,
+    image: `${siteOrigin}${data.image}`,
+    telephone: siteConfig.phone.primary,
+    areaServed: [
+      { "@type": "Country", name: "Australia" },
+      { "@type": "Country", name: "India" },
+    ],
+    parentOrganization: {
+      "@type": "Organization",
+      "@id": `${siteOrigin}/#organization`,
+      name: siteConfig.name,
+      url: siteOrigin,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteOrigin,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Departments",
+        item: `${siteOrigin}/#departments`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: data.title,
+        item: `${siteOrigin}/departments/${slug}`,
+      },
+    ],
+  };
+
+  const faqSchema =
+    data.faqs && data.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: data.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }
+      : null;
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(departmentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <Header />
       <main id="main">
         {/* Department Hero Section */}

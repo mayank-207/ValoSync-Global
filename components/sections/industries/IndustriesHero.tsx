@@ -16,7 +16,7 @@ export default function IndustriesHero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-[#041026] via-[#071A3D] to-[#0D47A1] text-white overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1800&q=80"
+        src="/images/heroes/industries-hero.webp"
         alt=""
         fill
         sizes="100vw"

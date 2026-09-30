@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,13 +11,29 @@ import { ArrowRightIcon, BriefcaseIcon, CheckCircleIcon, CodeIcon, FinanceIcon, 
 import { departmentsData } from "@/lib/departmentsData";
 
 export const metadata: Metadata = {
-  title: { absolute: "Our Departments | ValoSync Global" },
-  description: "Explore ValoSync Global departments across engineering, loans, accounting, property, conveyancing and technology to find the right specialist support.",
-  alternates: { canonical: "/departments" },
+  title: { absolute: "Our Specialist Departments | ValoSync Global" },
+  description:
+    "Explore ValoSync Global departments across engineering, loans, accounting, property, conveyancing and technology to find the right specialist support.",
+  keywords: [
+    "ValoSync Global departments",
+    "multidisciplinary specialist services",
+    "engineering and technology departments",
+    "Australia business services",
+  ],
+  alternates: {
+    canonical: "/departments",
+    languages: {
+      "en-AU": `${siteOrigin}/departments`,
+      "en-IN": `${siteOrigin}/departments`,
+      "en": `${siteOrigin}/departments`,
+      "x-default": `${siteOrigin}/departments`,
+    },
+  },
   ...shareMetadata({
     path: "/departments",
-    title: "Our Departments | ValoSync Global",
-    description: "Explore ValoSync Global departments across engineering, loans, accounting, property, conveyancing and technology to find the right specialist support.",
+    title: "Our Specialist Departments | ValoSync Global",
+    description:
+      "Explore ValoSync Global departments across engineering, loans, accounting, property, conveyancing and technology to find the right specialist support.",
     section: "Our Departments",
     visual: "/images/departments/overview-poster.webp",
   }),

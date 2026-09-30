@@ -21,7 +21,7 @@ const businessAreas = [
     title: "Engineering & Project Management",
     description: "Civil infrastructure, council town planning approvals, architectural design, and on-site project management.",
     href: "/departments/engineering-project-management",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/engineering-project-management.webp",
     alt: "Civil engineering team reviewing structural plans and project management schedule",
   },
   {
@@ -29,7 +29,7 @@ const businessAreas = [
     title: "Loan & Finance Management",
     description: "Residential mortgages, commercial business lending, financial planning, and asset risk protection.",
     href: "/departments/loan-finance-management",
-    image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/loan-finance-management.webp",
     alt: "Modern family home representing home loan and wealth advisory support",
   },
   {
@@ -37,7 +37,7 @@ const businessAreas = [
     title: "Accounting, Taxation & Compliance",
     description: "Corporate bookkeeping, statutory tax optimization, corporate governance, and payroll administration.",
     href: "/departments/accounting-taxation-compliance",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/accounting-taxation-compliance.webp",
     alt: "Financial compliance audit documents, balance sheet and laptop",
   },
   {
@@ -45,7 +45,7 @@ const businessAreas = [
     title: "Property & Real Estate Management",
     description: "Real estate sales, active property asset care, tenant leasing, and development feasibility.",
     href: "/departments/property-real-estate-management",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/property-real-estate-management.webp",
     alt: "Contemporary residential and commercial property management",
   },
   {
@@ -53,7 +53,7 @@ const businessAreas = [
     title: "Conveyancing & Property Settlement",
     description: "Certified legal title transfers, contract reviews, stamp duty processing, and electronic PEXA settlements.",
     href: "/departments/conveyancing-property-settlement",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/conveyancing-property-settlement.webp",
     alt: "House keys and property legal documents representing conveyancing support",
   },
   {
@@ -61,7 +61,7 @@ const businessAreas = [
     title: "Software Company",
     description: "Custom software platforms, mobile applications, web portals, CRM systems, and AI automation engines.",
     href: "/departments/software-company",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/software-company.webp",
     alt: "High-tech software code development and cloud server network",
   },
 ];

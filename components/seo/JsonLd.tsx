@@ -1,23 +1,67 @@
 import { siteOrigin } from "@/lib/shareMetadata";
+import { siteConfig } from "@/lib/siteConfig";
 
 export default function JsonLd() {
   const image = new URL("/share-image", siteOrigin);
   image.searchParams.set("page", "/");
   image.searchParams.set("title", "Connected Specialist Services");
-  image.searchParams.set("section", "ValoSync Global");
+  image.searchParams.set("section", siteConfig.name);
   image.searchParams.set("visual", "/images/departments/overview-poster.webp");
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${siteOrigin}/#organization`,
-    name: "ValoSync Global",
+    name: siteConfig.name,
+    legalName: siteConfig.legalName,
     url: siteOrigin,
-    image: image.toString(),
+    logo: `${siteOrigin}/images/logo.png`,
+    image: `${siteOrigin}/og-image.png`,
     description:
-      "ValoSync Global connects specialist teams across technology, accounting, conveyancing, civil engineering, real estate and home loans.",
-    email: "contact@valosyncglobal.com",
-    areaServed: { "@type": "Country", name: "Australia" },
+      "ValoSync Global connects specialist enterprise teams across custom software, AI automation, cloud systems, and professional services, powered by our India Engineering HQ and Australian client delivery.",
+    email: siteConfig.email.contact,
+    telephone: siteConfig.phone.primary,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.address.street,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.state,
+      postalCode: siteConfig.address.postalCode,
+      addressCountry: siteConfig.address.indiaHq.countryCode,
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phone.primary,
+        contactType: "customer support & sales",
+        areaServed: "AU",
+        availableLanguage: ["en"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phone.secondary,
+        contactType: "global engineering hq",
+        areaServed: ["IN", "AU", "Global"],
+        availableLanguage: ["en", "hi"],
+      },
+    ],
+    areaServed: [
+      { "@type": "Country", name: "Australia" },
+      { "@type": "Country", name: "India" },
+    ],
+    knowsAbout: [
+      "Custom Software Development",
+      "Enterprise AI & LLM Automation",
+      "CRM Development & Integration",
+      "Mobile App Development",
+      "Cloud Infrastructure & DevOps",
+      "Digital Marketing & SEO",
+    ],
+    sameAs: [
+      siteConfig.socials.linkedin,
+      siteConfig.socials.instagram,
+      siteConfig.socials.twitter,
+    ].filter(Boolean),
   };
 
   const websiteSchema = {
@@ -25,11 +69,11 @@ export default function JsonLd() {
     "@type": "WebSite",
     "@id": `${siteOrigin}/#website`,
     url: siteOrigin,
-    name: "ValoSync Global",
+    name: siteConfig.name,
     description:
-      "Specialist services for business, property and growth.",
+      "Enterprise software, AI automation, and multidisciplinary specialist services for Australian enterprises from our global engineering delivery HQ.",
     publisher: { "@id": `${siteOrigin}/#organization` },
-    inLanguage: "en-AU",
+    inLanguage: ["en-AU", "en-IN", "en"],
   };
 
   return (

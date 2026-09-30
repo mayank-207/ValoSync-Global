@@ -90,7 +90,8 @@ ValoSync-Global/
 ├── lib/                                    # Static datasets and business logic
 │   ├── departmentsData.ts                  # Comprehensive data records for 18 departments
 │   ├── industriesData.ts                   # Strategic datasets for 9 vertical industries
-│   └── shareMetadata.ts                    # Dynamic Open Graph & Twitter metadata builder
+│   ├── shareMetadata.ts                    # Dynamic Open Graph & Twitter metadata builder
+│   └── siteConfig.ts                       # Dynamic site configuration powered by environment variables
 ├── public/                                 # Static assets (brand icons, WebP imagery)
 ├── .env.example                            # Template for environment variables
 ├── ecosystem.config.cjs                    # PM2 process manager cluster configuration
@@ -155,10 +156,27 @@ ValoSync-Global/
 
 | Variable | Required | Default / Fallback | Description |
 | :--- | :---: | :--- | :--- |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | No | `contact@valosyncglobal.com` | Public contact email shown in Header, Footer, Contact page, and SEO schema. |
+| `NEXT_PUBLIC_SUPPORT_EMAIL` | No | `support@valosyncglobal.com` | Support desk email address. |
+| `NEXT_PUBLIC_PRIVACY_EMAIL` | No | `privacy@valosyncglobal.com` | Privacy officer email shown in Privacy Policy page. |
+| `NEXT_PUBLIC_CONTACT_PHONE` | No | `+61 (02) 8000 0000` | Primary office phone number display format. |
+| `NEXT_PUBLIC_CONTACT_PHONE_TEL` | No | `+61280000000` | Primary phone formatted for clickable `tel:` links (no spaces). |
+| `NEXT_PUBLIC_CONTACT_PHONE_SECONDARY` | No | `+91 98765 43210` | Secondary / international contact number display. |
+| `NEXT_PUBLIC_CONTACT_PHONE_SECONDARY_TEL` | No | `+919876543210` | Secondary phone formatted for clickable `tel:` links. |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | No | `+61400000000` | Direct WhatsApp messaging number (with country code). |
+| `NEXT_PUBLIC_OFFICE_ADDRESS` | No | `Level 25, 100 Barangaroo Avenue` | Physical street address line. |
+| `NEXT_PUBLIC_OFFICE_CITY` | No | `Sydney` | Office city. |
+| `NEXT_PUBLIC_OFFICE_STATE` | No | `NSW` | State / Territory. |
+| `NEXT_PUBLIC_OFFICE_POSTAL_CODE` | No | `2000` | Postal / Zip code. |
+| `NEXT_PUBLIC_OFFICE_COUNTRY` | No | `Australia` | Country. |
+| `NEXT_PUBLIC_OFFICE_FULL_ADDRESS` | No | Full Sydney address | Formatted single-line office address shown in Contact & Footer. |
+| `NEXT_PUBLIC_OFFICE_HOURS` | No | `Mon-Fri from 9am to 6pm (AEST)` | Business hours shown on Contact page. |
+| `NEXT_PUBLIC_LINKEDIN_URL` | No | `https://linkedin.com/...` | Official LinkedIn company profile URL. |
+| `NEXT_PUBLIC_INSTAGRAM_URL` | No | `https://instagram.com/...` | Official Instagram company profile URL. |
+| `NEXT_PUBLIC_SITE_URL` | No | `https://valosync-global.netlify.app` | Base canonical domain used for metadata, XML sitemaps, and social share links. |
 | `RESEND_API_KEY` | Optional* | None | Resend API key for sending contact emails. Form falls back gracefully when absent. |
-| `ADMIN_EMAIL` | No | Code fallback | Recipient email address for consultation and lead inquiries. |
-| `SENDER_EMAIL` | No | `onboarding@resend.dev` | `from:` address for outbound emails (must match a verified Resend domain in production). |
-| `NEXT_PUBLIC_SITE_URL`| No | `https://valosync-global.netlify.app` | Base canonical domain used for metadata, XML sitemaps, and social share links. |
+| `ADMIN_EMAIL` | No | `NEXT_PUBLIC_CONTACT_EMAIL` | Recipient email address for consultation and lead inquiries. |
+| `SENDER_EMAIL` | No | `onboarding@resend.dev` | Outbound `from:` email in Resend (must match verified domain in production). |
 | `DEPLOY_PRIME_URL` | Auto | Managed by Netlify | Auto-injected by Netlify for preview builds to render dynamic share cards correctly. |
 
 ---

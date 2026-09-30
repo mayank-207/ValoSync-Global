@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import IndustriesHero from "@/components/sections/industries/IndustriesHero";
@@ -11,14 +11,31 @@ import IndustryFAQSection from "@/components/sections/industries/IndustryFAQSect
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: { absolute: "Industries | ValoSync Global" },
-  description: "Explore technology solutions for healthcare, finance, logistics, retail, education and other industries supported by ValoSync Global.",
-  alternates: { canonical: "/industries" },
+  title: { absolute: "Industry Technology Solutions | Australian Enterprises & Global Delivery | ValoSync Global" },
+  description:
+    "Explore enterprise software, AI automation, and cloud platforms engineered for Australian healthcare, finance, logistics, real estate, and retail sectors.",
+  keywords: [
+    "enterprise software industries Australia",
+    "healthcare AI solutions",
+    "fintech development Australia",
+    "logistics software engineering",
+    "custom software Australia",
+  ],
+  alternates: {
+    canonical: "/industries",
+    languages: {
+      "en-AU": `${siteOrigin}/industries`,
+      "en-IN": `${siteOrigin}/industries`,
+      "en": `${siteOrigin}/industries`,
+      "x-default": `${siteOrigin}/industries`,
+    },
+  },
   ...shareMetadata({
     path: "/industries",
-    title: "Industries | ValoSync Global",
-    description: "Explore technology solutions for healthcare, finance, logistics, retail, education and other industries supported by ValoSync Global.",
-    section: "Industries",
+    title: "Industry Technology Solutions | Australian Enterprises & Global Delivery | ValoSync Global",
+    description:
+      "Explore enterprise software, AI automation, and cloud platforms engineered for Australian healthcare, finance, logistics, real estate, and retail sectors.",
+    section: "Industry Solutions",
     visual: "/images/departments/engineering-project-management.webp",
   }),
 };
