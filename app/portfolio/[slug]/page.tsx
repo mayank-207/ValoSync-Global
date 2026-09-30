@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -546,16 +546,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: data.metaTitle,
+    title: { absolute: data.metaTitle },
     description: data.metaDescription,
+    keywords: [
+      data.title,
+      `${data.category} case study`,
+      `${data.industry} technology solution`,
+      "ValoSync Global delivered project",
+    ],
     alternates: {
       canonical: `/portfolio/${slug}`,
+      languages: {
+        "en-AU": `${siteOrigin}/portfolio/${slug}`,
+        "en-IN": `${siteOrigin}/portfolio/${slug}`,
+        "en": `${siteOrigin}/portfolio/${slug}`,
+        "x-default": `${siteOrigin}/portfolio/${slug}`,
+      },
     },
     ...shareMetadata({
       path: `/portfolio/${slug}`,
       title: data.metaTitle,
       description: data.metaDescription,
       section: "Selected Projects",
+      visual: "/images/services/ai-automation-hero.webp",
     }),
   };
 }

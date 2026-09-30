@@ -20,7 +20,7 @@ export default function HeroSection() {
   return (
     <section className="corporate-hero relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between" aria-labelledby="hero-heading">
       <Image
-        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=82"
+        src="/images/heroes/home-hero.webp"
         alt=""
         fill
         priority

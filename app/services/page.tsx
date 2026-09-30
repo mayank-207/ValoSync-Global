@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ServicesHero from "@/components/sections/services/ServicesHero";
@@ -11,13 +11,31 @@ import ServiceFAQSection from "@/components/sections/services/ServiceFAQSection"
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: { absolute: "Technology Services | ValoSync Global" },
-  description: "Explore application development, AI automation, web and mobile apps, cloud delivery, managed networks and digital marketing at ValoSync Global.",
-  alternates: { canonical: "/services" },
+  title: { absolute: "Enterprise Technology & Software Services for Australia | ValoSync Global" },
+  description:
+    "Discover enterprise custom software, AI automation, CRM development, cloud DevOps, and digital marketing services for Australian businesses from our global engineering delivery HQ.",
+  keywords: [
+    "technology services Australia",
+    "custom software development Australia",
+    "AI automation solutions Australia",
+    "cloud devops consulting",
+    "custom CRM development Australia",
+    "offshore engineering delivery India",
+  ],
+  alternates: {
+    canonical: "/services",
+    languages: {
+      "en-AU": `${siteOrigin}/services`,
+      "en-IN": `${siteOrigin}/services`,
+      "en": `${siteOrigin}/services`,
+      "x-default": `${siteOrigin}/services`,
+    },
+  },
   ...shareMetadata({
     path: "/services",
-    title: "Technology Services | ValoSync Global",
-    description: "Explore application development, AI automation, web and mobile apps, cloud delivery, managed networks and digital marketing at ValoSync Global.",
+    title: "Enterprise Technology & Software Services for Australia | ValoSync Global",
+    description:
+      "Discover enterprise custom software, AI automation, CRM development, cloud DevOps, and digital marketing services for Australian businesses from our global engineering delivery HQ.",
     section: "Technology Services",
     visual: "/images/services/custom-software-hero.webp",
   }),

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -51,16 +51,30 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: data.metaTitle,
+    title: { absolute: data.metaTitle },
     description: data.metaDescription,
+    keywords: [
+      data.title,
+      `${data.title} Australia`,
+      "industry software solutions",
+      "enterprise digital transformation",
+      "ValoSync Global",
+    ],
     alternates: {
       canonical: `/industries/${slug}`,
+      languages: {
+        "en-AU": `${siteOrigin}/industries/${slug}`,
+        "en-IN": `${siteOrigin}/industries/${slug}`,
+        "en": `${siteOrigin}/industries/${slug}`,
+        "x-default": `${siteOrigin}/industries/${slug}`,
+      },
     },
     ...shareMetadata({
       path: `/industries/${slug}`,
       title: data.metaTitle,
       description: data.metaDescription,
       section: "Industries",
+      visual: data.heroImage,
     }),
   };
 }

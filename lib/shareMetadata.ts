@@ -36,11 +36,19 @@ export function shareMetadata({
     openGraph: {
       type: "website",
       locale: "en_AU",
+      alternateLocale: ["en_IN", "en_US"],
       siteName: "ValoSync Global",
       url: new URL(path, siteOrigin).toString(),
       title,
       description,
-      images: [{ url: imageUrl, width: 1200, height: 630, alt: title }],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${title} | ValoSync Global`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",

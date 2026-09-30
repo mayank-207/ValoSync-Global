@@ -16,6 +16,7 @@ import {
   ShieldIcon,
 } from "@/components/ui/Icons";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import { siteConfig } from "@/lib/siteConfig";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -60,22 +61,22 @@ export default function ContactPage() {
     {
       icon: <PhoneIcon size={24} />,
       title: "Sales & Inquiries",
-      detail: "+61 (02) 8000 0000 / +91 98765 43210",
-      subtext: "Mon-Fri from 9am to 6pm (AEST)",
-      href: "tel:+61280000000",
+      detail: siteConfig.phone.display,
+      subtext: siteConfig.hours.display,
+      href: `tel:${siteConfig.phone.primaryTel}`,
     },
     {
       icon: <MailIcon size={24} />,
       title: "Official Email",
-      detail: "contact@valosyncglobal.com",
-      subtext: "Guaranteed reply within 24 hours",
-      href: "mailto:contact@valosyncglobal.com",
+      detail: siteConfig.email.contact,
+      subtext: siteConfig.hours.sla,
+      href: `mailto:${siteConfig.email.contact}`,
     },
     {
       icon: <MapPinIcon size={24} />,
       title: "Global Delivery Hub",
-      detail: "Global Technology & Innovation Hub",
-      subtext: "Engineering & Client Success",
+      detail: siteConfig.address.full,
+      subtext: siteConfig.address.subtext,
       href: "#contact-form",
     },
   ];

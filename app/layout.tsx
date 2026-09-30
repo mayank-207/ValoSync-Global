@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import JsonLd from "@/components/seo/JsonLd";
+import AnalyticsTracking from "@/components/analytics/AnalyticsTracking";
 import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
+import { siteConfig } from "@/lib/siteConfig";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,24 +22,32 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin),
   title: {
     default: "ValoSync Global | Connected Specialist Services",
-    template: "%s",
+    template: "%s | ValoSync Global",
   },
   description:
-    "ValoSync Global connects specialist teams across technology, accounting, conveyancing, civil engineering, real estate and home loans.",
+    "Enterprise technology, custom software engineering, AI automation, and multidisciplinary specialist services for Australian businesses and global enterprises.",
+  keywords: [...siteConfig.seoKeywords],
   authors: [{ name: "ValoSync Global" }],
   creator: "ValoSync Global",
   publisher: "ValoSync Global",
+  manifest: "/manifest.webmanifest",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
+  verification: {
+    google: siteConfig.marketing.googleVerification || undefined,
+    other: siteConfig.marketing.bingVerification
+      ? { "msvalidate.01": siteConfig.marketing.bingVerification }
+      : undefined,
+  },
   ...shareMetadata({
     path: "/",
     title: "ValoSync Global | Connected Specialist Services",
     description:
-      "ValoSync Global connects specialist teams across technology, accounting, conveyancing, civil engineering, real estate and home loans.",
-    section: "Business • Property • Technology",
+      "Enterprise technology, custom software engineering, AI automation, and multidisciplinary specialist services for Australian businesses and global enterprises.",
+    section: "Enterprise Tech • Specialist Services",
     visual: "/images/departments/overview-poster.webp",
   }),
   robots: {
@@ -68,16 +78,15 @@ export const metadata: Metadata = {
     canonical: "/",
     languages: {
       "en-AU": siteOrigin,
+      "en-IN": siteOrigin,
       "en": siteOrigin,
       "x-default": siteOrigin,
     },
   },
   other: {
-    "geo.region": "AU",
-    "geo.placename": "Australia",
-    "geo.position": "-25.274398;133.775136",
-    "ICBM": "-25.274398, 133.775136",
-    "target-country": "AU",
+    "geo.region": "AU;IN",
+    "geo.placename": "Australia; India",
+    "target-country": "AU, IN",
   },
   category: "business",
 };
@@ -108,6 +117,7 @@ export default function RootLayout({ children }: LayoutProps) {
         <link rel="apple-touch-icon" href="/images/logo.png" />
       </head>
       <body className="min-h-full flex flex-col">
+        <AnalyticsTracking />
         <JsonLd />
         {children}
       </body>

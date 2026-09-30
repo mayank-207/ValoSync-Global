@@ -11,6 +11,7 @@ import {
   CloseIcon,
   ChevronDownIcon,
 } from "../ui/Icons";
+import { siteConfig } from "@/lib/siteConfig";
 
 interface SubLink {
   label: string;
@@ -584,7 +585,9 @@ export default function Header() {
               Book Free Consultation
             </Button>
             <div className="text-center text-xs text-slate-500 font-medium">
-              contact@valosyncglobal.com
+              <a href={`mailto:${siteConfig.email.contact}`} className="hover:text-primary transition-colors">
+                {siteConfig.email.contact}
+              </a>
             </div>
           </div>
         </nav>

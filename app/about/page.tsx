@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import AboutHero from "@/components/sections/about/AboutHero";
@@ -10,14 +10,30 @@ import TeamLeadershipSection from "@/components/sections/about/TeamLeadershipSec
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: { absolute: "About ValoSync Global | Connected Specialist Services" },
-  description: "Learn how ValoSync Global connects specialist departments across business, property, lending, engineering and technology.",
-  alternates: { canonical: "/about" },
+  title: { absolute: "About ValoSync Global | Global Engineering & Australian Client Success" },
+  description:
+    "Learn how ValoSync Global connects multidisciplinary specialists across custom software, AI automation, and enterprise consulting, powered by our India Engineering HQ and Australian client hub.",
+  keywords: [
+    "about ValoSync Global",
+    "software engineering firm Australia",
+    "global technology company India HQ",
+    "specialist enterprise services",
+  ],
+  alternates: {
+    canonical: "/about",
+    languages: {
+      "en-AU": `${siteOrigin}/about`,
+      "en-IN": `${siteOrigin}/about`,
+      "en": `${siteOrigin}/about`,
+      "x-default": `${siteOrigin}/about`,
+    },
+  },
   ...shareMetadata({
     path: "/about",
-    title: "About ValoSync Global | Connected Specialist Services",
-    description: "Learn how ValoSync Global connects specialist departments across business, property, lending, engineering and technology.",
-    section: "About",
+    title: "About ValoSync Global | Global Engineering & Australian Client Success",
+    description:
+      "Learn how ValoSync Global connects multidisciplinary specialists across custom software, AI automation, and enterprise consulting, powered by our India Engineering HQ and Australian client hub.",
+    section: "About Us",
     visual: "/images/departments/property-real-estate-management.webp",
   }),
 };

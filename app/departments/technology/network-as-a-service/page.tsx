@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
@@ -8,12 +8,29 @@ import { ArrowRightIcon, CheckCircleIcon, GlobeIcon } from "@/components/ui/Icon
 
 export const metadata: Metadata = {
   title: { absolute: "Network as a Service (NaaS) | ValoSync Global" },
-  description: "Explore managed network planning, connectivity and support for business locations, remote teams and cloud systems.",
-  alternates: { canonical: "/departments/technology/network-as-a-service" },
+  description:
+    "Explore managed network planning, enterprise connectivity and support for business locations, remote teams and cloud systems across Australia and India.",
+  keywords: [
+    "network as a service Australia",
+    "NaaS enterprise solutions",
+    "managed LAN WAN Wi-Fi",
+    "cloud connectivity Australia",
+    "ValoSync Global technology",
+  ],
+  alternates: {
+    canonical: "/departments/technology/network-as-a-service",
+    languages: {
+      "en-AU": `${siteOrigin}/departments/technology/network-as-a-service`,
+      "en-IN": `${siteOrigin}/departments/technology/network-as-a-service`,
+      "en": `${siteOrigin}/departments/technology/network-as-a-service`,
+      "x-default": `${siteOrigin}/departments/technology/network-as-a-service`,
+    },
+  },
   ...shareMetadata({
     path: "/departments/technology/network-as-a-service",
     title: "Network as a Service (NaaS) | ValoSync Global",
-    description: "Explore managed network planning, connectivity and support for business locations, remote teams and cloud systems.",
+    description:
+      "Explore managed network planning, enterprise connectivity and support for business locations, remote teams and cloud systems across Australia and India.",
     section: "Technology Services",
     visual: "/images/naas-network-hero.webp",
   }),

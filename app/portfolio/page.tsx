@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PortfolioHero from "@/components/sections/portfolio/PortfolioHero";
@@ -10,14 +10,31 @@ import PortfolioFAQSection from "@/components/sections/portfolio/PortfolioFAQSec
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: { absolute: "Selected Projects | ValoSync Global" },
-  description: "Explore selected technology projects and delivery approaches across software platforms, automation, cloud and digital growth.",
-  alternates: { canonical: "/portfolio" },
+  title: { absolute: "Enterprise Case Studies & Delivered Systems | ValoSync Global" },
+  description:
+    "Explore enterprise software case studies, custom CRMs, AI automation platforms, and cloud solutions delivered for Australian businesses and global clients.",
+  keywords: [
+    "software case studies Australia",
+    "enterprise CRM implementations",
+    "AI automation case study",
+    "custom software portfolio",
+    "ValoSync Global delivered projects",
+  ],
+  alternates: {
+    canonical: "/portfolio",
+    languages: {
+      "en-AU": `${siteOrigin}/portfolio`,
+      "en-IN": `${siteOrigin}/portfolio`,
+      "en": `${siteOrigin}/portfolio`,
+      "x-default": `${siteOrigin}/portfolio`,
+    },
+  },
   ...shareMetadata({
     path: "/portfolio",
-    title: "Selected Projects | ValoSync Global",
-    description: "Explore selected technology projects and delivery approaches across software platforms, automation, cloud and digital growth.",
-    section: "Selected Projects",
+    title: "Enterprise Case Studies & Delivered Systems | ValoSync Global",
+    description:
+      "Explore enterprise software case studies, custom CRMs, AI automation platforms, and cloud solutions delivered for Australian businesses and global clients.",
+    section: "Client Case Studies",
     visual: "/images/services/ai-automation-hero.webp",
   }),
 };
