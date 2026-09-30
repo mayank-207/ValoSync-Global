@@ -286,7 +286,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Engineered Precision for Structural, Civil & Land Infrastructure",
     heroSubtitle:
       "Deliver safe, compliant, and cost-effective development projects with our civil planning, structural drafting, site coordination, and regulatory compliance expertise.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/civil-engineering.webp",
     alt: "Civil engineering team reviewing plans at a construction site",
     highlights: [
       "Structural Drafting & Design",
@@ -363,7 +363,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Strategic Real Estate Services for Buyers, Sellers & Investors",
     heroSubtitle:
       "Maximize property value and portfolio growth through dedicated sales advocacy, proactive asset management, market research, and seamless leasing services.",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/real-estate.webp",
     alt: "Contemporary residential property representing real estate services",
     highlights: [
       "Targeted Property Marketing",
@@ -440,7 +440,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Tailored Mortgage & Property Lending Solutions Built for You",
     heroSubtitle:
       "Navigate the home loan landscape with confidence. We compare lending options across leading banks and lenders to secure competitive rates and smooth loan approval.",
-    image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/home-loans.webp",
     alt: "Modern family home representing home loan support",
     highlights: [
       "Access to 30+ Leading Lenders",
@@ -594,7 +594,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Visionary Architecture & Precision Building Design",
     heroSubtitle:
       "Bring your property vision to life with custom architectural concepts, detailed building blueprints, 3D renderings, and seamless integration with civil engineering.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/architecture.webp",
     alt: "Modern architectural house design with clean lines and glass facade",
     highlights: [
       "Custom Residential & Commercial Design",
@@ -671,7 +671,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Strategic Wealth Management Built for Your Life Goals",
     heroSubtitle:
       "Secure your family's future and accelerate wealth creation with tailored investment portfolios, retirement planning, SMSF guidance, and proactive risk protection.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/financial-planning.webp",
     alt: "Financial planner discussing investment portfolio growth with clients",
     highlights: [
       "Tailored Wealth Accumulation",
@@ -748,7 +748,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Commercial Legal Guidance Safeguarding Your Business Operations",
     heroSubtitle:
       "Protect your enterprise with expert commercial legal contracts, corporate governance advice, IP enforcement, employment agreements, and strategic legal counsel.",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/legal-advisory.webp",
     alt: "Gavel and legal books representing corporate legal advisory",
     highlights: [
       "Commercial Contract Drafting",
@@ -825,7 +825,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Proactive Risk Protection & Corporate Insurance Solutions",
     heroSubtitle:
       "Mitigate business and property vulnerabilities with tailored commercial insurance policies, asset protection, risk management audits, and fast claims advocacy.",
-    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/insurance.webp",
     alt: "Shield symbol and umbrella representing corporate risk and insurance advisory",
     highlights: [
       "Commercial Liability & Indemnity",
@@ -902,7 +902,7 @@ export const departmentsData: Record<DepartmentSlug, DepartmentData> = {
     heroHeadline: "Building High-Performing Teams & Compliant Workforces",
     heroSubtitle:
       "Scale your organization with expert talent acquisition, compliant employment frameworks, performance management systems, and strategic HR leadership.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=82",
+    image: "/images/departments/hr-advisory.webp",
     alt: "Diverse corporate team collaborating around a conference table",
     highlights: [
       "Executive & Technical Recruitment",

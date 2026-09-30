@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 
 const WIDTH = 1200;
 const HEIGHT = 630;
-const ALLOWED_VISUAL = /^\/images\/(?:departments|services)\/[a-z0-9-]+\.webp$|^\/images\/naas-network-hero\.webp$/;
+const ALLOWED_VISUAL = /^\/images\/(?:departments|services|industries|heroes)\/[a-z0-9-]+\.webp$|^\/images\/naas-network-hero\.webp$/;
 
 function clean(value: string | null, limit: number) {
   return (value || "").replace(/[<>\r\n]/g, " ").trim().slice(0, limit);
