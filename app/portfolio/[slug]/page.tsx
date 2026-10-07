@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
+import { siteConfig } from "@/lib/siteConfig";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -582,8 +584,67 @@ export default async function CaseStudyPage({ params }: PageProps) {
     notFound();
   }
 
+  const caseStudyUrl = `${siteOrigin}/portfolio/${slug}`;
+
+  const caseStudySchema = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "@id": `${caseStudyUrl}#casestudy`,
+    name: data.title,
+    headline: data.heroHeadline,
+    description: data.metaDescription,
+    url: caseStudyUrl,
+    creator: {
+      "@type": "Organization",
+      "@id": `${siteOrigin}/#organization`,
+      name: siteConfig.name,
+      url: siteOrigin,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${siteOrigin}/#organization`,
+      name: siteConfig.name,
+      url: siteOrigin,
+    },
+    inLanguage: "en",
+    keywords: [data.category, data.industry, "Case Study", "Enterprise Technology"],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteOrigin,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Portfolio",
+        item: `${siteOrigin}/portfolio`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: data.title,
+        item: caseStudyUrl,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
       <main id="main">
         {/* Dynamic Hero */}
@@ -593,11 +654,27 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
+              {/* Breadcrumb Navigation */}
+              <nav
+                aria-label="Breadcrumb"
+                className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-300 mb-6"
+              >
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+                <span>/</span>
+                <Link href="/portfolio" className="hover:text-white transition-colors">
+                  Portfolio
+                </Link>
+                <span>/</span>
+                <span className="text-[#D4AF37] font-semibold">{data.title}</span>
+              </nav>
+
               <div className="mb-6">
                 <span className="px-4 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold uppercase tracking-wide">
                   {data.category}
                 </span>
-                <span className="px-3 py-1.5 rounded-full bg-white/10 text-slate-300 text-xs font-semibold">
+                <span className="px-3 py-1.5 rounded-full bg-white/10 text-slate-300 text-xs font-semibold ml-2">
                   {data.country} • {data.industry}
                 </span>
               </div>

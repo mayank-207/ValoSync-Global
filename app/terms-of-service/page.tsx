@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { shareMetadata } from "@/lib/shareMetadata";
+import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -20,7 +20,15 @@ import {
 export const metadata: Metadata = {
   title: { absolute: "Terms and Conditions | ValoSync Global" },
   description: "Read the terms covering use of the ValoSync Global website and service engagements.",
-  alternates: { canonical: "/terms-of-service" },
+  alternates: {
+    canonical: "/terms-of-service",
+    languages: {
+      "en-AU": `${siteOrigin}/terms-of-service`,
+      "en-IN": `${siteOrigin}/terms-of-service`,
+      "en": `${siteOrigin}/terms-of-service`,
+      "x-default": `${siteOrigin}/terms-of-service`,
+    },
+  },
   ...shareMetadata({
     path: "/terms-of-service",
     title: "Terms and Conditions | ValoSync Global",

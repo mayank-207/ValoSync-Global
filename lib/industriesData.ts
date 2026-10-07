@@ -75,10 +75,8 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     heroHeadline: "Accelerate the Future of Connected Mobility, EV Platforms & Automotive Tech",
     heroSubtitle:
       "We empower OEMs, dealerships, and electric mobility providers across Australia and globally with cutting-edge automotive software engineering, telematics integration, and automated supply chains.",
-    heroImage:
-      "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=82",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=82",
+    heroImage: "/images/industries/automotive-hero.webp",
+    secondaryImage: "/images/industries/automotive-secondary.webp",
     alt: "Futuristic electric vehicle cockpit and digital dashboard engineering",
     tagline: "High-precision automotive software, telematics, and intelligent fleet management.",
     description:
@@ -221,10 +219,8 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     heroHeadline: "Secure, Compliant Digital Health Platforms That Elevate Patient Care",
     heroSubtitle:
       "Transforming healthcare providers, private practices, and clinical networks across Australia with HIPAA/AHPRA compliant software, automated patient intake, and unified EHR pipelines.",
-    heroImage:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=82",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=82",
+    heroImage: "/images/industries/healthcare-hero.webp",
+    secondaryImage: "/images/industries/healthcare-secondary.webp",
     alt: "Medical professional using advanced digital healthcare tablet in clinical hospital setting",
     tagline: "Digitizing patient experiences with zero-friction compliance.",
     description:
@@ -367,10 +363,8 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     heroHeadline: "Real-Time Fleet Telematics & Intelligent Supply Chain Automation",
     heroSubtitle:
       "Eliminate dispatch blind spots, cut fuel overhead, and deliver transparency with real-time GPS tracking, warehouse ERP sync, and dynamic route optimization software.",
-    heroImage:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=82",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=82",
+    heroImage: "/images/industries/logistics-hero.webp",
+    secondaryImage: "/images/industries/logistics-secondary.webp",
     alt: "Automated logistics warehouse distribution center with modern shipping systems",
     tagline: "End-to-end fleet tracking and automated dispatch management.",
     description:
@@ -513,10 +507,8 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     heroHeadline: "High-Security Financial Portals, Automated Underwriting & Fintech Software",
     heroSubtitle:
       "Engineered for Australian wealth managers, mortgage lenders, and fintech innovators who demand bank-grade encryption, automated KYC, and seamless regulatory compliance.",
-    heroImage:
-      "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1600&q=82",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=82",
+    heroImage: "/images/industries/finance-hero.webp",
+    secondaryImage: "/images/industries/finance-secondary.webp",
     alt: "Financial analyst working with modern digital analytics trading dashboard",
     tagline: "High-security financial portals and automated approval engines.",
     description:
@@ -659,10 +651,8 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     heroHeadline: "Sub-Second Headless Commerce & Omnichannel Retail Platforms",
     heroSubtitle:
       "Unlock massive conversion leaps with lightning-fast Next.js headless storefronts, real-time inventory synchronization, and automated customer retention funnels.",
-    heroImage:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=82",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=1200&q=82",
+    heroImage: "/images/industries/retail-hero.webp",
+    secondaryImage: "/images/industries/retail-secondary.webp",
     alt: "Modern retail store and digital e-commerce customer checkout experience",
     tagline: "High-converting headless commerce & AI customer retention.",
     description:
@@ -805,10 +795,8 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     heroHeadline: "Property Listing Platforms, Automated Buyer CRMs & Digital Lease Portals",
     heroSubtitle:
       "Built for Australian agencies, property developers, and asset managers seeking automated lead follow-ups, interactive inspection booking, and digital tenant agreements.",
-    heroImage:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=82",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=82",
+    heroImage: "/images/industries/realestate-hero.webp",
+    secondaryImage: "/images/industries/realestate-secondary.webp",
     alt: "Modern real estate corporate architecture and high-rise property development",
     tagline: "Automating property management and high-intent lead conversion.",
     description:
@@ -951,10 +939,8 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     heroHeadline: "Client Collaboration Portals & Practice Automation for Corporate Firms",
     heroSubtitle:
       "Streamline billable project delivery, automate proposal generation, and provide clients with an executive self-service workspace that differentiates your practice.",
-    heroImage:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=82",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=82",
+    heroImage: "/images/industries/professional-hero.webp",
+    secondaryImage: "/images/industries/professional-secondary.webp",
     alt: "Executive boardroom strategic meeting in professional corporate consulting office",
     tagline: "Custom client portals and automated practice operations.",
     description:
@@ -1097,10 +1083,8 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     heroHeadline: "Industry 4.0 IoT Dashboards, Predictive Maintenance & Smart Manufacturing",
     heroSubtitle:
       "Bridge your shop-floor machinery with executive analytics. Real-time IoT sensor telemetry, automated production scheduling, and defect tracking built for modern manufacturing plants.",
-    heroImage:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=82",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=82",
+    heroImage: "/images/industries/manufacturing-hero.webp",
+    secondaryImage: "/images/industries/manufacturing-secondary.webp",
     alt: "Advanced automated manufacturing robotic arm assembly line in smart factory",
     tagline: "Shop-floor visibility and automated production scheduling.",
     description:
@@ -1243,10 +1227,8 @@ export const industriesDataMap: Record<IndustrySlug, IndustryData> = {
     heroHeadline: "Next-Gen Learning Management Systems & Frictionless Student Enrolment",
     heroSubtitle:
       "Deliver engaging digital learning experiences with custom LMS architectures, automated student onboarding, interactive assessments, and real-time student analytics.",
-    heroImage:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=82",
-    secondaryImage:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=82",
+    heroImage: "/images/industries/education-hero.webp",
+    secondaryImage: "/images/industries/education-secondary.webp",
     alt: "Modern digital university classroom with students and technology learning displays",
     tagline: "Custom learning management systems and automated student portals.",
     description:

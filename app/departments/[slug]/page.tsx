@@ -187,6 +187,22 @@ export default async function DepartmentDetailPage({ params }: PageProps) {
 
           <div className="container relative z-10">
             <div className="max-w-4xl">
+              {/* Breadcrumb Navigation */}
+              <nav
+                aria-label="Breadcrumb"
+                className="flex items-center gap-2 text-xs sm:text-sm text-slate-300 mb-6"
+              >
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+                <span>/</span>
+                <Link href="/departments" className="hover:text-white transition-colors">
+                  Departments
+                </Link>
+                <span>/</span>
+                <span className="text-[#D4AF37] font-semibold">{data.title}</span>
+              </nav>
+
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#071A33]/60 border border-[#D4AF37]/45 text-[#F5E6B3] text-xs sm:text-sm font-semibold tracking-wide mb-7 backdrop-blur-sm">
                 <SparkleIcon size={16} className="text-[#D4AF37]" />
                 <span>Department {data.number} • {data.badge}</span>

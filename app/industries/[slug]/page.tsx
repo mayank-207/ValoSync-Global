@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
+import { siteConfig } from "@/lib/siteConfig";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -88,8 +89,62 @@ export default async function IndustryDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const industryUrl = `${siteOrigin}/industries/${slug}`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteOrigin,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Industries",
+        item: `${siteOrigin}/industries`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: data.title,
+        item: industryUrl,
+      },
+    ],
+  };
+
+  const industrySchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${industryUrl}#service`,
+    name: `${data.title} Technology Solutions`,
+    description: data.metaDescription,
+    url: industryUrl,
+    provider: {
+      "@type": "Organization",
+      "@id": `${siteOrigin}/#organization`,
+      name: siteConfig.name,
+      url: siteOrigin,
+    },
+    areaServed: [
+      { "@type": "Country", name: "Australia" },
+      { "@type": "Country", name: "India" },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(industrySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
       <main id="main">
         {/* ============================================================ */}

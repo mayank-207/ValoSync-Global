@@ -723,6 +723,22 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
           <div className="container relative z-10">
             <div className="max-w-3xl">
+              {/* Breadcrumb Navigation */}
+              <nav
+                aria-label="Breadcrumb"
+                className="flex items-center gap-2 text-xs sm:text-sm text-slate-300 mb-6"
+              >
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+                <span>/</span>
+                <Link href="/services" className="hover:text-white transition-colors">
+                  Services
+                </Link>
+                <span>/</span>
+                <span className="text-[#D4AF37] font-semibold">{data.title}</span>
+              </nav>
+
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 bg-[#071A33]/50 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#D4AF37]">
                 <SparkleIcon size={16} className="text-[#D4AF37]" />
                 <span>{data.badge}</span>
