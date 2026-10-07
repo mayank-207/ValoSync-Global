@@ -90,8 +90,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "healthcare-telehealth-portal",
     "logistics-dispatch-tracker",
     "fintech-kyc-onboarding",
-    "headless-ecommerce",
-    "iot-telematics-dashboard",
+    "headless-ecommerce-store",
+    "industrial-iot-dashboard",
   ];
 
   const portfolioRoutes: MetadataRoute.Sitemap = portfolioSlugs.map((slug) => ({

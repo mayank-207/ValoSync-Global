@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -104,11 +104,20 @@ export default function ContactPage() {
       <Header />
       <main id="main">
         {/* Contact Hero */}
-        {/* <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
+        <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-[#0B1B3D] via-[#0F172A] to-[#0B1B3D] text-white overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[360px] bg-[#D4AF37]/15 blur-[130px] rounded-full pointer-events-none" />
 
           <div className="container relative z-10 text-center max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-400 mb-6">
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+              <span>/</span>
+              <span className="text-[#D4AF37] font-semibold">Contact</span>
+            </nav>
+
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide mb-6">
               <SparkleIcon size={16} />
               <span>Let&apos;s Build Success Together</span>
@@ -121,14 +130,14 @@ export default function ContactPage() {
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto mb-10">
+            <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto mb-4">
               Speak directly with our senior software architects to scope your custom software, CRM build, AI automation workflow, or digital lead generation campaign.
             </p>
           </div>
-        </section> */}
+        </section>
 
         {/* Contact Method Cards */}
-        <section className="pt-32 pb-20 py-12 bg-slate-900 border-b border-slate-800 text-white">
+        <section className="py-12 bg-slate-900 border-b border-slate-800 text-white">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {contactMethods.map((item, idx) => (

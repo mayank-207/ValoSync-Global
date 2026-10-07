@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { shareMetadata, siteOrigin } from "@/lib/shareMetadata";
+import { siteConfig } from "@/lib/siteConfig";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
@@ -88,8 +89,68 @@ const steps = [
 ];
 
 export default function NetworkAsAServicePage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${siteOrigin}/departments/technology/network-as-a-service#service`,
+    name: "Network as a Service (NaaS)",
+    description:
+      "Managed enterprise network planning, SD-WAN, LAN/Wi-Fi deployment, and cloud connectivity solutions for Australian businesses.",
+    url: `${siteOrigin}/departments/technology/network-as-a-service`,
+    provider: {
+      "@type": "Organization",
+      "@id": `${siteOrigin}/#organization`,
+      name: siteConfig.name,
+      url: siteOrigin,
+    },
+    areaServed: [
+      { "@type": "Country", name: "Australia" },
+      { "@type": "Country", name: "India" },
+    ],
+    serviceType: "Network as a Service",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteOrigin,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Departments",
+        item: `${siteOrigin}/departments`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Technology",
+        item: `${siteOrigin}/departments/technology`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Network as a Service",
+        item: `${siteOrigin}/departments/technology/network-as-a-service`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
       <main id="main">
         <section className="relative isolate overflow-hidden bg-[#071A33] pt-32 pb-20 text-white md:pt-40 md:pb-28">
@@ -104,7 +165,27 @@ export default function NetworkAsAServicePage() {
           <div className="absolute inset-0 bg-[#071A33]/65 md:bg-gradient-to-r md:from-[#071A33]/75 md:via-[#071A33]/45 md:to-[#071A33]/10" aria-hidden="true" />
           <div className="container relative z-10">
             <div className="max-w-3xl">
-              <Link href="/departments/technology" className="mb-8 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#D4AF37] hover:text-white">
+              {/* Breadcrumb Navigation */}
+              <nav
+                aria-label="Breadcrumb"
+                className="flex items-center gap-2 text-xs sm:text-sm text-slate-300 mb-6"
+              >
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+                <span>/</span>
+                <Link href="/departments" className="hover:text-white transition-colors">
+                  Departments
+                </Link>
+                <span>/</span>
+                <Link href="/departments/technology" className="hover:text-white transition-colors">
+                  Technology
+                </Link>
+                <span>/</span>
+                <span className="text-[#D4AF37] font-semibold">NaaS</span>
+              </nav>
+
+              <Link href="/departments/technology" className="mb-6 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#D4AF37] hover:text-white">
                 <GlobeIcon size={18} /> Technology Services
               </Link>
               <h1 className="mb-6 max-w-2xl text-4xl font-extrabold leading-[1.12] tracking-tight drop-shadow-lg sm:text-5xl md:text-6xl">

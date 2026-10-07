@@ -19,3 +19,6 @@ Strictly enforce the official ValoSync Global color system across all codebase c
 - **Borders**: `#D9E1EC`
 - **Canvas**: `#FFFFFF` / `#F7F9FC`
 
+# Google SEO Standards
+Follow the official guidelines in `.agents/rules/google_seo_starter_guide.md` for all routing, page structures, metadata, breadcrumbs, headings, and sitemaps.
+
